@@ -103,7 +103,7 @@
                       <?php } else { ?>
                           <li><a href="<?php echo osc_esc_html(osc_update_search_url($params)); ?>"><?php echo $label; ?></a></li>
                       <?php } ?>
-                      <?php $i++; ?>
+                   
                   <?php } ?>
                 </ul>
             </div>

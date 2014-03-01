@@ -51,11 +51,11 @@
    }
    $words[] = array('[quote]','[/quote]', '[quoteAuthor]','[/quoteAuthor]');
    $words[] = array('<div class="messQuote">','</div>', '<div class="quoteAuthor">','</div>');
-   $message  = osc_mailBeauty($pm['pm_message'], $words) ;
+  /* $message  = osc_mailBeauty($pm['pm_message'], $words) ;*/
    
- if($pm['sender_id'] != 0){
+ /*if($pm['sender_id'] != 0){
                      $user = User::newInstance()->findByPrimaryKey($pm['sender_id']); 
-                  } else { $user['s_name'] = pmAdmin();} 
+                  } else { */$user['s_name'] = pmAdmin(); /*} */
    
    }
 $i_userId = osc_logged_user_id();
@@ -115,17 +115,7 @@ $( ".account_box ul li" ).click(function() {
                 <div class="clear"></div>
         
 					<div class="clear"></div>
-					<?php if($admin){ ?>
-                    <span class="admin-options">
-                        <a href="<?php echo osc_item_edit_url(); ?>" rel="nofollow"><?php _e('Edit item', 'isha'); ?></a>
-                        <span>|</span>
-                        <a class="delete" onclick="javascript:return confirm('<?php echo osc_esc_js(__('This action can not be undone. Are you sure you want to continue?', 'isha')); ?>')" href="<?php echo osc_item_delete_url();?>" ><?php _e('Delete', 'isha'); ?></a>
-                        <?php if(osc_item_is_inactive()) {?>
-                        <span>|</span>
-                        <a href="<?php echo osc_item_activate_url();?>" ><?php _e('Activate', 'isha'); ?></a>
-                        <?php } ?>
-                    </span>
-                <?php } ?>
+					
 
     </article>
       		<?php }
