@@ -51,11 +51,11 @@
    }
    $words[] = array('[quote]','[/quote]', '[quoteAuthor]','[/quoteAuthor]');
    $words[] = array('<div class="messQuote">','</div>', '<div class="quoteAuthor">','</div>');
-   $message  = osc_mailBeauty($pm['pm_message'], $words) ;
+  /* $message  = osc_mailBeauty($pm['pm_message'], $words) ;
    
  if($pm['sender_id'] != 0){
                      $user = User::newInstance()->findByPrimaryKey($pm['sender_id']); 
-                  } else { $user['s_name'] = pmAdmin();} 
+                  } else { $user['s_name'] = pmAdmin();} */
    
    }
 $i_userId = osc_logged_user_id();
