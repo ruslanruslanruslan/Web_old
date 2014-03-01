@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+nav.navigation
+{
+	display:none;	
+}
+nav.navigation2
+{
+	display:block;
+}
+.input_outer_area input[type="text"], .input_outer_area select
+{
+	width:98.5%;
+	border:1px solid #999;
+	border-radius:5px;
+}
+.inner_listing
+{
+	text-align:center;
+}
+.inner_listing img
+{
+	float:none;
+}
+.listing_text
+{
+	width:100%;
+	text-align:left;
+	margin-left:0px;
+}
+h1.latest, .welcome_mid_box h1
+{
+	font-size:45px;
+}
+.login_text
+{
+	font-size:30px;
+}
+.login_areabox
+{
+	padding:3em 0px 2em
+}
+.login_areabox ul li input[type=text]
+{
+	width:98%;
+}
+.login_areabox
+{
+	padding:3em 0px 4em;
+}
+header
+{
+	position:inherit;
+}
+.service_area
+{
+	margin-top:0px;
+}
+.search_box
+{
+	top:71px;
+}
+.chose-langu
+{
+	top:inherit;
+	bottom:0px;
+}
+.after_loginarea
+{
+	width:100%;
+}

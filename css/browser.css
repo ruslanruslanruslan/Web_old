@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+nav.navigation ul li a
+{
+	padding:15px 9px;
+}
+.map_back
+{
+	padding:0px;
+	background:none;
+}

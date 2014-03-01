@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+nav.navigation
+{
+	float:none;
+	margin:0px auto;
+	display:table;
+}
+.logo
+{
+	float:none;
+	margin:0px auto 20px;
+	display:table;
+}
+
+.input_outer_area
+{
+	width:100%;
+	margin-bottom:20px;
+}
+.input_outer_area select
+{
+	width:38%;
+}
+.input_outer_area input[type="text"]
+{
+	width:59%;
+}
+input.search_btn[type="button"]
+{
+	float:none;
+	margin:0px auto;
+	display:table;
+}
+.instrument
+{
+	width:100%;
+}
+.device
+{
+	margin-left:0px;
+	margin:30px 0;
+}
+.location, .listing
+{
+	width:100%;
+}
+.login_areabox
+{
+	width:98%;	
+}
+.login_areabox2
+{
+	padding-top:2em;
+}
+.map_back
+{
+	width:88%;
+}
+.chose-langu
+{
+	top:12em;
+}
+.service_area
+{
+	margin-top:10em;
+}
+.search_box
+{
+	margin-top:97px;
+}
+.publish-btn{
+	float:right;
+	padding:10px 0 10px 0;
+	width:100%;
+	text-align:center;
+}

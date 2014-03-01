@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+	min-width:inherit;
+}
+.wrapper
+{
+	width:95%;
+}
+nav.navigation ul li
+{
+	margin-left:5px;
+}
+nav.navigation ul li a
+{
+	padding:15px 12px;
+}
+.input_outer_area
+{
+	width:75%;	
+}
+.listing_text
+{
+	width:77%;
+}
+.map_back
+{
+	float:none;
+	margin:0px auto;
+	width:66%;
+}
+.contact_text
+{
+	width:100%;
+}
