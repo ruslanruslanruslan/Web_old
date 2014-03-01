@@ -24,7 +24,7 @@
 DEFINES
 
 */
-/*if($_GET['action']=="items"){?>
+if($_GET['action']=="items"){?>
 <style>
 body{background:none repeat scroll 0 0 #EEECE7 !important;}
 </style>
@@ -33,7 +33,7 @@ body{background:none repeat scroll 0 0 #EEECE7 !important;}
 <style>
 body{background:none repeat scroll 0 0 #FFFFFF !important;}
 </style>
-<?php }*/ ?>
+<?php } ?>
 
  <?php
     define('BENDER_THEME_VERSION', '1.0');
