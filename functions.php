@@ -517,6 +517,7 @@ if(osc_is_home_page()){
     osc_add_hook('product','product_listing');
     osc_add_hook('login-content','login_content');
     osc_add_hook('contact-content','contact_content');
+	osc_add_hook('item-add','item_add');
 }
 if(osc_is_home_page() || osc_is_search_page()){
     bender_add_body_class('has-searchbox');
@@ -951,5 +952,182 @@ class benderBodyClass
     {
         return $this->class;
     }
+}
+?>
+
+
+
+
+
+
+
+<?php
+if(!function_exists('item_add')){
+function item_add(){?>
+
+<?php ItemForm::location_javascript_new(); ?>
+<?php if(osc_images_enabled_at_items()) ItemForm::photos_javascript(); ?>
+<div id="#login_register" class="div-cont">
+<br>
+<br>
+           <div class="after_loginarea">     
+            <ul id="error_list"></ul>
+                <form name="item" action="<?php echo osc_base_url(true);?>" method="post" enctype="multipart/form-data" id="item-post">
+                    
+                    <input type="hidden" name="action" value="<?php echo $action; ?>" />
+                    <input type="hidden" name="page" value="item" />
+                    <?php if($edit){ ?>
+                        <input type="hidden" name="id" value="<?php echo osc_item_id();?>" />
+                        <input type="hidden" name="secret" value="<?php echo osc_item_secret();?>" />
+                    <?php } ?>
+                       <h1><?php _e('General Information', 'bender'); ?></h1>
+					   <div class="inner_area">
+					   <ul>
+					   
+                        <li>
+                          <label class="control-label" for="select_1"><?php _e('Category', 'bender'); ?></label>
+                          <div class="controls">
+                                <?php ItemForm::category_select(null, null, __('Select a category', 'bender')); ?>
+                          </div>
+                        </li>
+                        <li>
+                          <label class="control-label" for="title[<?php echo osc_locale_code(); ?>]"><?php _e('Title', 'bender'); ?></label>
+                          <div class="controls">
+                                <?php ItemForm::title_input('title',osc_locale_code(), osc_esc_html( bender_item_title() )); ?>
+                          </div>
+                        </li>
+<!---Tristan start--->
+                        <?php if($edit) {
+                          ItemForm::plugin_edit_item(); 
+                        } else {
+                          ItemForm::plugin_post_item(); 
+                        } ?>
+<!--- Tristan end --->
+
+                        <li>
+                          <label class="control-label" for="description[<?php echo osc_locale_code(); ?>]"><?php _e('Description', 'bender'); ?></label>
+                          <div class="controls">
+                                <?php ItemForm::description_textarea('description',osc_locale_code(), osc_esc_html( bender_item_description() )); ?>
+                          </div>
+                        </li>
+
+                        <?php if( osc_price_enabled_at_items() ) { ?>
+                        <li>
+                          <label class="control-label" for="price"><?php _e('Price', 'bender'); ?></label>
+                          <div class="controls">
+                            <?php ItemForm::price_input_text(); ?>
+                            <?php ItemForm::currency_select(); ?>
+                          </div>
+                        </li>
+                        <?php } ?>
+						
+						</ul>
+						</div>
+
+                        <?php if( osc_images_enabled_at_items() ) { ?>
+                         <h1><?php _e('Photos', 'bender'); ?></h1>
+                          <div class="inner_area">
+						     <ul>
+							 
+							 
+                            <li>
+                              <label class="control-label" for="photos[]"><?php _e('Photos', 'bender'); ?></label>
+                              <div class="controls">
+                                <div id="photos">
+                                    <?php ItemForm::photos(); ?>
+                                </div>
+                              </div>
+                              <div class="controls">
+                                <a href="#" onclick="addNewPhoto(); return false;"><?php _e('Add new photo', 'bender'); ?></a>
+                              </div>
+
+                            </li>
+
+							</ul>
+                        </div>
+
+
+                        <?php } ?>
+						
+						
+                        <h1><?php _e('Listing Location', 'bender'); ?></h1>
+						
+						<div class="inner_area">
+						     <ul>
+
+                            <li>
+                              <label class="control-label" for="country"><?php _e('Country', 'bender'); ?></label>
+                              <div class="controls">
+                                <?php ItemForm::country_select(osc_get_countries(), osc_user()); ?>
+                              </div>
+                            </li>
+                            <li>
+                              <label class="control-label" for="region"><?php _e('Region', 'bender'); ?></label>
+                              <div class="controls">
+                                <?php ItemForm::region_text(osc_user()); ?>
+                              </div>
+                            </li>
+                            <li>
+                              <label class="control-label" for="city"><?php _e('City', 'bender'); ?></label>
+                              <div class="controls">
+                                <?php ItemForm::city_text(osc_user()); ?>
+                              </div>
+                            </li>
+                            <li>
+                              <label class="control-label" for="cityArea"><?php _e('City Area', 'bender'); ?></label>
+                              <div class="controls">
+                                <?php ItemForm::city_area_text(osc_user()); ?>
+                              </div>
+                            </li>
+                            <li>
+                              <label class="control-label" for="address"><?php _e('Address', 'bender'); ?></label>
+                              <div class="controls">
+                                <?php ItemForm::address_text(osc_user()); ?>
+                              </div>
+                            </li>
+
+                        <!-- seller info -->
+                        
+                       
+                        <?php if($edit) {
+                          ItemForm::plugin_edit_item(); 
+                        } else {
+                          ItemForm::plugin_post_item(); 
+                        } ?> 
+                         
+							</ul>
+                    </div>
+                </form>
+            
+       </div>
+
+        <script type="text/javascript">
+    <?php if(osc_locale_thousands_sep()!='' || osc_locale_dec_point() != '') { ?>
+    $().ready(function(){
+        $("#price").blur(function(event) {
+            var price = $("#price").prop("value");
+            <?php if(osc_locale_thousands_sep()!='') { ?>
+            while(price.indexOf('<?php echo osc_esc_js(osc_locale_thousands_sep());  ?>')!=-1) {
+                price = price.replace('<?php echo osc_esc_js(osc_locale_thousands_sep());  ?>', '');
+            }
+            <?php }; ?>
+            <?php if(osc_locale_dec_point()!='') { ?>
+            var tmp = price.split('<?php echo osc_esc_js(osc_locale_dec_point())?>');
+            if(tmp.length>2) {
+                price = tmp[0]+'<?php echo osc_esc_js(osc_locale_dec_point())?>'+tmp[1];
+            }
+            <?php }; ?>
+            $("#price").prop("value", price);
+        });
+
+    });
+    <?php }; ?>
+</script>
+<br>
+<br>
+</div>
+<?php
+}
+
 }
 ?>
