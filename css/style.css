@@ -2433,3 +2433,17 @@ margin-bottom: 10px;}
 li.contact_button{ color:#015685; width: 290px;
 font-size: 13px;
 margin-top: 10px;}
+
+
+.instrument:hover h2 a{
+color:#015686;
+}
+.instrument:hover img {
+    opacity:0.8;
+	transition:1s linear ease-in;
+	-moz-transition:1s linear ease-in;
+	-ms-transition:1s linear ease-in;
+	-o-transition:1s linear ease-in;
+	-webkit-transition:1s linear ease-in;
+	cursor:pointer;
+}
