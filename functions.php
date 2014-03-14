@@ -184,13 +184,19 @@ FUNCTIONS
         
 	<?php if($i=='0'){?>
 	<div class="instrument">
-            <img src="<?php echo osc_current_web_theme_url('images/instrument.png')?>" alt="image Here" />
+              <a class="<?php echo osc_category_slug() ; ?>" href="<?php echo osc_search_category_url() ; ?>">
+			   <img src="<?php echo osc_current_web_theme_url('images/instrument.png')?>" alt="image Here" />
+			 </a>
 			<?php } elseif($i=='1'){?>
-			    <div class="instrument device">
-            <img src="<?php echo osc_current_web_theme_url('images/devices.png')?>" alt="image Here" />
+			 <div class="instrument device">
+			 <a class="<?php echo osc_category_slug() ; ?>" href="<?php echo osc_search_category_url() ; ?>">
+                <img src="<?php echo osc_current_web_theme_url('images/devices.png')?>" alt="image Here" />
+			 </a>
 			<?php } if($i=='2'){?>
 			    <div class="instrument service">
-            <img src="<?php echo osc_current_web_theme_url('images/services.png')?>" alt="image Here" />
+			<a class="<?php echo osc_category_slug() ; ?>" href="<?php echo osc_search_category_url() ; ?>">	
+               <img src="<?php echo osc_current_web_theme_url('images/services.png')?>" alt="image Here" />
+			</a>  
 			<?php }?>
             <h2><a class="<?php echo osc_category_slug() ; ?>" href="<?php echo osc_search_category_url() ; ?>"><?php echo osc_category_name() ; ?></a></h2>
 			<?php /**/if ( osc_count_subcategories() > 0 ) { ?>
