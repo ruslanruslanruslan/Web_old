@@ -50,7 +50,7 @@ jQuery('#yourName').attr('placeholder','Name');
 		jQuery.fn.goTo = function( $thiss ) {
 			jQuery('html, body').animate({
 					scrollTop: parseInt(jQuery(this).offset().top-jQuery("header").height()) + 'px' //
-				}, 2000);
+				}, 'slow');
 				return this; // for chaining...
 		   }
 		   
@@ -138,41 +138,8 @@ jQuery('#yourName').attr('placeholder','Name');
 			
 			/** code for scroll and select menu **/
 	</script> 
-  	
-	<script>
-			$(document).ready(function(){
-
-			// hide #back-top first
-			$("#back-top").hide();
-			
-			// fade in #back-top
-			$(function () {
-				$(window).scroll(function () {
-					if ($(this).scrollTop() > 400) {
-						$('#back-top').fadeIn();
-					} else {
-						$('#back-top').fadeOut();
-					}
-				});
-
-				// scroll body to 0px on click
-				$('#back-top a').click(function () {
-					$('body,html').animate({ 
-						scrollTop: 0
-					}, 1500);
-					return false;
-				});
-			});
-            });
-	</script>
-	<style>
-	#back-top {position: fixed; display:none; bottom:40px; right:15px; width:48px;}
-    #back-top a {width: 48px; display: block;}
-    #back-top img {width: 48px; height: 48px; display: block;} 
-	</style>
     </head>
 <body>
-<p id="back-top"><a href="#top"><img src="<?php echo osc_current_web_theme_url('images/go-top.png');?>" /></a></p>
 
 <header>
 	<section class="header_midbox wrapper">
