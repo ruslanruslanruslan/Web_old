@@ -74,8 +74,7 @@ body
 {
 	font-family:Verdana, Geneva, sans-serif;
 	color:#5d5c5c;
-/*	background:#d1d3d4;*/
-background:url(../images/welcome_back.png);
+	background:#d1d3d4;
 	min-width:1000px;
 }
 .wrapper
@@ -941,13 +940,11 @@ p.description
 	color: #2C2C2C;
     font: 13px/24px Arial,Helvetica,sans-serif;
 	padding-top:10px;
-	line-height:30px;
 }
-.descheading{margin-top:20px; font-weight:bold; text-decoration:underline;}
-/*p.description:hover {
+p.description:hover {
     color: #FB9500;
     cursor: pointer;
-}*/
+}
 ul.view
 {
 	list-style:none;
@@ -1060,7 +1057,7 @@ input.share[type=submit]:hover
 .related_box
 {
 	width:100%;
-	padding:50px 0 3em;
+	padding:20px 0 3em;
 }
 .related_list
 {
@@ -1069,24 +1066,18 @@ input.share[type=submit]:hover
 }
 .related_list h1
 {
-	color: #FFF;
+	color: #2C2C2C;
     font-family: 'oswaldlight';
     font-size: 32px;
     font-weight: normal;
     line-height: 30px;
-    background:#74AFC5;
-    padding:12px;
-    border-radius:5px;
-    
 }
 .contact_pub
 {
-    border-radius:5px;
 	float:right;
 	width:27%;
 	padding:2%;
 	background:#f7f7f7;
-	box-shadow:0px 5px 10px 6px #ccc;
 }
 .contact_pub select
 {
@@ -1438,7 +1429,7 @@ a.rate
 	/*display:block;*/
 	background:#0382b1;
 	margin-top:2px;
-	padding:5px 10px 5px 10px !important;
+	padding:4px 0 !important;
 	text-decoration:none;
 	color:#fff;
 	font:13px Arial, Helvetica, sans-serif;
@@ -2117,25 +2108,22 @@ nav.navigation3 ul li a.active img.normal_icon, nav.navigation3 ul li.current a 
     padding: 5px;
     position: relative;
     text-decoration: none;
-	 margin-top: 10px;
+	 margin-top: 7px;
 }
 .listing_text p a.MCtooltip span, .product_detail_text a.MCtooltip span, .list_result figure a.MCtooltip span
 {
-		background: #ababab;
-color: #fff;
-left: 0;
-position: absolute;
-text-align: left;
-top: 24px;
-padding: 10px;
-display: none;
-width: 81%; 
-line-height: 20px;
+	background:#F5F5F5;
+    color: #000000;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 24px;
+    width: 100%;
+	display:none;
 }
 .listing_text p a.MCtooltip:hover span, .product_detail_text a.MCtooltip:hover span, .list_result figure a.MCtooltip:hover span
 {
     display:block;
-    color:#015685;
 }
 .dash{float:right;font-family: verdana;background: #0382B1;color: #fff;margin-left: 1%;font-size: 12px;height: 60px;padding: 15px 10px;}
 
@@ -2359,77 +2347,3 @@ background: -moz-linear-gradient(top , #FB9500, #EB2B0C) repeat scroll 0 0 rgba(
     font-weight: bold;
     text-decoration: underline;
 }
-
-
-/*  2-3-2014 */
-
-div.page > section > section.product_box > article.product_detail > a > img { display:block; margin:0 auto; padding:10px; border:1px solid #ccc;}
-
-
-/*  RELATED SEARCH  */
-
-.rsearch {display:block; overflow:hidden; background:#fff; box-shadow:0px 5px 10px 6px #ccc; margin:30px 0 0px 0px; position:relative; width:100%;border-radius:5px;}
-.left_photo{display:block; overflow:hidden; float:left; width:130px;}
-.left_photo img {margin:30px 0px 0px 20px;}
-.right_content { display:block; overflow:hidden; float:left; margin-left:20px; width:75%; }
-
-.right_content h4 a{color:#0382B1; text-decoration:none; margin:30px 0 10px 0; display:block; font-size:16px; width:420px;}
-.right_content p{font-size:13px; display:block; margin-bottom:10px;}
-.price {display: block; color: #000;font-size: 14px;position: absolute;top: 0;right: 0px; }
-.bottom {display: block;width: 95%;overflow: hidden;padding: 10px;float: right; }
-.bottom span {font-size:13px;color:#0382B1; margin-bottom:10px; display:block; float:right; margin-left:30px;   margin:10px 0 10px 10px;}
-.bottom span a {font-size:13px;color:#0382B1; margin-bottom:10px; display:block; float:right; margin-left:30px;   margin:0;}
-
-a.rate {color:#fff!important;}
- a.MCtooltip
-{
-	background: none repeat scroll 0 0 #74AFC5;
-    color: #FFFFFF!important;
-    display: inline-block;
-    font-family: arial;
-    font-size: 12px;
-    padding: 5px;
-    position: relative;
-    text-decoration: none;
-	 
-}
-a.MCtooltip span
-{
-	background: #ababab;
-color: #fff!important;
-left: 0;
-position: absolute;
-text-align: left;
-top: 24px;
-padding: 10px;
-display: none;
-width: 100%; 
-line-height: 20px;
-}
-a.MCtooltip:hover span
-{
-    display:block;
-     
-}
-.views {border: 1px solid #666;
-        border-radius:5px;
-padding: 5px;
-
-font-weight:bold;
-width: 80px;}
-
-#wrapper_voting_plugin 
-{
-    border-radius:5px;
-margin-top: 10px;
-padding: 5px;
-width:330px;
-border: 1px solid #666;
-margin-bottom: 10px;}
-.btn {
-    text-decoration: none;
-    color:#015685;
-}
-li.contact_button{ color:#015685; width: 290px;
-font-size: 13px;
-margin-top: 10px;}
