@@ -196,13 +196,7 @@ jQuery('#yourName').attr('placeholder','Name');
 				
             	<li><a href="#login_register"><img src="<?php echo osc_current_web_theme_url('images/register_icon.png')?>" alt="Home_icon" class="active_icon" /><img src="<?php echo osc_current_web_theme_url('images/register_icon_normal.png')?>" alt="Home_icon" class="normal_icon" /><p><?php _e("Register", 'isha') ; ?></p></a></li>
 				  <?php } else{ ?>
-				  
-           	<li class="publish_ad"><a class="no-link" href="#login_register"><img src="<?php echo osc_current_web_theme_url('images/publish-icon.png')?>" alt="Home_icon" class="active_icon" /><img src="<?php echo osc_current_web_theme_url('images/publish-icon-normal.png')?>" alt="Home_icon" class="normal_icon" /><p><?php _e("Publish your ad", 'isha');?></p></a></li>
-				  
-				  <!--
             <li class="publish_ad"><a class="no-link" href="<?php echo osc_item_post_url_in_category() ; ?>"><img src="<?php echo osc_current_web_theme_url('images/publish-icon.png')?>" alt="Home_icon" class="active_icon" /><img src="<?php echo osc_current_web_theme_url('images/publish-icon-normal.png')?>" alt="Home_icon" class="normal_icon" /><p><?php _e("Publish your ad", 'isha');?></p></a></li>
-			-->
-			
 			<?php }?>
            
             </ul> 
@@ -271,14 +265,9 @@ jQuery('#yourName').attr('placeholder','Name');
 	</div>
 	<?php osc_run_hook('product');?>
 	
-	<?php if( osc_users_enabled() ) { ?>
-       <?php if( !osc_is_web_user_logged_in() ) { ?>
-	       <?php osc_run_hook('login-content');
-	        }
-			else
-			{
-			 osc_run_hook('item-add'); 
-			}
-		}?>
+			  <?php if( osc_users_enabled() ) { ?>
+            <?php if( !osc_is_web_user_logged_in() ) { ?>
+	<?php osc_run_hook('login-content');
+	}}?>
 	
 	<?php osc_run_hook('contact-content');?>
