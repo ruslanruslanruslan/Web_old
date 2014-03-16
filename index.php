@@ -9,8 +9,6 @@ Author: playandbay team
 Author URI: http://playandbay.com
 Widgets: header,footer
 Theme update URI: -
-
-you make some changes and save them
 */
 
     function twitter_theme_info() {
