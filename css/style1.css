@@ -1,0 +1,178 @@
+@charset "utf-8";
+/* CSS Document */
+li{list-style:none;}
+body{font-family:Arial, Helvetica, sans-serif;}
+header {
+    background: none repeat scroll 0 0 #EEF2F3;
+    border-bottom: 1px solid #CCCCCC;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.clear{clear:both;}
+.logo { float: left; padding:15px 0px 15px 0px;}
+
+.service_area {background: url("../images/welcome_back.png") 0 0 rgba(0, 0, 0, 0);}
+.result_outer { padding-top: 90px;}
+.top_left_slider{display:block; overflow:hidden; border-radius:3px; border:solid 1px #CCCCCC; background:#FFF; padding:3px;}
+.top_right_slider{display:block; overflow:hidden; border-radius:5px; border:solid 1px #CCCCCC; background:#FFF; padding:5px;}
+.boss_chromatic{display:block; overflow:hidden; padding:10px 0;}
+.conten_left_slider{display:block; overflow:hidden; border-radius:5px; border:solid 1px #CCCCCC; background:#FFF; padding:8px;}
+.conten_right_slider{display:block; overflow:hidden; border-radius:5px; border:solid 1px #CCCCCC; background:#FBFBFB; padding:8px;}
+.mark_full_width{display:block; padding:5px; width:98%;}
+.span4 .conten_right_slider h3{font-weight:normal; }
+.span4 .conten_right_slider h4{font-weight:normal; }
+.botton_divbox{display:block; overflow:hidden; background:#349AD1; color:#FFF; font-size:12px; font-weight:bold; padding:5px 10px; border:solid 3px #FFF; float:left;box-shadow: 0 0 0 1px #FFF;margin: 2px; transition: all 0.1s ease-in 0s;}
+.botton_divbox_sher{display:block; overflow:hidden; background:#F88B6C; color:#FFF; font-size:12px; font-weight:bold; padding:5px 20px; border:solid 3px #FFF; float:left;box-shadow: 0 0 0 1px #FFF;margin: 2px; transition: all 0.1s ease-in 0s;}
+.botton_divbox:hover{box-shadow: 0 0 0 1px #349AD1; cursor:pointer; transition: all 0.1s ease-in 0s;}
+.botton_divbox_sher:hover{box-shadow: 0 0 0 1px #F88B6C; cursor:pointer; transition: all 0.1s ease-in 0s;}
+.botton_box_publi{display:block; overflow:hidden; padding:10px 0;}
+.botton_box_publi_innar_menu{position:absolute; display:none; overflow:hidden; background:#FFF; width:100px; padding:10px 20px; border:solid 1px #349AD1; margin:8px 0 0 -14px; }
+.botton_box_publi_innar_menu span:hover{color:#349AD1;}
+.botton_divbox:hover .botton_box_publi_innar_menu{display:block;}
+.botton_box_publi_innar_menu span{color:#333; font-size:14px; float:none; clear:both; width:auto;}
+.description_box{display:block; margin:5px; overflow:auto; border:solid 1px #CCC; height:150px; padding:10px; width:auto;}
+.votes_txt_vote_box{display:block; font-size:15px; color:#333; padding:3px;}
+.votes_txt_vote_box b{font-weight:bold; color:#000;}
+.votes_results_box_star{float:left; padding:11px; background:url(../images/star_icon.png) top center no-repeat;}
+.votes_results_box span{float:left; font-size:16px; color:#000;  font-weight: bold; padding: 3px 5px;}
+.votes_results_box{width:auto; display:block; overflow:hidden;}
+.votes_results_box_star:hover{background-position:bottom center;}
+.votes_results_box_star2{float:left; padding:11px; background:url(../images/star_icon.png) bottom center no-repeat;}
+/* listing box   */
+.listing_div_manbox{display:block; overflow:hidden;}
+.relatedlistings_box{background:#FFF; overflow:hidden; display:block; padding:10px 0;box-shadow: inset -1px 3px 5px -3px #000; margin:10px 0 0 0;}
+.list_result_box{display:block; padding:10px; overflow:hidden; border:solid 1px #0068A6; box-shadow:0 0 2px #0068A6;  margin: 0 0 20px 0px;}
+.list_result_boximagebox{display:block; width:25%; float:left; vertical-align:middle; text-align:center;}
+.riadmore_bottom{float:right; color:#2C8BBB; font-size:15px;}
+.list_result_box h5{color:#2C8BBB;}
+.mctooltip_box{display:block; border:solid 1px #C1C5C6; overflow:hidden; clear:both; width:auto;
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top, #ffffff 0%, #f4f4f4 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f4f4f4)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #ffffff 0%,#f4f4f4 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #ffffff 0%,#f4f4f4 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #ffffff 0%,#f4f4f4 100%); /* IE10+ */
+background: linear-gradient(to bottom, #ffffff 0%,#f4f4f4 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
+}	
+.mctooltip_box span{border-right:solid 1px #C1C5C6; padding:6px 10px; display:block; float:left;font-size: 12px; }
+.mctooltip_box span select{border:none; background:none; width:auto; padding:0; margin:0; height:auto;}
+.mctooltip_box .florida_right_bor{width:185px; border:none; height:20px;}
+.listinr_next_pre_buttondi{display:block; overflow:hidden; width:auto;}
+.listinr_next_pre_button ul li{display:block;float:left; margin:5px 0 5px 5px; }
+.listinr_next_pre_button ul li a{border:solid 1px #CCCCCC;font-size:15px; font-weight:bold; padding:3px 10px;color:#000; background:#EEF2F3; text-decoration:none;}
+.listinr_next_pre_button ul li a:hover{background:#2C8BBC;border:solid 1px #1D597A; color:#FFF;}
+
+.comments_manbox{display:block; background:url(../images/Comments_bg_img.jpg) center top; border-top:solid 1px #E2E2E2; padding:10px 0;}
+.contect_form_box{display:block; overflow:hidden; padding:0; margin:0;}
+.contect_form_input{display:block; padding:5px; border:solid 1px #CCCCCC; width:29%}
+form  .contect_form_mar{margin:0  9px 0 0}
+form  .contect_form_textarea{width:61%; float:none; clear:both; min-height:120px; margin:10px 0;}
+.submit_botton_div{display:block; overflow:hidden; background:#F88B6C; color:#FFF; font-size:12px; font-weight:bold; padding:5px 20px; border:solid 3px #DAE8F2; float:none;box-shadow: 0 0 0 1px #DAE8F2;margin: 2px; transition: all 0.1s ease-in 0s; clear:both; margin:10px 3px 3px 3px;}
+.submit_botton_div:hover{box-shadow: 0 0 0 1px #F88B6C; cursor:pointer; transition: all 0.1s ease-in 0s;}
+/*   slider css  */
+
+.nivoSlider {
+	position:relative;
+	width:100%;
+	height:auto;
+	overflow: hidden;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	max-width: none;
+}
+.nivo-main-image {
+	display: block !important;
+	position: relative !important; 
+	width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+	background:white; 
+	filter:alpha(opacity=0); 
+	opacity:0;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+	top:0;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+	overflow:hidden;
+}
+.nivo-box img { display:block; }
+
+/* Caption styles */
+.nivo-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	width:100%;
+	z-index:8;
+	padding: 5px 10px;
+	opacity: 0.8;
+	overflow: hidden;
+	display: none;
+	-moz-opacity: 0.8;
+	filter:alpha(opacity=8);
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.nivo-caption p {
+	padding:5px;
+	margin:0;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0px;
+}
+.nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav {
+	text-align:center;
+	padding: 15px 0;
+}
+.nivo-controlNav a {
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
