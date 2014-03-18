@@ -30,5 +30,4 @@
                         <?php } ?>
                     </span>
                 <?php } ?>
-
     </article>
