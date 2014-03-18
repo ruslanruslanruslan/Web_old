@@ -55,6 +55,7 @@
         <?php
         if( osc_count_item_resources() > 0 ) {
             $i = 0;
+            
         ?>
 			<article class="product_detail">
             	<a href="<?php echo osc_resource_url(); ?>" class="main-photo" rel="image_group" title="<?php _e('Image', 'bender'); ?> <?php echo $i+1;?> / <?php echo osc_count_item_resources();?>">
