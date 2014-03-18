@@ -98,8 +98,8 @@
               </h2>
           </div>
           <div class="divqrcode">
-            <!--<img src="/playandbay/oc-content/themes/isha/images/qrcode.jpg" />-->
-            <?php show_qrcode(); ?>
+            <img src="/playandbay/oc-content/themes/isha/images/qrcode.jpg" />
+            <!--<?php show_qrcode(); ?>-->
           </div>
           <div class="clear"></div>
           <?php if( osc_price_enabled_at_items() ) { ?>
