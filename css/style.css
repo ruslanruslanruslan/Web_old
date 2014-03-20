@@ -930,7 +930,7 @@ ul.nav li{
 .product_detail_text h2
 {
 	color: #999;
-	padding:20px 0;
+	padding:10px 0;
     font: 12px/20px Verdana,Geneva,sans-serif;
     width:380px;
 }
@@ -2573,6 +2573,34 @@ background: url('../images/subscribe-online-shopping-close.png') no-repeat;
 background-position: 0px 0px;
 float: right;
 }
+.sub_email {
+color: #999;
+border: solid 4px #DDD;
+border-radius: 4px 4px 4px 4px;
+font-size: 12px;
+height: 34px;
+margin-right: 5px;
+outline: medium none;
+padding: 0 0 0 7px;
+width: 357px;
+box-shadow: none;
+text-align: left;
+}
+
+#un {
+color: #999;
+border: solid 4px #DDD;
+border-radius: 4px 4px 4px 4px;
+font-size: 12px;
+height: 34px;
+margin-right: 5px;
+outline: medium none;
+padding: 0 0 0 7px;
+width: 357px;
+box-shadow: none;
+text-align: left;
+}
+
 #sub_email {
 color: #999;
 border: solid 4px #DDD;
@@ -2584,8 +2612,40 @@ outline: medium none;
 padding: 0 0 0 7px;
 width: 357px;
 box-shadow: none;
-text-align: center;
+text-align: left;
 }
+
+
+
+#pwd {
+color: #999;
+border: solid 4px #DDD;
+border-radius: 4px 4px 4px 4px;
+font-size: 12px;
+height: 34px;
+margin-right: 5px;
+outline: medium none;
+padding: 0 0 0 7px;
+width: 357px;
+box-shadow: none;
+text-align: left;
+}
+
+#confpwd {
+color: #999;
+border: solid 4px #DDD;
+border-radius: 4px 4px 4px 4px;
+font-size: 12px;
+height: 34px;
+margin-right: 5px;
+outline: medium none;
+padding: 0 0 0 7px;
+width: 357px;
+box-shadow: none;
+text-align: left;
+}
+
+
 
 .new_popup_submit_button {
 background-image: url(../images/new_popup_submit.png);
