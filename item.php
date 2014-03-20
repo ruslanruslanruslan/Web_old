@@ -57,16 +57,18 @@
             $i = 0;
         ?>
       <article class="product_detail">
-        <a href="<?php echo osc_resource_url(); ?>" class="main-photo" rel="image_group" title="<?php _e('Image', 'bender'); ?> <?php echo $i+1;?> / <?php echo osc_count_item_resources();?>">
+        <a href=""
+          <?php echo osc_resource_url(); ?>" class="main-photo" rel="image_group" title="<?php _e('Image', 'bender'); ?> <?php echo $i+1;?> / <?php echo osc_count_item_resources();?>">
           <!--<img src=""<?php echo osc_resource_url(); ?>" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>" />-->
-          <img src="<?php echo osc_resource_url(); ?>" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>" />
+          <img src=""<?php echo osc_resource_url(); ?>" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>" />
 
         </a>
         <ul>
           <?php for ( $i = 0; osc_has_item_resources(); $i++ ) { ?>
           <li>
-            <a href="<?php echo osc_resource_url(); ?>" rel="image_group" title="<?php _e('Image', 'bender'); ?> <?php echo $i+1;?> / <?php echo osc_count_item_resources();?>">
-              <img src="<?php echo osc_resource_thumbnail_url(); ?>" width="75" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>" />
+            <a href=""
+              <?php echo osc_resource_url(); ?>" rel="image_group" title="<?php _e('Image', 'bender'); ?> <?php echo $i+1;?> / <?php echo osc_count_item_resources();?>">
+              <img src=""<?php echo osc_resource_thumbnail_url(); ?>" width="75" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>" />
             </a>
           </li>
           <?php } ?>
@@ -286,7 +288,7 @@
               <div class="botton_div1">
                 <a href="#">Submit</a>
               </div>
-         </form>
+            </form>
       </div>
     </div>
   </div>
@@ -305,11 +307,11 @@
         <div class="clear"></div>
 
 
-        <div style="font-weight:700!important;font-size:18px;width:90%;margin:0 auto;color:#555;padding-bottom:10px;margin-top: -10px;">
+        <!--<div style="font-weight:700!important;font-size:18px;width:90%;margin:0 auto;color:#555;padding-bottom:10px;margin-top: -10px;">
           Now shipping to <span style="color:#61BA46">India</span>
         </div>
         <div style="font-weight:100!important;font-size:12px;width:90%;margin:0 auto;color:#555;padding-bottom:10px;border-bottom:solid 1px #eee;margin-bottom:20px;">
-          Fast Shipping. Low Shipping Rates.<br>Secure Checkout. 14-Day Returns</div>
+          Fast Shipping. Low Shipping Rates.<br>Secure Checkout. 14-Day Returns</div>-->
         <div class="jpsubscribe_title" style="padding:0px;">
           <div style="padding:10px;height:42px;">
             <h1>Sign up and Save!</h1>
@@ -320,16 +322,20 @@
         <form action="" method="post" name="login_form" onsubmit="return false;">
           <div style="padding:0 10px;">
             <div style="width:275px;margin:0 auto;">
-              <p style="font-size:14px;font-weight:700 !important:color:#555;">Receive email-only deals, special offers, product exclusives, contests, news &amp;more!</p>
+              <p style="font-size:14px;font-weight:700 !important:color:#555;"><!--Receive email-only deals, special offers, product exclusives, contests, news &amp;more!-->Register for Play and Bay
+              </p>
             </div>
             <div class="clear"></div>
 
             <div>
-              <input id="sub_email" type="text" name="sub_email" style="color: rgb(204, 204, 204); font-weight: normal;" value="" autocomplete="off">
+              <input id="un" type="text" name="un" style="color: #999;border: solid 4px #DDD;border-radius: 4px 4px 4px 4px;font-size: 12px;height: 34px;margin-right: 5px;outline: medium none;padding: 0 0 0 7px;width: 357px;box-shadow: none;text-align: left; margin:10px 0;" placeholder="UserName" value="" autocomplete="off"></input>
+              <input id="sub_email" type="text" name="sub_email" style="color: #999;border: solid 4px #DDD;border-radius: 4px 4px 4px 4px;font-size: 12px;height: 34px;margin-right: 5px;outline: medium none;padding: 0 0 0 7px;width: 357px;box-shadow: none;text-align: left; margin:10px 0;" placeholder="Email" value="" autocomplete="off"></input>
+              <input id="pwd" type="text" name="pwd" style="color: #999;border: solid 4px #DDD;border-radius: 4px 4px 4px 4px;font-size: 12px;height: 34px;margin-right: 5px;outline: medium none;padding: 0 0 0 7px;width: 357px;box-shadow: none;text-align: left; margin:10px 0;" placeholder="Password" value="" autocomplete="off"></input>
+              <input id="confpwd" type="text" name="confpwd" style="color: #999;border: solid 4px #DDD;border-radius: 4px 4px 4px 4px;font-size: 12px;height: 34px;margin-right: 5px;outline: medium none;padding: 0 0 0 7px;width: 357px;box-shadow: none;text-align: left; margin:10px 0;" placeholder="Confirm Passwor" value="" autocomplete="off"></input>
 
-                <div class="new_popup_submit_button" onclick="$(this).getForm().sendRequest('on_action',{update: {'mailchimp_subscribe_form':'jp_newsletter_popup'}, onAfterUpdate: function() {_gaq.push(['_trackEvent', 'Subscription', 'Emails', 'Newletter PopUp']);}})" href="javascript:void(0)"></div>
-                <div class="clear" style="height:20px;"></div>
-              </div>
+                      <div class="new_popup_submit_button" onclick="$(this).getForm().sendRequest('on_action',{update: {'mailchimp_subscribe_form':'jp_newsletter_popup'}, onAfterUpdate: function() {_gaq.push(['_trackEvent', 'Subscription', 'Emails', 'Newletter PopUp']);}})" href="javascript:void(0)"></div>
+                      <div class="clear" style="height:20px;"></div>
+                    </div>
             <input type="hidden" name="redirect" value="http://jadopado.com/product/JP00005719/apple-iphone-5c-32gb-white">
     </div>
 
