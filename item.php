@@ -293,7 +293,7 @@
 </div>
 
 
-<!--<?php osc_current_web_theme_path('footer.php') ; ?>-->
+<?php osc_current_web_theme_path('footer.php') ; ?>
 <div id="jp_popup_wrap" style="display: none;"></div>
 <div id="jp_popup" style="margin-left: -225px; display: none;">
 
