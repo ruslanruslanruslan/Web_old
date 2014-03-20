@@ -96,17 +96,19 @@
                 </b> <?php echo implode(', ', $location); ?>:
 
               </h2>
+            <br/>
+            <?php if( osc_price_enabled_at_items() ) { ?>
+            <?php bender_draw_dropdown(); ?>
+            <?php } ?>
+
+            <?php if(osc_is_web_user_logged_in() && osc_logged_user_id()==osc_item_user_id()) { ?>
           </div>
           <div class="divqrcode">
             <!--<img src="/playandbay/oc-content/themes/isha/images/qrcode.jpg" />-->
             <?php show_qrcode(); ?>
           </div>
           <div class="clear"></div>
-          <?php if( osc_price_enabled_at_items() ) { ?>
-          <?php bender_draw_dropdown(); ?>
-          <?php } ?>
-
-          <?php if(osc_is_web_user_logged_in() && osc_logged_user_id()==osc_item_user_id()) { ?>
+         
           <p id="edit_item_view">
             <strong>
               <a href=""
