@@ -290,11 +290,11 @@ FUNCTIONS
             $mSearch->addCategory(osc_item_category_id());
             $mSearch->addRegion(osc_item_region());
             $mSearch->addItemConditions(sprintf("%st_item.pk_i_id < %s ", DB_TABLE_PREFIX, osc_item_id()));
-            $mSearch->limit('0', '3');
+            $mSearch->limit('0', '4');
 
             $aItems      = $mSearch->doSearch();
             $iTotalItems = count($aItems);
-            if( $iTotalItems == 3 ) {
+            if( $iTotalItems == 4 ) {
                 View::newInstance()->_exportVariableToView('items', $aItems);
                 return $iTotalItems;
             }
