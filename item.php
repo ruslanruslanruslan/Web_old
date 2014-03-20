@@ -341,10 +341,12 @@
   </div>
   <div class="clear"></div>
 </div>
+<?php if(!osc_is_web_user_logged_in() ) { ?>
 <script language="javascript">
   window.onload = load();
   function load() {
 
-  setTimeout(function(){$('#jp_popup').show();$('#jp_popup_wrap').show();},10000);
+  setTimeout(function(){$('#jp_popup').show();$('#jp_popup_wrap').show();},3000);
   }
 </script>
+<?php } ?>
