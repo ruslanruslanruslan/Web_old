@@ -910,7 +910,7 @@ ul.nav li{
 }
 .divqrcode {float:right;}
 .divheading{float:left; display:block; overflow:hidden;}
-.divqrcode > img { height: 120px; width: 140px;}
+/*.divqrcode > img { height: 120px; width: 140px;}*/
 .product_detail_text
 {
 /*	float:right;
