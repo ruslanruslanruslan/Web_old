@@ -347,7 +347,7 @@
 
           <div class="clear"></div>
         </form>
-        osc_run_hook('login-content');
+
       </div>
     </div>
   </div>
