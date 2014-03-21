@@ -297,13 +297,13 @@
 
 <?php osc_current_web_theme_path('footer.php') ; ?>
 <div id="jp_popup_wrap" style="display: none;"></div>
-<div id="jp_popup" style="margin-left: -225px; display: none;">
+<div id="jp_popup" style="margin-left: -275px; display: none;">
 
   <div id="mailchimp_subscribe_form">
-    <div id="mailchimp_subscribe">
+    <div id="mailchimp_subscribe" style="width:600px;">
       <div id="mailchimp_subscribe_content">
 
-        <a id="jpmail_subscribe_close" onclick="$('#jp_popup_wrap').css('display', 'none');$('#jp_popup').css('display', 'none');" href="#"></a>
+        <!--<a id="jpmail_subscribe_close" onclick="$('#jp_popup_wrap').css('display', 'none');$('#jp_popup').css('display', 'none');" href="#"></a>-->
         <div class="clear"></div>
 
 
@@ -328,12 +328,18 @@
             <div class="clear"></div>
 
             <div>
-              <input id="un" type="text" name="un" style="color: #999;border: solid 4px #DDD;border-radius: 4px 4px 4px 4px;font-size: 12px;height: 34px;margin-right: 5px;outline: medium none;padding: 0 0 0 7px;width: 357px;box-shadow: none;text-align: left; margin:10px 0;" placeholder="UserName" value="" autocomplete="off"></input>
-              <input id="sub_email" type="text" name="sub_email" style="color: #999;border: solid 4px #DDD;border-radius: 4px 4px 4px 4px;font-size: 12px;height: 34px;margin-right: 5px;outline: medium none;padding: 0 0 0 7px;width: 357px;box-shadow: none;text-align: left; margin:10px 0;" placeholder="Email" value="" autocomplete="off"></input>
-              <input id="pwd" type="text" name="pwd" style="color: #999;border: solid 4px #DDD;border-radius: 4px 4px 4px 4px;font-size: 12px;height: 34px;margin-right: 5px;outline: medium none;padding: 0 0 0 7px;width: 357px;box-shadow: none;text-align: left; margin:10px 0;" placeholder="Password" value="" autocomplete="off"></input>
-              <input id="confpwd" type="text" name="confpwd" style="color: #999;border: solid 4px #DDD;border-radius: 4px 4px 4px 4px;font-size: 12px;height: 34px;margin-right: 5px;outline: medium none;padding: 0 0 0 7px;width: 357px;box-shadow: none;text-align: left; margin:10px 0;" placeholder="Confirm Passwor" value="" autocomplete="off"></input>
+              <input id="un" type="text" name="un" style="color: #999;border: solid 4px #DDD;border-radius: 4px 4px 4px 4px;font-size: 12px;height: 34px;margin-right: 5px;outline: medium none;padding: 0 0 0 7px;width: 510px;box-shadow: none;text-align: left; margin:10px 0;" placeholder="UserName" value="" autocomplete="off"></input>
+              <input id="sub_email" type="text" name="sub_email" style="color: #999;border: solid 4px #DDD;border-radius: 4px 4px 4px 4px;font-size: 12px;height: 34px;margin-right: 5px;outline: medium none;padding: 0 0 0 7px;width: 510px;box-shadow: none;text-align: left; margin:10px 0;" placeholder="Email" value="" autocomplete="off"></input>
+              <input id="pwd" type="text" name="pwd" style="color: #999;border: solid 4px #DDD;border-radius: 4px 4px 4px 4px;font-size: 12px;height: 34px;margin-right: 5px;outline: medium none;padding: 0 0 0 7px;width: 510px;box-shadow: none;text-align: left; margin:10px 0;" placeholder="Password" value="" autocomplete="off"></input>
+              <input id="confpwd" type="text" name="confpwd" style="color: #999;border: solid 4px #DDD;border-radius: 4px 4px 4px 4px;font-size: 12px;height: 34px;margin-right: 5px;outline: medium none;padding: 0 0 0 7px;width: 510px;box-shadow: none;text-align: left; margin:10px 0;" placeholder="Confirm Password" value="" autocomplete="off"></input>
 
-                      <div class="new_popup_submit_button" onclick="$(this).getForm().sendRequest('on_action',{update: {'mailchimp_subscribe_form':'jp_newsletter_popup'}, onAfterUpdate: function() {_gaq.push(['_trackEvent', 'Subscription', 'Emails', 'Newletter PopUp']);}})" href="javascript:void(0)"></div>
+                      <!--<div class="new_popup_submit_button" onclick="$(this).getForm().sendRequest('on_action',{update: {'mailchimp_subscribe_form':'jp_newsletter_popup'}, onAfterUpdate: function() {_gaq.push(['_trackEvent', 'Subscription', 'Emails', 'Newletter PopUp']);}})" href="javascript:void(0)"></div>-->
+              <div class="botton_div1" style="margin-left:30px; float:left; width:150px; margin-top:10px;">
+                <a href="#">SignUp</a>
+              </div>
+              <div class="botton_div1" style="margin-left:20px; float:left; width:150px; margin-top:10px;">
+                <a href="#">Login</a>
+              </div>
                       <div class="clear" style="height:20px;"></div>
                     </div>
             <input type="hidden" name="redirect" value="http://jadopado.com/product/JP00005719/apple-iphone-5c-32gb-white">
