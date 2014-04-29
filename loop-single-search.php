@@ -90,6 +90,7 @@
   <div class="mctooltip_box">
     <span>7399 руб. </span>
     <span>
+      
       <select name="">
         <option>Other Currencies</option>
         <option>376 EUR</option>
@@ -98,6 +99,7 @@
         <option>521 USD</option>
       </select>
     </span>
+    
     <span class="florida_right_bor">Florida - Feruary 14, 2014</span>
   </div>
 </div>

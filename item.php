@@ -1,4 +1,5 @@
-<?php
+﻿<?php
+
     /*
      *      Osclass – software for creating and publishing online classified
      *                           advertising platforms
@@ -48,6 +49,80 @@
 
     osc_current_web_theme_path('header.php');
 ?>
+<!-- Add fancyBox main JS and CSS files -->
+
+
+<script type="text/javascript" src="http://playandbay.com/betaPlayandBay2/oc-content/themes/isha/fancybox/jquery.fancybox.js?v=2.1.5"></script>
+<link href="http://playandbay.com/betaPlayandBay2/oc-content/themes/isha/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+  $(document).ready(function () {
+  <!--$('.fancybox').fancybox();-->
+  $(".fancybox")
+  .attr('rel', 'gallery')
+  .fancybox({
+  padding : 0
+  });
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+  // For Previus Next slider
+  var imagewidth = '60'; //$j('.visible-area').width();
+  var totalimages = '7';
+  var visibleimages = '3';
+  var sliderwidth = imagewidth * totalimages;
+
+
+  $('.slider').css({ 'width': sliderwidth });
+  //alert(sliderwidth);
+  var count = 0;
+
+  $('.Next').click(function () {
+  // alert('next clicked');
+  if (count < totalimages - visibleimages) {
+                    $('.Next').css({ 'disable': false });
+                    count = count + 1;
+
+                }
+
+                else {
+
+                    $('.Next').css({ 'disable': true });
+                    return false;
+
+                }
+
+                var sliderposition = count * imagewidth;
+                $('.slider').animate({ 'left': -sliderposition }, 1000);
+                return false;
+            });
+
+            $('.Prev').click(function () {
+
+                if (count >= 1)
+                { count = count - 1; }
+
+                var sliderposition = count * imagewidth;
+                $('.slider').animate({ 'left': -sliderposition }, 1000);
+                return false;
+            });
+
+        });
+
+
+
+</script>
+<!--<script type="text/javascript">
+  $(document).ready(function () {
+  $('.MCtooltip').closest("span").hide();
+  $('.MCtooltip').hover(function () {
+  //$(this).closest("span").show('slow');
+  
+  $(this).parent().nextAll("span").slideToggle("slow");
+  });
+  });
+</script>-->
 <div class="page">
   <section class="wrapper result_outer">
     <section class="product_box">
@@ -57,23 +132,39 @@
             $i = 0;
         ?>
       <article class="product_detail">
-        <a href=""
-          <?php echo osc_resource_url(); ?>" class="main-photo" rel="image_group" title="<?php _e('Image', 'bender'); ?> <?php echo $i+1;?> / <?php echo osc_count_item_resources();?>">
+        <a href="<?php echo osc_resource_url(); ?>" class="main-photo fancybox" rel="image_group" title="<?php _e('Image', 'bender'); ?> <?php echo $i+1;?> / <?php echo osc_count_item_resources();?>">
           <!--<img src=""<?php echo osc_resource_url(); ?>" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>" />-->
-          <img src=""<?php echo osc_resource_url(); ?>" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>" />
-
+          <img src="<?php echo osc_resource_preview_url(); ?>" alt="<?php echo osc_item_title(); ?>"   title="<?php echo osc_item_title(); ?>" id="headimg" />
         </a>
-        <ul>
-          <?php for ( $i = 0; osc_has_item_resources(); $i++ ) { ?>
-          <li>
-            <a href=""
-              <?php echo osc_resource_url(); ?>" rel="image_group" title="<?php _e('Image', 'bender'); ?> <?php echo $i+1;?> / <?php echo osc_count_item_resources();?>">
-              <img src=""<?php echo osc_resource_thumbnail_url(); ?>" width="75" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>" />
-            </a>
-          </li>
+        <?php if(osc_count_item_resources() > 5) { ?>
+        <div>
+          <a class="Prev" href="#"></a>
+        </div>
+        <?php } ?>
+        <?php if(osc_count_item_resources() > 5) { ?>
+        <div class="visible-area" style="width:180px">
+          <?php } else {?>
+          <div class="visible-area" style="width:310px">
+            <?php } ?>
+
+            <ul class="slider">
+              <?php for ( $i = 0; osc_has_item_resources(); $i++ ) { ?>
+              <li>
+                <a  class="fancybox" href=""
+                  <?php echo osc_resource_url(); ?>"  data-fancybox-group="gallery" rel="image_group" title="<?php _e('Image', 'bender'); ?> <?php echo $i+1;?> / <?php echo osc_count_item_resources();?>">
+                  <!--<img id="<?php echo osc_resource_thumbnail_url(); ?>" src="<?php echo osc_resource_thumbnail_url(); ?>" width="75" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>"  class="fancybox"  data-fancybox-group="gallery" />-->
+                  <img id=""<?php echo osc_resource_url(); ?>" src="<?php echo osc_resource_thumbnail_url(); ?>"  alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>"   data-fancybox-group="gallery"/>
+                </a>
+              </li>
+              <?php } ?>
+            </ul>
+          </div>
+          <?php if(osc_count_item_resources() > 5) { ?>
+          <div>
+            <a class="Next" href="#"></a>
+          </div>
           <?php } ?>
-        </ul>
-      </article>
+        </article>
       <?php }}?>
       <div class="top_right_slider theme-default">
         <div id="slider" class="nivoSlider">
@@ -98,15 +189,18 @@
                 </b> <?php echo implode(', ', $location); ?>:
 
               </h2>
+
+            <?php if( osc_price_enabled_at_items() ) { ?>
+            <?php bender_draw_dropdown(); ?>
+            <?php } ?>
+
           </div>
           <div class="divqrcode">
-            <!--<img src="/playandbay/oc-content/themes/isha/images/qrcode.jpg" />-->
+
             <?php show_qrcode(); ?>
           </div>
           <div class="clear"></div>
-          <?php if( osc_price_enabled_at_items() ) { ?>
-          <?php bender_draw_dropdown(); ?>
-          <?php } ?>
+
 
           <?php if(osc_is_web_user_logged_in() && osc_logged_user_id()==osc_item_user_id()) { ?>
           <p id="edit_item_view">
@@ -157,7 +251,9 @@
             <?php     if(osc_reg_user_can_contact() && osc_is_web_user_logged_in() || !osc_reg_user_can_contact() ) { ?>
             <a href="#contact" class="ui-button ui-button-middle ui-button-main resp-toogle">
               <?php _e('Contact seller', 'bender'); ?>
+
             </a>
+            <!--<?php osclass_pm_link(); ?>-->
             <?php     } ?>
             <?php     } ?>
             <?php } ?>
@@ -319,46 +415,198 @@
         </div>
 
         <div class="clear"></div>
-        <form action="" method="post" name="login_form" onsubmit="return false;">
-          <div style="padding:0 10px;">
+        <div class="resp-wrapper newregister">
+          <form name="register" action="<?php echo osc_base_url(true); ?>" method="post" >
             <div style="width:275px;margin:0 auto;">
-              <p style="font-size:14px;font-weight:700 !important:color:#555;"><!--Receive email-only deals, special offers, product exclusives, contests, news &amp;more!-->Register for Play and Bay
+              <p style="font-size:14px;font-weight:700 !important:color:#555;">
+                Receive email-only deals, special offers, product exclusives, contests, news &amp;more!
+                Register for Play and Bay
               </p>
             </div>
-            <div class="clear"></div>
-
-            <div>
-              <input id="un" type="text" name="un" style="color: #999;border: solid 4px #DDD;border-radius: 4px 4px 4px 4px;font-size: 12px;height: 34px;margin-right: 5px;outline: medium none;padding: 0 0 0 7px;width: 510px;box-shadow: none;text-align: left; margin:10px 0;" placeholder="UserName" value="" autocomplete="off"></input>
-              <input id="sub_email" type="text" name="sub_email" style="color: #999;border: solid 4px #DDD;border-radius: 4px 4px 4px 4px;font-size: 12px;height: 34px;margin-right: 5px;outline: medium none;padding: 0 0 0 7px;width: 510px;box-shadow: none;text-align: left; margin:10px 0;" placeholder="Email" value="" autocomplete="off"></input>
-              <input id="pwd" type="text" name="pwd" style="color: #999;border: solid 4px #DDD;border-radius: 4px 4px 4px 4px;font-size: 12px;height: 34px;margin-right: 5px;outline: medium none;padding: 0 0 0 7px;width: 510px;box-shadow: none;text-align: left; margin:10px 0;" placeholder="Password" value="" autocomplete="off"></input>
-              <input id="confpwd" type="text" name="confpwd" style="color: #999;border: solid 4px #DDD;border-radius: 4px 4px 4px 4px;font-size: 12px;height: 34px;margin-right: 5px;outline: medium none;padding: 0 0 0 7px;width: 510px;box-shadow: none;text-align: left; margin:10px 0;" placeholder="Confirm Password" value="" autocomplete="off"></input>
-
-                      <!--<div class="new_popup_submit_button" onclick="$(this).getForm().sendRequest('on_action',{update: {'mailchimp_subscribe_form':'jp_newsletter_popup'}, onAfterUpdate: function() {_gaq.push(['_trackEvent', 'Subscription', 'Emails', 'Newletter PopUp']);}})" href="javascript:void(0)"></div>-->
-              <div class="botton_div1" style="margin-left:30px; float:left; width:150px; margin-top:10px;">
-                <a href="#">SignUp</a>
+            <input type="hidden" name="page" value="register" />
+            <input type="hidden" name="action" value="register_post" />
+            <ul id="error_list"></ul>
+            <div class="control-group">
+              <!--<label class="control-label" for="name">
+                <?php _e('Name', 'bender'); ?>
+              </label>-->
+              <div class="controls">
+               
+                   <?php UserForm::name_text(); ?>
+               
               </div>
-              <div class="botton_div1" style="margin-left:20px; float:left; width:150px; margin-top:10px;">
-                <a href="#">Login</a>
+            </div>
+            <div class="control-group">
+              <!--<label class="control-label" for="email">
+                <?php _e('E-mail', 'bender'); ?>
+              </label>-->
+              <div class="controls">
+                <?php UserForm::email_text(); ?>
+                <?php osc_show_recaptcha('register'); ?>
               </div>
-                      <div class="clear" style="height:20px;"></div>
-                    </div>
-            <input type="hidden" name="redirect" value="http://jadopado.com/product/JP00005719/apple-iphone-5c-32gb-white">
-    </div>
-
-          <div class="clear"></div>
-        </form>
-        <?php  osc_run_hook('login-content’); ?>
+            </div>
+            <div class="control-group">
+              <!--<label class="control-label" for="password">
+                <?php _e('Password', 'bender'); ?>
+              </label>-->
+              <div class="controls">
+                <?php UserForm::password_text(); ?>
+              </div>
+            </div>
+            <div class="control-group">
+              <!--<label class="control-label" for="password-2">
+                <?php _e('Repeat password', 'bender'); ?>
+              </label>-->
+              <div class="controls">
+                <?php UserForm::check_password_text(); ?>
+                <p id="password-error" style="display:none;">
+                  <?php _e("Passwords don't match", 'bender'); ?>
+                </p>
+              </div>
+            </div>
+            <?php osc_run_hook('user_register_form'); ?>
+            <div class="control-group control-group1">
+              <div class="controls">
+                <button type="submit" class="ui-button ui-button-middle ui-button-main">
+                  <?php _e("Create", 'bender'); ?>
+                </button>
+                <div class="botton_div1" style="margin-left:30px; float:left; width:150px; margin-top:10px;">
+                  <a href="#" onclick="return openlogin();">Login</a>
+                </div>
+                <div class="clear" style="height:20px;"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <br />
+        <?php  osc_run_hook('login-content'); ?>
       </div>
     </div>
   </div>
   <div class="clear"></div>
 </div>
+
+<!--Login start-->
+<div id="jp_popup_login" style="margin-left: -275px; display: none;">
+
+  <div id="mailchimp_subscribe_form">
+    <div id="mailchimp_subscribe" style="width:600px;">
+      <div id="mailchimp_subscribe_content">
+
+        <!--<a id="jpmail_subscribe_close" onclick="$('#jp_popup_wrap').css('display', 'none');$('#jp_popup').css('display', 'none');" href="#"></a>-->
+        <div class="clear"></div>
+
+
+        <!--<div style="font-weight:700!important;font-size:18px;width:90%;margin:0 auto;color:#555;padding-bottom:10px;margin-top: -10px;">
+          Now shipping to <span style="color:#61BA46">India</span>
+        </div>
+        <div style="font-weight:100!important;font-size:12px;width:90%;margin:0 auto;color:#555;padding-bottom:10px;border-bottom:solid 1px #eee;margin-bottom:20px;">
+          Fast Shipping. Low Shipping Rates.<br>Secure Checkout. 14-Day Returns</div>-->
+        <div class="jpsubscribe_title" style="padding:0px;">
+          <div style="padding:10px;height:42px;">
+            <h1>Login</h1>
+          </div>
+        </div>
+
+        <div class="clear"></div>
+        <div class="resp-wrapper newregister">
+          <form action="<?php echo osc_base_url(true); ?>" method="post" >
+            <input type="hidden" name="page" value="login" />
+            <input type="hidden" name="action" value="login_post" />
+
+            <div class="control-group">
+              <!--<label class="control-label" for="email">
+                <?php _e('E-mail', 'isha'); ?>
+              </label>-->
+              <div class="controls">
+                <?php UserForm::email_login_text(); ?>
+              </div>
+            </div>
+            <div class="control-group">
+              <!--<label class="control-label" for="password">
+                <?php _e('Password', 'isha'); ?>
+              </label>-->
+              <div class="controls">
+                <?php UserForm::password_login_text(); ?>
+              </div>
+            </div>
+            <div class="control-group">
+              <!--<div class="controls checkbox">
+                <?php UserForm::rememberme_login_checkbox();?>
+                <label for="remember">
+                  <?php _e('Remember me', 'isha'); ?>
+                </label>
+              </div>-->
+              <div class="controls">
+                <button type="submit" class="ui-button ui-button-middle ui-button-main">
+                  <?php _e("Log in", 'isha');?>
+                </button>
+                <div class="botton_div1" style="margin-left:30px; float:left; width:150px; margin-top:10px;">
+                  <a href="#" onclick="return openregister();">Create</a>
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <!--<div class="actions">
+              <a href="<?php echo osc_register_account_url(); ?>"><?php _e("Register for a free account", 'isha'); ?>
+              </a>
+              <br />
+              <a href="<?php echo osc_recover_user_password_url(); ?>"><?php _e("Forgot password?", 'isha'); ?>
+              </a>
+            </div>-->
+          </form>
+        </div>
+        <br />
+        <?php  osc_run_hook('login-content'); ?>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<?php UserForm::js_validation(); ?>
+<script  language="javascript">
+  $("#s_name").val("").prop("placeholder","UserName");
+  $("#s_email").val("").prop("placeholder","Email");
+  $("#s_password").val("").prop("placeholder","Password");
+  $("#s_password2").val("").prop("placeholder","Confirm Password");
+
+
+  $("#password").val("").prop("placeholder","Password");
+  $("#email").val("").prop("placeholder","Email");
+
+  function openlogin(){
+
+  $('#jp_popup').hide('slow');
+  $('#jp_popup_login').show('slow');
+
+  return false;
+
+  }
+  function openregister(){
+
+  $('#jp_popup').show('slow');
+  $('#jp_popup_login').hide('slow');
+
+  return false;
+
+  }
+
+
+</script>
 <?php if(!osc_is_web_user_logged_in() ) { ?>
 <script language="javascript">
   window.onload = load();
   function load() {
 
   setTimeout(function(){$('#jp_popup').show();$('#jp_popup_wrap').show();},3000);
+  }
+  function changeimage(x){
+  // alert(x.id);
+  document.getElementById('headimg').src=x.id;
+  return false;
   }
 </script>
 <?php } ?>

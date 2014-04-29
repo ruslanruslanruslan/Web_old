@@ -303,7 +303,7 @@ FUNCTIONS
             $mSearch = new Search();
             $mSearch->addCategory(osc_item_category_id());
             $mSearch->addItemConditions(sprintf("%st_item.pk_i_id != %s ", DB_TABLE_PREFIX, osc_item_id()));
-            $mSearch->limit('0', '4');
+            $mSearch->limit('0', '3');
 
             $aItems = $mSearch->doSearch();
             $iTotalItems = count($aItems);

@@ -23,7 +23,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="<?php echo str_replace('_', '-', osc_current_user_locale()); ?>">
     <head>
 	 <?php osc_current_web_theme_path('common/head.php') ; ?>
-        <?php include_once("analyticstracking.php") ?> 
+	 <?php osc_enqueue_style('style', osc_current_web_theme_url('layout.css')); ?>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -140,7 +140,7 @@ jQuery('#yourName').attr('placeholder','Name');
 	</script> 
     </head>
 <body>
-
+<?php include_once("analyticstracking.php") ?>
 <header>
 	<section class="header_midbox wrapper">
     	<a href="<?php echo osc_base_url(); ?>"><img width="226" src="<?php echo osc_current_web_theme_url('images/logo.png')?>" alt="Logo Here" class="logo"/></a> 

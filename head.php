@@ -44,6 +44,7 @@
 
 <?php
 osc_enqueue_style('style', osc_current_web_theme_url('style.css'));
+osc_enqueue_style('style', osc_current_web_theme_url('layout.css'));
 osc_enqueue_style('tabs', osc_current_web_theme_url('tabs.css'));
 osc_enqueue_style('jquery-ui-datepicker', osc_assets_url('css/jquery-ui/jquery-ui.css'));
 
