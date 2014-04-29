@@ -178,7 +178,7 @@ background:url(../images/welcome_back.png);
 	width:1000px;
 }
 header
-{
+{ top:0;
 	background:#eef2f3;
 	position:fixed;
 	width:100%;

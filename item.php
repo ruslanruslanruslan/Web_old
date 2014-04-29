@@ -486,6 +486,7 @@
   <div class="clear"></div>
 </div>
 
+<<<<<<< HEAD
 <!--Login start-->
 <div id="jp_popup_login" style="margin-left: -275px; display: none;">
 
@@ -560,6 +561,11 @@
         </div>
         <br />
         <?php  osc_run_hook('login-content'); ?>
+=======
+          <div class="clear"></div>
+        </form>
+
+>>>>>>> 2951a6c481ed38be39b4bd6098f61196f14c9365
       </div>
     </div>
   </div>
