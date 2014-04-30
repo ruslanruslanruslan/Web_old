@@ -904,7 +904,8 @@ function contact_content(){?>
     }
 	if( !function_exists('bender_draw_dropdown') ) {
         function bender_draw_dropdown() {
-             echo '<a href="#" class="rate">'.osc_item_formated_price().'</a>';
+             //echo '<a href="#" class="rate">'.osc_item_formated_price().'</a>';
+			 echo '<a class="rate">'.osc_item_formated_price().'</a>';
         }
     }
 	?>
