@@ -407,7 +407,7 @@
           Fast Shipping. Low Shipping Rates.<br>Secure Checkout. 14-Day Returns</div>-->
         <div class="jpsubscribe_title" style="padding:0px;">
           <div style="padding:10px;height:42px;">
-            <h1><?php _e("Please login or sign up", 'Isha'); ?></h1>
+            <h1>Sign up and Save!</h1>
           </div>
         </div>
 
@@ -416,7 +416,8 @@
           <form name="register" action="<?php echo osc_base_url(true); ?>" method="post" >
             <div style="width:275px;margin:0 auto;">
               <p style="font-size:14px;font-weight:700 !important:color:#555;">
-               <?php _e("This is fast registration that will allow you to use most functionality of PlayAndBay", 'Isha'); ?>
+                Receive email-only deals, special offers, product exclusives, contests, news &amp;more!
+                Register for Play and Bay
               </p>
             </div>
             <input type="hidden" name="page" value="register" />
@@ -482,6 +483,7 @@
   <div class="clear"></div>
 </div>
 
+<<<<<<< HEAD
 <!--Login start-->
 <div id="jp_popup_login" style="margin-left: -275px; display: none;">
 
@@ -556,9 +558,11 @@
         </div>
         <br />
         <?php  osc_run_hook('login-content'); ?>
+=======
           <div class="clear"></div>
         </form>
 
+>>>>>>> 2951a6c481ed38be39b4bd6098f61196f14c9365
       </div>
     </div>
   </div>
