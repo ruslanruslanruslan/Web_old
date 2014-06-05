@@ -84,4 +84,5 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$widgetbordercolor\".\A         on line 34 of /Users/feralou/git/public/osclass-themes/bender/sass/item.scss"; }
+ // content: "Syntax error: Undefined variable: \"$widgetbordercolor\".\A         on line 34 of /Users/feralou/git/public/osclass-themes/bender/sass/item.scss"; 
+      }
