@@ -3,10 +3,10 @@
     background-image: image_url($filename + "." + $extension);
   }
   @else {
-    background-image: url($filename + "." + $extension);
+//    background-image: url($filename + "." + $extension);
   }
 
-  @include hidpi {
+//  @include hidpi {
 
     @if $asset-pipeline {
       @if $retina-filename {
@@ -15,16 +15,16 @@
       @else {
         background-image: image_url($filename + "@2x" + "." + $extension);
       }
-    }
+ //   }
 
-    @else {
+ //   @else {
       @if $retina-filename {
-        background-image: url($retina-filename + "." + $extension);
+ //       background-image: url($retina-filename + "." + $extension);
       }
       @else {
-        background-image: url($filename + "@2x" + "." + $extension);
+//        background-image: url($filename + "@2x" + "." + $extension);
       }
-    }
+//    }
 
     background-size: $background-size;
 
