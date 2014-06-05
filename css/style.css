@@ -2670,7 +2670,7 @@ a.MCtooltip:hover span
 }
 .views {
     font-weight:bold;
-    width: 80px;}
+    width: 100%;}
 
 #wrapper_voting_plugin 
 {

@@ -412,17 +412,16 @@ osc_current_web_theme_path('header.php');
                   Fast Shipping. Low Shipping Rates.<br>Secure Checkout. 14-Day Returns</div>-->
                 <div class="jpsubscribe_title" style="padding:0px;">
                     <div style="padding:10px;height:42px;">
-                        <h1>Sign up and Save!</h1>
+                        <h1><?php _e('Welcome to the PlayAndBay!', 'isha'); ?></h1>
                     </div>
                 </div>
 
                 <div class="clear"></div>
                 <div class="resp-wrapper newregister">
                     <form name="register" action="<?php echo osc_base_url(true); ?>" method="post" >
-                        <div style="width:275px;margin:0 auto;">
+                        <div style="width:375px;margin:30 0 0 19%;">
                             <p style="font-size:14px;font-weight:700 !important:color:#555;">
-                                Receive email-only deals, special offers, product exclusives, contests, news &amp;more!
-                                Register for Play and Bay
+                                <?php _e('Please sign up or log in to our portal to use whole capability of PlayAndBay. It is easy, fast and free.', 'isha'); ?>
                             </p>
                         </div>
                         <input type="hidden" name="page" value="register" />
@@ -473,7 +472,7 @@ osc_current_web_theme_path('header.php');
                                     <?php _e("Create", 'isha'); ?>
                                 </button>
                                 <div class="botton_div1" style="margin-left:30px; float:left; width:150px; margin-top:10px;">
-                                    <a href="#" onclick="return openlogin();">Login</a>
+                                    <a href="#" onclick="return openlogin();"><?php _e('Login', 'isha'); ?></a>
                                 </div>
                                 <div class="clear" style="height:20px;"></div>
                             </div>
@@ -506,7 +505,7 @@ osc_current_web_theme_path('header.php');
                   Fast Shipping. Low Shipping Rates.<br>Secure Checkout. 14-Day Returns</div>-->
                 <div class="jpsubscribe_title" style="padding:0px;">
                     <div style="padding:10px;height:42px;">
-                        <h1>Login</h1>
+                        <h1><?php _e("Login", 'isha'); ?></h1>
                     </div>
                 </div>
 
@@ -544,7 +543,7 @@ osc_current_web_theme_path('header.php');
                                     <?php _e("Log in", 'isha'); ?>
                                 </button>
                                 <div class="botton_div1" style="margin-left:30px; float:left; width:150px; margin-top:10px;">
-                                    <a href="#" onclick="return openregister();">Create</a>
+                                    <a href="#" onclick="return openregister();"><?php _e("Create", 'isha'); ?></a>
                                 </div>
                             </div>
                         </div>
@@ -606,7 +605,7 @@ osc_current_web_theme_path('header.php');
             setTimeout(function() {
                 $('#jp_popup').show();
                 $('#jp_popup_wrap').show();
-            }, 3000);
+            }, 0000);
         }
         function changeimage(x) {
             // alert(x.id);
