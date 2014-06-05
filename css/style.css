@@ -2752,9 +2752,9 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
                background: linear-gradient(to bottom, #ffffff 0%,#f4f4f4 100%); /* W3C */
                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
 }	
-.mctooltip_box span{border-right:solid 1px #C1C5C6; padding:6px 10px; display:block; float:left;font-size: 12px;  /* height:25px; */ line-height:25px;width: 50%; box-sizing: border-box}
+.mctooltip_box span{border-right:solid 1px #C1C5C6; padding:6px 10px; display:block; float:left;font-size: 12px;  /* height:25px; */ line-height:25px; box-sizing: border-box}
 .mctooltip_box span select{border:none; background:none; width:130px; padding:3px; margin:0; height:auto; border:1px solid #ccc;}
-.mctooltip_box .florida_right_bor{text-align: center; border:none; height:47px; line-height: 18px;}
+.mctooltip_box .florida_right_bor{text-align: center; border:none; height:47px; line-height: 18px; min-width: 46%}
 .mctooltip_box .price_span{padding: 0;}
 .mctooltip_box .price_span .MCtooltip{ padding: 11px 15px; }
 .mctooltip_box .price_span .rate{ padding: 11px 0; text-align: center; width: 106px;}
