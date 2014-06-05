@@ -9,38 +9,38 @@
   @if $original-prefix-for-webkit {
     @include disable-prefix-for-all();
     $prefix-for-webkit: true;
-    @-webkit-keyframes #{$name} {
+//    @-webkit-keyframes #{$name} {
       @content;
-    }
+ //   }
   }
   @if $original-prefix-for-mozilla {
     @include disable-prefix-for-all();
     $prefix-for-mozilla: true;
-    @-moz-keyframes #{$name} {
+//    @-moz-keyframes #{$name} {
       @content;
-    }
+//    }
   }
   @if $original-prefix-for-microsoft {
     @include disable-prefix-for-all();
     $prefix-for-microsoft: true;
-    @-ms-keyframes #{$name} {
+ //   @-ms-keyframes #{$name} {
       @content;
-    }
+ //   }
   }
   @if $original-prefix-for-opera {
     @include disable-prefix-for-all();
     $prefix-for-opera: true;
-    @-o-keyframes #{$name} {
+ //   @-o-keyframes #{$name} {
       @content;
-    }
+ //   }
   }
   @if $original-prefix-for-spec {
     $prefix-for-spec:     true !default;
     @include disable-prefix-for-all();
     $prefix-for-spec: true;
-    @keyframes #{$name} {
+ //   @keyframes #{$name} {
       @content;
-    }
+ //   }
   }
 
   $prefix-for-webkit:    $original-prefix-for-webkit;

@@ -1,24 +1,4 @@
 ﻿<?php
-/*
- *      Osclass – software for creating and publishing online classified
- *                           advertising platforms
- *
- *                        Copyright (C) 2013 OSCLASS
- * 
- *       This program is free software: you can redistribute it and/or
- *     modify it under the terms of the GNU Affero General Public License
- *     as published by the Free Software Foundation, either version 3 of
- *            the License, or (at your option) any later version.
- *
- *     This program is distributed in the hope that it will be useful, but
- *         WITHOUT ANY WARRANTY; without even the implied warranty of
- *        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *             GNU Affero General Public License for more details.
- *
- *      You should have received a copy of the GNU Affero General Public
- * License along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
 // meta tag robots
 osc_add_hook('header', 'bender_follow_construct');
 
@@ -340,7 +320,7 @@ osc_current_web_theme_path('header.php');
                                     <?php } else { ?>
                                         <?php CommentForm::author_input_text(); ?>
                                         <?php CommentForm::email_input_text(); ?>
-                                    <?php }; ?>
+                                    <?php } ?>
                                     <?php CommentForm::body_input_textarea(); ?>
                                     <!-- input type="text" class="contect_form_input contect_form_mar" name="">
                                     <input type="text" class="contect_form_input" name="">
@@ -419,8 +399,8 @@ osc_current_web_theme_path('header.php');
                 <div class="clear"></div>
                 <div class="resp-wrapper newregister">
                     <form name="register" action="<?php echo osc_base_url(true); ?>" method="post" >
-                        <div style="width:375px;margin:30 0 0 19%;">
-                            <p style="font-size:14px;font-weight:700 !important:color:#555;">
+                        <div style="width:375px;margin:30px 0 0 19%;">
+                            <p style="font-size:14px;font-weight:700;">
                                 <?php _e('Please sign up or log in to our portal to use whole capability of PlayAndBay. It is easy, fast and free.', 'isha'); ?>
                             </p>
                         </div>
@@ -613,4 +593,4 @@ osc_current_web_theme_path('header.php');
             return false;
         }
     </script>
-<?php } ?>
+<?php }

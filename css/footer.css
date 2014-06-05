@@ -86,4 +86,5 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$widgetbordercolor\".\A         on line 5 of /Users/feralou/git/public/osclass-themes/bender/sass/footer.scss\A \A 1: /Users/feralou/git/public/osclass-themes/bender/sass/footer.scss"; }
+ // content: "Syntax error: Undefined variable: \"$widgetbordercolor\".\A         on line 5 of /Users/feralou/git/public/osclass-themes/bender/sass/footer.scss\A \A 1: /Users/feralou/git/public/osclass-themes/bender/sass/footer.scss"; 
+      }

@@ -82,4 +82,5 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$widgetbackground\".\A         on line 2 of /Users/feralou/htdocs/osclass/develop/oc-content/themes/bender/sass/user.scss\A \A 1: /Users/feralou/htdocs/osclass/develop/oc-content/themes/bender/sass/user.scss"; }
+ // content: "Syntax error: Undefined variable: \"$widgetbackground\".\A         on line 2 of /Users/feralou/htdocs/osclass/develop/oc-content/themes/bender/sass/user.scss\A \A 1: /Users/feralou/htdocs/osclass/develop/oc-content/themes/bender/sass/user.scss"; 
+      }
