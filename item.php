@@ -134,7 +134,7 @@ osc_current_web_theme_path('header.php');
                     $i = 0;
                     ?>
                     <article class="product_detail">
-                        <a href="<?php echo osc_resource_original_url(); ?>" class="main-photo fancybox" rel="image_group" title="<?php _e('Image', 'bender'); ?> <?php echo $i + 1; ?> / <?php echo osc_count_item_resources(); ?>">
+                        <a href="<?php echo osc_resource_original_url(); ?>" class="main-photo fancybox" rel="image_group" title="<?php _e('Image', 'isha'); ?> <?php echo $i + 1; ?> / <?php echo osc_count_item_resources(); ?>">
                             <img src="<?php echo osc_resource_preview_url(); ?>" alt="<?php echo osc_item_title(); ?>"   title="<?php echo osc_item_title(); ?>" id="headimg" />
                         </a>
                         <?php if (osc_count_item_resources() > 5) { ?>
@@ -151,7 +151,7 @@ osc_current_web_theme_path('header.php');
                                 <ul class="slider">
                                     <?php for ($i = 0; osc_has_item_resources(); $i++) { ?>
                                         <li>
-                                            <a  class="fancybox" href="<?php echo osc_resource_original_url(); ?>"  data-fancybox-group="gallery" rel="image_group" title="<?php _e('Image', 'bender'); ?> <?php echo $i + 1; ?> / <?php echo osc_count_item_resources(); ?>">
+                                            <a  class="fancybox" href="<?php echo osc_resource_original_url(); ?>"  data-fancybox-group="gallery" rel="image_group" title="<?php _e('Image', 'isha'); ?> <?php echo $i + 1; ?> / <?php echo osc_count_item_resources(); ?>">
                                                 <img id="<?php echo osc_resource_original_url(); ?>" src="<?php echo osc_resource_thumbnail_url(); ?>"  alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>"   data-fancybox-group="gallery"/>
                                             </a>
                                         </li>
@@ -185,13 +185,13 @@ osc_current_web_theme_path('header.php');
                         <h2>
                             <?php
                             if (osc_item_pub_date() !== '') {
-                                printf(__('<strong class="publish">Published date</strong>: %1$s', 'bender'), osc_format_date(osc_item_pub_date(), 'F d, Y H:i'));
+                                printf(__('<strong class="publish">Published date</strong>: %1$s', 'isha'), osc_format_date(osc_item_pub_date(), 'F d, Y H:i'));
                             }
                             ?>
                             <br>
 
                             <b>
-                                <?php _e("Location", 'bender'); ?>:
+                                <?php _e("Location", 'isha'); ?>:
                             </b> <?php echo implode(', ', $location); ?>:
 
                         </h2>
@@ -211,7 +211,7 @@ osc_current_web_theme_path('header.php');
                     <?php if (osc_is_web_user_logged_in() && osc_logged_user_id() == osc_item_user_id()) { ?>
                         <p id="edit_item_view">
                             <strong>
-                                <a href="<?php echo osc_item_edit_url(); ?>" rel="nofollow"><?php _e('Edit item', 'bender'); ?>
+                                <a href="<?php echo osc_item_edit_url(); ?>" rel="nofollow"><?php _e('Edit item', 'isha'); ?>
                                 </a>
                             </strong>
                         </p>
@@ -239,19 +239,19 @@ osc_current_web_theme_path('header.php');
                     <?php } ?>
                     <div class="views">
                         <?php echo osc_item_views(); ?>
-                        <?php _e('views', 'bender'); ?>
+                        <?php _e('views', 'isha'); ?>
                     </div>
                     <div class="ratings">
                         <?php osc_run_hook('item_detail', osc_item()); ?>
                         <!--<?php
                         echo osc_item_views();
-                        _e('views', 'bender');
+                        _e('views', 'isha');
                         ?>
-                        <?php _e('views', 'bender'); ?>-->
+                        <?php _e('views', 'isha'); ?>-->
                     </div>
                     <!--<div class="view">
                     <?php echo osc_item_views(); ?>
-                    <?php _e('views', 'bender'); ?>
+                    <?php _e('views', 'isha'); ?>
                   </div>-->
                     <p class="contact_button">
                         <?php if (!osc_item_is_expired()) { ?>
@@ -262,7 +262,7 @@ osc_current_web_theme_path('header.php');
                             <?php } ?>
                         <?php } ?>
                         <?php watchlist(); ?>
-                        <a href="<?php echo osc_item_send_friend_url(); ?>" rel="nofollow" class="ui-button ui-button-middle"><?php _e('Share', 'bender'); ?>
+                        <a href="<?php echo osc_item_send_friend_url(); ?>" rel="nofollow" class="ui-button ui-button-middle"><?php _e('Share', 'isha'); ?>
                         </a>
                     </p>
                     <?php osc_run_hook('location'); ?>
@@ -292,7 +292,7 @@ osc_current_web_theme_path('header.php');
     <section class="related_box">
         <?php if (osc_count_items() > 0) { ?>
             <aside class="related_list">
-                <h1><?php _e('Related listings', 'bender'); ?></h1>
+                <h1><?php _e('Related listings', 'isha'); ?></h1>
                 <?php
                 $i = 0;
                 while (osc_has_items()) {
@@ -322,14 +322,14 @@ osc_current_web_theme_path('header.php');
             <div class="container">
                 <div class="row">
                     <div class="span12">
-                        <h4><?php _e('Comments', 'bender'); ?></h4>
+                        <h4><?php _e('Comments', 'isha'); ?></h4>
                         <ul id="comment_error_list"></ul>
                         <?php CommentForm::js_validation(); ?>
                         <div class="row_cols">
                             <div class="rcol">
-                                <h4>
-                                    <?php _e('Leave your comment (spam and offensive messages will be removed)', 'bender'); ?>
-                                </h4>
+                                <p><font size="1">
+                                    <?php _e('Leave your comment (spam and offensive messages will be removed)', 'isha'); ?>
+                                </p>
                                 <form class="contect_form_box" action="<?php echo osc_base_url(true); ?>" method="post" name="comment_form" id="comment_form">
                                     <input type="hidden" name="action" value="add_comment" />
                                     <input type="hidden" name="page" value="item" />
@@ -349,7 +349,7 @@ osc_current_web_theme_path('header.php');
                                     <div class="clear"></div>
                                     <div class="botton_div1">
                                         <button type="submit">
-                                            <?php _e('Submit', 'bender'); ?>
+                                            <?php _e('Submit', 'isha'); ?>
                                         </button>
                                     </div>
                                 </form>
@@ -363,7 +363,7 @@ osc_current_web_theme_path('header.php');
                                                     <strong>
                                                         <?php echo osc_comment_title(); ?>
                                                     </strong>
-                                                    <?php _e("by", 'bender'); ?> <?php echo osc_comment_author_name(); ?>:
+                                                    <?php _e("by", 'isha'); ?> <?php echo osc_comment_author_name(); ?>:
                                                 </h4>
                                                 <div>
                                                     <p>
@@ -371,7 +371,7 @@ osc_current_web_theme_path('header.php');
                                                     </p>
                                                     <?php if (osc_comment_user_id() && (osc_comment_user_id() == osc_logged_user_id())) { ?>
                                                         <p>
-                                                            <a rel="nofollow" href="<?php echo osc_delete_comment_url(); ?>" title="<?php _e('Delete your comment', 'bender'); ?>"><?php _e('Delete', 'bender'); ?>
+                                                            <a rel="nofollow" href="<?php echo osc_delete_comment_url(); ?>" title="<?php _e('Delete your comment', 'isha'); ?>"><?php _e('Delete', 'isha'); ?>
                                                             </a>
                                                         </p>
                                                     <?php } ?>
@@ -430,7 +430,7 @@ osc_current_web_theme_path('header.php');
                         <ul id="error_list"></ul>
                         <div class="control-group">
                             <!--<label class="control-label" for="name">
-                            <?php _e('Name', 'bender'); ?>
+                            <?php _e('Name', 'isha'); ?>
                             </label>-->
                             <div class="controls">
 
@@ -440,7 +440,7 @@ osc_current_web_theme_path('header.php');
                         </div>
                         <div class="control-group">
                             <!--<label class="control-label" for="email">
-                            <?php _e('E-mail', 'bender'); ?>
+                            <?php _e('E-mail', 'isha'); ?>
                             </label>-->
                             <div class="controls">
                                 <?php UserForm::email_text(); ?>
@@ -449,7 +449,7 @@ osc_current_web_theme_path('header.php');
                         </div>
                         <div class="control-group">
                             <!--<label class="control-label" for="password">
-                            <?php _e('Password', 'bender'); ?>
+                            <?php _e('Password', 'isha'); ?>
                             </label>-->
                             <div class="controls">
                                 <?php UserForm::password_text(); ?>
@@ -457,12 +457,12 @@ osc_current_web_theme_path('header.php');
                         </div>
                         <div class="control-group">
                             <!--<label class="control-label" for="password-2">
-                            <?php _e('Repeat password', 'bender'); ?>
+                            <?php _e('Repeat password', 'isha'); ?>
                             </label>-->
                             <div class="controls">
                                 <?php UserForm::check_password_text(); ?>
                                 <p id="password-error" style="display:none;">
-                                    <?php _e("Passwords don't match", 'bender'); ?>
+                                    <?php _e("Passwords don't match", 'isha'); ?>
                                 </p>
                             </div>
                         </div>
@@ -470,7 +470,7 @@ osc_current_web_theme_path('header.php');
                         <div class="control-group control-group1">
                             <div class="controls">
                                 <button type="submit" class="ui-button ui-button-middle ui-button-main">
-                                    <?php _e("Create", 'bender'); ?>
+                                    <?php _e("Create", 'isha'); ?>
                                 </button>
                                 <div class="botton_div1" style="margin-left:30px; float:left; width:150px; margin-top:10px;">
                                     <a href="#" onclick="return openlogin();">Login</a>
