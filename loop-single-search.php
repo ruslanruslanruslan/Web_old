@@ -55,9 +55,9 @@
         <figure>
           <?php if (osc_images_enabled_at_items()) { ?>
                 <?php if (osc_count_item_resources()) { ?>
-                    <img src="<?php echo osc_resource_thumbnail_url(); ?>" title="" alt="<?php echo osc_item_title(); ?>" width="108" height="110">
+                    <img src="<?php echo osc_resource_thumbnail_url(); ?>" title="" alt="<?php echo osc_item_title(); ?>" width="80" height="80">
                 <?php } else { ?>
-                    <img src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" title="" alt="<?php echo osc_item_title(); ?>" width="108" height="110">
+                    <img src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" title="" alt="<?php echo osc_item_title(); ?>" width="80" height="80">
                 <?php } ?>
             <?php } ?>
 
@@ -67,14 +67,16 @@
         <h4>
             <a href="<?php echo osc_item_url(); ?>" ><?php echo osc_item_title(); ?>(<?php echo osc_item_category(); ?>)</a>
         </h4>
-        <p>
-            <?php echo osc_highlight(strip_tags(osc_item_description()), 250); ?>
-        </p>
         <!--<div class="price">
         <?php bender_draw_dropdown(); ?>
         --><!--1900 yp.--><!--
       </div>-->
     </div>
+	<div class="bottom_content">
+	    <p>
+            <?php echo osc_highlight(strip_tags(osc_item_description()), 244); ?>
+        </p>
+	</div>
     <!--<div class="bottom">
       <span>
     <?php bender_draw_dropdown(); ?>
