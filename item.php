@@ -135,7 +135,6 @@ osc_current_web_theme_path('header.php');
                     ?>
                     <article class="product_detail">
                         <a href="<?php echo osc_resource_original_url(); ?>" class="main-photo fancybox" rel="image_group" title="<?php _e('Image', 'bender'); ?> <?php echo $i + 1; ?> / <?php echo osc_count_item_resources(); ?>">
-                          <!--<img src=""<?php echo osc_resource_url(); ?>" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>" />-->
                             <img src="<?php echo osc_resource_preview_url(); ?>" alt="<?php echo osc_item_title(); ?>"   title="<?php echo osc_item_title(); ?>" id="headimg" />
                         </a>
                         <?php if (osc_count_item_resources() > 5) { ?>
@@ -152,9 +151,8 @@ osc_current_web_theme_path('header.php');
                                 <ul class="slider">
                                     <?php for ($i = 0; osc_has_item_resources(); $i++) { ?>
                                         <li>
-                                            <a  class="fancybox" href="<?php echo osc_resource_url(); ?>"  data-fancybox-group="gallery" rel="image_group" title="<?php _e('Image', 'bender'); ?> <?php echo $i + 1; ?> / <?php echo osc_count_item_resources(); ?>">
-                                              <!--<img id="<?php echo osc_resource_thumbnail_url(); ?>" src="<?php echo osc_resource_thumbnail_url(); ?>" width="75" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>"  class="fancybox"  data-fancybox-group="gallery" />-->
-                                                <img id="<?php echo osc_resource_url(); ?>" src="<?php echo osc_resource_thumbnail_url(); ?>"  alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>"   data-fancybox-group="gallery"/>
+                                            <a  class="fancybox" href="<?php echo osc_resource_original_url(); ?>"  data-fancybox-group="gallery" rel="image_group" title="<?php _e('Image', 'bender'); ?> <?php echo $i + 1; ?> / <?php echo osc_count_item_resources(); ?>">
+                                                <img id="<?php echo osc_resource_original_url(); ?>" src="<?php echo osc_resource_thumbnail_url(); ?>"  alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>"   data-fancybox-group="gallery"/>
                                             </a>
                                         </li>
                                     <?php } ?>
