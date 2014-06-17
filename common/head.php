@@ -6,13 +6,14 @@ $js_lang = array(
 
 osc_enqueue_script('jquery');
 osc_enqueue_script('jquery-ui');
-osc_enqueue_script('jquery.min.js');
+//osc_enqueue_script('jquery.min.js');
 osc_register_script('global-theme-js', osc_current_web_theme_js_url('global.js'), 'jquery');
 osc_register_script('delete-user-js', osc_current_web_theme_js_url('delete_user.js'), 'jquery-ui');
 osc_enqueue_script('global-theme-js');
+osc_enqueue_style('style', osc_current_web_theme_url('layout.css'));
+osc_run_hook('header');
 ?>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-
 <title><?php echo meta_title(); ?></title>
 <meta name="title" content="<?php echo osc_esc_html(meta_title()); ?>" />
 <?php if (meta_description() != '') { ?>
@@ -57,6 +58,21 @@ osc_enqueue_script('global-theme-js');
 <link rel="stylesheet" type="text/css" href="<?php echo osc_current_web_theme_url('css/browser.css'); ?>?<?php echo rand(0, pow(10, 5)); ?>" media="only screen and (max-width:600px)" />
 <link rel="stylesheet" type="text/css" href="<?php echo osc_current_web_theme_url('css/iphone-landscape-width.css'); ?>?<?php echo rand(0, pow(10, 5)); ?>" media="only screen and (max-width:480px), (max-device-width:480px)" />
 <link rel="stylesheet" type="text/css" href="<?php echo osc_current_web_theme_url('css/iphone-portrait-width.css'); ?>?<?php echo rand(0, pow(10, 5)); ?>" media="only screen and (max-width:320px), (max-device-width:320px)" />
+
+<link href="<?php echo osc_current_web_theme_url('css/style_search.css') ?>" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="<?php echo osc_current_web_theme_url('css/jquery.selectBox.css') ?>">
+<link type="text/css" rel="stylesheet" href="<?php echo osc_current_web_theme_url('css/jquery.selectBox1.css') ?>">
+<link rel="stylesheet" type="text/css" media="all" href="<?php echo osc_current_web_theme_url('css/jquery.selectbox.css') ?>">
+<link rel="stylesheet" type="text/css" media="only screen and (max-width:1300px) and (min-width:1201px)" href="<?php echo osc_current_web_theme_url('css/max1300width.css') ?>">
+<link rel="stylesheet" type="text/css" media="only screen and (max-width:1200px) and (min-width:979px)" href="<?php echo osc_current_web_theme_url('css/max1200width.css') ?>">
+<link rel="stylesheet" type="text/css" media="only screen and (max-width:979px) and (min-width:768px)" href="<?php echo osc_current_web_theme_url('css/max979width.css') ?>">
+<link rel="stylesheet" type="text/css" media="only screen and (max-width:767px) and (min-width:681px)" href="<?php echo osc_current_web_theme_url('css/max767width.css') ?>">
+<link rel="stylesheet" type="text/css" media="only screen and (max-width:680px) and (min-width: 481px)" href="<?php echo osc_current_web_theme_url('css/min500max680.css') ?>">
+<link rel="stylesheet" type="text/css" media="only screen and (max-width:480px) and (min-width:349px)" href="<?php echo osc_current_web_theme_url('css/max480width.css') ?>">
+<link rel="stylesheet" type="text/css" media="only screen and (max-width:348px) and (min-width:320px)" href="<?php echo osc_current_web_theme_url('css/max350width.css') ?>">
+<style>
+#srch{ display:none;}
+</style>
 <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -68,8 +84,10 @@ osc_enqueue_script('global-theme-js');
         }
     </style>
 <![endif]-->
-<?php osc_enqueue_style('style', osc_current_web_theme_url('layout.css')); ?>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!-- script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script -->
+
+<script type="text/javascript" src="<?php echo osc_current_web_theme_js_url('jquery.selectbox.js') ?>"></script>
+<script type="text/javascript" src="<?php echo osc_current_web_theme_js_url('selectbox.js') ?>"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         $(".search-btn").click(function() {

@@ -1,0 +1,49 @@
+@charset "utf-8";
+.wrapper {width: 900px;}
+.minbox {width: 85px;}
+
+.minbox {
+width: 100%;
+}
+.shwmid {
+float: left;
+padding: 0px;
+width: 100%;}
+
+.amin article{ width:47%; float:left}
+.amin .rytttlist{width: 59%;}
+.amin .ztxt a{ font-size:22px;}
+
+.mrvmain {
+width: 94%;}
+.mrbv1 {width: 92%;}
+
+.amin article{ padding-top:29px;}
+.rytttlist{ width:58%;}
+
+.price a {
+padding: 5px 5px;
+font-size:11px;
+}
+.result_outer p{ font-size:14px;}
+.price a.MCtooltip{ padding:0px 5px;}
+.listings {
+padding: 10px 10px 40px 10px;}
+
+.list_left{ float:none}
+.list_ryt{ width:44%; margin:10px 0 0 0 ; float:none; clear:both}
+
+.alist1 .price a {
+padding:2px 10.1px;
+font-size:12px;
+}
+.price a.rate {
+font-size: 11px;
+}
+
+.MCtooltip h3 {
+    font-size: 11px;
+}
+.alist1 .listings{ padding-top:45px;}
+.mainccs {
+width: 100%;}

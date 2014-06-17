@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+.wrapper {width: 292px;}
+.minbox {width: 85px;}
+.mrbv1 {width: 90%;}
+.minbox {
+width: 98%;
+}.shwmid {
+float: left;
+padding: 0px;
+width: 100%;}
+.rytttlist {
+	padding-bottom: 17px;
+float: right;
+text-align: left;
+width: 100%;}
+.shwmain .slct{ width:98%;}
+.price a.rate{ font-size:11px; padding:5px 4px; }
+.price a.MCtooltip{ font-size:11px; padding:5px 4px;}
+.alaist {
+float: left;
+width: 100%;
+}
+
+.cent_srch_left_main {
+width: 100%;
+float: none;
+}
+.mrbv {
+width: 98%;}
+.minmain {
+float: none;
+}
+.selselct {
+width: 98%;
+}
+.cent_srch_ryt {
+float: none;
+padding: 20px 0px;
+width: 100%;
+color: aliceblue;
+}
+.srch_bar { float:left;
+}
+.srchboxa {
+width: 93%; 
+}
+.list_ryt {
+width: 100%;
+margin-top: 10px;
+}
+
+.cent_srch_ryt h1 {
+font-size: 25px;}
+.listings figure {
+float: none; margin:10px 0px;}
+.ztxt a {
+font-size: 23px;
+}
+.srchbtn {width: 100%}
+.sortlist li a {
+padding: 1px 4px;}
+
+
+
+.amin article{ width:94%; float:none}
+.amin .rytttlist{width: 100%; float:none; margin:20px 0 0 0;}
+.amin .ztxt a{ font-size:22px;}
+.amin .listings figure{ float:none}
+
+.mrvmain {
+width: 78%; float:none; margin-bottom:10px}
+.mrbv1 {width: 92%;}
+.list_ryt {
+float: right;
+width: 90%;
+margin: 10px 0px 0px 0px;}
+.selselct11 {
+width: 167px;}
+
+.amin article{ padding-top:29px;}
+.listings{ padding:30px 10px 10px 10px;}
+
+.togimg{
+background: url(../images/toogle.png) #0d698d;
+padding: 10px 10px;
+cursor: pointer;
+width: 15px;
+height: 7px;
+float: right;margin: 37px 0 0 0;
+}
+nav ul li{ float:none}
+.navigation3{ float:none; clear:both;display:none}
+
+#srch{ width:68%; margin:0px 2px; }
+
+.alist1 .price a {
+padding: 5px 10px;
+font-size: 13px;
+}
+.MCtooltip h3{font-size: 11px;}
+.alist .price a {
+padding: 5px 4px;
+font-size: 11px;
+}
+
+.amin .listings {
+ margin-right:0px
+}
+
+.alist .listings{ margin-bottom:70px;}
+
+
+.list_left{ float:none; font-size:13px;}
+.list_ryt{ width:92%; margin:10px 0 0 0 ; float:none; clear:both}
+
+.listings {
+padding: 32px 10px 22px 10px;}
+
+.alist1 .price{width: 100%;}
+
+.mainccs {
+width: 100%;}
+.mrvmain {
+width: 84%;}

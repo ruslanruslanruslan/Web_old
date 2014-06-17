@@ -1,0 +1,102 @@
+@CHARSET "UTF-8";
+
+.jquery-selectbox {
+	position: relative;
+	height: 26px;
+
+	width: 100px;
+	z-index: 0;
+	float: left;
+	display: inline;
+	margin: 4px 4px 4px 0;
+	font-size: 9px;
+	font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #444;
+	padding: 0;
+	background:#fff; border:1px solid #5d5c5c ; float:left;width: 192.28px !important;
+	background: #efeeee;
+background: -moz-linear-gradient(top, #efeeee 0%, white 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #efeeee), color-stop(100%, white));
+background: -webkit-linear-gradient(top, #efeeee 0%, white 100%);
+background: -o-linear-gradient(top, #efeeee 0%, white 100%);
+background: -ms-linear-gradient(top, #efeeee 0%, white 100%);
+background: linear-gradient(top, #efeeee 0%, #ffffff 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efeeee', endColorstr='white',GradientType=0 );
+}
+.jquery-selectbox.selecthover {
+	
+	background-color: #fff;
+	z-index: 700;
+}	
+.jquery-selectbox .jquery-selectbox-currentItem {
+padding: 5px 0px 0px 11px;
+white-space: nowrap;
+display: block;
+overflow: hidden;
+text-align: left;
+font-size: 12px;
+}
+
+.jquery-selectbox .jquery-selectbox-list {
+	display: none;
+	position: absolute;
+	top: 26px;
+	padding: 2px;
+	left: 0px;
+	overflow: auto;
+	width: 100px;
+	height: 120px; background:#fff;
+width: 187.28px !important; text-align:left;
+	z-index: 1000; border:1px solid #5d5c5c;background: #efeeee;
+background: -moz-linear-gradient(top, #efeeee 0%, white 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #efeeee), color-stop(100%, white));
+background: -webkit-linear-gradient(top, #efeeee 0%, white 100%);
+background: -o-linear-gradient(top, #efeeee 0%, white 100%);
+background: -ms-linear-gradient(top, #efeeee 0%, white 100%);
+background: linear-gradient(top, #efeeee 0%, #ffffff 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efeeee', endColorstr='white',GradientType=0 );
+}
+.jquery-selectbox .jquery-selectbox-moreButton {
+	/*
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	*/
+	float: right;
+background: url(../images/arrow.png) no-repeat;
+width: 189px;
+height: 21px;
+cursor: pointer;
+margin-top: 3px;
+position: absolute;
+background-position: right;
+right: 5px;}
+.jquery-selectbox .jquery-selectbox-moreButton.morebuttonhover {
+	float: right;
+background: url(../images/arrow.png) no-repeat;
+width: 189px;
+height: 21px;
+cursor: pointer;
+margin-top: 3px;
+position: absolute;
+background-position: right;
+right: 5px;
+}
+
+.jquery-selectbox .jquery-selectbox-item.listelementhover {
+	background: #0d698d;
+	color: #eee;
+}
+.jquery-selectbox .jquery-selectbox-item {
+	display: block;
+	cursor: default; font-size:13px;padding: 5px 9px; cursor:pointer
+}
+
+/** ERROR classes **/
+form .error .jquery-selectbox {
+	color: #d00;
+	border-color: #d00;
+	background-image: url("../img/bg-TextFieldError.gif");
+}
+
+/*.demoTarget .selectBox { display:none !important}*/

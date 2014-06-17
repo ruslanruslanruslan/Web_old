@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+
+.wrapper {width: 450px;}
+.minbox {width: 85px;}
+.mrbv1 {width: 93%;}
+.minbox {
+width: 98%;
+}
+.shwmain .slct{ width:98%;}
+.shwmid {
+float: left;
+padding: 0px;
+width: 100%;}
+.rytttlist {
+float: right;
+text-align: left;
+width: 66%;}
+
+.cent_srch_left_main {
+width: 100%;
+float: none;
+}
+.mrbv {
+width: 98%;}
+.minmain {
+float: none;
+}
+.selselct {
+width: 98%;
+}
+.cent_srch_ryt {
+float: none;
+padding: 20px 0px;
+width: 100%;
+color: aliceblue;
+}
+.srch_bar {
+float: none;
+
+}
+.srchboxa {
+}
+.list_ryt {
+width: 50%;}
+
+.alaist {
+float: left;
+width: 100%;
+}
+
+.amin article{ width:46%; float:left}
+.amin .rytttlist{width: 100%; float:none; margin:20px 0 0 0;}
+.amin .ztxt a{ font-size:22px;}
+.amin .listings figure{ float:none}
+
+.mrvmain {
+width: 86%; float:none; margin-bottom:10px}
+.mrbv1 {width: 92%;}
+.list_ryt {
+float: right;
+width: 64%;
+margin: 10px 0px 0px 0px;}
+
+.amin article{ padding-top:29px;}
+.listings{ padding:30px 10px 0 10px;}
+
+.togimg{
+background: url(../images/toogle.png) #0d698d;
+padding: 10px 10px;
+cursor: pointer;
+width: 15px;
+height: 7px;
+float: right;margin: 37px 0 0 0;}
+nav ul li{ float:none}
+.navigation3{ float:none; clear:both;display:none}
+
+.alist1 .price a {
+padding: 2px 10px;
+}
+.alist .listings{ margin-bottom:70px;}
+
+
+
+.list_left{ float:none; font-size:13px;}
+.list_ryt{ width:64%; margin:10px 0 0 0 ; float:none; clear:both}
+
+.listings {
+padding: 32px 10px 26px 10px;}
+
+.alist1 .price{
+width: 100%;}
+
+.mrvmain {
+width: 91%;}
+.mainccs {
+width: 100%;}
+.mrvbtn{ right:8px}
