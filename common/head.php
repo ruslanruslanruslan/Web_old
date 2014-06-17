@@ -63,7 +63,7 @@ osc_run_hook('header');
 <link type="text/css" rel="stylesheet" href="<?php echo osc_current_web_theme_url('css/jquery.selectBox.css') ?>">
 <link type="text/css" rel="stylesheet" href="<?php echo osc_current_web_theme_url('css/jquery.selectBox1.css') ?>">
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo osc_current_web_theme_url('css/jquery.selectbox.css') ?>">
-<link rel="stylesheet" type="text/css" media="only screen and (max-width:1300px) and (min-width:1201px)" href="<?php echo osc_current_web_theme_url('css/max1300width.css') ?>">
+<link rel="stylesheet" type="text/css" media="only screen and (min-width:1201px)" href="<?php echo osc_current_web_theme_url('css/max1300width.css') ?>">
 <link rel="stylesheet" type="text/css" media="only screen and (max-width:1200px) and (min-width:979px)" href="<?php echo osc_current_web_theme_url('css/max1200width.css') ?>">
 <link rel="stylesheet" type="text/css" media="only screen and (max-width:979px) and (min-width:768px)" href="<?php echo osc_current_web_theme_url('css/max979width.css') ?>">
 <link rel="stylesheet" type="text/css" media="only screen and (max-width:767px) and (min-width:681px)" href="<?php echo osc_current_web_theme_url('css/max767width.css') ?>">
