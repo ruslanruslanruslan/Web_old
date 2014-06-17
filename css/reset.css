@@ -80,4 +80,5 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$linkcolor\".\A         on line 51 of /Users/feralou/git/public/osclass-themes/bender/sass/reset.scss"; }
+//  content: "Syntax error: Undefined variable: \"$linkcolor\".\A         on line 51 of /Users/feralou/git/public/osclass-themes/bender/sass/reset.scss"; 
+}

@@ -5,9 +5,9 @@ $placeholders: '-webkit-input-placeholder',
 @mixin placeholder {
   @each $placeholder in $placeholders {
     @if $placeholder == "-webkit-input-placeholder" {
-      &::#{$placeholder} {
+ //     &::#{$placeholder} {
         @content;
-      }
+ //     }
     }
     @else {
       &:#{$placeholder} {

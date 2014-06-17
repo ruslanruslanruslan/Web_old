@@ -94,4 +94,5 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$widgetbordercolor\".\A         on line 19 of /Users/feralou/htdocs/osclass/develop/oc-content/themes/bender/sass/sidebar.scss"; }
+ // content: "Syntax error: Undefined variable: \"$widgetbordercolor\".\A         on line 19 of /Users/feralou/htdocs/osclass/develop/oc-content/themes/bender/sass/sidebar.scss"; 
+      }

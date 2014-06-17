@@ -71,4 +71,5 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"listToSelector\": expected selector, was \"(\"\", \"ul.r-list...\"\A         on line 7 of /Users/feralou/git/public/osclass-themes/bender/sass/responsive/480.scss"; }
+//  content: "Syntax error: Invalid CSS after \"listToSelector\": expected selector, was \"(\"\", \"ul.r-list...\"\A         on line 7 of /Users/feralou/git/public/osclass-themes/bender/sass/responsive/480.scss"; 
+      }

@@ -2603,16 +2603,18 @@ div.page > section > section.product_box > article.product_detail > a > img { di
 /*  RELATED SEARCH  */
 
 .rsearch {display:block; background:#fff; box-shadow:0 0 2px #0068A6; border:1px solid #0068A6; margin:30px 0 0px 0px; width:100%;  }
-.relatedlistings_box div.rsearch{display:block; background:#fff; /* box-shadow:0 0 2px #0068A6; */  box-shadow:0 0 10px #CCCCCC;  border :1px solid #0068A6; margin:20px 0 0px 0px; position:relative; width:100%;  width:470px; float:left; margin-left:20px; min-height:270px;}
-.relatedlistings_box div.right_content {width:60%; min-height:250px}
-.relatedlistings_box div.right_content h4 a {width:auto;}
-.left_photo{display:block; overflow:hidden; float:left; width:130px;}
-.left_photo img {margin:30px 0px 0px 20px;}
-.right_content { display:block; overflow:hidden; float:left; margin-left:20px; width:75%; }
+.relatedlistings_box div.rsearch{display:block; background:#fff; /* box-shadow:0 0 2px #0068A6; */  box-shadow:0 0 10px #CCCCCC;  border :1px solid #0068A6; margin:20px 0 0px 0px; position:relative; width:100%;  width:470px; float:left; margin-left:20px; min-height:210px;}
+.relatedlistings_box div.right_content {width:380px; min-height:30px}
+.relatedlistings_box div.right_content h4 a {width: 380px;}
+.left_photo{display:block; overflow:hidden; float:left; width:50px; border:1px solid #d4d4d4; margin: 10px 10px 0px 10px;}
+.left_photo img {margin: 0px 0px 0px 0px;}
+.right_content { display:block; overflow:hidden; float:left; margin-left:10px; width:380px; }
 
-.related_list div.right_content h4 a{color:#0382B1; text-decoration:none; margin:30px 0 10px 0; display:block; font-size:16px; width:300px; min-height:70px;}
-.right_content h4 a{color:#0382B1; text-decoration:none; margin:20px 0 10px 0; display:block; font-size:16px; width:420px; min-height:30px;}
+.related_list div.right_content h4 a{color:#0382B1; text-decoration:none; margin:15px 0px 0px 0px; display:block; font-size:16px; width:380px; min-height:20px;}
+.right_content h4 a{color:#0382B1; text-decoration:none; margin:10px 0 10px 0; display:block; font-size:16px; width:380px; min-height:30px;}
 .right_content p{font-size:13px; display:block; margin-bottom:10px;}
+.relatedlistings_box div.bottom_content {width:100%; min-height:80px; margin:70px 0px 0px 0px;}
+.bottom_content p{font-size:13px; display:block; margin:10px 10px 10px 10px;}
 .price {display: block; color: #000;font-size: 14px;position: absolute;top: 0;right: 0px; }
 .bottom {display: block;width: 100%; padding: 10px;float: right; }
 .bottom span {font-size:13px;color:#0382B1; margin-bottom:10px; display:block; float:left; margin-left:20px   }
@@ -2669,7 +2671,7 @@ a.MCtooltip:hover span
 }
 .views {
     font-weight:bold;
-    width: 80px;}
+    width: 100%;}
 
 #wrapper_voting_plugin 
 {
@@ -2753,9 +2755,9 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
                background: linear-gradient(to bottom, #ffffff 0%,#f4f4f4 100%); /* W3C */
                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
 }	
-.mctooltip_box span{border-right:solid 1px #C1C5C6; padding:6px 10px; display:block; float:left;font-size: 12px;  /* height:25px; */ line-height:25px;width: 50%; box-sizing: border-box}
+.mctooltip_box span{border-right:solid 1px #C1C5C6; padding:6px 10px; display:block; float:left;font-size: 12px;  /* height:25px; */ line-height:25px; box-sizing: border-box}
 .mctooltip_box span select{border:none; background:none; width:130px; padding:3px; margin:0; height:auto; border:1px solid #ccc;}
-.mctooltip_box .florida_right_bor{text-align: center; border:none; height:47px; line-height: 18px;}
+.mctooltip_box .florida_right_bor{text-align: center; border:none; height:47px; line-height: 18px; min-width: 46%}
 .mctooltip_box .price_span{padding: 0;}
 .mctooltip_box .price_span .MCtooltip{ padding: 11px 0; text-align: center; width: 116px;}
 .mctooltip_box .price_span .rate{ padding: 11px 0; text-align: center; width: 106px;}
