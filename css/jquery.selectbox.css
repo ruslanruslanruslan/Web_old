@@ -1,11 +1,11 @@
 .sbHolder {
 	position: relative;
-	height: 26px;
+	height: 29px;
 	width: 100%;
-	margin: 4px 4px 4px 0;
-	font: 13px/1.5 Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	margin: 2px 0 0;
+	font-size: 16px;
 	color: #444;
-	border:1px solid #5d5c5c;
+	border: 1px solid #CCC;
 	background: #efeeee;
 	background: -moz-linear-gradient(top, #efeeee 0%, white 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #efeeee), color-stop(100%, white));
@@ -37,18 +37,13 @@
 }
 
 .sbSelector {
-	background: url(../images/arrow.png) no-repeat;
+	background: url(../images/arrow.png) 100% 10px no-repeat;
 	height: 21px;
 	margin-top: 3px;
 	position: absolute;
 	color: #000;
-	background-position: right;
 	right: 5px;
 	left: 5px;
-}
-
-.sbOptions li {
-	font-size:13px;
 }
 
 .sbOptions a {
