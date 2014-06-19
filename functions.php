@@ -600,6 +600,76 @@ function bender_print_sidebar_category_search($aCategories, $current_category = 
 <?php
     }
 }
+
+function isha_sidebar_category_search($catId = null)
+{
+    $aCategories = array();
+    if($catId==null) {
+        $aCategories[] = Category::newInstance()->findRootCategoriesEnabled();
+    } else {
+        // if parent category, only show parent categories
+        $aCategories = Category::newInstance()->toRootTree($catId);
+        end($aCategories);
+        $cat = current($aCategories);
+        // if is parent of some category
+        $childCategories = Category::newInstance()->findSubcategories($cat['pk_i_id']);
+        if(count($childCategories) > 0) {
+            $aCategories[] = $childCategories;
+        }
+    }
+
+    if(count($aCategories) == 0) {
+        return "";
+    }
+
+    isha_print_sidebar_category_search($aCategories, $catId);
+}
+
+function isha_print_sidebar_category_search($aCategories, $current_category = null, $i = 0)
+{
+    $class = 'class="ullist"';
+    $c   = $aCategories[$i];
+    $i++;
+    if(!isset($c['pk_i_id'])) {
+        echo '<ul '.$class.'>';
+        if($i==1) {
+            echo '<li><a href="'.osc_esc_html(osc_update_search_url(array('sCategory'=>null))).'">'.__('All categories')."</a></li>";
+        }
+        foreach($c as $key => $value) {
+    ?>
+            <li>
+                <a id="cat_<?php echo osc_esc_html($value['pk_i_id']);?>" href="<?php echo osc_esc_html(osc_update_search_url(array('sCategory'=> $value['pk_i_id']))); ?>">
+                <?php if(isset($current_category) && $current_category == $value['pk_i_id']){ echo '<strong>'.$value['s_name'].'</strong>'; }
+                else{ echo $value['s_name']; } ?>
+                </a>
+
+            </li>
+    <?php
+        }
+        if($i==1) {
+        echo "</ul>";
+        } else {
+        echo "</ul>";
+        }
+    } else {
+    ?>
+    <ul <?php echo $class;?>>
+        <?php if($i==1) { ?>
+        <li><a href="<?php echo osc_esc_html(osc_update_search_url(array('sCategory'=>null))); ?>"><?php _e('All categories'); ?></a></li>
+        <?php } ?>
+            <li>
+                <a id="cat_<?php echo osc_esc_html($c['pk_i_id']);?>" href="<?php echo osc_esc_html(osc_update_search_url(array('sCategory'=> $c['pk_i_id']))); ?>">
+                <?php if(isset($current_category) && $current_category == $c['pk_i_id']){ echo '<strong>'.$c['s_name'].'</strong>'; }
+                      else{ echo $c['s_name']; } ?>
+                </a>
+                <?php bender_print_sidebar_category_search($aCategories, $current_category, $i); ?>
+            </li>
+        <?php if($i==1) { ?>
+        <?php } ?>
+    </ul>
+<?php
+    }
+}
 ?>
 <?php  
 if(!function_exists('product_listing')){
@@ -900,6 +970,17 @@ function contact_content(){?>
             }
 			
             require WebThemes::newInstance()->getCurrentThemePath().'loop-single-search'.$premiumSlug.'.php';
+        }
+    }
+    
+    if( !function_exists('isha_draw_item_search') ) {
+        function isha_draw_item_search($class = false,$admin = false, $premium = false) {
+            $premiumSlug = '';
+            if($premium){
+                $premiumSlug = '-premium';
+            }
+			
+            require WebThemes::newInstance()->getCurrentThemePath().'loop-single-isha-search'.$premiumSlug.'.php';
         }
     }
 	if( !function_exists('bender_draw_dropdown') ) {
