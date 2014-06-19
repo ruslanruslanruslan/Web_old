@@ -35,7 +35,7 @@
                         <strong><a class="account_new" href="<?php echo osc_user_dashboard_url(); ?>"><?php _e('My account', 'isha'); ?></a></strong>
                         <a class="logout" href="<?php echo osc_user_logout_url(); ?>"><?php _e('Logout', 'isha'); ?></a>
                     </div>
-                    <?php
+                <?php
                 }
                 if (osc_is_home_page()) {
                     ?>
@@ -45,17 +45,17 @@
                             <li><a href="#listing"><img src="<?php echo osc_current_web_theme_url('images/list_icon.png') ?>" alt="Home_icon" class="active_icon" /><img src="<?php echo osc_current_web_theme_url('images/list_icon_normal.png') ?>" alt="Home_icon" class="normal_icon" /><p><?php _e("Listing", 'isha'); ?></p></a></li>
                             <li><a href="#contact"><img src="<?php echo osc_current_web_theme_url('images/contact_icon.png') ?>" alt="Home_icon" class="active_icon" /><img src="<?php echo osc_current_web_theme_url('images/contact_icon_normal.png'); ?>" alt="Home_icon" class="normal_icon" /><p><?php _e("Contact us", 'isha'); ?></p></a></li>
                             <?php ?>
-                            <?php if (!osc_is_web_user_logged_in()) { ?>
+    <?php if (!osc_is_web_user_logged_in()) { ?>
                                 <li><a href="#login_register"><img src="<?php echo osc_current_web_theme_url('images/login_icon.png'); ?>" alt="Home_icon" class="active_icon" /><img src="<?php echo osc_current_web_theme_url('images/login_icon_normal.png'); ?>" alt="Home_icon" class="normal_icon" /><p><?php _e("Login", 'isha'); ?></p></a></li>
 
                                 <li><a href="#login_register"><img src="<?php echo osc_current_web_theme_url('images/register_icon.png') ?>" alt="Home_icon" class="active_icon" /><img src="<?php echo osc_current_web_theme_url('images/register_icon_normal.png') ?>" alt="Home_icon" class="normal_icon" /><p><?php _e("Register", 'isha'); ?></p></a></li>
                             <?php } else { ?>
                                 <li class="publish_ad"><a class="no-link" href="<?php echo osc_item_post_url_in_category(); ?>"><img src="<?php echo osc_current_web_theme_url('images/publish-icon.png') ?>" alt="Home_icon" class="active_icon" /><img src="<?php echo osc_current_web_theme_url('images/publish-icon-normal.png') ?>" alt="Home_icon" class="normal_icon" /><p><?php _e("Publish your ad", 'isha'); ?></p></a></li>
-                            <?php } ?>
+    <?php } ?>
 
                         </ul> 
                     </nav> 
-                <?php } else { ?> 
+<?php } else { ?> 
                     <nav class="navigation">
                         <ul class="nav1" >
                             <li class="current" ><a href="<?php echo osc_base_url() . '#home'; ?>" >
@@ -66,16 +66,16 @@
                             <li><a href="<?php echo osc_base_url() . '#listing'; ?>"><img src="<?php echo osc_current_web_theme_url('images/list_icon.png') ?>" alt="Home_icon" class="active_icon" /><img src="<?php echo osc_current_web_theme_url('images/list_icon_normal.png') ?>" alt="Home_icon" class="normal_icon" /><p><?php _e("Listing", 'isha'); ?></p></a></li>
                             <li><a href="<?php echo osc_base_url() . '#contact'; ?>"><img src="<?php echo osc_current_web_theme_url('images/contact_icon.png') ?>" alt="Home_icon" class="active_icon" /><img src="<?php echo osc_current_web_theme_url('images/contact_icon_normal.png'); ?>" alt="Home_icon" class="normal_icon" /><p><?php _e("Contact us", 'isha'); ?></p></a></li>
 
-                            <?php if (!osc_is_web_user_logged_in()) { ?>
+    <?php if (!osc_is_web_user_logged_in()) { ?>
                                 <li><a href="<?php echo osc_base_url() . '#login_register'; ?>"><img src="<?php echo osc_current_web_theme_url('images/login_icon.png'); ?>" alt="Home_icon" class="active_icon" /><img src="<?php echo osc_current_web_theme_url('images/login_icon_normal.png'); ?>" alt="Home_icon" class="normal_icon" /><p><?php _e("Login", 'isha'); ?></p></a></li>
 
                                 <li><a href="<?php echo osc_base_url() . '#login_register'; ?>"><img src="<?php echo osc_current_web_theme_url('images/register_icon.png') ?>" alt="Home_icon" class="active_icon" /><img src="<?php echo osc_current_web_theme_url('images/register_icon_normal.png') ?>" alt="Home_icon" class="normal_icon" /><p><?php _e("Register", 'isha'); ?></p></a></li>
                             <?php } else { ?>
                                 <li class="publish_ad"><a class="no-link" href="<?php echo osc_item_post_url_in_category(); ?>"><img src="<?php echo osc_current_web_theme_url('images/publish-icon.png') ?>" alt="Home_icon" class="active_icon" /><img src="<?php echo osc_current_web_theme_url('images/publish-icon-normal.png') ?>" alt="Home_icon" class="normal_icon" /><p><?php _e("Publish your ad", 'isha'); ?></p></a></li>
-                            <?php } ?>
+    <?php } ?>
                         </ul>
                     </nav>
-                <?php } ?>
+<?php } ?>
             </section>
 
         </header>
@@ -87,7 +87,7 @@
                         <input type="hidden" name="page" value="search" />
                         <div class="input_outer_area">
                             <input type="text" name="sPattern" id="query" class="input-text" value="" placeholder="<?php echo osc_get_preference('keyword_placeholder', 'bender'); ?>" />
-                            <?php osc_categories_select('sCategory', null, __('Select a category', 'bender_black')); ?>
+<?php osc_categories_select('sCategory', null, __('Select a category', 'bender_black')); ?>
                             <div class="clear"></div>
                         </div>
 
@@ -97,26 +97,26 @@
                 </div>
             </section>
         </article>
-        <div class="wrapper wrapper-flash">
+        <?php /*<div class="wrapper wrapper-flash">
             <?php
             $breadcrumb = osc_breadcrumb('&raquo;', false, get_breadcrumb_lang());
             if ($breadcrumb !== '') {
                 ?>
                 <div class="breadcrumb">
-                    <?php echo $breadcrumb; ?>
+    <?php echo $breadcrumb; ?>
                     <div class="clear"></div> 
                 </div> 
                 <?php
             }
             ?>
-            <?php osc_show_flash_message(); ?>
-        </div>
+<?php osc_show_flash_message(); ?>
+        </div> */ ?>
         <div id="home" class="div-cont" >
 
             <?php
             osc_run_hook('inside-main');
             ?>
-            <?php osc_run_hook('home-content'); ?>
+        <?php osc_run_hook('home-content'); ?>
         </div>
         <?php osc_run_hook('product'); ?>
 
@@ -128,4 +128,4 @@
         }
         ?>
 
-        <?php osc_run_hook('contact-content'); ?>
+<?php osc_run_hook('contact-content'); ?>
