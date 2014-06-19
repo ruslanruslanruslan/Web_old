@@ -103,10 +103,8 @@ osc_run_hook('header');
         jQuery('#body').attr('placeholder', 'Message');
         jQuery('#message').attr('rows', '5');
         jQuery(".my_page").find("ul").addClass("result_slide");
-        jQuery('a.list-first').html('First');
-        jQuery('a.list-last').html('Last');
-        jQuery('a.searchPaginationNext').html('Next');
-        jQuery('a.searchPaginationPrev').html('Prev');
+        jQuery('a.list-last').html('[ Next >> ]');
+        jQuery('a.list-first').html('[ << Previous ]');
     });
 </script>
 
