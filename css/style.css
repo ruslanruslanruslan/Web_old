@@ -182,7 +182,7 @@ header
   background:#eef2f3;
   position:fixed;
   width:100%;
-  z-index:10;
+  z-index:1;
   border-bottom:1px solid #CCC;
 }
 
@@ -2419,7 +2419,6 @@ line-height: 20px;*/
 .sort:hover ul.price_drop
 {
     display:block;
-    z-index:33;
 }
 .list_textbox h1 a, .list_textbox h3 a{
     text-decoration:none;
@@ -2759,8 +2758,9 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
 .mctooltip_box span select{border:none; background:none; width:130px; padding:3px; margin:0; height:auto; border:1px solid #ccc;}
 .mctooltip_box .florida_right_bor{text-align: center; border:none; height:47px; line-height: 18px; min-width: 46%}
 .mctooltip_box .price_span{padding: 0;}
-.mctooltip_box .price_span .MCtooltip{ padding: 11px 0; text-align: center; width: 116px;}
+.mctooltip_box .price_span .MCtooltip{ padding: 11px 15px; }
 .mctooltip_box .price_span .rate{ padding: 11px 0; text-align: center; width: 106px;}
+ .mctooltip_box .price_span .MCtooltip{ padding-right: 16px;}
 .listinr_next_pre_buttondi{display:block; overflow:hidden; width:auto;}
 .listinr_next_pre_button ul li{display:block;float:left; margin:5px 0 5px 5px; }
 .listinr_next_pre_button ul li a{border:solid 1px #CCCCCC;font-size:15px; font-weight:bold; padding:3px 10px;color:#000; background:#EEF2F3; text-decoration:none;}
@@ -3108,8 +3108,12 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
     height: 25px;
     margin: 0px;
     box-sizing: border-box;
+<<<<<<< HEAD
 }
 
 .listings p a{
     color: #5d5c5c !important
 }
+=======
+}
+>>>>>>> parent of e089ae7... интеграция страницы поиска
