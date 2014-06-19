@@ -280,15 +280,11 @@ function autocompleteCity() {
                                 <?php
                                 $f = true;
                                 $i = 0;
-                                $count = osc_count_items() / 2;
+                                $count = ceil( osc_count_items() / 2 );
                                 while (osc_has_items()) {
                                     $i++;
                                     ?>
                                     <?php
-                                    /* $class = false;
-                                      if ($i % 4 == 0) {
-                                      $class = 'last';
-                                      } */
                                     if ($i > $count && $f) {
                                         $f = false;
                                         echo '</ul><ul class="alaist">';
