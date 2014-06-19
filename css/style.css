@@ -825,9 +825,13 @@ h1.latest
     float:left;
     width:45%;
     background:url(../images/map.png) center center no-repeat;
-    padding:7em 5% 3em;
+    background-size: contain;
+    padding:7em 7% 3em;
     margin-top:2em;
     text-align:center;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 .map_back input[type=text]
 {
