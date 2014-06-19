@@ -432,79 +432,8 @@ margin: 0 0 5px 0;
 .listings{}
 
 
-
-
-
-
-
-
-/* ****header start ****** /
-header{background: #eef2f3;
-position: fixed;
-width: 100%;
-z-index: 2;
-border-bottom: 1px solid #CCC; top:0}
-.img{ float:left;padding: 18px 0 0 0;}
-nav ul li {
-float: left;
-color: #015685;
-font-size: 18px;
-text-align: center;
-margin-left: 20px;
-}
-nav.navigation3 ul li a:hover, nav.navigation3 ul li a.active, nav.navigation3 ul li.current a {
-background: #0382B1;
-color: #fff;
-}
-nav.navigation3 ul li a {
-display: block;
-text-decoration: none;
-color: #015685;
-padding: 15px 20px;
-text-align: center;
-height: 60px;
-}
-
-nav.navigation3 ul li img {
-height: 19px;
-}
-.navigation3{ float:right}
-
-nav.navigation3 ul li a:hover img.active_icon {
-	visibility:visible;
-margin: 0px auto;
-}
-nav.navigation3 ul li img.active_icon {
-	visibility:hidden
-}
-nav.navigation3 ul li img{ display:block}
-.navigation3 li span{padding: 20px 0 0 0; display:block}
-header .wrapper{ margin:0px !important}
-nav.navigation3 ul li a p {
-color: #015685;
-text-align: center;
-}
-nav.navigation3 ul li a:hover > p {
-color: #fff;
-text-align: center;
-}
-footer {
-background: #b5bcbe;
-background: linear-gradient(top, #dae0e1, #b3babc);
-background: -moz-linear-gradient(top, #dae0e1, #b3babc);
-background: -webkit-linear-gradient(top, #dae0e1, #b3babc);
-background: -ms-linear-gradient(top, #dae0e1, #b3babc);
-background: -o-linear-gradient(top, #dae0e1, #b3babc);
-text-align: center;
-padding: 10px 0;
-}
-footer p{font: bold 12px Verdana, Geneva, sans-serif;
-color: #343435; margin:0px;}
-/ *****header end ******/
-
-
 .pcc{ padding-bottom:10px;}
-.mainccs{ width:41%; float:left; position:relative;}
+.mainccs{ width:48%; float:left; position:relative;}
 
 .price p{background: none repeat scroll 0 0 #74AFC5;
 color: #FFFFFF!important;
