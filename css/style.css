@@ -3084,18 +3084,38 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
 
 
 /* для комментариев товара, если кто-то это читает сделай лучше */
-.comment{padding-bottom: 30px; float:left; border: 1px solid #ccc; padding: 10px; margin: 10px 0; box-sizing: border-box; width: 100%;}
-.comment > h4{
-    width: 12%; max-width: 100px; float: left; padding-right:10px;
-}
-.comment > div{
-    width: 87%; float: left; font-size: 12px;
+.comment {
+    width: 100%;
+    float:left;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.rcol{
-    width: 50%; float: left;
+.comment > h4 {
+    width: 12%;
+    max-width: 100px;
+    float: left;
+    padding-right:10px;
 }
-.rcolof{ overflow: auto; height: 250px}
+.comment > div {
+    width: 87%;
+    float: left;
+    font-size: 12px;
+}
+
+.rcol {
+    width: 50%;
+    float: left;
+}
+.rcolof {
+    overflow: auto;
+    height: 250px;
+}
+
 @media (max-width:980px){
     .rcol{
         width: 100%;
