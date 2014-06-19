@@ -309,7 +309,7 @@ function autocompleteCity() {
                 </div>
                 <div class="clear"></div>
                 <?php
-                if (osc_rewrite_enabled()) {
+                /*if (osc_rewrite_enabled()) {
                     $footerLinks = osc_search_footer_links();
                     if (count($footerLinks) > 0) {
                         ?>
@@ -327,7 +327,7 @@ function autocompleteCity() {
                         </div>
                         <?php
                     }
-                }
+                }*/
                 ?>
             </section>
             <div class="clear"></div>
