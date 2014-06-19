@@ -22,6 +22,11 @@
 <html dir="ltr" lang="<?php echo str_replace('_', '-', osc_current_user_locale()); ?>">
     <head>
         <?php osc_current_web_theme_path('common/head.php'); ?> 
+        <style>
+        #jp_popup,
+#jp_popup_wrap {
+    display: none !important;
+}</style>
     </head>
     <body>
         <?php include_once("analyticstracking.php") ?>

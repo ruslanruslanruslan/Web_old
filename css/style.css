@@ -177,6 +177,11 @@ body
     margin:0px auto;
     width:1000px;
 }
+
+.page-item p.description {
+    color: #2c2c2c;
+}
+
 header
 { top:0;
   background:#eef2f3;
@@ -1012,8 +1017,7 @@ label:before {
 {
     width:100%;
 }
-.product_detail
-{  background: none repeat scroll 0 0 #FFFFFF;
+.product_detail{  background: none repeat scroll 0 0 #FFFFFF;
    border: 1px solid #CCCCCC;
 
    display: block;
@@ -1118,13 +1122,26 @@ p.description
     margin-top:10px;
     line-height:22px;
 }
-.descheading{margin-top:20px; font-weight:bold; text-decoration:underline;}
-.top_right_slider{display:block; overflow:hidden;  border:solid 1px #CCCCCC; background:#FFF; padding:10px; width:63%; margin-left:25px; float:left; height:260px;}
-#slider img {height:260px;}
-/*p.description:hover {
-    color: #FB9500;
-    cursor: pointer;
-}*/
+
+.descheading {
+    margin-top:20px;
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+.top_right_slider {
+    overflow:hidden;
+    border:solid 1px #CCCCCC;
+    background:#FFF;
+    padding:10px;
+    margin-left:341px;
+    height:260px;
+}
+
+#slider img {
+    height:260px;
+}
+
 ul.view
 {
     list-style:none;
@@ -1236,7 +1253,7 @@ input.share[type=submit]:hover
 }
 .related_box
 {
-    width:1000px;
+    width:1214px;
     padding:20px 0 3em;
     margin:0 auto;
 
@@ -1248,6 +1265,7 @@ input.share[type=submit]:hover
 }
 .related_list h1
 {
+    margin: 0 20px;
     color: #000;
     font-family: 'oswaldlight';
     font-size: 32px;
@@ -1262,7 +1280,7 @@ input.share[type=submit]:hover
     margin-top:20px;
 
     float:right;
-    width:29%;
+    width:29.5%;
     padding:2%;
     background:#fbfbfb;
     border:1px solid #ccc;
@@ -2607,7 +2625,7 @@ div.page > section > section.product_box > article.product_detail > a > img { di
 /*  RELATED SEARCH  */
 
 .rsearch {display:block; background:#fff; box-shadow:0 0 2px #0068A6; border:1px solid #0068A6; margin:30px 0 0px 0px; width:100%;  }
-.relatedlistings_box div.rsearch{display:block; background:#fff; /* box-shadow:0 0 2px #0068A6; */  box-shadow:0 0 10px #CCCCCC;  border :1px solid #0068A6; margin:20px 0 0px 0px; position:relative; width:100%;  width:470px; float:left; margin-left:20px; min-height:210px;}
+.relatedlistings_box div.rsearch{display:inline-block; vertical-align: top; background:#fff; /* box-shadow:0 0 2px #0068A6; */  box-shadow:0 0 10px #CCCCCC;  border :1px solid #0068A6; margin:20px 0 0px 0px; position:relative; width:582px; margin-left:20px; min-height:210px;}
 .relatedlistings_box div.right_content {width:380px; min-height:30px}
 .relatedlistings_box div.right_content h4 a {width: 380px;}
 .left_photo{display:block; overflow:hidden; float:left; width:50px; border:1px solid #d4d4d4; margin: 10px 10px 0px 10px;}
@@ -2761,7 +2779,7 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
 }	
 .mctooltip_box span{border-right:solid 1px #C1C5C6; padding:6px 10px; display:block; float:left;font-size: 12px;  /* height:25px; */ line-height:25px; box-sizing: border-box}
 .mctooltip_box span select{border:none; background:none; width:130px; padding:3px; margin:0; height:auto; border:1px solid #ccc;}
-.mctooltip_box .florida_right_bor{text-align: center; border:none; height:47px; line-height: 18px; min-width: 46%}
+.mctooltip_box .florida_right_bor{text-align: center; border:none; height:47px; line-height: 18px; /*min-width: 46%*/}
 .mctooltip_box .price_span{padding: 0;}
 .mctooltip_box .price_span .MCtooltip{ padding: 11px 0; text-align: center; width: 116px;}
 .mctooltip_box .price_span .rate{ padding: 11px 0; text-align: center; width: 106px;}

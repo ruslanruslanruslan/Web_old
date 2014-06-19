@@ -106,7 +106,7 @@ osc_current_web_theme_path('header.php');
   });
 </script>-->
 <div class="page">
-    <section class="wrapper result_outer">
+    <section class="wrapper result_outer page-item">
         <section class="product_box">
             <?php if (osc_images_enabled_at_items()) { ?>
                 <?php
