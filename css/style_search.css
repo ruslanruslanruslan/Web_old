@@ -14,22 +14,6 @@ h1,h2,h3,h4,h5,h6,img,a,ul{margin:0px; padding:0px; list-style-type:none;outline
          url('../fonts/oswald-regular.svg#OswaldBook') format('svg');
 }
 
-fieldset {
-  border:0;
-}
-
-.row .selectBox {
-  float: left;
-  width: 100% !important;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.accord {
-  margin-bottom: 1em;
-}
-
 
 .subscri{ border-radius: 0px 10px 10px 0px;padding: 0px 1px 0 0;box-shadow: 2px 1px 15px #5c5a5a;}
 .chose-langu { 
@@ -137,24 +121,13 @@ outline: none;
 cursor: pointer; font-weight:bold;width: 98%; margin:10px 0 10px 0;}
 .cent_srch_ryt h1{ font-size:30px; text-align:left;padding: 20px 0px 5px 0px;}
 .srch_main{ padding:20px 0px 20px 0px;}
-.maincc ul, .sotbot ul{ float:right; margin: 7px 0 0 0;}
-.maincc ul li a, .maincc ul li span, .sotbot ul li a, .sotbot ul li span{background:#0d698d; padding:4px 7px; display:block; color:#fff; }
-
-.maincc ul li span.searchPaginationSelected,
-.sotbot ul li span.searchPaginationSelected {
-  color: #FFFFFF; background-color: #FF0000;background: -webkit-linear-gradient(rgba(116, 23, 23, 1), rgba(255, 16, 16, 1));
-}
-
-.maincc ul li a:hover,
-.maincc ul li span:hover,
-.sotbot ul li a:hover,
-.sotbot ul li span:hover {
+.sortlist{ float:right; margin: 7px 0 0 0;}
+.sortlist li a{background:#0d698d; padding:4px 7px; display:block; color:#fff; }
+.sortlist li a:hover {
 
 color: #FFFFFF; background-color: #FF0000;transition: all 0.8s ease-out 0s; background: -webkit-linear-gradient(rgba(116, 23, 23, 1), rgba(255, 16, 16, 1)); padding: 6px 10px; margin-top:-4px;}
-.maincc ul li+li,
-.sotbot ul li+li{ margin-left:4px;}
-.maincc ul li,
-.sotbot ul li{float:left; }
+.sortlist li+li{ margin-left:4px;}
+.sortlist li{float:left; }
 .headnav { background-color: #0d698d; padding:10px 10px; border:1px solid #aeaeae; margin-bottom:16px}
 .list_left{ float:left; color:#fff;  font-family: 'OswaldBook'; font-size:16 px;
 padding: 8px 0 0 0;}
@@ -504,7 +477,7 @@ color: #343435; margin:0px;}
 
 
 .pcc{ padding-bottom:10px;}
-.mainccs{ width:41%; float:left; position:relative;}
+.mainccs{ width:60%; float:left; position:relative;}
 
 .price p{background: none repeat scroll 0 0 #74AFC5;
 color: #FFFFFF!important;
@@ -542,9 +515,6 @@ position: relative;}
 .alaist {
     float: left;
     width: 48%;
-}
-.alaist:first-child {
-  margin-right: 4%;
 }
 
 
