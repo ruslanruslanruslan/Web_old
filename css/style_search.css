@@ -64,7 +64,9 @@ left: 0; z-index:9999999;webkit-transition:  .4s ease-out;
 transition: .4s ease-out; TOP: 91PX;
 } 
 /*.wrapper{ width:1208px;margin: 112px 0px 30px 0px;}*/
-.result_outer{margin-top: 35px; margin-bottom: 30px;}
+.result_outer{
+  margin-bottom: 30px;
+}
 
 .srchboxa{width: 93%;height: 21px;
 padding: 5px; width: 266px;

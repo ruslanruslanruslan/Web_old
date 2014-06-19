@@ -286,10 +286,6 @@ function autocompleteCity() {
                 $(".navigation3").slideToggle();
             });
             
-            $(".jquery-selectbox-list").mouseleave(function() {
-                $(".jquery-selectbox-list").hide();
-            });
-            
             $(".sub_button").click(function() {
                 $.post('<?php echo osc_base_url(true); ?>', {email: $("#alert_email").val(), userid: $("#alert_userId").val(), alert: $("#alert").val(), page: "ajax", action: "alerts"},
                 function(data) {
