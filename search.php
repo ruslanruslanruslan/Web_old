@@ -291,7 +291,7 @@ function autocompleteCity() {
                                       } */
                                     if ($i > $count && $f) {
                                         $f = false;
-                                        echo '</ul><ul class="alaist" style="float:right">';
+                                        echo '</ul><ul class="alaist">';
                                     }
                                     isha_draw_item_search(false);
                                     ?>
