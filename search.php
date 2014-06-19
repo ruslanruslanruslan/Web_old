@@ -69,80 +69,9 @@ function autocompleteCity() {
 <?php osc_current_web_theme_path('header.php'); ?>
 <?php osc_register_script('delete-user-js', osc_current_web_theme_js_url('jquery-1.2.6.pack.js'), 'jquery-ui'); ?>
 <?php osc_register_script('delete-user-js', osc_current_web_theme_js_url('jquery.selectbox-0.6.1.js'), 'jquery-ui'); ?>
-<script>
-    $(document).ready(function() {
-        $("#tog").click(function() {
-            $("#srch").toggle("slow");
-        });
-    });
-</script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $(".togimg").click(function() {
-            $(".navigation3").slideToggle();
-        });
-    });
-</script>
-<script>
-    $(document).ready(function() {
-        $('.accord > span').hide();
-        $('.MCtooltip  > h3').hover(function() {
-            $(this).next('span').slideToggle('slow');
-        });
-    });
-</script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $(".jquery-selectbox-list").mouseleave(function() {
-            $(".jquery-selectbox-list").hide();
-        });
-    });
-</script>
 <?php osc_register_script('delete-user-js', osc_current_web_theme_js_url('js/jquery.selectbox.js'), 'jquery-ui'); ?>
 <?php osc_register_script('delete-user-js', osc_current_web_theme_js_url('js/selectbox.js'), 'jquery-ui'); ?>
 
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $(".sub_button").click(function() {
-            $.post('<?php echo osc_base_url(true); ?>', {email: $("#alert_email").val(), userid: $("#alert_userId").val(), alert: $("#alert").val(), page: "ajax", action: "alerts"},
-            function(data) {
-                if (data == 1) {
-                    alert('<?php echo osc_esc_js(__('You have sucessfully subscribed to the alert', 'bender')); ?>');
-                }
-                else if (data == -1) {
-                    alert('<?php echo osc_esc_js(__('Invalid email address', 'bender')); ?>');
-                }
-                else {
-                    alert('<?php echo osc_esc_js(__('There was a problem with the alert', 'bender')); ?>');
-                }
-                ;
-            });
-            return false;
-        });
-
-        var sQuery = '<?php echo osc_esc_js(AlertForm::default_email_text()); ?>';
-
-        if ($('input[name=alert_email]').val() == sQuery) {
-            $('input[name=alert_email]').css('color', 'gray');
-        }
-        $('input[name=alert_email]').click(function() {
-            if ($('input[name=alert_email]').val() == sQuery) {
-                $('input[name=alert_email]').val('');
-                $('input[name=alert_email]').css('color', '');
-            }
-        });
-        $('input[name=alert_email]').blur(function() {
-            if ($('input[name=alert_email]').val() == '') {
-                $('input[name=alert_email]').val(sQuery);
-                $('input[name=alert_email]').css('color', 'gray');
-            }
-        });
-        $('input[name=alert_email]').keypress(function() {
-            $('input[name=alert_email]').css('background', '');
-        })
-    });
-</script>
 <section class="wrapper result_outer">
 
     <section>
@@ -335,16 +264,71 @@ function autocompleteCity() {
     </section>
 
 </section>
+
 <script>
-    $(document).ready(function() {
-        $('#default-usage-select').change(function() {
-            $('#frm_search').submit();
-        })
-    });
-</script>
-<script type="text/javascript">
     //<![CDATA[
-    $("#default-usage-select").selectBox({menuSpeed: 'slow'});
+    (function($){
+        $(document).ready(function(){
+            $('#default-usage-select').change(function() {
+                $('#frm_search').submit();
+            });
+
+            $('#tog').click(function() {
+                $('#srch').toggle('slow');
+            });
+
+            $('.accord > span').hide();
+            $('.MCtooltip  > h3').hover(function() {
+                $(this).next('span').slideToggle('slow');
+            });
+
+            $(".togimg").click(function() {
+                $(".navigation3").slideToggle();
+            });
+            
+            $(".jquery-selectbox-list").mouseleave(function() {
+                $(".jquery-selectbox-list").hide();
+            });
+            
+            $(".sub_button").click(function() {
+                $.post('<?php echo osc_base_url(true); ?>', {email: $("#alert_email").val(), userid: $("#alert_userId").val(), alert: $("#alert").val(), page: "ajax", action: "alerts"},
+                function(data) {
+                    if (data == 1) {
+                        alert('<?php echo osc_esc_js(__('You have sucessfully subscribed to the alert', 'bender')); ?>');
+                    }
+                    else if (data == -1) {
+                        alert('<?php echo osc_esc_js(__('Invalid email address', 'bender')); ?>');
+                    }
+                    else {
+                        alert('<?php echo osc_esc_js(__('There was a problem with the alert', 'bender')); ?>');
+                    }
+                    ;
+                });
+                return false;
+            });
+
+            var sQuery = '<?php echo osc_esc_js(AlertForm::default_email_text()); ?>';
+
+            if ($('input[name=alert_email]').val() == sQuery) {
+                $('input[name=alert_email]').css('color', 'gray');
+            }
+            $('input[name=alert_email]').click(function() {
+                if ($('input[name=alert_email]').val() == sQuery) {
+                    $('input[name=alert_email]').val('');
+                    $('input[name=alert_email]').css('color', '');
+                }
+            });
+            $('input[name=alert_email]').blur(function() {
+                if ($('input[name=alert_email]').val() == '') {
+                    $('input[name=alert_email]').val(sQuery);
+                    $('input[name=alert_email]').css('color', 'gray');
+                }
+            });
+            $('input[name=alert_email]').keypress(function() {
+                $('input[name=alert_email]').css('background', '');
+            })
+        });
+    })(jQuery);
     //]]>
 </script>
 <?php osc_current_web_theme_path('footer.php'); ?>

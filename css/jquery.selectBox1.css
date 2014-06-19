@@ -1,36 +1,23 @@
 /* Dropdown control */
 .selectBox-dropdown {
-	background-repeat:no-repeat;
-
 	position: relative;
-
-	
 	text-decoration: none;
 	color: #000;
 	outline: none;
 	vertical-align: middle;
-
-padding: 5px;
-border:0;
-background: #fff;
-box-shadow: 0 0 5px #333333;
-/*background: -moz-linear-gradient(top, #efeeee 0%, white 100%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #efeeee), color-stop(100%, white));
-background: -webkit-linear-gradient(top, #efeeee 0%, white 100%);
-background: -o-linear-gradient(top, #efeeee 0%, white 100%);
-background: -ms-linear-gradient(top, #efeeee 0%, white 100%);
-background: linear-gradient(top, #efeeee 0%, #ffffff 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efeeee', endColorstr='white',GradientType=0 );*/
-	
+	padding: 5px;
+	border:0;
+	background: #fff;
+	box-shadow: 0 0 5px #333333;	
 	display: inline-block;
-	cursor: default;-webkit-transition: color .3s linear;
--moz-transition: color .3s linear;
--ms-transition: color .3s linear;
--o-transition: color .3s linear;
-transition: color .3s linear;
-
-
+	cursor: default;
+	-webkit-transition: color .3s linear;
+	-moz-transition: color .3s linear;
+	-ms-transition: color .3s linear;
+	-o-transition: color .3s linear;
+	transition: color .3s linear;
 }
+
 .selectBox-menuShowing
 .selectBox-dropdown:focus,
 .selectBox-dropdown:focus .selectBox-arrow {
