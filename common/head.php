@@ -95,11 +95,11 @@ osc_run_hook('header');
             });
         });
 
-        jQuery('#yourName').attr('placeholder', 'Name');
-        jQuery('#yourEmail').attr('placeholder', 'Email');
-        jQuery('#phoneNumber').attr('placeholder', 'Phone no.');
-        jQuery('#message').attr('placeholder', 'Message');
-        jQuery('#body').attr('placeholder', 'Message');
+        jQuery('#yourName').attr('placeholder', '<?php _e('Name', 'isha'); ?>');
+        jQuery('#yourEmail').attr('placeholder', '<?php _e('Email', 'isha'); ?>');
+        jQuery('#phoneNumber').attr('placeholder', '<?php _e('Phone no.', 'isha'); ?>');
+        jQuery('#message').attr('placeholder', '<?php _e('Message', 'isha'); ?>');
+        jQuery('#body').attr('placeholder', '<?php _e('Message', 'isha'); ?>');
         jQuery('#message').attr('rows', '5');
         jQuery(".my_page").find("ul").addClass("result_slide");
         jQuery('a.list-first').html('First');
