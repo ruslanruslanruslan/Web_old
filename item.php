@@ -299,7 +299,7 @@ osc_current_web_theme_path('header.php');
     <?php if (osc_reg_user_post_comments() && osc_is_web_user_logged_in() || !osc_reg_user_post_comments()) { ?>
         <div class="clear"></div>
         <div class="comments_manbox">
-            <div class="container">
+            <div class="comments_box">
                 <div class="row">
                     <div class="span12">
                         <h4><?php _e('Comments', 'isha'); ?></h4>

@@ -1251,7 +1251,8 @@ input.share[type=submit]:hover
     border-radius:5px;
     font:14px/24px Verdana, Geneva, sans-serif;
 }
-.related_box
+.related_box,
+.comments_box
 {
     width:1214px;
     padding:20px 0 3em;
@@ -1275,6 +1276,12 @@ input.share[type=submit]:hover
     border-radius:5px;
 
 }
+
+.comments_box {
+    width: 1174px;
+    overflow: hidden;
+}
+
 .contact_pub
 {
     margin-top:20px;
@@ -2625,7 +2632,7 @@ div.page > section > section.product_box > article.product_detail > a > img { di
 /*  RELATED SEARCH  */
 
 .rsearch {display:block; background:#fff; box-shadow:0 0 2px #0068A6; border:1px solid #0068A6; margin:30px 0 0px 0px; width:100%;  }
-.relatedlistings_box div.rsearch{display:inline-block; vertical-align: top; background:#fff; /* box-shadow:0 0 2px #0068A6; */  box-shadow:0 0 10px #CCCCCC;  border :1px solid #0068A6; margin:20px 0 0px 0px; position:relative; width:582px; margin-left:20px; min-height:210px;}
+.relatedlistings_box div.rsearch{display:inline-block; vertical-align: top; background:#fff; /* box-shadow:0 0 2px #0068A6; */  box-shadow:0 0 10px #CCCCCC;  border :1px solid #0068A6; margin:20px 0 0px 0px; position:relative; width:572px; margin-left:20px; min-height:210px;}
 .relatedlistings_box div.right_content {width:380px; min-height:30px}
 .relatedlistings_box div.right_content h4 a {width: 380px;}
 .left_photo{display:block; overflow:hidden; float:left; width:50px; border:1px solid #d4d4d4; margin: 10px 10px 0px 10px;}
@@ -3027,6 +3034,7 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
     .top_right_slider {    float: none;    margin: 0 auto;    width: 95%;}
     .divqrcode{float:none;}
     .related_box{width:770px;}
+    .comments_box { width: auto; }
     .related_list{float:none;}
     .relatedlistings_box div.rsearch { float: none; margin: 20px auto; width: 500px;}
 }
