@@ -47,21 +47,21 @@ osc_add_hook('header','bender_nofollow_construct');
                     <?php } ?>
 	<h1><?php _e('General Information', 'isha'); ?></h1>
     <div class="inner_area">
-    	<ul> 
-        	<li>
+    	<ul class="inner_area-list"> 
+        	<li class="inner_area-item">
             	<label><?php _e('Category', 'isha'); ?></label>
                 <?php ItemForm::category_select(null, null, __('Select a category', 'isha')); ?>
             </li>
-            <li>
+            <li class="inner_area-item">
             	<label for="title[<?php echo osc_locale_code(); ?>]"><?php _e('Title', 'isha'); ?></label>
                 <?php ItemForm::title_input('title',osc_locale_code(), osc_esc_html( bender_item_title() )); ?>
             </li>
-            <li>
+            <li class="inner_area-item">
             	<label for="description[<?php echo osc_locale_code(); ?>]"><?php _e('Description', 'isha'); ?></label>
                  <?php ItemForm::description_textarea('description',osc_locale_code(), osc_esc_html( bender_item_description() )); ?>
            	</li>
 			<?php if( osc_price_enabled_at_items() ) { ?>
-            <li>
+            <li class="inner_area-item">
             	<label for="price"><?php _e('Price', 'isha'); ?></label>
                  <?php ItemForm::price_input_text(); ?>
                                 <?php ItemForm::currency_select(); ?>
@@ -73,8 +73,8 @@ osc_add_hook('header','bender_nofollow_construct');
 	<?php if( osc_images_enabled_at_items() ) { ?>
  	<h1><?php _e('Photo', 'isha'); ?></h1>
     <div class="inner_area">
-    	<ul>
-        	<li>
+    	<ul class="inner_area-list">
+        	<li class="inner_area-item">
             	<label  for="photos[]"><?php _e('Photos', 'isha'); ?></label>
                 
 				<div id="photos">
@@ -91,24 +91,24 @@ osc_add_hook('header','bender_nofollow_construct');
 	<?php }?>
     <h1><?php _e('Listing Location', 'isha'); ?></h1>
     <div class="inner_area">
-    	<ul>
-        	<li>
+    	<ul class="inner_area-list">
+        	<li class="inner_area-item">
             	<label  for="country"><?php _e('Country', 'isha'); ?></label>
                 <?php ItemForm::country_select(osc_get_countries(), osc_user()); ?>
             </li>
-            <li>
+            <li class="inner_area-item">
             	<label  for="region"><?php _e('Region', 'isha'); ?></label>
                 <?php ItemForm::region_text(osc_user()); ?>
             </li>
-            <li>
+            <li class="inner_area-item">
             	<label  for="city"><?php _e('City', 'isha'); ?></label>
                <?php ItemForm::city_text(osc_user()); ?>
             </li>
-            <li>
+            <li class="inner_area-item">
             	<label for="cityArea"><?php _e('City Area', 'isha'); ?></label>
                 <?php ItemForm::city_area_text(osc_user()); ?>
             </li>
-            <li>
+            <li class="inner_area-item">
             	<label for="address"><?php _e('Address', 'isha'); ?></label>
                  <?php ItemForm::address_text(osc_user()); ?>
             </li>
@@ -119,16 +119,16 @@ osc_add_hook('header','bender_nofollow_construct');
 	 <h1><?php _e("Seller's information", 'isha'); ?></h1>
 	 
 	    <div class="inner_area">
-    	<ul>
-        	<li>
+    	<ul class="inner_area-list">
+        	<li class="inner_area-item">
             	<label for="contactName"><?php _e('Name', 'isha'); ?></label>
                 <?php ItemForm::contact_name_text(); ?>
             </li>
-            <li>
+            <li class="inner_area-item">
             	<label for="contactEmail"><?php _e('E-mail', 'isha'); ?></label>
                 <?php ItemForm::contact_email_text(); ?>
             </li>
-            <li>
+            <li class="inner_area-item">
             	<?php ItemForm::show_email_checkbox(); ?> 
 				<label for="showEmail"><?php _e('Show e-mail on the listing page', 'isha'); ?></label>
             </li>
@@ -143,8 +143,8 @@ osc_add_hook('header','bender_nofollow_construct');
                         }
                         ?>
 						 <div class="inner_area">
-						 <ul>
-						 <li>
+						 <ul class="inner_area-list">
+						 <li class="inner_area-item">
 						   <button type="submit" class="publish_new_btn ui-button ui-button-middle ui-button-main">
 						   <?php if($edit) { _e("Update", 'isha'); } 
 						   else { _e("Publish", 'isha'); } ?></button>

@@ -1,4 +1,4 @@
-.sbHolder {
+div.sbHolder {
 	position: relative;
 	height: 29px;
 	width: 100%;
@@ -9,7 +9,7 @@
 	background: #fff;
 }
 
-.sbOptions {
+ul.sbOptions {
 	display: none;
 	position: absolute;
 	top: 26px;
@@ -24,23 +24,26 @@
 	background: #fff;
 }
 
-.sbSelector {
+a.sbSelector {
 	background: url(../images/arrow.png) 100% 10px no-repeat;
 	height: 21px;
 	margin-top: 3px;
+	padding: 0;
 	position: absolute;
+	font-size: 16px;
 	color: #000;
 	right: 5px;
 	left: 5px;
 }
 
-.sbOptions a {
+ul.sbOptions a {
 	display: block;
 	padding: 5px 9px;
 	color: #000;
+	font-size: 16px;
 }
 
-.sbOptions a:hover {
+ul.sbOptions a:hover {
 	color: #eee;
 	background: #0d698d;
 }

@@ -2040,23 +2040,23 @@ input.apply[type="submit"] {
     padding:15px 20px;
     margin-bottom:10px;
 }
-.inner_area ul
+.inner_area-list
 {
     list-style:none;
 }
-.inner_area ul li
+.inner_area-item
 {
     width:100%;
     padding-bottom:15px;
 }
-.inner_area ul li label
+.inner_area-item label
 {
     color: #2C2C2C;
     display: block;
     font: 14px Arial,Helvetica,sans-serif;
     padding:0 0 10px 0;	
 }
-.inner_area ul li input[type=text]
+.inner_area-item input[type=text]
 {
     border:1px solid #999;
     border-radius:5px;
@@ -2069,11 +2069,11 @@ input.apply[type="submit"] {
     -ms-box-sizing:border-box;
     -o-box-sizing:border-box;
 }
-.inner_area ul li input[type=text]:focus
+.inner_area-item input[type=text]:focus
 {
     border:1px solid #000;
 }
-.inner_area ul li select
+.inner_area-item select
 {
     width:100%;
     padding:5px;
@@ -2083,12 +2083,12 @@ input.apply[type="submit"] {
     font:14px Arial, Helvetica, sans-serif;
     color:#2c2c2c;
 }
-.inner_area ul li select:focus
+.inner_area-item select:focus
 {
     border: 1px solid #0066FF;
     box-shadow: 0 0 3px #0099FF;
 }
-.inner_area ul li textarea
+.inner_area-item textarea
 {
     border:1px solid #999;
     resize:none;
@@ -2103,7 +2103,7 @@ input.apply[type="submit"] {
     -ms-box-sizing:border-box;
     -o-box-sizing:border-box;
 }
-.inner_area ul li textarea:focus
+.inner_area-item textarea:focus
 {
     border:1px solid #000;
 }
@@ -2150,7 +2150,7 @@ input.apply[type="submit"] {
     cursor:pointer;
     box-shadow:-1px -1px 0px #85CAE3 inset, 0px 1px 0px #34758d inset;
 }
-.inner_area ul li [type=submit]
+.inner_area-item [type=submit]
 {
     background:#fb9500;
     float:left;
@@ -2168,7 +2168,7 @@ input.apply[type="submit"] {
     box-shadow:0px 1px 0px #fed18c inset, -1px -1px 0px #ef5c4a inset;
 
 }
-.inner_area ul li [type=submit]:hover
+.inner_area-item [type=submit]:hover
 {
     background:#015473;
     background:linear-gradient(top, #eb2b0c, #fb9500);
@@ -2179,7 +2179,7 @@ input.apply[type="submit"] {
     cursor:pointer;
     box-shadow:-1px -1px 0px #fed18c inset, 0px 1px 0px #ef5c4a inset;
 }
-.inner_area ul li a
+.inner_area-item a
 {
     text-decoration:none;
     color:#000;
