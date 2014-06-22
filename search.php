@@ -68,7 +68,6 @@ function autocompleteCity() {
 ?>
 <?php osc_current_web_theme_path('header.php'); ?>
 <?php osc_register_script('delete-user-js', osc_current_web_theme_js_url('jquery-1.2.6.pack.js'), 'jquery-ui'); ?>
-<?php osc_register_script('delete-user-js', osc_current_web_theme_js_url('jquery.selectbox-0.6.1.js'), 'jquery-ui'); ?>
 <?php osc_register_script('delete-user-js', osc_current_web_theme_js_url('js/jquery.selectbox.js'), 'jquery-ui'); ?>
 <?php osc_register_script('delete-user-js', osc_current_web_theme_js_url('js/selectbox.js'), 'jquery-ui'); ?>
 

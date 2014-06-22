@@ -56,10 +56,8 @@ function autocompleteCity() {
         <title>search page</title>
         <link href="<?php echo osc_current_web_theme_url('css/style_search.css'); ?>" rel="stylesheet" />
         <link type="text/css" rel="stylesheet" href="<?php echo osc_current_web_theme_url('css/jquery.selectBox.css'); ?>">
-            <link type="text/css" rel="stylesheet" href="<?php echo osc_current_web_theme_url('css/jquery.selectBox1.css'); ?>">
                 <link rel="stylesheet" type="text/css" media="all" href="<?php echo osc_current_web_theme_url('css/jquery.selectbox.css'); ?>" />
                 <script type="text/javascript" src="<?php echo osc_current_web_theme_url('js/jquery-1.2.6.pack.js'); ?>"></script>
-                <script type="text/javascript" src="<?php echo osc_current_web_theme_url('js/jquery.selectbox-0.6.1.js'); ?>"></script>
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
                 <link rel="stylesheet" type="text/css" media="only screen and (max-width:1300px) and (min-width:1201px)" href="<?php echo osc_current_web_theme_url('css/max1300width.css'); ?>">
                     <link rel="stylesheet" type="text/css" media="only screen and (max-width:1200px) and (min-width:979px)" href="<?php echo osc_current_web_theme_url('css/max1200width.css'); ?>">

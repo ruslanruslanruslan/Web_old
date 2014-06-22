@@ -60,8 +60,6 @@ osc_run_hook('header');
 <link rel="stylesheet" type="text/css" href="<?php echo osc_current_web_theme_url('css/iphone-portrait-width.css'); ?>?<?php echo rand(0, pow(10, 5)); ?>" media="only screen and (max-width:320px), (max-device-width:320px)" />
 
 <link href="<?php echo osc_current_web_theme_url('css/style_search.css') ?>" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="<?php echo osc_current_web_theme_url('css/jquery.selectBox.css') ?>">
-<link type="text/css" rel="stylesheet" href="<?php echo osc_current_web_theme_url('css/jquery.selectBox1.css') ?>">
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo osc_current_web_theme_url('css/jquery.selectbox.css') ?>">
 <link rel="stylesheet" type="text/css" media="only screen and (min-width:1201px)" href="<?php echo osc_current_web_theme_url('css/max1300width.css') ?>">
 <link rel="stylesheet" type="text/css" media="only screen and (max-width:1200px) and (min-width:979px)" href="<?php echo osc_current_web_theme_url('css/max1200width.css') ?>">
