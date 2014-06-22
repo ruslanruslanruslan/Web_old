@@ -1,3 +1,9 @@
+<script type="text/javascript">
+    var bender = window.bender || {};
+    bender.base_url = '<?php echo osc_base_url(true); ?>';
+    bender.langs = <?php echo json_encode($js_lang); ?>
+</script>
+
 <?php
 $js_lang = array(
     'delete' => __('Delete', 'bender'),
@@ -45,11 +51,6 @@ osc_run_hook('header');
 
 <link href="<?php echo osc_current_web_theme_url('js/jquery-ui/jquery-ui-1.10.2.custom.min.css'); ?>?<?php echo rand(0, pow(10, 5)); ?>" rel="stylesheet" type="text/css" />
 
-<script type="text/javascript">
-    var bender = window.bender || {};
-    bender.base_url = '<?php echo osc_base_url(true); ?>';
-    bender.langs = <?php echo json_encode($js_lang); ?>
-</script>
 <!-- Including css files -->
 <link href="<?php echo osc_current_web_theme_url('css/style.css'); ?>?<?php echo rand(0, pow(10, 5)); ?>" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="<?php echo osc_current_web_theme_url('css/browser.css'); ?>?<?php echo rand(0, pow(10, 5)); ?>" media="only screen and (max-width:1024px), (max-device-width:1024px) and (orientation:landscape)" />

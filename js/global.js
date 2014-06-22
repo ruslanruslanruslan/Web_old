@@ -139,7 +139,7 @@ $(document).ready(function(event){
 
 
     /////// STARTS PLACE HOLDER
-    $('body').on('focus','.has-placeholder input, .has-placeholder textarea',function(){
+    /*$('body').on('focus','.has-placeholder input, .has-placeholder textarea',function(){
         var placeholder = $(this).prev();
         var thatInput  = $(this);
 
@@ -179,9 +179,6 @@ $(document).ready(function(event){
         selectUi($(this));
     });
 
-    $('.flashmessage .ico-close').click(function(){
-        $(this).parents('.flashmessage').remove();
-    });
     $('#mask_as_form select').on('change',function(){
         $('#mask_as_form').submit();
         $('#mask_as_form').submit();
@@ -205,7 +202,9 @@ $(document).ready(function(event){
             e.preventDefault();
             $("a[rel=image_group]").first().click();
         });
+    }*/
 
-
-    }
+    $('.flashmessage .ico-close').click(function(){
+        $(this).parents('.flashmessage').remove();
+    });
 });
