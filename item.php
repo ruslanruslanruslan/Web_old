@@ -324,8 +324,8 @@ osc_current_web_theme_path('header.php');
                                     <?php CommentForm::body_input_textarea(); ?>
                                     <!-- input type="text" class="contect_form_input contect_form_mar" name="">
                                     <input type="text" class="contect_form_input" name="">
-                                    <!-- textarea class="contect_form_textarea" rows="" cols="" name=""></textarea>
-                                    <!--<input type="button" class="submit_botton_div" value="Submit" name="">-->
+                                    <textarea class="contect_form_textarea" rows="" cols="" name=""></textarea>
+                                    <input type="button" class="submit_botton_div" value="Submit" name="">-->
                                     <div class="clear"></div>
                                     <div class="botton_div1">
                                         <button type="submit">
