@@ -150,7 +150,15 @@ osc_current_web_theme_path('header.php');
             ?>
             <div class="top_right_slider theme-default">
                 <div id="slider" class="nivoSlider">
-                    <img src="/playandbay/oc-content/themes/isha/images/banner.png" />
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- test3 -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:336px;height:280px"
+                         data-ad-client="ca-pub-3021368859777537"
+                         data-ad-slot="7055974407"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
                 </div>
             </div>
 
