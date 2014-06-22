@@ -55,7 +55,6 @@ function autocompleteCity() {
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>search page</title>
         <link href="<?php echo osc_current_web_theme_url('css/style_search.css'); ?>" rel="stylesheet" />
-        <link type="text/css" rel="stylesheet" href="<?php echo osc_current_web_theme_url('css/jquery.selectBox.css'); ?>">
                 <link rel="stylesheet" type="text/css" media="all" href="<?php echo osc_current_web_theme_url('css/jquery.selectbox.css'); ?>" />
                 <script type="text/javascript" src="<?php echo osc_current_web_theme_url('js/jquery-1.2.6.pack.js'); ?>"></script>
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
