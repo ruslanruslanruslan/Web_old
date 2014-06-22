@@ -151,11 +151,11 @@ osc_current_web_theme_path('header.php');
             <div class="top_right_slider theme-default">
                 <div id="slider" class="nivoSlider">
                     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- test3 -->
+                    <!-- test4 -->
                     <ins class="adsbygoogle"
-                         style="display:inline-block;width:336px;height:280px"
+                         style="display:inline-block;width:300px;height:250px"
                          data-ad-client="ca-pub-3021368859777537"
-                         data-ad-slot="7055974407"></ins>
+                         data-ad-slot="8334231207"></ins>
                     <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
