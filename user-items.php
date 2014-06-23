@@ -62,16 +62,7 @@ $i_userId = osc_logged_user_id();
 	
 ?>
 
-<script type="text/javascript" >
-$(document).ready(function(){
-$( ".account_box ul li" ).click(function() {
-				  $(this).children(".wishlist").slideToggle( "slow", function() {
-					// Animation complete.
-				  });
-				});
-});
-</script>
-    <?php osc_run_hook('search_ads_listing_top'); ?>
+<?php osc_run_hook('search_ads_listing_top'); ?>
 <section class="wrapper result_outer account_outer">
     
 <section class="account_box">
@@ -425,6 +416,13 @@ $( ".account_box ul li" ).click(function() {
                 </div>
             </li> 
         </ul>
-    </section> 
+    </section>
+    <script>
+    (function($){
+        $( ".account_box ul li" ).click(function() {
+            $(this).children(".wishlist").slideToggle( "slow", function() {});
+        });
+    })(jQuery)
+    </script>
     </section>
 <?php osc_current_web_theme_path('footer.php') ; ?>
