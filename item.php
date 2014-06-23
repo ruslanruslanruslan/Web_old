@@ -412,6 +412,15 @@ osc_current_web_theme_path('header.php');
                                 <?php _e('Please sign up or log in to our portal to use whole capability of PlayAndBay. It is easy, fast and free.', 'isha'); ?>
                             </p>
                         </div>
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- test6 -->
+                        <ins class="adsbygoogle"
+                             style="display:inline-block;width:468px;height:60px"
+                             data-ad-client="ca-pub-3021368859777537"
+                             data-ad-slot="6445368807"></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                         <input type="hidden" name="page" value="register" />
                         <input type="hidden" name="action" value="register_post" />
                         <ul id="error_list"></ul>
@@ -453,6 +462,15 @@ osc_current_web_theme_path('header.php');
                                 </p>
                             </div>
                         </div>
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- test6 -->
+                        <ins class="adsbygoogle"
+                             style="display:inline-block;width:468px;height:60px"
+                             data-ad-client="ca-pub-3021368859777537"
+                             data-ad-slot="6445368807"></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                         <?php osc_run_hook('user_register_form'); ?>
                         <div class="control-group control-group1">
                             <div class="controls">
@@ -526,6 +544,15 @@ osc_current_web_theme_path('header.php');
                             <?php _e('Remember me', 'isha'); ?>
                               </label>
                             </div>-->
+							<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- test6 -->
+                            <ins class="adsbygoogle"
+                                 style="display:inline-block;width:468px;height:60px"
+                                 data-ad-client="ca-pub-3021368859777537"
+                                 data-ad-slot="6445368807"></ins>
+                            <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
                             <div class="controls">
                                 <button type="submit" class="ui-button ui-button-middle ui-button-main">
                                     <?php _e("Log in", 'isha'); ?>
