@@ -95,7 +95,7 @@ foreach ($aCategories as $cat_id) {
             </div>
         <?php } ?>
         <div class="srctxt"><?php _e('City', 'isha'); ?></div>
-        <input type="text" class="srchbox mrbv" id="sCity" name="sCity" value="<?php echo osc_esc_html(osc_search_city()); ?>" placeholder="Enter City Here">
+        <input type="text" class="srchbox mrbv" id="sCity" name="sCity" value="<?php echo osc_esc_html(osc_search_city()); ?>" placeholder="<?php _e('Enter city here', 'isha'); ?>">
         <div class="clear"></div>
 
         <?php if (osc_price_enabled_at_items()) { ?>
