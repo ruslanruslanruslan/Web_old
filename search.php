@@ -92,7 +92,7 @@ function autocompleteCity() {
 
                     <?php }; ?>
                     <div class="clear"></div>
-                    <input type="submit" class="srchbtn" value="<?php _e('Subscribe now', 'bender'); ?>">
+                    <input type="submit" class="srchbtn" value="<?php _e('Subscribe now', 'isha'); ?>">
                     <div class="clear"></div>
                 </form>
             </div>
@@ -128,14 +128,14 @@ function autocompleteCity() {
 
                 <div class="headnav">
                     <div class="list_left">
-                        <?php _e('Search Results for :- ', 'bender'); ?>
+                        <?php _e('Search Results for :- ', 'isha'); ?>
                         <?php echo search_title(); ?>
                         <?php
                         if (osc_count_items() == 0) {
-                            printf(__('There are no results matching "%s"', 'bender'), osc_search_pattern());
+                            printf(__('There are no results matching "%s"', 'isha'), osc_search_pattern());
                         } else {
                             $search_number = bender_search_number();
-                            printf(__('%1$d to %2$d of <span> %3$d </span> listings', 'bender'), $search_number['from'], $search_number['to'], $search_number['of']);
+                            printf(__('%1$d to %2$d of <span> %3$d </span> listings', 'isha'), $search_number['from'], $search_number['to'], $search_number['of']);
                         }
                         ?>
                     </div>
@@ -151,7 +151,7 @@ function autocompleteCity() {
                             }
                         }
                         ?>
-                        <span class="sorttxt"><?php _e('Sort by', 'bender'); ?>:</span>  
+                        <span class="sorttxt"><?php _e('Sort by', 'isha'); ?>:</span>  
 
                         <div class="demoTarget">
                             <select id="default-usage-select" name="sOrder" class="selectBox" style="width:180px;">
@@ -242,7 +242,7 @@ function autocompleteCity() {
                     if (count($footerLinks) > 0) {
                         ?>
                         <div id="related-searches">
-                            <h5><?php _e('Other searches that may interest you', 'bender'); ?></h5>
+                            <h5><?php _e('Other searches that may interest you', 'isha'); ?></h5>
                             <ul class="footer-links">
                                 <?php
                                 foreach ($footerLinks as $f) {
@@ -289,13 +289,13 @@ function autocompleteCity() {
                 $.post('<?php echo osc_base_url(true); ?>', {email: $("#alert_email").val(), userid: $("#alert_userId").val(), alert: $("#alert").val(), page: "ajax", action: "alerts"},
                 function(data) {
                     if (data == 1) {
-                        alert('<?php echo osc_esc_js(__('You have sucessfully subscribed to the alert', 'bender')); ?>');
+                        alert('<?php echo osc_esc_js(__('You have sucessfully subscribed to the alert', 'isha')); ?>');
                     }
                     else if (data == -1) {
-                        alert('<?php echo osc_esc_js(__('Invalid email address', 'bender')); ?>');
+                        alert('<?php echo osc_esc_js(__('Invalid email address', 'isha')); ?>');
                     }
                     else {
-                        alert('<?php echo osc_esc_js(__('There was a problem with the alert', 'bender')); ?>');
+                        alert('<?php echo osc_esc_js(__('There was a problem with the alert', 'isha')); ?>');
                     }
                     ;
                 });

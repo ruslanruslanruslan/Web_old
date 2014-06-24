@@ -36,28 +36,28 @@ echo $allowedTypesForSorting[osc_search_order_type()];
 <?php } ?>
     <ul> 
         <li>
-            <label><?php _e('Search', 'bender'); ?></label> 
+            <label><?php _e('Search', 'isha'); ?></label> 
             <input class="input-text" type="text" name="sPattern"  id="query" value="<?php echo osc_esc_html(osc_search_pattern()); ?>" placeholder="Your Search Here"/> 
         </li>
         <li>
-            <label><?php _e('City', 'bender'); ?></label>
+            <label><?php _e('City', 'isha'); ?></label>
             <input class="input-text" type="text" id="sCity" name="sCity" value="<?php echo osc_esc_html(osc_search_city()); ?>" placeholder="Enter City Here"/>
         </li>
 <?php if (osc_images_enabled_at_items()) { ?>
                                         <li>
-                                            <label><?php _e('Show only', 'bender'); ?></label>
+                                            <label><?php _e('Show only', 'isha'); ?></label>
                                             <div class="list_picture">
                                                 <input type="checkbox" name="bPic" id="withPicture" value="1" <?php echo (osc_search_has_pic() ? 'checked' : ''); ?> />
-                                                <label for="picture"><?php _e('listings with pictures', 'bender'); ?></label>
+                                                <label for="picture"><?php _e('listings with pictures', 'isha'); ?></label>
                                             </div>
                                         </li> 
 <?php } ?>
 <?php if (osc_price_enabled_at_items()) { ?>
                                         <li>
-                                            <label><?php _e('Price', 'bender'); ?></label>
-                                            <span ><?php _e('Min', 'bender'); ?>.</span>
+                                            <label><?php _e('Price', 'isha'); ?></label>
+                                            <span ><?php _e('Min', 'isha'); ?>.</span>
                                             <input style="width:10%" class="input-text" type="text" id="priceMin" name="sPriceMin" value="<?php echo osc_esc_html(osc_search_price_min()); ?>" size="6" maxlength="6" />
-                                            <span ><?php _e('Max', 'bender'); ?>.</span>
+                                            <span ><?php _e('Max', 'isha'); ?>.</span>
                                             <input style="width:10%" class="input-text" type="text" id="priceMax" name="sPriceMax" value="<?php echo osc_esc_html(osc_search_price_max()); ?>" size="6" maxlength="6" />
                                         </li> 
 <?php } ?>
@@ -81,7 +81,7 @@ foreach ($aCategories as $cat_id) {
     <input type="submit" value="Appply" class="apply">
 </form>
 <div class="refine_category">
-    <h1><?php _e('Refine category', 'bender'); ?></h1>
+    <h1><?php _e('Refine category', 'isha'); ?></h1>
 <?php //bender_sidebar_category_search($category['pk_i_id']); ?>
 
 </div>
@@ -90,25 +90,25 @@ foreach ($aCategories as $cat_id) {
     <section class="cent_srch_left">
         <?php if (osc_images_enabled_at_items()) { ?>
             <div class="shwmain">
-                <div class="srctxt"><?php _e('Show only', 'bender'); ?></div>
-                <label class="listxt"> <input type="checkbox" name="bPic" id="withPicture" value="1" <?php echo (osc_search_has_pic() ? 'checked' : ''); ?> ><?php _e('listings with pictures', 'bender'); ?></label>
+                <div class="srctxt"><?php _e('Show only', 'isha'); ?></div>
+                <label class="listxt"> <input type="checkbox" name="bPic" id="withPicture" value="1" <?php echo (osc_search_has_pic() ? 'checked' : ''); ?> ><?php _e('listings with pictures', 'isha'); ?></label>
             </div>
         <?php } ?>
-        <div class="srctxt"><?php _e('City', 'bender'); ?></div>
+        <div class="srctxt"><?php _e('City', 'isha'); ?></div>
         <input type="text" class="srchbox mrbv" id="sCity" name="sCity" value="<?php echo osc_esc_html(osc_search_city()); ?>" placeholder="Enter City Here">
         <div class="clear"></div>
 
         <?php if (osc_price_enabled_at_items()) { ?>
             <div class="shwmain">
-                <div class="srctxt pcc"><?php _e('Price', 'bender'); ?></div>
+                <div class="srctxt pcc"><?php _e('Price', 'isha'); ?></div>
 
                 <div class="minmain">
-                    <div class="mintxt"><?php _e('Min', 'bender'); ?>.</div>
+                    <div class="mintxt"><?php _e('Min', 'isha'); ?>.</div>
                     <label class="listxt"><input type="text" class="srchbox minbox" id="priceMin" name="sPriceMin" value="<?php echo osc_esc_html(osc_search_price_min()); ?>"></label>
                 </div>
                 <span class="shwmid">-</span>
                 <div class="minmain">
-                    <div class="mintxt"><?php _e('Max', 'bender'); ?>.</div>
+                    <div class="mintxt"><?php _e('Max', 'isha'); ?>.</div>
                     <label class="listxt"><input type="text" class="srchbox minbox" id="priceMax" name="sPriceMax" value="<?php echo osc_esc_html(osc_search_price_max()); ?>"></label>
                 </div>
                 <div class="clear"></div>
@@ -136,7 +136,7 @@ foreach ($aCategories as $cat_id) {
     </section>
 
     <section class="cent_srch_left mrschr padzero">
-        <div class="allcat"><?php _e('Refine category', 'bender'); ?></div>   
+        <div class="allcat"><?php _e('Refine category', 'isha'); ?></div>   
 <?php isha_sidebar_category_search($category['pk_i_id']); ?>
         <div class="clear"></div>
     </section>
