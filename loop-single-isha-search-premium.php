@@ -53,8 +53,8 @@
         </div>
         <div class="clear"></div>
         <div class="price">
-            <a class="MCtooltip dte"><?php echo osc_item_city(); ?> - <?php echo osc_format_date(osc_premium_pub_date()); ?></a>
-            <?php bender_draw_dropdown(); ?>
+            <a class="MCtooltip dte"><?php echo osc_premium_city(); ?> - <?php echo osc_format_date(osc_premium_pub_date()); ?></a>
+            <?php bender_draw_dropdown(true); ?>
             <div class="clear"></div>
 
             <!--1900 yp.-->
