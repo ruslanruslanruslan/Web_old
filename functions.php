@@ -1087,7 +1087,7 @@ if (!function_exists('bender_draw_categories_list')) {
         $currencyFormat = osc_locale_currency_format();
         $currencyFormat = str_replace('{NUMBER}', number_format($price, osc_locale_num_dec(), osc_locale_dec_point(), osc_locale_thousands_sep()), $currencyFormat);
         $currencyFormat = str_replace('{CURRENCY}', $symbol, $currencyFormat);
-        return osc_apply_filter('premium_price', $currencyFormat );
+        return osc_apply_filter('item_price', $currencyFormat );
     }
     function osc_item_currency_symbol2() {
         $aCurrency = Currency::newInstance()->findByPrimaryKey(osc_item_currency2());
