@@ -34,11 +34,11 @@
         return __('Alerts', 'isha');;
     }
 	$osc_user = osc_user();
-	
+
 	if(osc_is_web_user_logged_in() ) {
-   $pm_id = Params::getParam('message');  
+   $pm_id = Params::getParam('message');
    switch(Params::getParam('box')) {
-      case 'inbox': 
+      case 'inbox':
          $pm = ModelPM::newInstance()->getRecipientMessage(osc_logged_user_id(), 1, 0, $pm_id );
 		echo "danish"; print_r($pm); die;
          if($pm['recipNew'] == 1) {
@@ -52,25 +52,25 @@
    $words[] = array('[quote]','[/quote]', '[quoteAuthor]','[/quoteAuthor]');
    $words[] = array('<div class="messQuote">','</div>', '<div class="quoteAuthor">','</div>');
   /* $message  = osc_mailBeauty($pm['pm_message'], $words) ;*/
-   
+
  /*if($pm['sender_id'] != 0){
-                     $user = User::newInstance()->findByPrimaryKey($pm['sender_id']); 
+                     $user = User::newInstance()->findByPrimaryKey($pm['sender_id']);
                   } else { */$user['s_name'] = pmAdmin(); /*} */
-   
+
    }
 $i_userId = osc_logged_user_id();
-	
+
 ?>
 
 <?php osc_run_hook('search_ads_listing_top'); ?>
 <section class="wrapper result_outer account_outer">
-    
+
 <section class="account_box">
     	<h1 class="result"><?php _e('My Account', 'isha') ; ?></h1>
         <ul>
         	<li>
                 <a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/listing_icon.png')?>">
-			    <h2><?php _e('Listings', 'isha') ; ?><span><?php _e('Your Selected Listings', 'isha') ; ?></span></h2> 
+			    <h2><?php _e('Listings', 'isha') ; ?><span><?php _e('Your Selected Listings', 'isha') ; ?></span></h2>
 				<img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
                 <div class="wishlist" style="display: none;">
                 	<h1><?php _e('My Listings', 'isha') ; ?></h1>
@@ -79,12 +79,12 @@ $i_userId = osc_logged_user_id();
 					<?php } else {
 					while(osc_has_items()) {
 					 $search_number = bender_search_number();
-					 
+
 				echo '<p>';
                 printf(__('%1$d to %2$d of <span> %3$d </span> listings', 'isha'), $search_number['from'], $search_number['to'], $search_number['of']);
 				echo '</p>';
 					?>
-					
+
                     <article class="list_result">
             	<figure>
                 		    <?php if( osc_images_enabled_at_items() ) { ?>
@@ -95,28 +95,41 @@ $i_userId = osc_logged_user_id();
         <?php } ?>
     <?php } ?>
                       <?php bender_draw_dropdown(); ?>
-                        
+
                 </figure>
                 <div class="list_textbox">
                 		<h1><?php echo osc_item_title() ; ?>(<?php echo osc_item_category() ; ?>)</h1>
                         <h3><?php echo osc_item_city(); //osc_item()['s_city'];?> - (<?php echo osc_item_region(); ?>) - <?php echo osc_format_date(osc_item_pub_date()); ?>.</h3>
                         <p><?php echo osc_highlight( strip_tags( osc_item_description()) ,250) ; ?></p>
-						<a href="<?php echo osc_item_edit_url(); ?>" rel="nofollow"><?php _e('Edit item', 'isha'); ?></a><a class="delete" onclick="javascript:return confirm('<?php echo osc_esc_js(__('This action can not be undone. Are you sure you want to continue?', 'isha')); ?>')" href="<?php echo osc_item_delete_url();?>" ><?php _e('Delete', 'isha'); ?></a>
+						<a href="<?php echo osc_item_edit_url(); ?>" rel="nofollow"><?php _e('Edit item', 'isha'); ?></a>
+						<a class="delete" onclick="javascript:return confirm('<?php echo osc_esc_js(__('This action can not be undone. Are you sure you want to continue?', 'isha')); ?>')" href="<?php echo osc_item_delete_url();?>" ><?php _e('Delete', 'isha'); ?></a>
+                      <?php if(osc_item_is_active()) {?>
+
+                                            <a href="<?php echo osc_item_deactivate_url();?>" ><?php _e('Деактивировать', 'modern'); ?></a>
+                                            <?php
+                                            }
+                                            elseif (!osc_item_is_active())
+                                            {
+                                            ?>
+                                            <a href="<?php echo osc_item_activate_url();?>" ><?php _e('Активировать', 'modern'); ?></a>
+                                            <?php
+                                            }
+                                            ?>
                 </div>
                 <div class="clear"></div>
-        
+
 					<div class="clear"></div>
-					
+
 
     </article>
       		<?php }
 			}?>
                 </div>
             </li>
-			
+
             <li>
             	<a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/alert.png')?>">
-				<h2><?php _e('Alert', 'isha') ; ?><span><?php _e('Your Important Alerts', 'isha') ; ?></span></h2> 
+				<h2><?php _e('Alert', 'isha') ; ?><span><?php _e('Your Important Alerts', 'isha') ; ?></span></h2>
 				<img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
                  <div class="wishlist" style="display: none;">
                 	<h1><?php _e('Alerts', 'isha') ; ?></h1>
@@ -148,12 +161,12 @@ $i_userId = osc_logged_user_id();
                 </div>
             </li>
             <li>
-			<?php 
+			<?php
 			 $recipPMs = ModelPM::newInstance()->getRecipientMessages(osc_logged_user_id(), 1, 0, 'pm_id', 'DESC');
              $recipCount = count($recipPMs);
 			?>
             	<a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/inbox.png')?>">
-				<h2><?php _e('Inbox', 'isha'); ?> (<?php echo $recipCount;?>)<span><?php _e('Your Incoming Messages', 'isha'); ?></span></h2> 
+				<h2><?php _e('Inbox', 'isha'); ?> (<?php echo $recipCount;?>)<span><?php _e('Your Incoming Messages', 'isha'); ?></span></h2>
 				<img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
                 <div class="wishlist inbox" style="display: none;">
                 	<table cellspacing="0" cellpadding="0">
@@ -171,7 +184,7 @@ $i_userId = osc_logged_user_id();
                      <td><?php _e('You have no messages', 'osclass_pm'); ?></td>
                      <td></td>
                   </tr>
-                  <?php }else{ 
+                  <?php }else{
 				  foreach($recipPMs as $recipPM){?>
                         <tr>
                         	<td><input type="checkbox"></td>
@@ -179,7 +192,7 @@ $i_userId = osc_logged_user_id();
                             <td><!--<a class="mesLink" href="<?php echo osc_render_file_url('osclass_pm/' . 'user-messages.php?message=' . $recipPM['pm_id'] . '&box=inbox'); ?>">--><?php echo $recipPM['pm_subject']; ?><!--</a>--></td>
                             <td><?php echo $user['s_name']; ?></td>
 							<td><li class="reply">
-							
+
 							<a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=reply&messId=' . $recipPM['pm_id'] . '&userId=' . $i_userId ; ?>" ><?php _e('Reply','osclass_pm'); ?></a></li>
                   <li class="quote"><a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=quote&messId=' . $recipPM['pm_id'] . '&userId=' . $i_userId; ?>" ><?php _e('Quote','osclass_pm'); ?></a></li></td>
                         </tr>
@@ -217,18 +230,18 @@ $i_userId = osc_logged_user_id();
                             <td><!--<a class="mesLink" href="<?php echo osc_render_file_url('osclass_pm/' . 'user-messages.php?message=' . $recipPM['pm_id'] . '&box=outbox'); ?>">--><?php echo $recipPM['pm_subject']; ?><!--</a>--></td>
                             <td><?php echo $user['s_name']; ?></td>
 							<td><li class="reply">
-							
+
 							<a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=reply&messId=' . $recipPM['pm_id'] . '&userId=' . $i_userId ; ?>" ><?php _e('Reply','osclass_pm'); ?></a></li>
                   <li class="quote"><a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=quote&messId=' . $recipPM['pm_id'] . '&userId=' . $i_userId; ?>" ><?php _e('Quote','osclass_pm'); ?></a></li></td>
                         </tr>
 						<?php } ?>
                     </tbody></table>
                     <input type="button" onclick="if (!confirm('<?php _e('Are you sure you want to delete all selected personal messages?','osclass_pm'); ?>')) return false;" class="delete apply" value="Delete Selected">
-                
+
                 </div>
             </li>
             <li>
-			<?php 
+			<?php
 
 	if(Params::getParam('delete') != '' && osc_is_web_user_logged_in()){
 		delete_item(Params::getParam('delete'), $i_userId);
@@ -255,12 +268,12 @@ $i_userId = osc_logged_user_id();
 		$conn = getConnection();
 		$conn->osc_dbExec("DELETE FROM %st_item_watchlist WHERE fk_i_item_id = %d AND fk_i_user_id = %d LIMIT 1", DB_TABLE_PREFIX , $item, $uid);
 	}
-        
+
 ?>
             	<a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/wishlist.png')?>">
-				<h2><?php _e('Watchlist', 'isha') ; ?><span><?php _e('Your Selected Watchlist', 'isha') ; ?></span></h2> 
+				<h2><?php _e('Watchlist', 'isha') ; ?><span><?php _e('Your Selected Watchlist', 'isha') ; ?></span></h2>
 				<img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
-                
+
                 <div class="wishlist" style="display: none;">
 				<?php if (osc_count_items() == 0) { ?>
         <h3><?php _e('You don\'t have any items yet', 'watchlist'); ?></h3>
@@ -285,7 +298,7 @@ $i_userId = osc_logged_user_id();
                                 	<li>516 USD</li>
                                 </ul>
                        </a>-->
-                        
+
                 </figure>
                 <div class="list_textbox">
                 		<h1> <a href="<?php echo osc_item_url(); ?>"><?php echo osc_item_title(); ?></a></h1>
@@ -294,9 +307,9 @@ $i_userId = osc_logged_user_id();
                 </div>
                 <div class="clear"></div>
             </article>
-			<?php } 
+			<?php }
 			}?>
-                	
+
                 </div>
             </li>
             <li>
@@ -305,7 +318,7 @@ $i_userId = osc_logged_user_id();
 				<img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
                 <div class="wishlist account" style="display: block;">
                 	<h1><?php _e('Update account', 'isha') ; ?></h1>
-					<?php  
+					<?php
 					$osc_user = osc_user();
 					?>
 					<form action="<?php echo osc_base_url(true); ?>" method="post">
@@ -324,12 +337,12 @@ $i_userId = osc_logged_user_id();
                     	<li><label><?php _e('Website', 'isha') ; ?></label><?php UserForm::website_text(osc_user()); ?></li>
                     	<li><label><?php _e('Description', 'isha') ; ?></label> <?php UserForm::info_textarea('s_info', osc_locale_code(), @$osc_user['locale'][osc_locale_code()]['s_info']); ?></li>
                         <li> <button type="submit" class="Update apply ui-button ui-button-middle ui-button-main"><?php _e("Update", 'isha');?></button></li>
-						
+
 						 <?php //osc_run_hook('user_form'); ?>
 						 <?php osc_run_hook('user_form', osc_user()); ?>
                     </ul>
 					</form>
-					<?php 
+					<?php
             if(osc_is_web_user_logged_in()){
             $userSettings = ModelPM::newInstance()->getUserPmSettings(osc_logged_user_id());
             ?>
@@ -387,7 +400,7 @@ $i_userId = osc_logged_user_id();
                 	<ul>
                     	<li><label><?php _e('Current Email', 'isha') ; ?></label><?php echo osc_logged_user_email(); ?></li>
                     	<li><label><?php _e('New Email*', 'isha') ; ?></label><input type="text" name="new_email" id="new_email" value="" /></li>
-                    	
+
                         <li><button type="submit" class="Update apply ui-button ui-button-middle ui-button-main"><?php _e("Update", 'isha');?></button></li>
                     </ul>
 					</form>
@@ -409,12 +422,12 @@ $i_userId = osc_logged_user_id();
                          'url'   => '#',
                          'class' => 'opt_delete_account');
       $options = osc_apply_filter('user_menu_filter', $options);
-      echo '<ul><li class="' . $options[0]['class'] . '" ><a href="' . $options[0]['url'] . '" >' . $options[0]['name'] . '</a></li></ul>';   */                         
+      echo '<ul><li class="' . $options[0]['class'] . '" ><a href="' . $options[0]['url'] . '" >' . $options[0]['name'] . '</a></li></ul>';   */
 ?>
 <input id="dialog-delete-account" class="delete_account subscribe" title="Delete Account" onclick="return confirm('Are you sure you want to delete your account?');" value="<?php _e('Delete account', 'isha'); ?>"/>
                     <div class="clear"></div>
                 </div>
-            </li> 
+            </li>
         </ul>
     </section>
     <script>
