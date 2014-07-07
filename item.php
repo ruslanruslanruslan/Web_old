@@ -411,6 +411,7 @@ osc_current_web_theme_path('header.php');
                             <p style="font-size:14px;font-weight:700;">
                                 <?php _e('Please sign up or log in to our portal to use whole capability of PlayAndBay. It is easy, fast and free.', 'isha'); ?>
                             </p>
+							</br>
                         </div>
 						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <!-- item_popup_create_top -->

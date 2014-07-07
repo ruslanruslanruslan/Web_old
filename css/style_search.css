@@ -126,7 +126,7 @@ transition: background .2s ease-in;}
 .minmain{ float:left;}
 .minbox{width: 91px;}
 .mintxt{ text-align:left;}
-.shwmid{ float:left; padding:24px 20px 0px 20px;}
+.shwmid{ float:left; padding:8px 20px 0px 20px;}
 .mrschr{ margin:20px 0 0 0;}
 .apply{
 border-radius: 5px;
@@ -434,7 +434,7 @@ margin: 0 0 5px 0;
 .listings{}
 
 
-.pcc{ padding-bottom:10px;}
+.pcc{ padding-bottom:0px;}
 .mainccs{ width: 425px; float:left; position:relative;}
 
 .price p{background: none repeat scroll 0 0 #74AFC5;

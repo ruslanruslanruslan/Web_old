@@ -89,12 +89,10 @@ foreach ($aCategories as $cat_id) {
 <section class="cent_srch_left_main">
     <section class="cent_srch_left">
         <div class="shwmain">
-                <div class="srctxt"><?php _e('Active only', 'isha'); ?></div>
-                <label class="listxt"> <input type="checkbox" name="b_active" id="b_active" value="1" <?php echo (Params::getParam('b_active') ? 'checked' : ''); ?> ><?php _e('Active', 'isha'); ?></label>
-            </div>
         <?php if (osc_images_enabled_at_items()) { ?>
             <div class="shwmain">
                 <div class="srctxt"><?php _e('Show only', 'isha'); ?></div>
+				<label class="listxt"> <input type="checkbox" name="b_active" id="b_active" value="1" <?php echo (Params::getParam('b_active') ? 'checked' : ''); ?> ><?php _e('Active', 'isha'); ?></label>
                 <label class="listxt"> <input type="checkbox" name="bPic" id="withPicture" value="1" <?php echo (osc_search_has_pic() ? 'checked' : ''); ?> ><?php _e('listings with pictures', 'isha'); ?></label>
             </div>
         <?php } ?>
@@ -105,15 +103,12 @@ foreach ($aCategories as $cat_id) {
         <?php if (osc_price_enabled_at_items()) { ?>
             <div class="shwmain">
                 <div class="srctxt pcc"><?php _e('Price', 'isha'); ?></div>
-
                 <div class="minmain">
-                    <div class="mintxt"><?php _e('Min', 'isha'); ?>.</div>
-                    <label class="listxt"><input type="text" class="srchbox minbox" id="priceMin" name="sPriceMin" value="<?php echo osc_esc_html(osc_search_price_min()); ?>"></label>
+                    <label class="listxt"><input type="text" class="srchbox minbox" id="priceMin" name="sPriceMin" value="<?php echo osc_esc_html(osc_search_price_min()); ?>" placeholder="<?php _e('Min', 'isha'); ?>"></label>
                 </div>
                 <span class="shwmid">-</span>
                 <div class="minmain">
-                    <div class="mintxt"><?php _e('Max', 'isha'); ?>.</div>
-                    <label class="listxt"><input type="text" class="srchbox minbox" id="priceMax" name="sPriceMax" value="<?php echo osc_esc_html(osc_search_price_max()); ?>"></label>
+                    <label class="listxt"><input type="text" class="srchbox minbox" id="priceMax" name="sPriceMax" value="<?php echo osc_esc_html(osc_search_price_max()); ?>" placeholder="<?php _e('Max', 'isha'); ?>"></label>
                 </div>
                 <div class="clear"></div>
             </div>
