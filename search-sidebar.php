@@ -135,7 +135,7 @@ foreach ($aCategories as $cat_id) {
     </section>
 
     <section class="cent_srch_left mrschr padzero">
-        <div class="allcat"><?php _e('Refine category', 'isha'); ?></div>   
+        <div class="allcat"><?php _e('Categories', 'isha'); ?></div>   
         <?php isha_sidebar_category_search($category['pk_i_id']); ?>
         <div class="clear"></div>
     </section>
