@@ -119,7 +119,7 @@ color: #fff; float:left; margin-top:13px; border:none; outline:none; cursor:poin
 transition: background .2s ease-in;}
 .srchbtn:hover{ background-color:#000000; color:#FFF !important;}
 .srctxt{ text-align:left; font-size: 18px;}
-.mrbv{ margin-bottom:10px; width:95%}
+.mrbv{ margin-bottom:10px; width:96%}
 .listxt{ text-align:left; display:block;}
 .shwmain{ padding-bottom:10px; clear:both;}
 .shwmain .slct{ float:left; width:95% !important;}
@@ -136,7 +136,7 @@ padding: 7px 15px;
 color: #fff;
 border: none;
 outline: none;
-cursor: pointer; font-weight:bold;width: 98%; margin:10px 0 10px 0;}
+cursor: pointer; font-weight:bold;width: 100%; margin:10px 0 10px 0;}
 .cent_srch_ryt h1{ font-size:30px; text-align:left;padding: 20px 0px 5px 0px;}
 .srch_main{ padding:20px 0px 20px 0px;}
 .maincc ul, .sotbot ul{ float:right; margin: 7px 0 0 0;}

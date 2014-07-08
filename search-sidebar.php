@@ -48,7 +48,7 @@ echo $allowedTypesForSorting[osc_search_order_type()];
                                                 <label><?php _e('Show only', 'isha'); ?></label>
                                                 <div class="list_picture">
                                                     <input type="checkbox" name="bPic" id="withPicture" value="1" <?php echo (osc_search_has_pic() ? 'checked' : ''); ?> />
-                                                    <label for="picture"><?php _e('listings with pictures', 'isha'); ?></label>
+                                                    <label for="picture"><?php _e('With pictures', 'isha'); ?></label>
                                                 </div>
                                             </li> 
 <?php } ?>
