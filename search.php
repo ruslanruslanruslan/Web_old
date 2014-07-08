@@ -128,14 +128,14 @@ function autocompleteCity() {
 
                 <div class="headnav">
                     <div class="list_left">
-                        <?php _e('Search Results for :- ', 'isha'); ?>
+                        <?php// _e('Search Results for :- ', 'isha'); ?>
                         <?php echo search_title(); ?>
                         <?php
                         if (osc_count_items() == 0) {
                             printf(__('There are no results matching "%s"', 'isha'), osc_search_pattern());
                         } else {
                             $search_number = bender_search_number();
-                            printf(__('%1$d to %2$d of <span> %3$d </span> listings', 'isha'), $search_number['from'], $search_number['to'], $search_number['of']);
+                            printf(__('%1$d to %2$d of <span> %3$d </span> listings for ', 'isha'), $search_number['from'], $search_number['to'], $search_number['of']); printf('"%s"', osc_search_pattern());
                         }
                         ?>
                     </div>

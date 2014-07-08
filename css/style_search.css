@@ -39,7 +39,7 @@ background: -moz-linear-gradient(right, #2F6396, #5795DF);
 background: -webkit-linear-gradient(right, #2F6396, #5795DF);
 background: -ms-linear-gradient(right, #2F6396, #5795DF);
 background: -o-linear-gradient(right, #2F6396, #5795DF);
-border-radius: 10px 0px 0px 10px;
+border-radius: 0px 0px 0px 0px;
 padding:0.8em 0.4em;
 position: fixed;
 top: 91PX;
@@ -303,7 +303,7 @@ top: 10px;}
 height: 21px;
 padding: 8px 30px 8px 8px;
 border: 1px solid #ddd;
-border-radius:3px;
+border-radius:0px;
 background: #fff;
 box-shadow: 5px 4px 10px #ccc;
 
