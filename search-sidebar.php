@@ -81,7 +81,7 @@ foreach ($aCategories as $cat_id) {
     <input type="submit" value="Appply" class="apply">
 </form>
 <div class="refine_category">
-    <h1><?php _e('Refine category', 'isha'); ?></h1>
+    <h1><?php _e('Categories', 'isha'); ?></h1>
 <?php //bender_sidebar_category_search($category['pk_i_id']); ?>
 
 </div>
@@ -93,7 +93,7 @@ foreach ($aCategories as $cat_id) {
             <div class="shwmain">
                 <div class="srctxt"><?php _e('Show only', 'isha'); ?></div>
 				<label class="listxt"> <input type="checkbox" name="b_active" id="b_active" value="1" <?php echo (Params::getParam('b_active') ? 'checked' : ''); ?> ><?php _e('Active', 'isha'); ?></label>
-                <label class="listxt"> <input type="checkbox" name="bPic" id="withPicture" value="1" <?php echo (osc_search_has_pic() ? 'checked' : ''); ?> ><?php _e('listings with pictures', 'isha'); ?></label>
+                <label class="listxt"> <input type="checkbox" name="bPic" id="withPicture" value="1" <?php echo (osc_search_has_pic() ? 'checked' : ''); ?> ><?php _e('With pictures', 'isha'); ?></label>
             </div>
         <?php } ?>
         <div class="srctxt"><?php _e('City', 'isha'); ?></div>

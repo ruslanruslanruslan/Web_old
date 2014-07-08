@@ -153,9 +153,10 @@ function autocompleteCity() {
                                 $orders[$label]['sOrder'] = '';
                         }
                         ?>
-                        <span class="sorttxt"><?php _e('Sort by', 'isha'); ?>:</span>  
+                          
 
                         <div class="demoTarget">
+						    <span class="sorttxt"><?php _e('Sort by', 'isha'); ?>:</span>
                             <select id="default-usage-select" name="sOrder" class="selectBox" style="width:180px;">
                                 <?php
                                 foreach ($orders as $label => $params) {

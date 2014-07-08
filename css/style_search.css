@@ -174,7 +174,7 @@ background: linear-gradient(top, #efeeee 0%, #ffffff 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efeeee', endColorstr='white',GradientType=0 );
 margin: 2px 0 0 0; color:#000 !important;}
 .list_ryt{ float:right;width: 263px;}
-.sorttxt{ color:#fff; font-size:18px; margin: 5px 8px 0px 0px; float:left}
+.sorttxt{ color:#fff; font-family: 'OswaldBook'; margin: 8px 8px 0px 0px; float:left}
 
 
 .listings{
@@ -233,7 +233,7 @@ transition: background .2s ease-in;margin: 5px 0 10px 0;
 
 .rytttlist{ float: right;
 text-align: left;
-width: 70%;}
+width: 85%;}
 .ztxt a{ 
     /*font-size: 22px; */
 font-weight: bold;}
