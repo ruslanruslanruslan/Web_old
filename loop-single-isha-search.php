@@ -39,17 +39,17 @@
         <figure>
             <?php if (osc_images_enabled_at_items()) { ?>
                 <?php if (osc_count_item_resources()) { ?>
-                    <img src="<?php echo osc_resource_thumbnail_url(); ?>" width="108" height="97" alt="<?php echo osc_item_title(); ?>">
+                    <img src="<?php echo osc_resource_thumbnail_url(); ?>" width="50" height="50" alt="<?php echo osc_item_title(); ?>">
                 <?php } else { ?>
-                    <img src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" title="" alt="<?php echo osc_item_title(); ?>" width="108" height="110">
+                    <img src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" title="" alt="<?php echo osc_item_title(); ?>" width="50" height="50">
                 <?php } ?>
             <?php } ?>
         </figure>
         </a>
         <div class="rytttlist">
-            <div class="ztxt"><a href="<?php echo osc_item_url(); ?>"><?php echo osc_item_title(); ?></a></div>
+            <div class="ztxt"><a href="<?php echo osc_item_url(); ?>"><?php echo osc_highlight(strip_tags(osc_item_title()), 33); ?></a></div>
 
-            <p><a href="<?php echo osc_item_url(); ?>"><?php echo osc_highlight(strip_tags(osc_item_description()), 130); ?></a></p>
+            <p><a href="<?php echo osc_item_url(); ?>"><?php echo osc_highlight(strip_tags(osc_item_description()), 140); ?></a></p>
         </div>
         <div class="clear"></div>
         <div class="price">

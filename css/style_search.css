@@ -39,7 +39,7 @@ background: -moz-linear-gradient(right, #2F6396, #5795DF);
 background: -webkit-linear-gradient(right, #2F6396, #5795DF);
 background: -ms-linear-gradient(right, #2F6396, #5795DF);
 background: -o-linear-gradient(right, #2F6396, #5795DF);
-border-radius: 10px 0px 0px 10px;
+border-radius: 0px 0px 0px 0px;
 padding:0.8em 0.4em;
 position: fixed;
 top: 91PX;
@@ -119,14 +119,14 @@ color: #fff; float:left; margin-top:13px; border:none; outline:none; cursor:poin
 transition: background .2s ease-in;}
 .srchbtn:hover{ background-color:#000000; color:#FFF !important;}
 .srctxt{ text-align:left; font-size: 18px;}
-.mrbv{ margin-bottom:10px; width:95%}
+.mrbv{ margin-bottom:10px; width:96%}
 .listxt{ text-align:left; display:block;}
 .shwmain{ padding-bottom:10px; clear:both;}
 .shwmain .slct{ float:left; width:95% !important;}
 .minmain{ float:left;}
 .minbox{width: 91px;}
 .mintxt{ text-align:left;}
-.shwmid{ float:left; padding:24px 20px 0px 20px;}
+.shwmid{ float:left; padding:8px 20px 0px 20px;}
 .mrschr{ margin:20px 0 0 0;}
 .apply{
 border-radius: 5px;
@@ -136,7 +136,7 @@ padding: 7px 15px;
 color: #fff;
 border: none;
 outline: none;
-cursor: pointer; font-weight:bold;width: 98%; margin:10px 0 10px 0;}
+cursor: pointer; font-weight:bold;width: 100%; margin:10px 0 10px 0;}
 .cent_srch_ryt h1{ font-size:30px; text-align:left;padding: 20px 0px 5px 0px;}
 .srch_main{ padding:20px 0px 20px 0px;}
 .maincc ul, .sotbot ul{ float:right; margin: 7px 0 0 0;}
@@ -174,7 +174,7 @@ background: linear-gradient(top, #efeeee 0%, #ffffff 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efeeee', endColorstr='white',GradientType=0 );
 margin: 2px 0 0 0; color:#000 !important;}
 .list_ryt{ float:right;width: 263px;}
-.sorttxt{ color:#fff; font-size:18px; margin: 5px 8px 0px 0px; float:left}
+.sorttxt{ color:#fff; font-family: 'OswaldBook'; margin: 8px 8px 0px 0px; float:left}
 
 
 .listings{
@@ -233,7 +233,7 @@ transition: background .2s ease-in;margin: 5px 0 10px 0;
 
 .rytttlist{ float: right;
 text-align: left;
-width: 70%;}
+width: 85%;}
 .ztxt a{ 
     /*font-size: 22px; */
 font-weight: bold;}
@@ -303,7 +303,7 @@ top: 10px;}
 height: 21px;
 padding: 8px 30px 8px 8px;
 border: 1px solid #ddd;
-border-radius:3px;
+border-radius:0px;
 background: #fff;
 box-shadow: 5px 4px 10px #ccc;
 
@@ -434,7 +434,7 @@ margin: 0 0 5px 0;
 .listings{}
 
 
-.pcc{ padding-bottom:10px;}
+.pcc{ padding-bottom:0px;}
 .mainccs{ width: 425px; float:left; position:relative;}
 
 .price p{background: none repeat scroll 0 0 #74AFC5;

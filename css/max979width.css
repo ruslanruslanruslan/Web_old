@@ -13,7 +13,7 @@ width: 100%;}
 .rytttlist {
 float: right;
 text-align: left;
-width: 76%;
+width: 88%;
 }
 
 .price a
@@ -60,7 +60,7 @@ padding:2px 13.1px;
 
 
 .list_left{ float:none}
-.list_ryt{ width:57%; margin:10px 0 0 0 ; float:none; clear:both}
+.list_ryt{ width:300px; margin:10px 0 0 0 ; float:none; clear:both}
 
 .listings {
 padding: 32px 10px 26px 10px;}

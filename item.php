@@ -153,7 +153,7 @@ osc_current_web_theme_path('header.php');
                     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                     <!-- test4 -->
                     <ins class="adsbygoogle"
-                         style="display:inline-block;width:300px;height:250px"
+                         style="display:inline-block;width:300px;height:260px"
                          data-ad-client="ca-pub-3021368859777537"
                          data-ad-slot="8334231207"></ins>
                     <script>
@@ -411,13 +411,14 @@ osc_current_web_theme_path('header.php');
                             <p style="font-size:14px;font-weight:700;">
                                 <?php _e('Please sign up or log in to our portal to use whole capability of PlayAndBay. It is easy, fast and free.', 'isha'); ?>
                             </p>
+							</br>
                         </div>
 						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- test6 -->
+                        <!-- item_popup_create_top -->
                         <ins class="adsbygoogle"
-                             style="display:inline-block;width:468px;height:60px"
-                             data-ad-client="ca-pub-3021368859777537"
-                             data-ad-slot="6445368807"></ins>
+                        style="display:inline-block;width:468px;height:60px"
+                        data-ad-client="ca-pub-3021368859777537"
+                        data-ad-slot="8776066405"></ins>
                         <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
@@ -463,11 +464,11 @@ osc_current_web_theme_path('header.php');
                             </div>
                         </div>
 						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- test6 -->
+                        <!-- item_popup_create bottom -->
                         <ins class="adsbygoogle"
                              style="display:inline-block;width:468px;height:60px"
                              data-ad-client="ca-pub-3021368859777537"
-                             data-ad-slot="6445368807"></ins>
+                             data-ad-slot="1252799602"></ins>
                         <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
@@ -545,11 +546,11 @@ osc_current_web_theme_path('header.php');
                               </label>
                             </div>-->
 							<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                            <!-- test6 -->
+                            <!-- item_popup_login_bottom -->
                             <ins class="adsbygoogle"
                                  style="display:inline-block;width:468px;height:60px"
                                  data-ad-client="ca-pub-3021368859777537"
-                                 data-ad-slot="6445368807"></ins>
+                                 data-ad-slot="5682999201"></ins>
                             <script>
                             (adsbygoogle = window.adsbygoogle || []).push({});
                             </script>

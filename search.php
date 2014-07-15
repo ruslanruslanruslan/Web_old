@@ -101,11 +101,11 @@ function autocompleteCity() {
         </div>
         <form action="<?php echo osc_base_url(true); ?>" method="get" class="nocsrf" id="frm_search">
             <input type="hidden" name="page" value="search"/>
-            <input type="hidden" name="sOrder" value="<?php echo osc_search_order(); ?>" />
+            <?php /*<input type="hidden" name="sOrder" value="<?php echo osc_search_order(); ?>" />
             <input type="hidden" name="iOrderType" value="<?php
             $allowedTypesForSorting = Search::getAllowedTypesForSorting();
             echo $allowedTypesForSorting[osc_search_order_type()];
-            ?>" />
+            ?>" /> */?>
                    <?php foreach (osc_search_user() as $userId) { ?>
                 <input type="hidden" name="sUser[]" value="<?php echo $userId; ?>"/>
             <?php } ?>
@@ -123,19 +123,19 @@ function autocompleteCity() {
                     </div>
                     <?php echo osc_search_pagination(); ?>
                     <div class="clear"></div>
-                    
+
                 </div>
 
                 <div class="headnav">
                     <div class="list_left">
-                        <?php _e('Search Results for :- ', 'isha'); ?>
+                        <?php// _e('Search Results for :- ', 'isha'); ?>
                         <?php echo search_title(); ?>
                         <?php
                         if (osc_count_items() == 0) {
                             printf(__('There are no results matching "%s"', 'isha'), osc_search_pattern());
                         } else {
                             $search_number = bender_search_number();
-                            printf(__('%1$d to %2$d of <span> %3$d </span> listings', 'isha'), $search_number['from'], $search_number['to'], $search_number['of']);
+                            printf(__('%1$d to %2$d of <span> %3$d </span> listings for ', 'isha'), $search_number['from'], $search_number['to'], $search_number['of']); printf('"%s"', osc_search_pattern());
                         }
                         ?>
                     </div>
@@ -149,11 +149,14 @@ function autocompleteCity() {
                             if (osc_search_order() == $params['sOrder'] && osc_search_order_type() == $orderType) {
                                 $current = $label;
                             }
+                            if ($params['sOrder'] == 'dt_pub_date')
+                                $orders[$label]['sOrder'] = '';
                         }
                         ?>
-                        <span class="sorttxt"><?php _e('Sort by', 'isha'); ?>:</span>  
+                          
 
                         <div class="demoTarget">
+						    <span class="sorttxt"><?php _e('Sort by', 'isha'); ?>:</span>
                             <select id="default-usage-select" name="sOrder" class="selectBox" style="width:180px;">
                                 <?php
                                 foreach ($orders as $label => $params) {
@@ -208,7 +211,7 @@ function autocompleteCity() {
                                 <?php
                                 $f = true;
                                 $i = 0;
-                                $count = ceil( osc_count_items() / 2 );
+                                $count = ceil(osc_count_items() / 2);
                                 while (osc_has_items()) {
                                     $i++;
                                     ?>
@@ -237,25 +240,25 @@ function autocompleteCity() {
                 </div>
                 <div class="clear"></div>
                 <?php
-                /*if (osc_rewrite_enabled()) {
-                    $footerLinks = osc_search_footer_links();
-                    if (count($footerLinks) > 0) {
-                        ?>
-                        <div id="related-searches">
-                            <h5><?php _e('Other searches that may interest you', 'isha'); ?></h5>
-                            <ul class="footer-links">
-                                <?php
-                                foreach ($footerLinks as $f) {
-                                    View::newInstance()->_exportVariableToView('footer_link', $f);
-                                    ?>
-                                    <?php if ($f['total'] < 3) continue; ?>
-                                    <li><a href="<?php echo osc_footer_link_url(); ?>"><?php echo osc_footer_link_title(); ?></a></li>
-                                <?php } ?>
-                            </ul>
-                        </div>
-                        <?php
-                    }
-                }*/
+                /* if (osc_rewrite_enabled()) {
+                  $footerLinks = osc_search_footer_links();
+                  if (count($footerLinks) > 0) {
+                  ?>
+                  <div id="related-searches">
+                  <h5><?php _e('Other searches that may interest you', 'isha'); ?></h5>
+                  <ul class="footer-links">
+                  <?php
+                  foreach ($footerLinks as $f) {
+                  View::newInstance()->_exportVariableToView('footer_link', $f);
+                  ?>
+                  <?php if ($f['total'] < 3) continue; ?>
+                  <li><a href="<?php echo osc_footer_link_url(); ?>"><?php echo osc_footer_link_title(); ?></a></li>
+                  <?php } ?>
+                  </ul>
+                  </div>
+                  <?php
+                  }
+                  } */
                 ?>
             </section>
             <div class="clear"></div>
@@ -266,8 +269,8 @@ function autocompleteCity() {
 
 <script>
     //<![CDATA[
-    (function($){
-        $(document).ready(function(){
+    (function($) {
+        $(document).ready(function() {
             $('#default-usage-select').change(function() {
                 $('#frm_search').submit();
             });
@@ -284,7 +287,7 @@ function autocompleteCity() {
             $(".togimg").click(function() {
                 $(".navigation3").slideToggle();
             });
-            
+
             $(".sub_button").click(function() {
                 $.post('<?php echo osc_base_url(true); ?>', {email: $("#alert_email").val(), userid: $("#alert_userId").val(), alert: $("#alert").val(), page: "ajax", action: "alerts"},
                 function(data) {

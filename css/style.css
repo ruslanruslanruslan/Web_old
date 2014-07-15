@@ -312,7 +312,7 @@ nav.navigation2 ul li a:hover
 .search_area
 {
     background:#0382b1;
-    border-radius:5px;
+    border-radius:0px;
     padding:10px;
 }
 .input_outer_area
@@ -320,7 +320,7 @@ nav.navigation2 ul li a:hover
     float:left;
     width:82%;
     background:#fff;
-    border-radius:5px;
+    border-radius:0px;
     box-shadow:0px 1px 1px rgba(0,0,0,0.5) inset;
 }
 .input_outer_area input[type=text]
@@ -353,11 +353,11 @@ nav.navigation2 ul li a:hover
 input[type=submit].search_btn
 {
     border:none;
-    border-radius:5px;
+    border-radius:0px;
     background:#015686;
     font:20px Arial, Helvetica, sans-serif;
     color:#fff;
-    padding:10px 42px;
+    padding:12px 42px;
     float:right;
     text-transform:uppercase;
 }
@@ -709,7 +709,7 @@ h1.latest
 .login_areabox ul li input[type=text],.login_areabox ul li input[type=password]
 {
     background:#f5f5f5;
-    border-radius:10px;
+    border-radius:0px;
     border:1px solid #f5f5f5;
     padding:5px;	
     height:36px;
@@ -725,7 +725,7 @@ h1.latest
 {
     border:none;
     background:#0991d0;
-    border-radius:10px;
+    border-radius:0px;
     font-size:24px;
     color:#fff;
     font-family:'abelregular';
@@ -842,7 +842,7 @@ h1.latest
 {
     background:rgba(30,32,35,0.6);
     border:3px solid rgba(172,170,170,0.5);
-    border-radius:15px;
+    border-radius:0px;
     width:86%;
     font:bold 13px Verdana, Geneva, sans-serif;
     color:#fff;
@@ -854,7 +854,7 @@ h1.latest
 {
     background:rgba(30,32,35,0.6);
     border:3px solid rgba(172,170,170,0.5);
-    border-radius:15px;
+    border-radius:0px;
     width:86%;
     font:bold 13px Verdana, Geneva, sans-serif;
     color:#fff;
@@ -916,7 +916,7 @@ footer p
     background:-webkit-linear-gradient(top, #0095c8, #006a9d);
     background:-ms-linear-gradient(top, #0095c8, #006a9d);
     background:-o-linear-gradient(top, #0095c8, #006a9d);
-    border-radius:10px 0px 0px 10px;
+    border-radius:0px 0px 0px 0px;
     padding:0.7em;
     position:fixed;
     top:91px;
@@ -954,7 +954,7 @@ ul.nav li{
 .submit{
     background: url("../images/submit_btn.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
     border: medium none;
-    border-radius: 5px;
+    border-radius: 0px;
     color: #FFFFFF;
     cursor: pointer;
     font-family: 'abelregular';
@@ -1335,7 +1335,7 @@ input.share[type=submit]:hover
 .contact_pub ul li input[type=text]
 {
     border:1px solid #999;
-    border-radius:5px;
+    border-radius:0px;
     padding:5px;
     width:100%;
     box-sizing:border-box;
@@ -1350,7 +1350,7 @@ input.share[type=submit]:hover
     resize:none;
     height:80px;
     margin-bottom:10px;
-    border-radius:5px;
+    border-radius:0px;
     padding:5px;
     width:100%;
     box-sizing:border-box;
@@ -2004,9 +2004,8 @@ input.delete_account[type="button"]
 }
 input.apply[type="submit"] {
     background: -moz-linear-gradient(center top , #FB9500, #EB2B0C) repeat scroll 0 0 rgba(0, 0, 0, 0);
-    border: 1px solid #EC2200;
-    border-radius: 5px;
-    box-shadow: 0 1px 0 #FED18C inset, -1px -1px 0 #EF5C4A inset;
+    border: 1px solid #000000;
+    border-radius: 0px;
     color: #FFFFFF;
     font-size: 14px;
     margin: 20px 0;
