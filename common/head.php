@@ -126,7 +126,9 @@ osc_run_hook('header');
         /** code for scroll and select menu **/
         jQuery("nav.navigation ul.nav > li > a").each(function(b, c) {
             var div_Id = jQuery(this).attr("href");
-           // jQuery(div_Id).data({"index": b});
+        
+		    if ((div_Id!='http://playandbay.com/item/new#')&&(div_Id!='http://www.playandbay.com/item/new#')&&(div_Id!='http://www.playandbay.com/item/new')&&(div_Id!='http://playandbay.com/item/new'))
+            jQuery(div_Id).data({"index": b});
         });
         /** code for scroll and select menu **/
 
