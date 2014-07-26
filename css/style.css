@@ -325,14 +325,14 @@ nav.navigation2 ul li a:hover
 }
 .input_outer_area input[type=text]
 {
-    width:69%;
+    width:65%;
     background:#fff;
     border-right:1px solid #919191;
     border-left:none;
     border-top:none;
     border-bottom:none;
     margin:2px;
-    padding:12px 0px;
+    padding:12px 10px;
     outline:none;
     float:left;
     font:bold 16px Verdana, Geneva, sans-serif;
