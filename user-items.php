@@ -105,13 +105,13 @@ $i_userId = osc_logged_user_id();
 						<a class="delete" onclick="javascript:return confirm('<?php echo osc_esc_js(__('This action can not be undone. Are you sure you want to continue?', 'isha')); ?>')" href="<?php echo osc_item_delete_url();?>" ><?php _e('Delete', 'isha'); ?></a>
                       <?php if(osc_item_is_active()) {?>
 
-                                            <a href="<?php echo osc_item_deactivate_url();?>" ><?php _e('Деактивировать', 'isha'); ?></a>
+                                            <a href="<?php echo osc_item_deactivate_url();?>" ><?php _e('Deactivate', 'isha'); ?></a>
                                             <?php
                                             }
                                             elseif (!osc_item_is_active())
                                             {
                                             ?>
-                                            <a href="<?php echo osc_item_activate_url();?>" ><?php _e('Активировать', 'isha'); ?></a>
+                                            <a href="<?php echo osc_item_activate_url();?>" ><?php _e('Activate', 'isha'); ?></a>
                                             <?php
                                             }
                                             ?>
