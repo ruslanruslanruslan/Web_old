@@ -1,17 +1,6 @@
 div.sbHolder {
 	position: relative;
 	height: 29px;
-	width: 100%;
-	margin: 15px 0 0;
-	font-size: 16px;
-	color: #444;
-	background: #fff;
-	float:right;
-}
-
-.search_area div.sbHolder {
-	position: relative;
-	height: 29px;
 	width: 30%;
 	margin: 15px 0 0;
 	font-size: 16px;
@@ -39,7 +28,7 @@ ul.sbOptions {
 a.sbSelector {
 	background: url(../images/arrow.png) 100% 10px no-repeat;
 	height: 21px;
-	margin-top: 2px;
+	margin-top: -2px;
 	padding: 0;
 	position: absolute;
 	color: #000;
