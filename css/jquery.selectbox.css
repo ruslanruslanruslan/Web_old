@@ -1,11 +1,13 @@
 div.sbHolder {
 	position: relative;
 	height: 29px;
+
 	width: 100%;
 	margin: 2px 0 0;
 	font-size: 16px;
 	color: #444;
 	background: #fff;
+
 }
 
 ul.sbOptions {
@@ -26,7 +28,9 @@ ul.sbOptions {
 a.sbSelector {
 	background: url(../images/arrow.png) 100% 10px no-repeat;
 	height: 21px;
+
 	margin-top: 3px;
+
 	padding: 0;
 	position: absolute;
 	color: #000;
