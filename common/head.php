@@ -90,7 +90,7 @@ osc_run_hook('header');
 <![endif]-->
 <!-- script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script -->
 
-<script type="text/javascript" src="<?php echo osc_current_web_theme_js_url('jquery.selectbox.js') ?>"></script>
+<script type="text/javascript" src="<?php echo osc_current_web_theme_js_url('jquery.selectBox.js') ?>"></script>
 <script type="text/javascript" src="<?php echo osc_current_web_theme_js_url('selectbox.js') ?>"></script>
 <script type="text/javascript">
     $(document).ready(function() {
