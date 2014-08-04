@@ -2042,6 +2042,7 @@ input.delete_account[type="button"]
     padding:4px 10px;
     color:#fff;
     box-shadow:0px 1px 0px #fed18c inset, -1px -1px 0px #ef5c4a inset;
+	display:none;
 
 }
 .share:hover
@@ -2054,6 +2055,7 @@ input.delete_account[type="button"]
     background:-o-linear-gradient(top, #eb2b0c, #fb9500);
     cursor:pointer;
     box-shadow:-1px -1px 0px #fed18c inset, 0px 1px 0px #ef5c4a inset;
+	display:none;
 }
 /*-pankhi--*/
 
