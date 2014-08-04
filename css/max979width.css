@@ -73,3 +73,6 @@ width: 91%;
 .mainccs {
 width: 100%;}
 .mrvbtn{ right:8px}
+.navigation{
+  display: none;
+}
