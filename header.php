@@ -87,7 +87,7 @@
                         <div class="input_outer_area">
 
                             <input type="text" name="sPattern" id="query" class="input-text" value="" placeholder="<?php echo osc_get_preference('keyword_placeholder', 'isha'); ?>" />
-                            <?php osc_categories_select('sCategory', null, __('Select a category', 'isha')); ?>
+                            <?php osc_categories_select('sCategory', null, __('Category', 'isha')); ?>
                             <!-- <div class="clear"></div>  -->
 
 
