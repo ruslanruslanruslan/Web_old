@@ -3,7 +3,7 @@ div.sbHolder {
 	height: 29px;
 
 	width: 100%;
-	margin: 2px 0 0;
+	/*margin: 2px 0 0; */
 	font-size: 16px;
 	color: #444;
 	background: #fff;
@@ -25,6 +25,51 @@ ul.sbOptions {
 	background: #fff;
 }
 
+/*.search_box ul.sbOptions {
+	display: none;
+position: absolute;
+top: 26px;
+padding: 2px;
+left: 0;
+right: 0;
+overflow: hidden;
+background: #fff;
+text-align: left;
+z-index: 1000;
+border: 1px solid #5d5c5c;
+background: #fff;
+margin-top: -20px;
+}  */
+
+.search_box ul.sbOptions {
+	display: none;
+position: absolute;
+top: 26px;
+padding: 2px;
+/*left: -25%; */
+right: 0;
+overflow: auto;
+background: #fff;
+text-align: left;
+z-index: 1000;
+border: 1px solid #5d5c5c;
+background: #fff;
+margin-top: -20px;
+/*width:96%;*/
+width:210px;
+}
+
+.search_box div.sbHolder {
+	position: relative;
+height: 43px;
+width: 19%;
+/*margin: 2px 0 0;*/
+font-size: 16px;
+/*float: right;  */
+margin-left: 67%;
+
+}
+
 a.sbSelector {
 	background: url(../images/arrow.png) 100% 10px no-repeat;
 	height: 21px;
@@ -38,11 +83,38 @@ a.sbSelector {
 	left: 5px;
 }
 
+.search_box a.sbSelector {
+	background: url(../images/arrow.png) 100% 17px no-repeat;
+/* height: 21px; */
+/* margin-top: 3px; */
+padding: 8px;
+position: absolute;
+color: #000;
+right: 5px;
+left: 5px;
+overflow: hidden;
+white-space: nowrap;
+/*left: -20%;  */
+}
+
 ul.sbOptions a {
 	display: block;
 	padding: 5px 9px;
 	color: #000;
 	font-size: 16px;
+}
+
+.search_box ul.sbOptions a {
+	display: block;
+	/*padding: 5px 9px;  */
+	color: #000;
+	font-size: 15px;
+	overflow:auto;
+
+}
+
+.search_box input.ui-button {
+padding: 0;
 }
 
 ul.sbOptions a:hover {

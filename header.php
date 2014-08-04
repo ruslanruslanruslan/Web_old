@@ -21,13 +21,13 @@
 ?><!DOCTYPE html>
 <html dir="ltr" lang="<?php echo str_replace('_', '-', osc_current_user_locale()); ?>">
     <head>
-        <?php osc_current_web_theme_path('common/head.php'); ?> 
+        <?php osc_current_web_theme_path('common/head.php'); ?>
     </head>
     <body>
         <?php include_once("analyticstracking.php") ?>
         <header>
             <section class="header_midbox wrapper">
-                <a href="<?php echo osc_base_url(); ?>"><img width="226" src="<?php echo osc_current_web_theme_url('images/logo.png') ?>" alt="Logo Here" class="logo"/></a> 
+                <a href="<?php echo osc_base_url(); ?>"><img width="226" src="<?php echo osc_current_web_theme_url('images/logo.png') ?>" alt="Logo Here" class="logo"/></a>
                 <?php if (osc_is_web_user_logged_in()) { ?>
                     <div class="dash">
                         <span><?php echo sprintf(__('Hi %s', 'isha'), osc_logged_user_name() . '!'); ?>  &middot;</span>
@@ -52,9 +52,9 @@
                                 <li class="publish_ad"><a class="no-link" href="<?php echo osc_item_post_url_in_category(); ?>"><img src="<?php echo osc_current_web_theme_url('images/publish-icon.png') ?>" alt="Home_icon" class="active_icon" /><img src="<?php echo osc_current_web_theme_url('images/publish-icon-normal.png') ?>" alt="Home_icon" class="normal_icon" /><p><?php _e("Publish your ad", 'isha'); ?></p></a></li>
                             <?php } ?>
 
-                        </ul> 
-                    </nav> 
-                <?php } else { ?> 
+                        </ul>
+                    </nav>
+                <?php } else { ?>
                     <nav class="navigation">
                         <ul class="nav1" >
                             <li class="current" ><a href="<?php echo osc_base_url() . '#home'; ?>" >
@@ -85,13 +85,19 @@
                     <form action="<?php echo osc_base_url(true); ?>" method="get" class="search nocsrf" <?php /* onsubmit="javascript:return doSearch();" */ ?>>
                         <input type="hidden" name="page" value="search" />
                         <div class="input_outer_area">
-                            <input type="text" name="sPattern" id="query" class="input-text" value="" placeholder="<?php echo osc_get_preference('keyword_placeholder', 'bender'); ?>" />
-                            <?php osc_categories_select('sCategory', null, __('Select a category', 'bender_black')); ?>
-                            <div class="clear"></div>
+
+                            <input type="text" name="sPattern" id="query" class="input-text" value="" placeholder="<?php echo osc_get_preference('keyword_placeholder', 'isha'); ?>" />
+                            <?php osc_categories_select('sCategory', null, __('Select a category', 'isha')); ?>
+                            <!-- <div class="clear"></div>  -->
+
+
+
+                        <input type="submit" class="search_btn ui-button ui-button-big js-submit" style="border: none;radius: 0px;background: #015686;0px Arial, Helvetica, sans-serif;color: #fff;float: right;height: 43px;margin: -43px 10px 0px 0px;width:10%;font-size:14px" value="OK" />
+                        <!-- <div class="clear"></div>  -->
+
                         </div>
 
-                        <input type="submit" class="search_btn ui-button ui-button-big js-submit" value="Search" />
-                        <div class="clear"></div>
+
                     </form>
                 </div>
             </section>
@@ -103,8 +109,8 @@
                 ?>
                 <div class="breadcrumb">
                     <?php echo $breadcrumb; ?>
-                    <div class="clear"></div> 
-                </div> 
+                    <div class="clear"></div>
+                </div>
                 <?php
             }
             ?>

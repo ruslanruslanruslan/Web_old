@@ -175,7 +175,7 @@ body
 .wrapper
 {
     margin:0px auto;
-    width:1000px;
+   /* width:1000px;*/
 }
 
 .page-item p.description {
@@ -308,20 +308,27 @@ nav.navigation2 ul li a:hover
     display:none;
     z-index:9999;
     width:100%;
+    height: 46px;
 }
 .search_area
 {
     background:#0382b1;
     border-radius:0px;
     padding:10px;
+    /* float: left;   */
+width: 98%;
+/*height:46px;*/
+margin-top: -10px;
 }
-.input_outer_area
+.search_box .input_outer_area
 {
-    float:left;
-    width:82%;
-    background:#fff;
-    border-radius:0px;
-    box-shadow:0px 1px 1px rgba(0,0,0,0.5) inset;
+ /* float: left;*/
+width: 100%;
+margin: 0 auto;
+ /*background: #fff;  */
+
+/* border-radius: 0px; */
+/*box-shadow: 0px 1px 1px rgba(0,0,0,0.5) inset; */
 }
 .input_outer_area input[type=text]
 {
@@ -331,7 +338,7 @@ nav.navigation2 ul li a:hover
     border-left:none;
     border-top:none;
     border-bottom:none;
-    margin:2px;
+   /* margin:2px;*/
 
     padding:12px 0;
 
@@ -341,6 +348,24 @@ nav.navigation2 ul li a:hover
     font:bold 16px Verdana, Geneva, sans-serif;
     color:#535455;
 }
+
+.search_box .input_outer_area input[type=text]
+{
+   width: 63%;
+height: 43px;
+/*background: #fff; */
+/* border-right: 1px solid #919191; */
+border-left: none;
+border-top: none;
+border-bottom: none;
+/* margin: 2px; */
+padding: 0px 5px;
+outline: none;
+/*float: left;*/
+font: bold 16px Verdana, Geneva, sans-serif;
+color: #535455;
+}
+
 .input_outer_area select
 {
     float:left;
@@ -353,6 +378,19 @@ nav.navigation2 ul li a:hover
     font:bold 16px Verdana, Geneva, sans-serif;
     color:#4d4e4e;
 }
+
+.search_box .input_outer_area select
+{
+   float: right;
+height: 43px;
+border: none;
+width: 36%;
+
+font: bold 16px Verdana, Geneva, sans-serif;
+display:block;
+
+}
+
 input[type=submit].search_btn
 {
     border:none;
@@ -360,15 +398,19 @@ input[type=submit].search_btn
     background:#015686;
     font:20px Arial, Helvetica, sans-serif;
     color:#fff;
-    padding:12px 42px;
+  /*  padding:12px 42px;  */
     float:right;
     text-transform:uppercase;
 }
+
+
 input[type=submit].search_btn:hover
 {
     background:#004972;
     cursor:pointer;
 }
+
+
 .service_area
 {
     background:url(../images/welcome_back.png);
@@ -984,6 +1026,25 @@ select {
     -moz-appearance:none;
     appearance:none;
     cursor:pointer;
+}
+
+.search_box select {
+   /* padding: 3px; */
+margin: 0;
+/* -webkit-border-radius: 4px; */
+-moz-border-radius: 4px;
+/* -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset; */
+-moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+/* box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset; */
+/* background: #f8f8f8; */
+color: #888;
+border: none;
+outline: none;
+display: inline-block;
+/* -webkit-appearance: none; */
+-moz-appearance: none;
+appearance: none;
+cursor: pointer;
 }
 
 /* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */

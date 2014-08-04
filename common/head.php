@@ -126,9 +126,15 @@ osc_run_hook('header');
         /** code for scroll and select menu **/
         jQuery("nav.navigation ul.nav > li > a").each(function(b, c) {
             var div_Id = jQuery(this).attr("href");
+                        // console.log(div_Id);
+            var pos =div_Id.indexOf('/item/new');
+             var pos2 =div_Id.indexOf('index.php?page=item&action=item_add');
+           // console.log(pos);
 
+            if ((pos===-1)&&(pos2===-1))
+            {
             jQuery(div_Id).data({"index": b});
-
+             }
 
         });
         /** code for scroll and select menu **/
