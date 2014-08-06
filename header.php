@@ -54,6 +54,11 @@
 
                         </ul>
                     </nav>
+                    <div class="menu_icon" id="menu_cliced">
+                        <div class="horisontal"></div>
+                        <div class="horisontal"></div>
+                        <div class="horisontal"></div>
+                    </div>
                 <?php } else { ?>
                     <nav class="navigation">
                         <ul class="nav1" >
@@ -76,7 +81,29 @@
                     </nav>
                 <?php } ?>
             </section>
+                    <div class="nav-mobile" id="menu-mobile_cliced">
+                        <div class="mobile_header"><div>Меню</div><div id="close_menu"></div>
+                        </div>
+                        <ul class="nav" >
+                            <li class="current for_mob" ><a href="#home" ><p><?php _e("Home", 'isha'); ?></p></a></li>
+                            <li><a href="#listing"><p><?php _e("Listing", 'isha'); ?></p></a></li>
+                            <li><a href="#contact"><p><?php _e("Contact us", 'isha'); ?></p></a></li>
+                            <?php ?>
+                            <?php if (!osc_is_web_user_logged_in()) { ?>
+                                <li><a href="#login_register"><p><?php _e("Login", 'isha'); ?></p></a></li>
 
+                                <li><a href="#login_register"><p><?php _e("Register", 'isha'); ?></p></a></li>
+
+                            <?php } else { ?>
+                                <li class="publish_ad"><a class="no-link" href="<?php echo osc_item_post_url_in_category(); ?>"><p><?php _e("Publish your ad", 'isha'); ?></p></a></li>
+                                <div class="dash">
+                        <span><?php echo sprintf(__('Hi %s', 'isha'), osc_logged_user_name() . '!'); ?>  &middot;</span>
+                        <strong><a class="account_new" href="<?php echo osc_user_dashboard_url(); ?>"><?php _e('My account', 'isha'); ?></a></strong>
+                        <a class="logout" href="<?php echo osc_user_logout_url(); ?>"><?php _e('Logout', 'isha'); ?></a>
+                    </div>
+                            <?php } ?>
+                        </ul> 
+                    </div>
         </header>
 
         <article class="search_box">

@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 
 *
@@ -175,7 +175,19 @@ body
 .wrapper
 {
     margin:0px auto;
-   /* width:1000px;*/
+    width: 90%;
+}
+
+section.wrapper
+{
+    margin:0px auto;
+    width: 100%;
+}
+.search_box .wrapper
+{
+    width: 90%;
+    margin-right: 8%;
+
 }
 
 .page-item p.description {
@@ -187,14 +199,14 @@ header
   background:#eef2f3;
   position:fixed;
   width:100%;
-  z-index:10;
+  z-index:9;
   border-bottom:1px solid #CCC;
 }
 
 .logo
 {
     float:left;
-    padding:20px 20px 0 0;
+    padding:20px 20px 17px 5%;
 }
 nav.navigation
 {
@@ -306,9 +318,8 @@ nav.navigation2 ul li a:hover
     position:fixed;
     top:90px;
     display:none;
-    z-index:9999;
+    z-index:9;
     width:100%;
-    height: 46px;
 }
 .search_area
 {
@@ -3079,8 +3090,20 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
 }
 .control-group1{height:60px; display:block; overflow:hidden;}
 /*  RESPONSIVE CSS - ADDEDD BY : TEJAS SHYANI */
-
 @media screen and (max-width: 1084px) {
+    .logo{
+        padding-left: 1%;
+    }
+    .nav-mobile .dash{
+        float: none;
+        text-align: center;
+    }
+}
+@media (max-width: 300px) {
+    
+    .nav-mobile{
+        z-index: 999;
+}
 }
 
 @media screen and (max-width: 1024px)
@@ -3090,8 +3113,11 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
     .relatedlistings_box div.rsearch {width:430px;}
     .mctooltip_box span{font-size:11px; padding:6px 5px;}
     .comments_manbox{max-width:930px; padding:10px 25px; overflow:hidden;}
+    .nav-mobile .dash{
+        float: none;
+        text-align: center;
+    }
 }
-
 @media screen and (max-width: 980px)
 {
     .result_outer{padding-top:75px;}
@@ -3103,7 +3129,12 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
     .related_list{float:none;}
     .relatedlistings_box div.rsearch { float: none; margin: 20px auto; width: 500px;}
 }
-
+@media screen and (min-width: 1024px and max-width: 1066px)
+{
+    .logo{
+        padding-left: 1%;
+    }
+}
 @media screen and (max-width: 800px)
 {
     .desc_cont{width:93%;}
@@ -3114,6 +3145,15 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
 }
 
 @media screen and (max-width: 768px) {
+    .dash{
+    display: none;
+}
+.nav-mobile .dash{
+    display: block;
+    float: none;
+    text-align: center;
+    margin-left: 0;
+}
 }
 
 @media screen and (max-width: 650px)
@@ -3170,11 +3210,23 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
     .contect_form_input{width:29%;}
     form .contect_form_textarea{width:28%;}
 }
-
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 240px) {
+    header section .menu_icon{
+    display: block;
+}
+}
+@media (max-width: 349px) {
+    img.logo{
+        width: 118px;
+        padding-top: 33px;
+        padding-bottom: 28px;
+    }
 }
 
-@media screen and (max-width: 240px) {
+@media screen and (max-width: 320px) {
+    header section .menu_icon{
+    display: block;
+}
 }
 
 
@@ -3227,4 +3279,106 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
 
 .listings p a{
     color: #5d5c5c !important
+}
+.menu_icon{
+    display: none;
+    float: right;
+    margin-top: 29px;
+    cursor: pointer;
+    margin-right: 5%;
+}
+.horisontal{
+    background-color: #005383;
+    height: 5px;
+    width: 30px;
+    margin: 4px 0;
+}
+.nav-mobile{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 283px;
+    background-color: #EEF2F3;
+    z-index: 9999;
+    overflow: auto;
+
+}
+.nav-mobile li a{
+    text-align: center;
+}
+.nav-mobile li{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border
+}
+.nav-mobile li a p{
+    text-align: center;
+    color: #025787;
+    font-size: 24px;
+    font-family: 'oswaldlight';
+    margin-left: 15%;
+    margin-right: 15%;
+    border-bottom: 1px solid #2B83B2;
+}
+.hiden{
+    display: none;
+}
+.blocking{
+    display: block;
+}
+
+.mobile_header{
+    background-color: #0382B1;
+    position: relative;
+}
+
+.mobile_header div:first-child{
+    text-align: center;
+    color: #025787;
+    font-size: 24px;
+    font-family: 'oswaldlight';
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    vertical-align: top;
+
+}
+.mobile_header #close_menu{
+    cursor: pointer;
+    background: url('http://playandbay.com/betaPlayandBay3/oc-content/themes/isha/images/close.png') no-repeat;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: 25px;right:10px;
+}
+.mobile_header #close_menu:hover{
+    background: url('http://playandbay.com/betaPlayandBay3/oc-content/themes/isha/images/close_red.png') no-repeat;
+}    
+.overlay{
+    opacity: 0;
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0382B1;
+    z-index: -15;
+    transform: matrix(0.8, 0, 0, 0.8, 0, 0);
+}
+
+.nav-mobile li:hover{
+    background-color: #35AAD8;
+    
+}
+
+.nav-mobile li:hover p{
+    border: none;
+    margin-bottom: 1px;
+    
+}
+.nav-mobile li:first-child{
+    padding-top: 30px;
+    
 }

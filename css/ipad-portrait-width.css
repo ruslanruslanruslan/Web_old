@@ -9,9 +9,23 @@ nav.navigation
 }
 .logo
 {
-	float:none;
-	margin:0px auto 20px;
+	float:left;
+	margin:0px auto;
 	display:table;
+	padding-left: 4px;
+	padding-right: 1px;
+}
+@media (max-width: 295px) {
+    img.logo{
+        width: 118px;
+        padding-top: 33px;
+        padding-bottom: 28px;
+    }
+}
+@media (max-width: 300px) {
+    .nav-mobile{
+    	width: 100%;
+    }
 }
 
 .input_outer_area
@@ -68,7 +82,7 @@ input.search_btn[type="button"]
 }
 .search_box
 {
-	margin-top:97px;
+	margin-top:148px;
 }
 .publish-btn{
 	float:right;
