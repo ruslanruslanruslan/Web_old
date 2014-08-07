@@ -126,3 +126,44 @@ ul.sbOptions a:hover {
 	float: left;
 	width: 182px;
 }
+
+@media (max-width: 680px) {
+	.search_box div.sbHolder{
+		float: none;
+		margin-left: 9%;
+		margin-top: 15px;
+		width: 57%;
+	}
+	.search_box .input_outer_area input[type=text]{
+		float: none;
+		width: 75%;
+		margin-left: 9%;
+	}
+	input[type=submit].search_btn{
+		float: left;
+		margin-left: 66%;
+		width: 20%;
+	}
+}
+
+@media (max-width: 500px) {
+	input[type=submit].search_btn{
+		margin-left: 67%;
+	}
+	.search_box div.sbHolder{
+		width: 58%;
+	}
+}
+
+input[type=submit].search_btn:hover{
+    background-color: #FF7F50;
+}
+
+@media (max-width: 305px) {
+	input[type=submit].search_btn{
+		margin-left: 57%;
+	}
+	.search_box div.sbHolder{
+		width: 48%;
+	}
+}

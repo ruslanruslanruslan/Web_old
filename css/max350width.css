@@ -142,7 +142,7 @@ header section .menu_icon{
 	float: left;
 	margin: 0;
 	display: inline;
-	padding-left: 2px;
+	padding-left: 10%;
 	padding-right: 0;
 }
 @media(max-width: 320px) {

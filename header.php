@@ -119,7 +119,7 @@
 
 
 
-                        <input type="submit" class="search_btn ui-button ui-button-big js-submit" style="border: none;radius: 0px;background: #015686;0px Arial, Helvetica, sans-serif;color: #fff;float: right;height: 43px;margin: -43px 10px 0px 0px;width:10%;font-size:14px" value="OK" />
+                        <input type="submit" class="search_btn ui-button ui-button-big js-submit" style="border: none;radius: 0px;0px Arial, Helvetica, sans-serif;color: #fff;height: 43px;font-size:14px" value="OK" />
                         <!-- <div class="clear"></div>  -->
 
                         </div>
