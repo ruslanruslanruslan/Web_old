@@ -373,7 +373,7 @@ border-left: none;
 border-top: none;
 border-bottom: none;
 /* margin: 2px; */
-padding: 0px 5px;
+padding: 0;
 outline: none;
 /*float: left;*/
 font: bold 16px Verdana, Geneva, sans-serif;
@@ -3404,3 +3404,6 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
     margin: -43px 10px 0px 0px;width:10%;
 }
 
+input[type=submit].search_btn:hover{
+    background-color: #FF7F50;
+}

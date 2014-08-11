@@ -136,7 +136,7 @@ ul.sbOptions a:hover {
 	}
 	.search_box .input_outer_area input[type=text]{
 		float: none;
-		width: 75%;
+		width: 77%;
 		margin-left: 9%;
 	}
 	input[type=submit].search_btn{
@@ -148,11 +148,17 @@ ul.sbOptions a:hover {
 
 @media (max-width: 500px) {
 	input[type=submit].search_btn{
-		margin-left: 67%;
+		margin-left: 66%;
 	}
 	.search_box div.sbHolder{
 		width: 58%;
 	}
+}
+
+@media (min-width: 420px) and (max-width: 480px) {
+  input[type=submit].search_btn{
+    margin-left: 66%;
+  }
 }
 
 input[type=submit].search_btn:hover{

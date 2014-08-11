@@ -213,6 +213,7 @@ $(document).ready(function(){
         $("#menu-mobile_cliced").show(700);
         $(".header_midbox").hide(1000);
         $('.chose-langu').css({"z-index": "1"});
+        $('.search_box').hide(700);
     });
 
     $("#close_menu").click(function(){
