@@ -123,3 +123,34 @@ padding: 32px 10px 22px 10px;}
 width: 100%;}
 .mrvmain {
 width: 84%;}
+
+.navigation li{
+	display: none;
+}
+nav.navigation li.for_mob{
+	margin-left: 0;
+}
+
+nav.navigation{
+	float: none;
+	display: inline;
+}
+header section .menu_icon{
+	display: block;
+}
+.header_midbox a .logo{
+	float: left;
+	margin: 0;
+	display: inline;
+	padding-left: 10%;
+	padding-right: 0;
+}
+@media(max-width: 320px) {
+    header section .menu_icon{
+	display: block;
+
+  }
+
+  .nav-mobile{
+        z-index: 999;
+}

@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.wrapper {width: 656px;}
+
 .minbox {width: 85px;}
 .mrbv1 {width: 93%;}
 .minbox {
@@ -88,3 +88,27 @@ width: 94%;}
 .mainccs {
 width: 100%;}
 .mrvbtn{ right:13px}
+.navigation li:not(.for_mob){
+	display: none;
+}
+nav.navigation li.for_mob{
+	margin-left: 18%;
+}
+
+nav.navigation{
+	float: none;
+	display: inline;
+}
+.menu_icon{
+	display: block;
+}
+
+.dash{
+    display: none;
+}
+.nav-mobile .dash{
+    display: block;
+    float: none;
+    text-align: center;
+    margin-left: 0;
+}

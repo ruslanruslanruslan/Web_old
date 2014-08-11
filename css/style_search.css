@@ -42,9 +42,9 @@ background: -o-linear-gradient(right, #2F6396, #5795DF);
 border-radius: 0px 0px 0px 0px;
 padding:0.8em 0.4em;
 position: fixed;
-top: 91PX;
+top: 90PX;
 right: 0;
-z-index: 99999;box-shadow: 2px 1px 15px #5c5a5a;
+z-index: 9;box-shadow: 2px 11px 15px #5c5a5a;
 }
 
 .cent_srch{ padding:30px 0px;}
@@ -208,7 +208,7 @@ box-shadow: 0 0 8px rgba(0,0,0,0.2);
 z-index: 5;position: relative;}
 
 .alist li:hover >.listings a {
-	
+  
 }
 .ullist  li a{ color:#fff}
 
@@ -399,9 +399,9 @@ background: -o-linear-gradient(top, #0095c8, #006a9d);
 border-radius: 10px 0px 0px 10px;
 padding: 0.7em;
 position: fixed;
-top: 119px;
+top: 90px;
 right: 0;
-z-index: 99999;
+z-index: 9;
 }
 /* .chose-langu:hover{ opacity:0.85;} */
 .search-btn {

@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-.wrapper {width: 328px;}
 .minbox {width: 85px;}
 .mrbv1 {width: 90%;}
 .minbox {
@@ -117,3 +116,34 @@ width: 86%;}
 .mainccs {
 width: 100%;}
 	
+.navigation li{
+	display: none;
+}
+nav.navigation li.for_mob{
+	margin-left: 0%;
+}
+
+nav.navigation{
+	float: none;
+	display: inline;
+}
+.menu_icon{
+	display: block;
+}
+.header_midbox a .logo{
+	float: left;
+	margin: 0;
+	display: inline;
+}
+.dash{
+    display: none;
+}
+.nav-mobile .dash{
+    display: block;
+    float: none;
+    text-align: center;
+    margin-left: 0;
+}
+.nav-mobile{
+        z-index: 999;
+}

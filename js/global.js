@@ -208,3 +208,17 @@ $(document).ready(function(event){
         $(this).parents('.flashmessage').remove();
     });
 });
+$(document).ready(function(){
+    $( "#menu_cliced" ).click(function() {
+        $("#menu-mobile_cliced").show(700);
+        $(".header_midbox").hide(1000);
+        $('.chose-langu').css({"z-index": "1"});
+        $('.search_box').hide(700);
+    });
+
+    $("#close_menu").click(function(){
+        $("#menu-mobile_cliced").hide(600);
+        $(".header_midbox").show(300);
+        $('.chose-langu').css({"z-index": "99"});
+    })
+})

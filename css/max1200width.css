@@ -1,5 +1,4 @@
 @charset "utf-8";
-.wrapper {width: 900px;}
 .minbox {width: 85px;}
 
 .minbox {
@@ -61,3 +60,7 @@ font-size: 11px;
 .alist1 .listings{ padding-top:45px;}
 .mainccs {
 width: 100%;}
+.nav-mobile .dash{
+        float: none;
+        text-align: center;
+    }

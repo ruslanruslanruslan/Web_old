@@ -3,7 +3,7 @@
 
 nav.navigation
 {
-	display:none;
+	display:none;	
 }
 nav.navigation2
 {
@@ -13,8 +13,6 @@ nav.navigation2
 {
 	width:98.5%;
 	border:1px solid #999;
-	/*border-radius:5px; */
-	border-radius:0px;
 }
 .inner_listing
 {
@@ -50,17 +48,13 @@ h1.latest, .welcome_mid_box h1
 {
 	padding:3em 0px 4em;
 }
-header
-{
-	position:inherit;
-}
 .service_area
 {
-	margin-top:0px;
+	margin-top:70px;
 }
 .search_box
 {
-	top:71px;
+	top:90px;
 }
 .chose-langu
 {
