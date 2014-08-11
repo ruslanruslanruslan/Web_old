@@ -103,7 +103,17 @@
             </section>
         </article>
         <div class="wrapper wrapper-flash">
+           
+            <?php osc_show_flash_message(); ?>
+        </div>
+        <div id="home" class="div-cont" >
+
             <?php
+            osc_run_hook('inside-main');
+            ?>
+            <?php osc_run_hook('home-content'); ?>
+        </div>
+		 <?php
             $breadcrumb = osc_breadcrumb('&raquo;', false, get_breadcrumb_lang());
             if ($breadcrumb !== '') {
                 ?>
@@ -114,15 +124,6 @@
                 <?php
             }
             ?>
-            <?php osc_show_flash_message(); ?>
-        </div>
-        <div id="home" class="div-cont" >
-
-            <?php
-            osc_run_hook('inside-main');
-            ?>
-            <?php osc_run_hook('home-content'); ?>
-        </div>
         <?php osc_run_hook('product'); ?>
 
         <?php if (osc_users_enabled()) { ?>
