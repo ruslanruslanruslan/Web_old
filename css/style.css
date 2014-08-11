@@ -3416,6 +3416,7 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
 input[type=submit].search_btn:hover{
     background-color: #FF7F50;
 
+
 }
 
 
@@ -3452,5 +3453,6 @@ padding:5px;
 .pm_message {
 margin: 0;
 }
+
 
 

@@ -122,8 +122,10 @@
                             </li>
 
 
+
                             <li><a href="<?php echo osc_base_url() . '#listing'; ?>"><p><?php _e("Listing", 'isha'); ?></p></a></li>
                             <li><a href="<?php echo osc_base_url() . '#contact'; ?>"><p><?php _e("Contact us", 'isha'); ?></p></a></li>
+
 
                             <?php if (!osc_is_web_user_logged_in()) { ?>
                                 <li><a href="<?php echo osc_base_url() . '#login_register'; ?>"><p><?php _e("Login", 'isha'); ?></p></a></li>
