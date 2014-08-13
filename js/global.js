@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-    $('.breadcrumb a[href="http://playandbay.com/betaPlayandBay3/"]').prepend('<img src="http://playandbay.com/betaPlayandBay3/oc-content/themes/isha/images/home.png" clss="visibl"><img src="http://playandbay.com/betaPlayandBay3/oc-content/themes/isha/images/home_hover.png" clss="not" style="position:absolute;top:-10px;left:0;z-index:5">');
+    $('.breadcrumb .first-child a').prepend('<img src="http://playandbay.com/betaPlayandBay3/oc-content/themes/isha/images/home.png" clss="visibl"><img src="http://playandbay.com/betaPlayandBay3/oc-content/themes/isha/images/home_hover.png" clss="not" style="position:absolute;top:-10px;left:0;z-index:5">');
 })
 bender.extend = function(el, opt) {
         for (var name in opt) el[name] = opt[name];
