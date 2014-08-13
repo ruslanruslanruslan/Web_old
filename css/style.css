@@ -20,7 +20,7 @@ img
 html
 {
     -webkit-text-size-adjust:none;
-	
+    
     position: relative;
     min-height: 100%;
 }
@@ -174,7 +174,7 @@ body
     /*  background:#d1d3d4;*/
     background:url(../images/welcome_back.png);
     min-width:1000px;
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 .wrapper
 {
@@ -966,7 +966,7 @@ footer
     background:-o-linear-gradient(top, #dae0e1, #b3babc);
     text-align:center;
     padding:10px 0;
-	position: absolute;
+    position: absolute;
     bottom: 0;
     width: 100%;
     height: 20px;
@@ -3144,7 +3144,7 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
 }
 @media screen and (max-width: 980px)
 {
-    .result_outer{padding-top:75px;}
+    .result_outer{padding-top:13px;}
     .product_detail{float:none; margin:0 auto 20px;}
     .top_right_slider {    float: none;    margin: 0 auto;    width: 95%;}
     .divqrcode{float:none;}
@@ -3182,7 +3182,7 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
 
 @media screen and (max-width: 650px)
 {
-    .result_outer{padding-top:225px;}
+    .result_outer{padding-top:13px;}
     .desc_cont{width:90%;}
     .contact_pub{width:95%;}
     .related_box{width:450px;}
@@ -3421,7 +3421,7 @@ input[type=submit].search_btn:hover{
 
 
 div .breadcrumb {
-margin-top:90px;
+margin-top:92px;
 padding-left: 6.2%;
 }
 
@@ -3450,8 +3450,6 @@ padding-left: 6.2%;
 .breadcrumb li span{
     color: #8E8E8E;
 }
-
-
 .content  {
 /*margin:10px;*/
 /*padding-left:100px;*/
@@ -3504,4 +3502,3 @@ margin: 0;
 .breadcrumb .first-child a img:first-child:hover{
     opacity: 0;
 }
-
