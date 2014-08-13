@@ -1450,7 +1450,7 @@ input.share[type=submit]:hover
 .result_outer
 {
     /*padding-top:125px;*/
-    padding-top: 77px;
+    padding-top: 12px;
 }
 .refine
 {
@@ -3421,14 +3421,35 @@ input[type=submit].search_btn:hover{
 
 
 div .breadcrumb {
-margin-top:100px;
-padding-left: 25%;
+margin-top:74px;
+padding-left: 6.2%;
 }
 
+.breadcrumb img{
+    position: relative;
+    top: 12px;
+    left: 0;
+    bottom: 0;
+}
 .breadcrumb li {
  display: inline;
+ color: #9C9B9A;
 }
 
+.breadcrumb li:not(.first-child) span{
+    background-color: #EEF3F4;
+    border: 1px solid #B6B5B5;
+    padding: 8px 10px;
+    line-height: 42px;
+}
+
+.breadcrumb .last-child span{
+    color: #0382B1;
+}
+
+.breadcrumb li span{
+    color: #8E8E8E;
+}
 
 
 .content  {
@@ -3454,5 +3475,33 @@ padding:5px;
 margin: 0;
 }
 
+.breadcrumb a[href="http://playandbay.com/betaPlayandBay3/"] span{
+    display: none;
+}
 
+.breadcrumb a span:hover{
+    background-color: #F88B6C;
+    color: #fff;
+}
+
+.visibl{
+    display: inline;
+}
+.not{
+     display: none;
+}
+
+.breadcrumb .first-child a img:first-child{
+    display: inline;
+    z-index: 6;
+}
+.breadcrumb .first-child a .not{
+    display: none;
+}
+.breadcrumb .first-child a{
+    position: relative;
+}
+.breadcrumb .first-child a img:first-child:hover{
+    opacity: 0;
+}
 
