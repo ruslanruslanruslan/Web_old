@@ -40,7 +40,7 @@
    switch(Params::getParam('box')) {
       case 'inbox':
          $pm = ModelPM::newInstance()->getRecipientMessage(osc_logged_user_id(), 1, 0, $pm_id );
-		echo "danish"; print_r($pm); die;
+		//echo "danish"; print_r($pm); die;
          if($pm['recipNew'] == 1) {
             ModelPM::newInstance()->updateMessageAsRead($pm['pm_id']);
          }
@@ -190,11 +190,11 @@ $i_userId = osc_logged_user_id();
                         	<td><input type="checkbox"></td>
                             <td><?php echo osc_format_date($recipPM['message_date']) . ', ' . osclass_pm_format_time($recipPM['message_date']); ?></td>
                             <td><!--<a class="mesLink" href="<?php echo osc_render_file_url('osclass_pm/' . 'user-messages.php?message=' . $recipPM['pm_id'] . '&box=inbox'); ?>">--><?php echo $recipPM['pm_subject']; ?><!--</a>--></td>
-                            <td><?php echo $user['s_name']; ?></td>
+                            <td><?php  /*print_r($recipPM);*/$user = User::newInstance()->findByPrimaryKey($recipPM['sender_id']);/*print_r($user); */echo $user['s_name'];?></td>
 							<td><li class="reply">
 
-							<a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=reply&messId=' . $recipPM['pm_id'] . '&userId=' . $i_userId ; ?>" ><?php _e('Reply','osclass_pm'); ?></a></li>
-                  <li class="quote"><a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=quote&messId=' . $recipPM['pm_id'] . '&userId=' . $i_userId; ?>" ><?php _e('Quote','osclass_pm'); ?></a></li></td>
+							<a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=reply&messId=' . $recipPM['pm_id'] . '&userId=' . $recipPM['sender_id'] ; ?>" ><?php _e('Reply','osclass_pm'); ?></a></li>
+                  <li class="quote"><a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=quote&messId=' . $recipPM['pm_id'] . '&userId=' . $recipPM['sender_id']; ?>" ><?php _e('Quote','osclass_pm'); ?></a></li></td>
                         </tr>
 					<?php }
 					} ?>
@@ -228,11 +228,11 @@ $i_userId = osc_logged_user_id();
                         	<td><input type="checkbox"></td>
                             <td><?php echo osc_format_date($recipPM['message_date']) . ', ' . osclass_pm_format_time($recipPM['message_date']); ?></td>
                             <td><!--<a class="mesLink" href="<?php echo osc_render_file_url('osclass_pm/' . 'user-messages.php?message=' . $recipPM['pm_id'] . '&box=outbox'); ?>">--><?php echo $recipPM['pm_subject']; ?><!--</a>--></td>
-                            <td><?php echo $user['s_name']; ?></td>
+                            <td><?php  $user = User::newInstance()->findByPrimaryKey($recipPM['sender_id']);echo $user['s_name']; ?></td>
 							<td><li class="reply">
 
-							<a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=reply&messId=' . $recipPM['pm_id'] . '&userId=' . $i_userId ; ?>" ><?php _e('Reply','osclass_pm'); ?></a></li>
-                  <li class="quote"><a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=quote&messId=' . $recipPM['pm_id'] . '&userId=' . $i_userId; ?>" ><?php _e('Quote','osclass_pm'); ?></a></li></td>
+							<a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=reply&messId=' . $recipPM['pm_id'] . '&userId=' . $recipPM['sender_id'] ; ?>" ><?php _e('Reply','osclass_pm'); ?></a></li>
+                  <li class="quote"><a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=quote&messId=' . $recipPM['pm_id'] . '&userId=' . $recipPM['sender_id']; ?>" ><?php _e('Quote','osclass_pm'); ?></a></li></td>
                         </tr>
 						<?php } ?>
                     </tbody></table>
@@ -316,7 +316,7 @@ $i_userId = osc_logged_user_id();
             	<a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/account.png')?>">
 				<h2><?php _e('Settings', 'isha') ; ?><span><?php _e('View Full Account', 'isha') ; ?></span></h2>
 				<img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
-                <div class="wishlist account" style="display: block;">
+                <div class="wishlist account" style="display: none;">
                 	<h1><?php _e('Update account', 'isha') ; ?></h1>
 					<?php
 					$osc_user = osc_user();
@@ -325,14 +325,16 @@ $i_userId = osc_logged_user_id();
 					           <input type="hidden" name="page" value="user" />
                                <input type="hidden" name="action" value="profile_post" />
                 	<ul>
-                    	<li><label><?php _e('Name', 'isha') ; ?></label><?php UserForm::name_text(osc_logged_user_name()); ?></li>
+                    	<li><label><?php _e('Name', 'isha') ; ?></label><?php UserForm::name_text(osc_user()); ?></li>
                     	<li><label><?php _e('User Type', 'isha') ; ?></label> <?php UserForm::is_company_select(osc_user()); ?></li>
                     	<li><label><?php _e('Cell Phone', 'isha') ; ?></label><?php UserForm::mobile_text(osc_user()); ?></li>
                     	<li><label><?php _e('Phone', 'isha') ; ?></label><?php UserForm::phone_land_text(osc_user()); ?></li>
                         <li><label><?php _e('Country', 'isha') ; ?></label><?php UserForm::country_select(osc_get_countries(), osc_user()); ?></li>
-                        <li><label><?php _e('Region', 'isha') ; ?></label> <?php UserForm::region_select(osc_get_regions(), osc_user()); ?></li>
+                        <li><label><?php _e('Region', 'isha') ; ?></label> <?php UserForm::region_select(osc_get_regions(), osc_user());?></li>
+
                         <li><label><?php _e('City', 'isha') ; ?></label>  <?php UserForm::city_select(osc_get_cities(), osc_user()); ?></li>
                     	<li><label><?php _e('City Area', 'isha') ; ?></label> <?php UserForm::city_area_text(osc_user()); ?></li>
+
                     	<li><label><?php _e('Address', 'isha') ; ?></label><?php UserForm::address_text(osc_user()); ?></li>
                     	<li><label><?php _e('Website', 'isha') ; ?></label><?php UserForm::website_text(osc_user()); ?></li>
                     	<li><label><?php _e('Description', 'isha') ; ?></label> <?php UserForm::info_textarea('s_info', osc_locale_code(), @$osc_user['locale'][osc_locale_code()]['s_info']); ?></li>
@@ -432,8 +434,10 @@ $i_userId = osc_logged_user_id();
     </section>
     <script>
     (function($){
-        $( ".account_box ul li" ).click(function() {
-            $(this).children(".wishlist").slideToggle( "slow", function() {});
+       // $( ".account_box ul li" ).click(function() {
+       	$( ".account_box ul li a" ).click(function() {
+            //$(this).children(".wishlist").slideToggle( "slow", function() {});
+            $(this).parent().children(".wishlist").slideToggle( "slow", function() {});
         });
     })(jQuery)
     </script>
