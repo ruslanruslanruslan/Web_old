@@ -1,3 +1,26 @@
+$(document).ready(function(){
+    
+    $('.breadcrumb .first-child a').prepend('<div class="for_home_images"><img src="http://playandbay.com/betaPlayandBay3/oc-content/themes/isha/images/home.png" clss="visibl"><img src="http://playandbay.com/betaPlayandBay3/oc-content/themes/isha/images/home_hover.png" clss="not" style="position:absolute;top:3px;left:0;z-index:5"></div>');
+    $('.inner_listing').click(function(){
+        var url = $(this).find('a').attr('href');
+        document.location.href = url;
+        });
+    var block_height = $('.listing').height() - 37;
+            $('.location').height(block_height);
+        $(window).resize(function() {
+            var block_height = $('.listing').height() - 37;
+            $('.location').height(block_height);
+        })
+        $('.listing_text p a:first-child').each(function() {
+    var s = this.textContent.split(" ");
+    // or var s = $(this).text().split(" ");
+    var last = s[s.length-2];
+       s[s.length-2] = '<span class="pricing">'+last+'</span>';
+
+})
+    
+        
+})
 bender.extend = function(el, opt) {
         for (var name in opt) el[name] = opt[name];
         return el;
@@ -222,3 +245,4 @@ $(document).ready(function(){
         $('.chose-langu').css({"z-index": "99"});
     })
 })
+
