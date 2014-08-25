@@ -18,9 +18,19 @@
      *      You should have received a copy of the GNU Affero General Public
      * License along with this program.  If not, see <http://www.gnu.org/licenses/>.
      */
+    $param=Params::getParam('file');
+    $param1=Params::getParam('p1');
+      bender_add_body_class('custom');
+  if((($param!='osclass_pm/user-send.php')AND($param!='osclass_pm/user-inbox.php')AND($param!='osclass_pm/user-outbox.php')AND($param!='osclass_pm/user-messages.php'))OR($param1==''))
+    {
 
-    bender_add_body_class('custom');
     osc_current_web_theme_path('header.php') ;
+    }
+    else
+    osc_current_web_theme_path('common/head.php');
 ?>
 <?php osc_render_file(); ?>
-<?php osc_current_web_theme_path('footer.php') ; ?>
+<?php
+if ((($param!='osclass_pm/user-send.php')AND($param!='osclass_pm/user-inbox.php')AND($param!='osclass_pm/user-outbox.php')AND($param!='osclass_pm/user-messages.php'))OR($param1==''))
+osc_current_web_theme_path('footer.php') ;
+ ?>
