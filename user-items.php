@@ -164,14 +164,19 @@ $i_userId = osc_logged_user_id();
 			<?php
 			 $recipPMs = ModelPM::newInstance()->getRecipientMessages(osc_logged_user_id(), 1, 0, 'pm_id', 'DESC');
              $recipCount = count($recipPMs);
+             $odd = 1;
+
+              $newPMs = ModelPM::newInstance()->getRecipientMessages(osc_logged_user_id(), 1, 1, 'pm_id', 'DESC');
+         $countPMs = count($newPMs);
+             //echo  '$recipCount: '.$recipCount;
 			?>
             	<a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/inbox.png')?>">
-				<h2><?php _e('Inbox', 'isha'); ?> (<?php echo $recipCount;?>)<span><?php _e('Your Incoming Messages', 'isha'); ?></span></h2>
+				<h2><?php _e('Inbox', 'isha'); ?> (<?php echo ' всего: '.$recipCount.' не прочитанных: '.$countPMs; ?>)<span><?php _e('Your Incoming Messages', 'isha'); ?></span></h2>
 				<img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
-                <div class="wishlist inbox" style="display: none;">
+                <div class="wishlist inbox" style="display: none;height:500px;overflow:auto">
                 	<table cellspacing="0" cellpadding="0">
                     	<tbody><tr>
-                        	<th><input type="checkbox"></th>
+                        	<!--<th><input type="checkbox"></th> -->
                             <th><?php _e('Date', 'isha'); ?></th>
                             <th><?php _e('Subject', 'isha'); ?></th>
                             <th><?php _e('From', 'isha'); ?></th>
@@ -185,37 +190,64 @@ $i_userId = osc_logged_user_id();
                      <td></td>
                   </tr>
                   <?php }else{
-				  foreach($recipPMs as $recipPM){?>
-                        <tr>
-                        	<td><input type="checkbox"></td>
-                            <td><?php echo osc_format_date($recipPM['message_date']) . ', ' . osclass_pm_format_time($recipPM['message_date']); ?></td>
-                            <td><!--<a class="mesLink" href="<?php echo osc_render_file_url('osclass_pm/' . 'user-messages.php?message=' . $recipPM['pm_id'] . '&box=inbox'); ?>">--><?php echo $recipPM['pm_subject']; ?><!--</a>--></td>
-                            <td><?php  /*print_r($recipPM);*/$user = User::newInstance()->findByPrimaryKey($recipPM['sender_id']);/*print_r($user); */echo $user['s_name'];?></td>
-							<td><li class="reply">
+				  foreach($recipPMs as $recipPM){
 
-							<a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=reply&messId=' . $recipPM['pm_id'] . '&userId=' . $recipPM['sender_id'] ; ?>" ><?php _e('Reply','osclass_pm'); ?></a></li>
-                  <li class="quote"><a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=quote&messId=' . $recipPM['pm_id'] . '&userId=' . $recipPM['sender_id']; ?>" ><?php _e('Quote','osclass_pm'); ?></a></li></td>
+				   if($odd==1) {
+                  		$odd_even = "odd";
+                  		$odd = 0;
+                      } else {
+                      	$odd_even = "even";
+                      	$odd = 1;
+                      }
+                      if($recipPM['recipNew'] == 1) {
+                         $styleNew = 'font-weight: bold;';
+                      } else {
+                         $styleNew = '';
+                      }
+
+				  	?>
+                        <tr class="<?php echo $odd_even;?>">
+                        	<!--<td><input type="checkbox"></td>  -->
+                            <td style="<?php echo $styleNew; ?>"><?php echo osc_format_date($recipPM['message_date']) . ', ' . osclass_pm_format_time($recipPM['message_date']); ?></td>
+                            <td style="<?php echo $styleNew; ?>"><!--<a class="mesLink" href="<?php echo osc_render_file_url('osclass_pm/' . 'user-messages.php?message=' . $recipPM['pm_id'] . '&box=inbox'); ?>">--><?php echo $recipPM['pm_subject']; ?><!--</a>--></td>
+                            <td style="<?php echo $styleNew; ?>"><?php  /*print_r($recipPM);*/$user = User::newInstance()->findByPrimaryKey($recipPM['sender_id']);/*print_r($user); */echo $user['s_name'];?></td>
+							<td>
+							<li class="read">
+
+							<a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-messages.php&box=inbox&message=' . $recipPM['pm_id'] ; ?>&p1=1" class="fancybox fancybox.iframe" >Читать</a>
+							</li>
+							<li class="reply">
+
+							<a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=reply&messId=' . $recipPM['pm_id'] . '&userId=' . $recipPM['sender_id'] ; ?>&p1=1" class="fancybox fancybox.iframe" ><?php _e('Reply','osclass_pm'); ?></a></li>
+                  <li class="quote"><a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=quote&messId=' . $recipPM['pm_id'] . '&userId=' . $recipPM['sender_id']; ?>&p1=1" class="fancybox fancybox.iframe"><?php _e('Quote','osclass_pm'); ?></a></li>
+                       <li class="del">
+                                    <a onclick="if (!confirm('Вы уверены, что хотите удалить это личное сообщение?')) return false;" href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-proc.php&pms=' . $recipPM['pm_id'].'&option=delMessages&box=inbox' ; ?>&p1=1" class="fancybox fancybox.iframe">
+                             Удалить</a></li>
+                  </td>
                         </tr>
 					<?php }
 					} ?>
                     </tbody></table>
-                   <input type="button" onclick="if (!confirm('<?php _e('Are you sure you want to delete all selected personal messages?','osclass_pm'); ?>')) return false;" class="delete apply pmDeleteButton" value="Delete Selected">
+                   <!--<input type="button" onclick="if (!confirm('<?php _e('Are you sure you want to delete all selected personal messages?','osclass_pm'); ?>')) return false;" class="delete apply pmDeleteButton" value="Delete Selected">
+					-->
 					<div class="admin subscribe"> <a  href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&userId=0&mType=new';?>"><?php echo __('Send PM to the ','osclass_pm') . ' ' . pmAdmin(); ?></a></div>
                 </div>
             </li>
             <li>
-            	<a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/outbox.png')?>"><h2><?php _e('Outbox', 'osclass_pm'); ?><span><?php _e('Your Outgoing Messages', 'isha'); ?></span></h2> <img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
-                <div class="wishlist inbox" style="display: none;">
+            <?php $recipPMs = ModelPM::newInstance()->getSenderMessages(osc_logged_user_id(), 1, 'pm_id', 'DESC');
+                        $recipCount = count($recipPMs); ?>
+            	<a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/outbox.png')?>"><h2>
+            	<?php _e('Outbox', 'osclass_pm'); ?> (<?php echo ' всего: '.$recipCount;  ?>)<span><?php _e('Your Outgoing Messages', 'isha'); ?></span></h2> <img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
+                <div class="wishlist inbox" style="display: none;height:500px;overflow:auto">
                 	<table cellspacing="0" cellpadding="0">
                     	<tbody><tr>
-                        	<th><input type="checkbox"></th>
+                        	<!--<th><input type="checkbox"></th> -->
                             <th><?php _e('Date', 'osclass_pm'); ?></th>
                             <th><?php _e('Subject', 'osclass_pm'); ?></th>
                             <th><?php _e('Sent To', 'osclass_pm'); ?></th>
 							<th><?php _e('Action', 'osclass_pm'); ?></th>
                         </tr>
-						<?php $recipPMs = ModelPM::newInstance()->getSenderMessages(osc_logged_user_id(), 1, 'pm_id', 'DESC');
-                        $recipCount = count($recipPMs);
+						<?php
                         if($recipCount == 0) {?>
 						<tr class="odd">
                      <td></td>
@@ -223,21 +255,42 @@ $i_userId = osc_logged_user_id();
                      <td><?php _e('You have no messages', 'osclass_pm'); ?></td>
                      <td></td>
                   </tr>
-				  <?php }else{ ?>
+				  <?php }else{
+                   foreach($recipPMs as $recipPM){
+                   	?>
+
                         <tr>
-                        	<td><input type="checkbox"></td>
+                        	<!--<td><input type="checkbox"></td>-->
                             <td><?php echo osc_format_date($recipPM['message_date']) . ', ' . osclass_pm_format_time($recipPM['message_date']); ?></td>
-                            <td><!--<a class="mesLink" href="<?php echo osc_render_file_url('osclass_pm/' . 'user-messages.php?message=' . $recipPM['pm_id'] . '&box=outbox'); ?>">--><?php echo $recipPM['pm_subject']; ?><!--</a>--></td>
-                            <td><?php  $user = User::newInstance()->findByPrimaryKey($recipPM['sender_id']);echo $user['s_name']; ?></td>
-							<td><li class="reply">
+                            <td><!--<a class="mesLink" href="<?php echo osc_render_file_url('osclass_pm/' . 'user-messages.php?message=' . $recipPM['pm_id'] . '&box=outbox'); ?>">--><?php echo $recipPM['pm_subject'];
+                            //http://test.playandbay.com/index.php?page=custom&file=osclass_pm/user-proc.php&pms=79&option=delMessages&box=inbox&p1=1
+                             ?><!--</a>--></td>
+                            <td><?php  /*print_r($recipPM);*/$user = User::newInstance()->findByPrimaryKey($recipPM['recip_id']);/*print_r($user);*/echo $user['s_name']; ?></td>
+							<td>
+							<li class="read">
 
-							<a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=reply&messId=' . $recipPM['pm_id'] . '&userId=' . $recipPM['sender_id'] ; ?>" ><?php _e('Reply','osclass_pm'); ?></a></li>
-                  <li class="quote"><a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=quote&messId=' . $recipPM['pm_id'] . '&userId=' . $recipPM['sender_id']; ?>" ><?php _e('Quote','osclass_pm'); ?></a></li></td>
+							<a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-messages.php&box=outbox&message=' . $recipPM['pm_id'] ; ?>&p1=1" class="fancybox fancybox.iframe" >Читать</a>
+							</li>
+							<li class="del">
+                                    <a onclick="if (!confirm('Вы уверены, что хотите удалить это личное сообщение?')) return false;" href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-proc.php&pms=' . $recipPM['pm_id'].'&option=delMessages&box=outbox' ; ?>&p1=1" class="fancybox fancybox.iframe">
+                             Удалить</a></li>
+                            <!--
+							<li class="reply">
+
+							<a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=reply&messId=' . $recipPM['pm_id'] . '&userId=' . $recipPM['sender_id'] ; ?>&p1=1" class="fancybox fancybox.iframe" ><?php _e('Reply','osclass_pm'); ?></a>
+							</li>
+                  <li class="quote">
+                  <a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=quote&messId=' . $recipPM['pm_id'] . '&userId=' . $recipPM['sender_id']; ?>&p1=1" class="fancybox fancybox.iframe" ><?php _e('Quote','osclass_pm'); ?></a>
+                  </li>-->
+
+                  </td>
                         </tr>
-						<?php } ?>
+						<?php
+						}
+						} ?>
                     </tbody></table>
-                    <input type="button" onclick="if (!confirm('<?php _e('Are you sure you want to delete all selected personal messages?','osclass_pm'); ?>')) return false;" class="delete apply" value="Delete Selected">
-
+                   <!-- <input type="button" onclick="if (!confirm('<?php _e('Are you sure you want to delete all selected personal messages?','osclass_pm'); ?>')) return false;" class="delete apply" value="Delete Selected">
+                    -->
                 </div>
             </li>
             <li>
@@ -434,12 +487,35 @@ $i_userId = osc_logged_user_id();
     </section>
     <script>
     (function($){
+    	var url='';var pos='';
        // $( ".account_box ul li" ).click(function() {
        	$( ".account_box ul li a" ).click(function() {
             //$(this).children(".wishlist").slideToggle( "slow", function() {});
             $(this).parent().children(".wishlist").slideToggle( "slow", function() {});
         });
+        $('.fancybox').fancybox({
+
+        beforeLoad : function(){
+   url= $(this.element).attr("href");
+   pos =url.indexOf('option=delMessages&box=inbox&p1=1');
+   pos1 =url.indexOf('option=delMessages&box=outbox&p1=1');
+
+
+ // this.href = url;
+
+ },
+        	afterClose:function() {
+        		 if ((pos===-1)&&(pos1===-1))
+            {
+
+            }
+            else
+            window.location.reload();
+
+        }
+        });
     })(jQuery)
+
     </script>
     </section>
 <?php osc_current_web_theme_path('footer.php') ; ?>

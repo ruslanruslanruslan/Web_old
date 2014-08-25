@@ -9,14 +9,14 @@ $(document).ready(function(){
         buttons: [
             {
                 text: bender.langs.delete,
-				/*text:'delete',*/
+				//text:'delete',
                 click: function() {
                     window.location = bender.base_url + '?page=user&action=delete&id=' + bender.user.id  + '&secret=' + bender.user.secret;
                 }
             },
             {
-                text: bender.langs.cancel,
-			   /*text: 'cansel',*/
+                  text: bender.langs.cancel,
+			   //text: 'cansel',
                 click: function() {
                     $(this).dialog("close");
                 }

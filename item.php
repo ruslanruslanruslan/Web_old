@@ -38,15 +38,17 @@ osc_current_web_theme_path('header.php');
 <script type="text/javascript">
     $(document).ready(function() {
 <!--$('.fancybox').fancybox();-->
-        $(".fancybox")
+      $(".fancybox")
                 .attr('rel', 'gallery')
                 .fancybox({
             padding: 0
         });
+        $('.fancybox2').fancybox();
     });
 </script>
 <script type="text/javascript">
     $(document).ready(function() {
+
         // For Previus Next slider
         var imagewidth = '60'; //$j('.visible-area').width();
         var totalimages = '7';
@@ -100,7 +102,7 @@ osc_current_web_theme_path('header.php');
   $('.MCtooltip').closest("span").hide();
   $('.MCtooltip').hover(function () {
   //$(this).closest("span").show('slow');
-  
+
   $(this).parent().nextAll("span").slideToggle("slow");
   });
   });
