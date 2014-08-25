@@ -3691,3 +3691,17 @@ a.MCtooltip:hover{
 .pricing{
     color: red;
 }
+
+.dataTables_wrapper {
+position: relative;
+min-height: 400px;
+ clear: both;
+/*height: 302px; */
+zoom: 1;
+float: left;
+
+margin-top:20px;
+border: 1px solid #CCC;
+padding:5px;
+width:auto;
+}
