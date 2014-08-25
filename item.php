@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // meta tag robots
 osc_add_hook('header', 'bender_follow_construct');
 
