@@ -1,21 +1,32 @@
 @charset "utf-8";
-
-
-.minbox {width: 85px;}
+.minmain{
+	width: 100%;
+}
 .mrbv1 {width: 93%;}
 .minbox {
-width: 95%;
+width: 96%;
 }
-.shwmid {
+span.shwmid {
 float: left;
 padding: 0px;
 width: 100%;}
-.rytttlist {
-float: right;
-text-align: left;
-width: 88%;
+.alist1 .rytttlist{
+	text-align: left;
 }
-
+.rytttlist {
+text-align: left;
+}
+/*@media (max-width: 855px){
+	.alist1 .rytttlist{
+		width: 72%;
+	}
+}
+@media (max-width: 890px){
+	.alist1 .rytttlist{
+		width: 76%;
+	}
+}
+*/
 .price a
 { font-size:11px;
 padding: 5px 16px;}
@@ -61,18 +72,14 @@ padding:2px 13.1px;
 
 .list_left{ float:none}
 .list_ryt{ width:300px; margin:10px 0 0 0 ; float:none; clear:both}
-
-.listings {
-padding: 32px 10px 26px 10px;}
-
 .alist1 .price{ /*background: #74AFC5;*/ width: 100%;}
 
 .mrvmain {
-width: 91%;
+width: 93%;
 }
 .mainccs {
 width: 100%;}
-.mrvbtn{ right:8px}
+.mrvbtn{ right:20px}
 .navigation li:not(.for_mob){
 	display: none;
 }
@@ -94,4 +101,10 @@ nav.navigation{
     float: none;
     text-align: center;
     margin-left: 0;
+}
+.accord .alaist article.listings{
+	height: 158px;
+}
+.accord .alaist article.listings{
+	padding-left: 22px;
 }

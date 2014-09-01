@@ -12,23 +12,24 @@ float: left;
 padding: 0px;
 width: 100%;}
 .rytttlist {
-float: right;
 text-align: left;
-width:59%;}
-
-.price a.rate{ font-size:10px;}
+}
+.price a.MCtooltip[href="#"]{
+      display: none;
+ }
+.price a.rate{ font-size:10px; width: }
 .price a{ padding:5px;}
-.MCtooltip h3{ font-size:11px;}
-
+.MCtooltip h3{ font-size:11px; }
+article.listings .price a.MCtooltip{
+	width: 22%;
+	font-size: 10px;
+}
 .cent_srch_left_main {
 width: 100%;
 float: none;
 }
 .mrbv {
 width: 98%;}
-.minmain {
-float: none;
-}
 .selselct {
 width: 98%;
 }
@@ -38,7 +39,9 @@ padding: 20px 0px;
 width: 100%;
 color: aliceblue;
 }
-
+.cent_srch_ryt .headnav .list_ryt{
+	width: 100%;
+}
 
 
 .amin article{ width:47%; float:left}
@@ -77,9 +80,6 @@ padding:2px 23.1px;
 .list_left{ float:none}
 .list_ryt{ width:44%; margin:10px 0 0 0 ; float:none; clear:both}
 
-.listings {
-padding: 32px 10px 26px 10px;}
-
 .alist1 .price{ 
 width: 100%;}
 
@@ -111,4 +111,9 @@ nav.navigation{
     float: none;
     text-align: center;
     margin-left: 0;
+}
+span.shwmid{
+	padding: 1.3% 0;
+	width: 13.9%;
+	padding-left: 1%;
 }

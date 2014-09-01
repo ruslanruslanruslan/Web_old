@@ -503,14 +503,14 @@ input[type=submit].search_btn:hover
 {
     font-size:14px;
     font-weight:bold;
-    color:#575656;
+    color:#000;
     font-family:Verdana, Geneva, sans-serif;
     padding-top:10px;
 }
 .instrument ul li a
 {
     text-decoration:none;
-    color:#575656;
+    color:#000;
 }
 .instrument ul li a:hover
 {
@@ -548,7 +548,7 @@ input[type=submit].search_btn:hover
 }
 .welcome_mid_box h1
 {
-    font-family:'abelregular';
+    font-family:'oswaldlight';
     color:#1b1613;
     font-size:65px;
     font-weight:normal;
@@ -576,7 +576,7 @@ input[type=submit].search_btn:hover
 
 h1.latest
 {
-    font-family:'abelregular';
+    font-family:'oswaldlight';
     color:#fff;
     font-size:65px;
     font-weight:normal;
@@ -590,15 +590,15 @@ h1.latest
 }
 .inner_listing
 {
-    min-height: 177px;
+    min-height: 187px;
     padding-top:20px;
     background: rgba(87,95,102,.4);
     margin-bottom: 34px;
     padding-left: 25px;
     padding-right: 10px;
+    padding-bottom: 20px;
     position: relative;
     cursor:pointer;
-    overflow: auto;
 }
 .inner_listing:last-of-type{
     margin-bottom: 0;
@@ -755,7 +755,7 @@ h1.latest
     border-top-left-radius:10px;
     border-top-right-radius:10px;
     font-size:46px;
-    font-family:'abelregular';
+    font-family:'oswaldlight';
     color:#0991d0;
     top:-34px;
     left:0px;
@@ -831,7 +831,7 @@ h1.latest
     border-radius:0px;
     font-size:24px;
     color:#fff;
-    font-family:'abelregular';
+    font-family:'oswaldlight';
     padding:3px 45px;
     margin-top:25px;
 }
@@ -1064,7 +1064,7 @@ ul.nav li{
     border-radius: 0px;
     color: #FFFFFF;
     cursor: pointer;
-    font-family: 'abelregular';
+    font-family: 'oswaldlight';
     font-size: 24px;
     margin-top: 15px;
     padding: 10px 40px;
@@ -1114,7 +1114,10 @@ cursor: pointer;
     select {padding-right:18px}
 }
 
-label {position:relative}
+label {position:relative;
+margin-top: 3px;
+margin-bottom: 3px;
+}
 label:after {
     /* content:'<>'!important;*/
     font:11px "Consolas", monospace;
@@ -1767,7 +1770,7 @@ ul.result_slide li.active
 }
 
 
-a.rate, a.other{display:block; overflow:hidden;text-decoration:none; color:#5d5c5c; font-size:12px; font-weight:bold; padding:5px 5px;float:left; /*border:solid 3px #FFF; box-shadow: 0 0 0 1px #FFF;margin: 2px; */ transition: all 0.1s ease-in 0s; border-right: 1px solid #C1C5C6;}
+a.rate, a.other{display:block; overflow:hidden;text-decoration:none; color:#5d5c5c; font-size:12px; font-weight:bold; padding:5px 5px;float:left; /*border:solid 3px #FFF; box-shadow: 0 0 0 1px #FFF;margin: 2px; */ transition: all 0.1s ease-in 0s; border-right: 0px solid #C1C5C6;}
 a.other:hover{box-shadow: 0 0 0 1px #349AD1; cursor:pointer; transition: all 0.1s ease-in 0s;}
 .product_detail_text a.rate, .price_head a.other2{border-right: 4px solid #FFF; display:block; overflow:hidden; background:#349AD1;text-decoration:none; color:#FFF; font-size:12px; font-weight:bold; padding:5px 10px;float:left; /*border:solid 3px #FFF; box-shadow: 0 0 0 1px #FFF;margin: 2px; */ transition: all 0.1s ease-in 0s;}
 .product_detail_text a.other2:hover{box-shadow: 0 0 0 1px #349AD1; cursor:pointer; transition: all 0.1s ease-in 0s;}
@@ -2641,7 +2644,8 @@ line-height: 20px;*/
 .ztxt a{ color:#0d698d; display:block}
 .listings p{color: #5d5c5c !important}
 a.MCtooltip:hover span {
-    background: #7C9EF3;
+    background: #0382B1;
+    display: block;
 }
 
 .listings figure{ float:left; margin:0px;}
@@ -2819,13 +2823,11 @@ a.MCtooltip span
     -o-transition:all 3s ease-in;
     -webkit-transition:all .3s ease-in;
     -moz-transition:all .3s ease-in;
+    transition:all .9s ease-in;
 }
 a.MCtooltip:hover span
 {
     display:block;
-    background: #7C9EF3;
-
-
 }
 .views {
     font-weight:bold;
@@ -3692,19 +3694,6 @@ a.MCtooltip:hover{
     color: red;
 }
 
-.dataTables_wrapper {
-position: relative;
-min-height: 400px;
- clear: both;
-/*height: 302px; */
-zoom: 1;
-float: left;
-
-margin-top:20px;
-border: 1px solid #CCC;
-padding:5px;
-width:auto;
-}
 .404p{
     margin-top: 90px;
 }

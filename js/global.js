@@ -1,4 +1,14 @@
 $(document).ready(function(){
+    $('article.listings').click(function(){
+        var url = $(this).find('a').attr('href');
+        document.location.href = url;
+        });
+    /*$('article.listings a.MCtooltip').click(function(event) {
+        event.stopPropagation();
+    })*/
+})
+
+$(document).ready(function(){
     var suma_shirini = $('.list_left').width() + $('.list_ryt').width();
     var conteiner = $('.headnav').width() - 60;
     if (suma_shirini > conteiner) {
@@ -46,7 +56,6 @@ $(document).ready(function() {
     }
 });
 $(document).ready(function(){
-    
     $('.breadcrumb .first-child a').prepend('<div class="for_home_images"><img src="http://playandbay.com/betaPlayandBay3/oc-content/themes/isha/images/home.png" clss="visibl"><img src="http://playandbay.com/betaPlayandBay3/oc-content/themes/isha/images/home_hover.png" clss="not" style="position:absolute;top:3px;left:0;z-index:5"></div>');
     $('.inner_listing').click(function(){
         var url = $(this).find('a').attr('href');
