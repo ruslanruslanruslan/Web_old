@@ -1,4 +1,51 @@
 $(document).ready(function(){
+    var suma_shirini = $('.list_left').width() + $('.list_ryt').width();
+    var conteiner = $('.headnav').width() - 60;
+    if (suma_shirini > conteiner) {
+        $('.list_left').css({'float':'none'});
+        $('.list_ryt').css({'float':'none'});
+    }
+    if (suma_shirini < conteiner) {
+        $('.list_left').css({'float':'left'});
+        $('.list_ryt').css({'float':'right'});
+    }
+})
+$(window).resize(function(){
+    var suma_shirini = $('.list_left').width() + $('.list_ryt').width();
+    var conteiner = $('.headnav').width() -60;
+    if (suma_shirini > conteiner) {
+        $('.list_left').css({'float':'none'});
+        $('.list_ryt').css({'float':'none'});
+    }
+    if (suma_shirini < conteiner) {
+        $('.list_left').css({'float':'left'});
+        $('.list_ryt').css({'float':'right'});
+    }
+});
+$(window).bind('load', function () {
+    $('.preloader9').fadeOut();
+    $('.mask9').fadeOut();
+    $('.wraper').fadeOut();
+});
+$(document).ready(function() {
+    $("body").css("display", "none");
+
+    $("body").fadeIn(500);
+
+    $("a:not(a[href*=javascript],a[href^=#])").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $('.preloader9').show();
+        $('.wraper').show();
+        $('.mask9').show();
+        $("body").fadeOut(500, redirectPage);
+    });
+
+    function redirectPage() {
+        window.location = linkLocation;
+    }
+});
+$(document).ready(function(){
     
     $('.breadcrumb .first-child a').prepend('<div class="for_home_images"><img src="http://playandbay.com/betaPlayandBay3/oc-content/themes/isha/images/home.png" clss="visibl"><img src="http://playandbay.com/betaPlayandBay3/oc-content/themes/isha/images/home_hover.png" clss="not" style="position:absolute;top:3px;left:0;z-index:5"></div>');
     $('.inner_listing').click(function(){
