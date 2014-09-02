@@ -21,7 +21,7 @@
     $param=Params::getParam('file');
     $param1=Params::getParam('p1');
       bender_add_body_class('custom');
-  if((($param!='osclass_pm/user-send.php')AND($param!='osclass_pm/user-inbox.php')AND($param!='osclass_pm/user-outbox.php')AND($param!='osclass_pm/user-messages.php'))OR($param1==''))
+  if((($param!='osclass_pm/user-send.php')AND($param!='osclass_pm/user-inbox.php')AND($param!='osclass_pm/user-outbox.php')AND($param!='osclass_pm/user-messages.php')AND($param!='osclass_pm/user-proc.php'))OR($param1==''))
     {
 
     osc_current_web_theme_path('header.php') ;
@@ -31,6 +31,6 @@
 ?>
 <?php osc_render_file(); ?>
 <?php
-if ((($param!='osclass_pm/user-send.php')AND($param!='osclass_pm/user-inbox.php')AND($param!='osclass_pm/user-outbox.php')AND($param!='osclass_pm/user-messages.php'))OR($param1==''))
+if ((($param!='osclass_pm/user-send.php')AND($param!='osclass_pm/user-inbox.php')AND($param!='osclass_pm/user-outbox.php')AND($param!='osclass_pm/user-messages.php')AND($param!='osclass_pm/user-proc.php'))OR($param1==''))
 osc_current_web_theme_path('footer.php') ;
  ?>
