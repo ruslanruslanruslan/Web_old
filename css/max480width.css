@@ -16,10 +16,11 @@ width: 100%;
 
 .price a.rate{ font-size:12px; padding:4px 4px; }
 .price a.MCtooltip{ font-size:10px; padding:4px 4px;}
-
+.cent_srch_ryt .headnav .list_ryt{
+	width: 100%;
+}
 .rytttlist {
 padding-bottom: 17px;	
-float: right;
 text-align: left;
 width: 100%;}
 .shwmain .slct{ width:98%;}
@@ -30,9 +31,6 @@ float: none;
 }
 .mrbv {
 width: 98%;}
-.minmain {
-float: none;
-}
 .selselct {
 width: 98%;
 }
@@ -51,12 +49,12 @@ color: aliceblue;
 width: 100%;
 margin-top: 10px;
 }
-#srch{ width: 71%;
-margin: 0px 2px;}
+#srch{margin: 0px 2px;}
 .cent_srch_ryt h1 {
 font-size: 25px;}
 .listings figure {
-float: none; margin:10px 0px;}
+float: left; margin:0;
+margin-right: 3%;}
 .ztxt a {
 font-size: 23px;
 }
@@ -105,10 +103,6 @@ font-size: 11px;
 
 .list_left{ float:none; font-size:13px;}
 .list_ryt{ width:92%; margin:10px 0 0 0 ; float:none; clear:both}
-
-.listings {
-padding: 32px 10px 22px 10px;}
-
 .alist1 .price{width: 100%;}
 
 .mrvmain {
@@ -146,4 +140,9 @@ nav.navigation{
 }
 .nav-mobile{
         z-index: 999;
+}
+span.shwmid{
+	padding: 2.5% 0;
+	padding-left: 3%;
+	width: 11.2%;
 }

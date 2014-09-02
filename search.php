@@ -73,7 +73,7 @@ function autocompleteCity() {
 
     <section>
         <div class="srch_bar">
-            <div id="tog"> <img src="<?php echo osc_current_web_theme_url() ?>images/sub2.gif" width="50" height="149" class="subscri" title="Subscribe" alt="img"></div>
+            <div id="tog"><div class="tog_text">Subscribe now</div></div>
 
             <div id="srch" style="display: none;">
                 <form action="<?php echo osc_base_url(true); ?>" method="post" name="sub_alert" id="sub_alert" class="nocsrf">
@@ -154,7 +154,7 @@ function autocompleteCity() {
                           
 
                         <div class="demoTarget">
-						    <span class="sorttxt"><?php _e('Sort by', 'isha'); ?>:</span>
+                            <span class="sorttxt"><?php _e('Sort by', 'isha'); ?>:</span>
                             <select id="default-usage-select" name="sOrder" class="selectBox" style="width:180px;">
                                 <?php
                                 foreach ($orders as $label => $params) {
