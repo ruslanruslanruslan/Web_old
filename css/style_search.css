@@ -714,3 +714,23 @@ iframe img{
 .alaist .price a.rate:last-child {
     float: right;
 }
+@media (max-width: 480px) {
+  article.listings .ztxt a{
+    font-size: 12px;
+  }
+}
+@media (max-width: 380px) {
+article.listings{
+  height: 205px;
+}
+@media (max-width: 240px) {
+article.listings{
+  height: 219px;
+}
+ul.alaist li{
+  margin-bottom: 20px;
+}
+}
+.sotbot{
+  margin-top: 20px;
+}
