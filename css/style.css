@@ -230,7 +230,7 @@ nav.navigation ul li
     font-family: 'oswaldlight';
     font-size:24px;
     text-align:center;
-    margin-left:20px;
+    margin-left:19px;
 }
 
 nav.navigation ul li a
@@ -259,7 +259,7 @@ nav.navigation ul li p
     padding-top:20px;
 }
 
-nav.navigation ul li.publish_ad a:hover, nav.navigation ul li.publish_ad a.active, nav.navigation ul li.current.publish_ad a
+nav.navigation ul li.publish_ad a.active, nav.navigation ul li.current.publish_ad a
 {
     background:#F54444;
     color:#fff;
@@ -1493,7 +1493,8 @@ input.share[type=submit]:hover
 .result_outer
 {
     /*padding-top:125px;*/
-    padding-top: 12px;
+    padding-top: 10px;
+    padding-bottom: 14px;
 }
 .refine
 {
@@ -1501,7 +1502,7 @@ input.share[type=submit]:hover
     width:20%;
     text-align:center;
 }
-.subscribe
+.subscribe:not(.delete_account, .send_but)
 {
     background:#008ec2;
     background:linear-gradient(top, #008ec2, #015473);
@@ -1510,7 +1511,7 @@ input.share[type=submit]:hover
     background:-ms-linear-gradient(top, #008ec2, #015473);
     background:-o-linear-gradient(top, #008ec2, #015473);
     border:1px solid #076cc7;
-    border-radius:5px;
+    border-radius:0px;
     font-size:16px;
     text-transform:uppercase;
     padding:7px 15px;
@@ -1743,29 +1744,26 @@ ul.result_slide li.active
 }
 .list_result
 {
-    margin:20px 10px 0px 10px;
-    border-bottom:1px solid #dbdbdb;
-    padding-bottom:30px;
+    margin:20px 10px 0px 0px;
+    border:1px dashed #ccc;
+    padding:15px;
+    background: #EEF2F3;
 }
 .list_result figure
 {
     float:left;
-    width:16%;
 }
 .list_result figure img
 {
     border:3px solid #e6e6e6;
-    width:100%;
     box-sizing:border-box;
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     -ms-box-sizing:border-box;
     -o-box-sizing:border-box;
-    margin-bottom: 5px;
 }
 .list_result figure img:hover
 {
-    border:3px solid #7fbfd7;
     cursor:pointer;
 }
 
@@ -1825,11 +1823,6 @@ a.other:hover ul
 {
     display:block;
 }
-.list_textbox
-{
-    float:right;
-    width:82%;
-}
 .list_textbox h1
 {
     font:22px/20px Verdana, Geneva, sans-serif;
@@ -1837,7 +1830,7 @@ a.other:hover ul
 }
 .list_textbox h3
 {
-    font:13px Arial, Helvetica, sans-serif;
+    font:14px Verdana, Geneva, sans-serif;
     color:#2c2c2c;
     padding:10px 0;
 }
@@ -1858,22 +1851,21 @@ a.other:hover ul
 .account_box ul
 {
     list-style:none;
-    margin-top:30px;
-    margin-bottom:50px;
+    margin-top:5px;
+    margin-bottom:30px;
 }
 .account_box ul li
 {
     background:#fff;
     margin-bottom:10px;
 }
+.account_box ul li:last-child{
+    padding-bottom: 20px;
+}
 .account_box ul li a
 {
     display:block;
     padding:14px 18px;
-}
-.account_box ul li a:hover
-{
-    background:#cccccb;
 }
 .account_box ul li img.icon
 {
@@ -1916,23 +1908,13 @@ a.other:hover ul
     width:87%;
     display:none;
 }
-.list_textbox h1:hover
-{
-    color:#EA121F;
-    cursor:pointer;
-}
-.list_textbox h3:hover, .list_textbox p:hover,.list_textbox h1 a:hover, .list_textbox h3 a:hover
-{
-    color:#fb9500;
-    cursor:pointer;
-
-}
 .wishlist h1
 {
-    font-size:20px;
+    font-size:22px;
     font-family: 'oswaldlight';
-    color:#999;
+    color:#666;
     padding:12px 0;
+    padding-top: 0;
 }
 .wishlist p
 {
@@ -1949,7 +1931,7 @@ a.other:hover ul
 }
 .inbox table tr th
 {
-    background:#999;
+    background:#0382B1;
     text-align:center;
     color:#fff;
     padding:7px 5px;
@@ -2003,7 +1985,7 @@ a.other:hover ul
 .account ul li label
 {
     float:left;
-    width:18%;
+    width:30.4%;
     font-size:14px;
     font-family:Arial, Helvetica, sans-serif;
     color:#2c2c2c;
@@ -2015,13 +1997,12 @@ a.other:hover ul
 {
     border:1px solid #999;
     background:#fff;
-    padding:7px;
-    font:12px Arial, Helvetica, sans-serif;
-    color:#000;
+    padding:0.9% 0.7%;
+    font:16px Verdana, Geneva, sans-serif;
+    color:#969696;
     float:left;
     margin-left:2%;
-    width:30%;
-    border-radius:5px;
+    width:40%;
 }
 .account ul li input[type=text]:focus, .account ul li select:focus
 {
@@ -2031,33 +2012,36 @@ a.other:hover ul
 .account ul li select
 {
     border:1px solid #999;
-    padding:6px;
-    font:12px Arial, Helvetica, sans-serif;
-    color:#000;
+    padding:0.8% 0.7%;
+    font:16px Verdana, Geneva, sans-serif;
+    color:#969696;
     float:left;
     margin-left:2%;
-    width:32%;
-    border-radius:5px;
-    background:#fff;
+    width: 41.6%;
+    border-radius:0px;
+    background-color:#fff;
+    background-image: url('../images/arrow.png');
+    background-repeat: no-repeat;
+    background-position: 90%;
+    box-shadow: 0 0 0 #fff;
 }
 
 .account ul li textarea
 {
     border:1px solid #999;
-    padding:6px;
+    padding: 0.8%;
     font:12px Arial, Helvetica, sans-serif;
-    color:#000;
+    color:#969696;
     float:left;
     margin-left:2%;
-    width:30%;
+    width:39.8%;
     resize:none;
     height:90px;
-    border-radius:5px;
+    border-radius:0px;
     background:#fff;
 }
 .account ul.pm li label
 {
-    width:auto;
 }
 input.delete_account[type="button"]
 {
@@ -2708,20 +2692,10 @@ ul.result_slide li:hover, ul.result_slide li:active {
     text-transform: uppercase;
 }
 .delete_account{
-    font-size: 14px;
+    display: block;
+    margin: 0 auto;
     margin-bottom: 20px;
     padding: 5px 15px;
-}
-.delete_account:hover
-{
-    background:#015473;
-    background:linear-gradient(top, #015473, #008ec2);
-    background:-moz-linear-gradient(top, #015473, #008ec2);
-    background:-webkit-linear-gradient(top, #015473, #008ec2);
-    background:-ms-linear-gradient(top, #015473, #008ec2);
-    background:-o-linear-gradient(top, #015473, #008ec2);
-    cursor:pointer;
-    box-shadow:-1px -1px 0px #85CAE3 inset, 0px 1px 0px #34758d inset;
 }
 .watchlist span{
     /*
@@ -3248,6 +3222,7 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
         transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
         vertical-align: middle;
         width: 40%;
+
     }
 
     form .contect_form_textarea {
@@ -3262,6 +3237,48 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
         transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
         width: 39%;
     }
+    .account ul li input[type=text], .account ul li input[type=password]{
+        width: 95.1%;
+        font-size: 12px;
+    }
+    .account ul li select{
+        width: 97%;
+        font-size: 12px;
+    }
+    .account ul li textarea{
+        width: 94.5%;
+        font-size: 12px;
+    }
+    .account ul li label{
+        font-size: 12px;
+        margin-left: 2.2%;
+        line-height: 17px;
+        float: none;
+    }
+    .account_box form button.apply{
+        margin: 0 auto;
+    }
+    .account ul li select{
+        background-position: 95%;
+    }
+    .list_result figure{
+        width: auto !important;
+    }
+    .list_result ul article figure a img{
+        width: auto !important;
+    }
+    .resuult_ul li figure a{
+        float: left;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    section li article figure a.rate{
+        float: right;
+    }
+    .list_text11{
+        width: 100% !important;
+    }
+
 }
 
 @media screen and (max-width: 480px)
@@ -3277,6 +3294,17 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
     .left_photo {   display: block;    float: none;    margin: 0 auto;    overflow: hidden;    width: 220px;}
     .contect_form_input{width:29%;}
     form .contect_form_textarea{width:28%;}
+    section li article figure a.rate{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .delete_account.subscribe{
+        width: 90%;
+        font-size: 14px;
+        letter-spacing: -.5px;    
+    }
+
+
 }
 @media screen and (max-width: 240px) {
     header section .menu_icon{
@@ -3530,7 +3558,7 @@ input[type=submit].search_btn:hover{
 
 
 div .breadcrumb {
-margin-top:92px;
+margin-top:102px;
 padding-left: 6.2%;
 }
 
@@ -4078,3 +4106,231 @@ F}
     height: 100%;
     display: none;
 }   
+
+.account_box .wishlist h1{
+    font-family: Verdana, Geneva, sans-serif;
+}
+.account_box form .apply{
+    display: block;
+    margin-left: 34.4%;
+    width: 240px;
+    margin-top: 35px;
+}
+.account_box form{
+    margin-top: 20px;
+}
+.wishlist h3{
+    padding: 12px 0;
+}
+nav.navigation ul li.publish_ad a:before{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    background: #F54444;
+    width: 100%;
+    height: 100%;
+    -moz-transform: matrix(0.9,0,0,0.9,0,0);
+    -webkit-transform: matrix(0.9,0,0,0.9,0,0);
+    -o-transform: matrix(0.9,0,0,0.9,0,0);
+    -ms-transform: matrix(0.9,0,0,0.9,0,0);
+    transform: matrix(0.9,0,0,0.9,0,0);
+    z-index: -99;
+}
+nav.navigation ul li.publish_ad a:after{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    background: #F54444;
+    width: 100%;
+    height: 100%;
+    transform: matrix(0.5,0,0,0.5,0,0);
+    z-index: -99;
+}
+
+nav.navigation ul li.publish_ad a:hover:before{
+    opacity: 1;
+        -moz-transform: matrix(1,0,0,1,0,0);
+    -webkit-transform: matrix(1,0,0,1,0,0);
+    -o-transform: matrix(1,0,0,1,0,0);
+    -ms-transform: matrix(1,0,0,1,0,0);
+    transform: matrix(1,0,0,1,0,0);
+    transform: matrix(1,0,0,1,0,0);
+    -webkit-transition: all 0.2s cubic-bezier(.13,.81,.89,.48) 0s;
+     -moz-transition: all 0.2s cubic-bezier(.13,.81,.89,.48) 0s;
+     -o-transition: all 0.2s cubic-bezier(.13,.81,.89,.48) 0s;
+     transition: all 0.2s cubic-bezier(.13,.81,.89,.48) 0s;
+}
+nav.navigation ul li.publish_ad a:hover:after{
+    opacity: 1;
+        -moz-transform: matrix(1,0,0,1,0,0);
+    -webkit-transform: matrix(1,0,0,1,0,0);
+    -o-transform: matrix(1,0,0,1,0,0);
+    -ms-transform: matrix(1,0,0,1,0,0);
+    transform: matrix(1,0,0,1,0,0);
+    -webkit-transition: all 0.3s cubic-bezier(.13,.81,.89,.48) 0s;
+     -moz-transition: all 0.3s cubic-bezier(.13,.81,.89,.48) 0s;
+     -o-transition: all 0.2s cubic-bezier(.13,.81,.89,.48) 0s;
+     transition: all 0.3s cubic-bezier(.14,.93,.93,.04) 0s;
+}
+@media (max-width: 650px) {
+    .list_result figure{
+        float: none;
+        width: 33%;
+    }
+    .list_textbox{
+        width: 60%;
+    }
+    .account_box ul li a{
+    padding: 8px 4px;
+    }
+    .account_box ul li h2{
+        font-family: verdana;
+        font-size: 14px;
+        letter-spacing: -.5px;
+        width: 63%;
+    }
+}
+@media (max-width: 770px) {
+    .com_but{
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+}
+button.apply.ui-button.ui-button-middle.ui-button-main,.delete_account{
+  background-color: #0382B1;
+}
+.delete_account{
+    box-shadow: 0 0 0 #0382B1;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    border: 0px;
+    width: 265px;
+    border-radius:0px;
+    font-size:16px;
+    text-transform:uppercase;
+    padding:7px 15px;
+    color:#fff;
+}
+.delete_account:hover, button.apply.ui-button.ui-button-middle.ui-button-main:hover{
+    background-color: #FF7F50 !important;
+    box-shadow: 0 0 0 #0382B1;
+}
+.subscribe.delete_account:hover{
+    background:#FF7F50;
+    border: 0px;
+
+}
+.account_box select option{
+    font-size: 20px;
+}
+.account_box select option{
+    color: #000;
+}
+.account_box .wishlist{
+    -webkit-transition: display 1.3s cubic-bezier(.13,.81,.89,.48) 0s;
+    transition: display 1.3s cubic-bezier(.13,.81,.89,.48) 0s;
+}
+.account_box ul li a{
+    -webkit-transition: all 1.3s cubic-bezier(.13,.81,.89,.48) 0s;
+    transition: all 1.3s cubic-bezier(.13,.81,.89,.48) 0s;
+}
+.com_but{
+    width: auto;
+    background-color: #0382B1;
+    color: #fff;
+    float: left;
+    margin-right: 2%;
+    -webkit-transition: background-color 0s !important;
+    transition: background-color 0s !important;
+}
+.com_but:last-of-type{
+    margin-right: 0;
+}
+.com_but:hover{
+    background-color: #FF7F50 !important;
+}
+.fir_title_img{
+    padding: 0 !important;
+}
+.for_price{
+    float: right;
+    width: 140px;
+}
+.for_price:hover a, .for_price:hover .rate{ 
+    
+}
+.for_price a:hover{
+    background-color: transparent !important;
+}
+.for_price a:hover .MCtooltip{
+    color: #fff !important;
+}
+.for_price a{
+    width: 100%;
+    font-size: 14px;
+    color: #0382B1;
+    padding: 6px 4px !important;
+    -webkit-transition: background-color 0s !important;
+    transition: background-color 0s !important;
+}
+.for_price .MCtooltip{
+    
+}
+.for_price .MCtooltip span{
+    
+}
+.send_but{
+    background:#0382B1;
+    border-radius:0px;
+    font-size:16px;
+    text-transform:uppercase;
+    padding:7px 15px;
+    color:#fff;
+    float: left;
+}
+.send_but:hover{
+    background:#FF7F50 !important;
+    border: 0px !important;
+    box-shadow: 0 0 0;
+}
+.send_but:hover a{
+    background: transparent !important;
+    border: 0px !important;      
+}
+.send_but a:hover{
+    background: transparent !important;
+    border: 0px !important;    
+}
+#btn1, #btn2{
+    margin-bottom: 5px;
+    background:#0382B1;
+    color: #fff;
+    float: left;
+    padding:7px 15px;
+    text-align: center;
+    margin-right: 10px;
+    font: 16px Verdana;
+    text-transform: uppercase;
+    -webkit-transition: background-color 0s !important;
+    transition: background-color 0s !important;
+}
+#btn1:hover, #btn2:hover{
+    background:#FF7F50 !important;
+    border: 0px !important;
+    box-shadow: 0 0 0;
+    color: #fff;
+}
+.list_figure{
+    margin-right: 2%;
+    margin-bottom: 5px;
+}
+.fir_title_img img{
+    margin-bottom: 20px;
+}
