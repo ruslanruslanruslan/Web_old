@@ -6,12 +6,6 @@ $(document).ready(function(){
     /*$('article.listings a.MCtooltip').click(function(event) {
         event.stopPropagation();
     })*/
-    var pluss = $('section.result_outer.account_outer .resuult_ul li a img.pluss');
-    var minuss = $('section.result_outer.account_outer .resuult_ul li a img.minus');
-    $('section.result_outer.account_outer .resuult_ul li a').click(function(){
-    $(this).find(pluss).toggleClass('opaci');
-    $(this).find(minuss).toggleClass('opaci');
-});
 })
 
 $(document).ready(function(){
@@ -38,17 +32,20 @@ $(window).resize(function(){
         $('.list_ryt').css({'float':'right'});
     }
 });
-$(window).bind('load', function () {
-    $('.preloader9').fadeOut();
-    $('.mask9').fadeOut();
-    $('.wraper').fadeOut();
+$(window).on('load', function () {
+     $('.preloader9').show();
+        $('.wraper').show();
+        $('.mask9').show();
+    $('.preloader9').delay(350).fadeOut('slow');
+    $('.mask9').delay(350).fadeOut('slow');
+    $('.wraper').delay(350).fadeOut('slow');
 });
 $(document).ready(function() {
-    $("body").css("display", "none");
+   $("body").css("display", "none");
 
     $("body").fadeIn(500);
 
-    $("a:not(a[href*=javascript],a[href^=#])").click(function(event){
+   /* $("a:not(a[href*=javascript],a[href^=#],a[class*=fancybox])").click(function(event){
         event.preventDefault();
         linkLocation = this.href;
         $('.preloader9').show();
@@ -59,7 +56,7 @@ $(document).ready(function() {
 
     function redirectPage() {
         window.location = linkLocation;
-    }
+    }*/
 });
 $(document).ready(function(){
     $('.breadcrumb .first-child a').prepend('<div class="for_home_images"><img src="http://playandbay.com/betaPlayandBay3/oc-content/themes/isha/images/home.png" clss="visibl"><img src="http://playandbay.com/betaPlayandBay3/oc-content/themes/isha/images/home_hover.png" clss="not" style="position:absolute;top:3px;left:0;z-index:5"></div>');
@@ -307,4 +304,3 @@ $(document).ready(function(){
         $('.chose-langu').css({"z-index": "99"});
     })
 })
-

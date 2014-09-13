@@ -78,11 +78,7 @@ $i_userId = osc_logged_user_id();
           <li>
                 <a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/listing_icon.png')?>">
           <h2><?php _e('Listings', 'isha') ; ?><span><?php _e('Your Selected Listings', 'isha') ; ?></span></h2>
-        <div class="plus_min">
-
-        <img class="minus opaci" alt="" src="<?php echo osc_current_web_theme_url('images/minus_dropdown.png')?>">
-        <img class="pluss" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>">
-        </div></a>
+        <img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
                 <div class="wishlist" style="display: none;">
                   <h1><?php _e('My Listings', 'isha') ; ?></h1>
            <?php if(osc_count_items() == 0) { ?>
@@ -100,20 +96,19 @@ $i_userId = osc_logged_user_id();
               <figure class="list_figure">
                         <?php if( osc_images_enabled_at_items() ) { ?>
         <?php if(osc_count_item_resources()) { ?>
-     <a class="fir_title_img" href="<?php echo osc_item_url() ; ?>" title="<?php echo osc_item_title() ; ?>"><img src="<?php echo osc_resource_thumbnail_url(); ?>" title="" alt="<?php echo osc_item_title() ; ?>" width="50" height="50"></a>
+     <a class="fir_title_img" href="<?php echo osc_item_url() ; ?>" title="<?php echo osc_item_title() ; ?>"><img src="<?php echo osc_resource_thumbnail_url(); ?>" title="" alt="<?php echo osc_item_title() ; ?>" width="100" height="100"></a>
         <?php } else { ?>
-           <img src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" title="" alt="<?php echo osc_item_title() ; ?>" width="50" height="50">
+           <img src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" title="" alt="<?php echo osc_item_title() ; ?>" width="100" height="100">
         <?php } ?>
     <?php } ?>
                     
 
                 </figure>
                 <div class="list_textbox list_text11">
-                  <div class="obiava_text">
+                  <div class="for_price"><a class="rate" href="#"><?php if (osc_price_enabled_at_items()) { echo osc_item_formated_price(); ?><?php }?></a></div>
                     <h1><?php echo osc_item_title() ; ?>(<?php echo osc_item_category() ; ?>)</h1>
                         <h3><?php echo osc_item_city(); //osc_item()['s_city'];?> - (<?php echo osc_item_region(); ?>) - <?php echo osc_format_date(osc_item_pub_date()); ?>.</h3>
-                        </div>                        
-                        <div class="obiave_buttons">
+                        <p><?php echo osc_highlight( strip_tags( osc_item_description()) ,250) ; ?></p>
             <a class="com_but" href="<?php echo osc_item_edit_url(); ?>" rel="nofollow"><?php _e('Edit item', 'isha'); ?></a>
             <a class="delete com_but" onclick="javascript:return confirm('<?php echo osc_esc_js(__('This action can not be undone. Are you sure you want to continue?', 'isha')); ?>')" href="<?php echo osc_item_delete_url();?>" ><?php _e('Delete', 'isha'); ?></a>
                       <?php if(osc_item_is_active()) {?>
@@ -124,15 +119,10 @@ $i_userId = osc_logged_user_id();
                                             elseif (!osc_item_is_active())
                                             {
                                             ?>
-                                            <a class="com_but" href="<?php echo osc_item_activate_url();?>" ><?php _e('Activate', 'isha'); ?></a>
+                                            <a href="<?php echo osc_item_activate_url();?>" ><?php _e('Activate', 'isha'); ?></a>
                                             <?php
                                             }
                                             ?>
-                                            </div>
-                                            <div class="for_price"><a class="rate" href="#"><?php if (osc_price_enabled_at_items()) { echo osc_item_formated_price(); ?><?php }?></a></div>
-                </div>
-                <div class="account_list_text">
-                  <p><?php echo osc_highlight( strip_tags( osc_item_description()) ,250) ; ?></p>
                 </div>
                 <div class="clear"></div>
 
@@ -148,11 +138,7 @@ $i_userId = osc_logged_user_id();
             <li>
               <a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/alert.png')?>">
         <h2><?php _e('Alert', 'isha') ; ?><span><?php _e('Your Important Alerts', 'isha') ; ?></span></h2>
-        <div class="plus_min">
-
-        <img class="minus opaci" alt="" src="<?php echo osc_current_web_theme_url('images/minus_dropdown.png')?>">
-        <img class="pluss" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>">
-        </div></a>
+        <img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
                  <div class="wishlist" style="display: none;">
                   <h1><?php _e('Alerts', 'isha') ; ?></h1>
           <?php if(osc_count_alerts() <= 0) { ?>
@@ -194,11 +180,7 @@ $i_userId = osc_logged_user_id();
       ?>
               <a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/inbox.png')?>">
         <h2><?php _e('Inbox', 'isha'); ?> (<?php echo ' всего: '.$recipCount.' не прочитанных: '.$countPMs; ?>)<span><?php _e('Your Incoming Messages', 'isha'); ?></span></h2>
-        <div class="plus_min">
-
-        <img class="minus opaci" alt="" src="<?php echo osc_current_web_theme_url('images/minus_dropdown.png')?>">
-        <img class="pluss" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>">
-        </div></a>
+        <img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
                 <div class="wishlist inbox" style="display: none;overflow:auto">
                   <table cellspacing="0" cellpadding="0">
                       <tbody><tr>
@@ -269,11 +251,7 @@ $i_userId = osc_logged_user_id();
             <?php $recipPMs = ModelPM::newInstance()->getSenderMessages(osc_logged_user_id(), 1, 'pm_id', 'DESC');
                         $recipCount = count($recipPMs); ?>
               <a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/outbox.png')?>"><h2>
-              <?php _e('Outbox', 'osclass_pm'); ?> (<?php echo ' всего: '.$recipCount;  ?>)<span><?php _e('Your Outgoing Messages', 'isha'); ?></span></h2> <div class="plus_min">
-
-        <img class="minus opaci" alt="" src="<?php echo osc_current_web_theme_url('images/minus_dropdown.png')?>">
-        <img class="pluss" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>">
-        </div></a>
+              <?php _e('Outbox', 'osclass_pm'); ?> (<?php echo ' всего: '.$recipCount;  ?>)<span><?php _e('Your Outgoing Messages', 'isha'); ?></span></h2> <img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
                 <div class="wishlist inbox" style="display: none;overflow:auto">
                   <table cellspacing="0" cellpadding="0">
                       <tbody><tr>
@@ -362,11 +340,7 @@ $i_userId = osc_logged_user_id();
 ?>
               <a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/wishlist.png')?>">
         <h2><?php _e('Watchlist', 'isha') ; ?><span><?php _e('Your Selected Watchlist', 'isha') ; ?></span></h2>
-        <div class="plus_min">
-
-        <img class="minus opaci" alt="" src="<?php echo osc_current_web_theme_url('images/minus_dropdown.png')?>">
-        <img class="pluss" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>">
-        </div></a>
+        <img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
 
                 <div class="wishlist" style="display: none;">
         <?php if (osc_count_items() == 0) { ?>
@@ -410,11 +384,7 @@ $i_userId = osc_logged_user_id();
             <li>
               <a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/account.png')?>">
         <h2><?php _e('Settings', 'isha') ; ?><span><?php _e('View Full Account', 'isha') ; ?></span></h2>
-        <div class="plus_min">
-
-        <img class="minus opaci" alt="" src="<?php echo osc_current_web_theme_url('images/minus_dropdown.png')?>">
-        <img class="pluss" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>">
-        </div></a>
+        <img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
                 <div class="wishlist account" style="display: none;">
                   <h1><?php _e('Update account', 'isha') ; ?></h1>
           <?php
