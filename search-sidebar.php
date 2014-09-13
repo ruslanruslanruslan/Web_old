@@ -39,16 +39,14 @@ if (!isset($category['pk_i_id'])) {
             <div class="clear"></div>
 
             <?php if (osc_price_enabled_at_items()) { ?>
-                <div class="for_price">
                 <div class="shwmain">
                     <div class="srctxt pcc"><?php _e('Price', 'isha'); ?></div>
                     <div class="minmain">
                         <label class="listxt"><input type="text" class="srchbox minbox" id="priceMin" name="sPriceMin" value="<?php echo osc_esc_html(osc_search_price_min()); ?>" placeholder="<?php _e('Min', 'isha'); ?>"></label>
                     </div>
                     <span class="shwmid">-</span>
-                    <div class="minmain minmain_right">
+                    <div class="minmain">
                         <label class="listxt"><input type="text" class="srchbox minbox" id="priceMax" name="sPriceMax" value="<?php echo osc_esc_html(osc_search_price_max()); ?>" placeholder="<?php _e('Max', 'isha'); ?>"></label>
-                    </div>
                     </div>
                     <div class="clear"></div>
                 </div>
