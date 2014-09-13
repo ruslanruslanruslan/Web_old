@@ -1913,8 +1913,7 @@ a.other:hover ul
     font-size:22px;
     font-family: 'oswaldlight';
     color:#666;
-    padding:12px 0;
-    padding-top: 0;
+    padding:0;
 }
 .wishlist p
 {
@@ -3278,7 +3277,9 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
     .list_text11{
         width: 100% !important;
     }
-
+    .obiava_text{
+        width: 62% !important;
+    }
 }
 
 @media screen and (max-width: 480px)
@@ -3303,8 +3304,13 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
         font-size: 14px;
         letter-spacing: -.5px;    
     }
-
-
+    .list_result .obiava_text{
+        width: 100% !important
+    }
+    .account_box .for_price{
+        float: none;
+        width: 100% !important;
+    }
 }
 @media screen and (max-width: 240px) {
     header section .menu_icon{
@@ -3365,6 +3371,16 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
     }
     /*.rcolof{overflow: auto; height: auto;}*/
     form#comment_form textarea#body{width: 100%}
+    .obiava_text{
+        width: 66% !important;
+    }
+    .account_box .for_price{
+        margin-left: 1% !important;
+    }
+    .wishlist h1{
+        font-size: 18px !important;
+
+    }
 }
 
 .product_detail_text a.MCtooltip{
@@ -4120,7 +4136,7 @@ F}
     margin-top: 20px;
 }
 .wishlist h3{
-    padding: 12px 0;
+    padding: 5px 0;
 }
 nav.navigation ul li.publish_ad a:before{
     content: ' ';
@@ -4178,6 +4194,12 @@ nav.navigation ul li.publish_ad a:hover:after{
      -o-transition: all 0.2s cubic-bezier(.13,.81,.89,.48) 0s;
      transition: all 0.3s cubic-bezier(.14,.93,.93,.04) 0s;
 }
+@media (max-width: 680px) {
+    .obiava_text{
+        width: 64% !important;
+    }
+}
+
 @media (max-width: 650px) {
     .list_result figure{
         float: none;
@@ -4195,11 +4217,20 @@ nav.navigation ul li.publish_ad a:hover:after{
         letter-spacing: -.5px;
         width: 63%;
     }
+    .obiava_text{
+        width: 62% !important;
+    }
 }
 @media (max-width: 770px) {
     .com_but{
         font-size: 12px;
         margin-bottom: 5px;
+    }
+    .obiava_text h1, .obiava_text h3{
+        word-break: break-all;
+    }
+    .account_outer .list_result .list_figure{
+        display: none;
     }
 }
 button.apply.ui-button.ui-button-middle.ui-button-main,.delete_account{
@@ -4259,9 +4290,13 @@ button.apply.ui-button.ui-button-middle.ui-button-main,.delete_account{
 .fir_title_img{
     padding: 0 !important;
 }
-.for_price{
+.account_box .for_price{
     float: right;
-    width: 140px;
+    width: 20%;
+    margin-left: 3%;
+    margin-bottom: 0%;
+    display: inline-block;
+    vertical-align: top;
 }
 .for_price:hover a, .for_price:hover .rate{ 
     
@@ -4331,6 +4366,68 @@ button.apply.ui-button.ui-button-middle.ui-button-main,.delete_account{
     margin-right: 2%;
     margin-bottom: 5px;
 }
-.fir_title_img img{
-    margin-bottom: 20px;
+@media (min-width: 1300px){
+    .account_box .for_price{
+        margin-left: 5%;
+    }
+}
+@media (min-width: 1300px){
+    .account_box .for_price{
+        float: right !important;
+        width: 15%;
+        margin-left: 5%;
+    }
+    .obiave_buttons{
+        float: right !important;
+        width: 22% !important;
+        margin-left: 3%;
+        position: static !important;
+    }
+    .obiave_buttons .com_but{
+        width: 77%;
+        text-align: center;
+        margin-bottom: 7px;
+        padding: 6px 10px !important;
+    }
+    .obiava_text{
+        float: left !important;
+        width: 47% !important;
+    }
+}
+.obiava_text{
+    width: 60%;
+    display: inline-block;
+    padding-top: 3px;
+}
+.account_list_text p{
+    padding-bottom: 60px;
+}
+.obiave_buttons{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.list_result{
+    position: relative;
+}
+.plus_min{
+    float: right;
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+.plus_min img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.pluss{
+    z-index: 2;
+}
+.opaci{
+    opacity: 0;
+}
+.visiv{
+    opacity: 1;
 }
