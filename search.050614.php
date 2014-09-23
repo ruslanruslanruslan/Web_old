@@ -470,7 +470,7 @@ function autocompleteCity() {
                                                                                                                         }
                                                                                                                     });
                                                                                                             //]]>
-                                                                                                        </script>		
+                                                                                                        </script>       
                                                                                                         </div>
                                                                                                         </center>
                                                                                                         <footer>

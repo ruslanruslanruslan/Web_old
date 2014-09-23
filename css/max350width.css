@@ -5,11 +5,6 @@
 .mrbv1 {width: 90%;}
 .minbox {
 width: 98%;
-}.shwmid {
-float: left;
-padding: 1.3% 0;
-padding-left: 3%;
-width: 13%;
 }
 .rytttlist {
 	padding-bottom: 17px;
@@ -148,11 +143,6 @@ header section .menu_icon{
   .nav-mobile{
         z-index: 999;
 }
-span.shwmid{
-	padding: 1.3% 0;
-	padding-left: 3%;
-	width: 13%;
-}
 .cent_srch_ryt .headnav .list_ryt{
 	width: 100%;
 }
@@ -161,4 +151,7 @@ span.shwmid{
 }
 .alaist1 .price a.MCtooltip[href="#"]{
 display: none;
+}
+article.listings{
+	height: 217px;
 }

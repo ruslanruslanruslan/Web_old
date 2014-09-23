@@ -4,11 +4,7 @@
 .mrbv1 {width: 90%;}
 .minbox {
 width: 98%;
-}.shwmid {
-float: left;
-padding: 0px;
-width: 100%;}
-
+}
 .alaist {
 float: left;
 width: 100%;
@@ -141,8 +137,6 @@ nav.navigation{
 .nav-mobile{
         z-index: 999;
 }
-span.shwmid{
-	padding: 2.5% 0;
-	padding-left: 3%;
-	width: 11.2%;
-}
+.minmain{
+    width: 100%;
+  }

@@ -413,9 +413,9 @@ osc_current_web_theme_path('header.php');
                             <p style="font-size:14px;font-weight:700;">
                                 <?php _e('Please sign up or log in to our portal to use whole capability of PlayAndBay. It is easy, fast and free.', 'isha'); ?>
                             </p>
-							</br>
+                            </br>
                         </div>
-						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <!-- item_popup_create_top -->
                         <ins class="adsbygoogle"
                         style="display:inline-block;width:468px;height:60px"
@@ -465,7 +465,7 @@ osc_current_web_theme_path('header.php');
                                 </p>
                             </div>
                         </div>
-						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <!-- item_popup_create bottom -->
                         <ins class="adsbygoogle"
                              style="display:inline-block;width:468px;height:60px"
@@ -547,7 +547,7 @@ osc_current_web_theme_path('header.php');
                             <?php _e('Remember me', 'isha'); ?>
                               </label>
                             </div>-->
-							<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                             <!-- item_popup_login_bottom -->
                             <ins class="adsbygoogle"
                                  style="display:inline-block;width:468px;height:60px"

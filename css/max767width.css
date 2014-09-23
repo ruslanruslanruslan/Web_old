@@ -7,10 +7,6 @@
 width: 98%;
 }
 .shwmain .slct{ width:98%;}
-.shwmid {
-float: left;
-padding: 0px;
-width: 100%;}
 .rytttlist {
 text-align: left;
 }
@@ -111,9 +107,4 @@ nav.navigation{
     float: none;
     text-align: center;
     margin-left: 0;
-}
-span.shwmid{
-	padding: 1.3% 0;
-	width: 13.9%;
-	padding-left: 1%;
 }

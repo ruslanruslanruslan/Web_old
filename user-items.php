@@ -33,14 +33,14 @@
     function custom_meta_title($data){
         return __('Alerts', 'isha');;
     }
-	$osc_user = osc_user();
+  $osc_user = osc_user();
 
-	if(osc_is_web_user_logged_in() ) {
+  if(osc_is_web_user_logged_in() ) {
    $pm_id = Params::getParam('message');
    switch(Params::getParam('box')) {
       case 'inbox':
          $pm = ModelPM::newInstance()->getRecipientMessage(osc_logged_user_id(), 1, 0, $pm_id );
-		//echo "danish"; print_r($pm); die;
+    //echo "danish"; print_r($pm); die;
          if($pm['recipNew'] == 1) {
             ModelPM::newInstance()->updateMessageAsRead($pm['pm_id']);
          }
@@ -73,77 +73,92 @@ $i_userId = osc_logged_user_id();
 <section class="wrapper result_outer account_outer">
 
 <section class="account_box">
-    	<h1 class="result"><?php _e('My Account', 'isha') ; ?></h1>
-        <ul>
-        	<li>
+      <h1 class="result"><?php _e('My Account', 'isha') ; ?></h1>
+        <ul class="resuult_ul">
+          <li>
                 <a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/listing_icon.png')?>">
-			    <h2><?php _e('Listings', 'isha') ; ?><span><?php _e('Your Selected Listings', 'isha') ; ?></span></h2>
-				<img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
-                <div class="wishlist" style="display: none;">
-                	<h1><?php _e('My Listings', 'isha') ; ?></h1>
-					 <?php if(osc_count_items() == 0) { ?>
-                    <p><?php _e('No listings have been added yet', 'isha') ; ?></p>
-					<?php } else {
-					while(osc_has_items()) {
-					 $search_number = bender_search_number();
+          <h2><?php _e('Listings', 'isha') ; ?><span><?php _e('Your Selected Listings', 'isha') ; ?></span></h2>
+        <div class="plus_min">
 
-				echo '<p>';
+        <img class="minus opaci" alt="" src="<?php echo osc_current_web_theme_url('images/minus_dropdown.png')?>">
+        <img class="pluss" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>">
+        </div></a>
+                <div class="wishlist" style="display: none;">
+                  <h1><?php _e('My Listings', 'isha') ; ?></h1>
+           <?php if(osc_count_items() == 0) { ?>
+                    <p><?php _e('No listings have been added yet', 'isha') ; ?></p>
+          <?php } else {
+          while(osc_has_items()) {
+           $search_number = bender_search_number();
+
+        echo '<p>';
                 printf(__('%1$d to %2$d of <span> %3$d </span> listings', 'isha'), $search_number['from'], $search_number['to'], $search_number['of']);
-				echo '</p>';
-					?>
+        echo '</p>';
+          ?>
 
                     <article class="list_result">
-            	<figure>
-                		    <?php if( osc_images_enabled_at_items() ) { ?>
+              <figure class="list_figure">
+                        <?php if( osc_images_enabled_at_items() ) { ?>
         <?php if(osc_count_item_resources()) { ?>
-		 <a  href="<?php echo osc_item_url() ; ?>" title="<?php echo osc_item_title() ; ?>"><img src="<?php echo osc_resource_thumbnail_url(); ?>" title="" alt="<?php echo osc_item_title() ; ?>" width="108" height="97"></a>
+     <a class="fir_title_img" href="<?php echo osc_item_url() ; ?>" title="<?php echo osc_item_title() ; ?>"><img src="<?php echo osc_resource_thumbnail_url(); ?>" title="" alt="<?php echo osc_item_title() ; ?>" width="50" height="50"></a>
         <?php } else { ?>
-           <img src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" title="" alt="<?php echo osc_item_title() ; ?>" width="108" height="97">
+           <img src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" title="" alt="<?php echo osc_item_title() ; ?>" width="50" height="50">
         <?php } ?>
     <?php } ?>
-                      <?php bender_draw_dropdown(); ?>
+                    
 
                 </figure>
-                <div class="list_textbox">
-                		<h1><?php echo osc_item_title() ; ?>(<?php echo osc_item_category() ; ?>)</h1>
+                <div class="list_textbox list_text11">
+                  <div class="obiava_text">
+                    <h1><?php echo osc_item_title() ; ?>(<?php echo osc_item_category() ; ?>)</h1>
                         <h3><?php echo osc_item_city(); //osc_item()['s_city'];?> - (<?php echo osc_item_region(); ?>) - <?php echo osc_format_date(osc_item_pub_date()); ?>.</h3>
-                        <p><?php echo osc_highlight( strip_tags( osc_item_description()) ,250) ; ?></p>
-						<a href="<?php echo osc_item_edit_url(); ?>" rel="nofollow"><?php _e('Edit item', 'isha'); ?></a>
-						<a class="delete" onclick="javascript:return confirm('<?php echo osc_esc_js(__('This action can not be undone. Are you sure you want to continue?', 'isha')); ?>')" href="<?php echo osc_item_delete_url();?>" ><?php _e('Delete', 'isha'); ?></a>
+                        </div>                        
+                        <div class="obiave_buttons">
+            <a class="com_but" href="<?php echo osc_item_edit_url(); ?>" rel="nofollow"><?php _e('Edit item', 'isha'); ?></a>
+            <a class="delete com_but" onclick="javascript:return confirm('<?php echo osc_esc_js(__('This action can not be undone. Are you sure you want to continue?', 'isha')); ?>')" href="<?php echo osc_item_delete_url();?>" ><?php _e('Delete', 'isha'); ?></a>
                       <?php if(osc_item_is_active()) {?>
 
-                                            <a href="<?php echo osc_item_deactivate_url();?>" ><?php _e('Deactivate', 'isha'); ?></a>
+                                            <a class="com_but" href="<?php echo osc_item_deactivate_url();?>" ><?php _e('Deactivate', 'isha'); ?></a>
                                             <?php
                                             }
                                             elseif (!osc_item_is_active())
                                             {
                                             ?>
-                                            <a href="<?php echo osc_item_activate_url();?>" ><?php _e('Activate', 'isha'); ?></a>
+                                            <a class="com_but" href="<?php echo osc_item_activate_url();?>" ><?php _e('Activate', 'isha'); ?></a>
                                             <?php
                                             }
                                             ?>
+                                            </div>
+                                            <div class="for_price"><a class="rate" href="#"><?php if (osc_price_enabled_at_items()) { echo osc_item_formated_price(); ?><?php }?></a></div>
+                </div>
+                <div class="account_list_text">
+                  <p><?php echo osc_highlight( strip_tags( osc_item_description()) ,250) ; ?></p>
                 </div>
                 <div class="clear"></div>
 
-					<div class="clear"></div>
+          <div class="clear"></div>
 
 
     </article>
-      		<?php }
-			}?>
+          <?php }
+      }?>
                 </div>
             </li>
 
             <li>
-            	<a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/alert.png')?>">
-				<h2><?php _e('Alert', 'isha') ; ?><span><?php _e('Your Important Alerts', 'isha') ; ?></span></h2>
-				<img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
+              <a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/alert.png')?>">
+        <h2><?php _e('Alert', 'isha') ; ?><span><?php _e('Your Important Alerts', 'isha') ; ?></span></h2>
+        <div class="plus_min">
+
+        <img class="minus opaci" alt="" src="<?php echo osc_current_web_theme_url('images/minus_dropdown.png')?>">
+        <img class="pluss" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>">
+        </div></a>
                  <div class="wishlist" style="display: none;">
-                	<h1><?php _e('Alerts', 'isha') ; ?></h1>
-					<?php if(osc_count_alerts() <= 0) { ?>
+                  <h1><?php _e('Alerts', 'isha') ; ?></h1>
+          <?php if(osc_count_alerts() <= 0) { ?>
                     <p><?php _e('You do not have any alerts yet.', 'isha') ; ?></p>
-					<?php } else { ?>
-					    <?php
+          <?php } else { ?>
+              <?php
     $i = 1;
     while(osc_has_alerts()) { ?>
         <div class="userItem" >
@@ -164,32 +179,36 @@ $i_userId = osc_logged_user_id();
     $i++;
     }
     ?>
-					<?php }?>
+          <?php }?>
                 </div>
             </li>
             <li>
-			<?php
-			 $recipPMs = ModelPM::newInstance()->getRecipientMessages(osc_logged_user_id(), 1, 0, 'pm_id', 'DESC');
+      <?php
+       $recipPMs = ModelPM::newInstance()->getRecipientMessages(osc_logged_user_id(), 1, 0, 'pm_id', 'DESC');
              $recipCount = count($recipPMs);
              $odd = 1;
 
               $newPMs = ModelPM::newInstance()->getRecipientMessages(osc_logged_user_id(), 1, 1, 'pm_id', 'DESC');
          $countPMs = count($newPMs);
              //echo  '$recipCount: '.$recipCount;
-			?>
-            	<a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/inbox.png')?>">
-				<h2><?php _e('Inbox', 'isha'); ?> (<?php echo ' всего: '.$recipCount.' не прочитанных: '.$countPMs; ?>)<span><?php _e('Your Incoming Messages', 'isha'); ?></span></h2>
-				<img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
-                <div class="wishlist inbox" style="display: none;height:500px;overflow:auto">
-                	<table cellspacing="0" cellpadding="0">
-                    	<tbody><tr>
-                        	<th><input id="all_inbox" type="checkbox"></th>
+      ?>
+              <a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/inbox.png')?>">
+        <h2><?php _e('Inbox', 'isha'); ?> (<?php echo ' всего: '.$recipCount.' не прочитанных: '.$countPMs; ?>)<span><?php _e('Your Incoming Messages', 'isha'); ?></span></h2>
+        <div class="plus_min">
+
+        <img class="minus opaci" alt="" src="<?php echo osc_current_web_theme_url('images/minus_dropdown.png')?>">
+        <img class="pluss" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>">
+        </div></a>
+                <div class="wishlist inbox" style="display: none;overflow:auto">
+                  <table cellspacing="0" cellpadding="0">
+                      <tbody><tr>
+                          <th><input id="all_inbox" type="checkbox"></th>
                             <th><?php _e('Date', 'isha'); ?></th>
                             <th><?php _e('Subject', 'isha'); ?></th>
                             <th><?php _e('From', 'isha'); ?></th>
-							<th><?php _e('Action', 'isha'); ?></th>
+              <th><?php _e('Action', 'isha'); ?></th>
                         </tr>
-						 <?php if($recipCount == 0) { ?>
+             <?php if($recipCount == 0) { ?>
                   <tr class="odd">
                      <td></td>
                      <td></td>
@@ -197,14 +216,14 @@ $i_userId = osc_logged_user_id();
                      <td></td>
                   </tr>
                   <?php }else{
-				  foreach($recipPMs as $recipPM){
+          foreach($recipPMs as $recipPM){
 
-				   if($odd==1) {
-                  		$odd_even = "odd";
-                  		$odd = 0;
+           if($odd==1) {
+                      $odd_even = "odd";
+                      $odd = 0;
                       } else {
-                      	$odd_even = "even";
-                      	$odd = 1;
+                        $odd_even = "even";
+                        $odd = 1;
                       }
                       if($recipPM['recipNew'] == 1) {
                          $styleNew = 'font-weight: bold;';
@@ -212,29 +231,29 @@ $i_userId = osc_logged_user_id();
                          $styleNew = '';
                       }
 
-				  	?>
+            ?>
                         <tr class="<?php echo $odd_even;?>">
-                        	<!--<td><input type="checkbox"></td> -->
-                        	<td class="pmCheckboxes"><input class="delChecks1" type="checkbox" id="delete<?php echo $recipPM['pm_id']; ?>" name="pms[]" value="<?php echo $recipPM['pm_id']; ?>" /></td>
+                          <!--<td><input type="checkbox"></td> -->
+                          <td class="pmCheckboxes"><input class="delChecks1" type="checkbox" id="delete<?php echo $recipPM['pm_id']; ?>" name="pms[]" value="<?php echo $recipPM['pm_id']; ?>" /></td>
                             <td style="<?php echo $styleNew; ?>"><?php echo osc_format_date($recipPM['message_date']) . ', ' . osclass_pm_format_time($recipPM['message_date']); ?></td>
                             <td style="<?php echo $styleNew; ?>"><!--<a class="mesLink" href="<?php echo osc_render_file_url('osclass_pm/' . 'user-messages.php?message=' . $recipPM['pm_id'] . '&box=inbox'); ?>">--><?php echo $recipPM['pm_subject']; ?><!--</a>--></td>
                             <td style="<?php echo $styleNew; ?>"><?php  /*print_r($recipPM);*/$user = User::newInstance()->findByPrimaryKey($recipPM['sender_id']); echo $user['s_name'];  ?></td>
-							<td>
-							<li class="read">
+              <td>
+              <li class="read">
 
-							<a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-messages.php&box=inbox&message=' . $recipPM['pm_id'] ; ?>&p1=1" class="fancybox fancybox.iframe" >Читать</a>
-							</li>
-							<li class="reply">
+              <a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-messages.php&box=inbox&message=' . $recipPM['pm_id'] ; ?>&p1=1" class="fancybox fancybox.iframe" >Читать</a>
+              </li>
+              <li class="reply">
 
-							<a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=reply&messId=' . $recipPM['pm_id'] . '&userId=' . $recipPM['sender_id'] ; ?>&p1=1" class="fancybox fancybox.iframe" ><?php _e('Reply','osclass_pm'); ?></a></li>
+              <a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=reply&messId=' . $recipPM['pm_id'] . '&userId=' . $recipPM['sender_id'] ; ?>&p1=1" class="fancybox fancybox.iframe" ><?php _e('Reply','osclass_pm'); ?></a></li>
                   <li class="quote"><a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=quote&messId=' . $recipPM['pm_id'] . '&userId=' . $recipPM['sender_id']; ?>&p1=1" class="fancybox fancybox.iframe"><?php _e('Quote','osclass_pm'); ?></a></li>
                        <li class="del">
                                     <a onclick="if (!confirm('Вы уверены, что хотите удалить это личное сообщение?')) return false;" href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-proc.php&pms=' . $recipPM['pm_id'].'&option=delMessages&box=inbox' ; ?>&p1=1" class="fancybox fancybox.iframe">
                              Удалить</a></li>
                   </td>
                         </tr>
-					<?php }
-					} ?>
+          <?php }
+          } ?>
                     </tbody></table>
                   <!--<input type="button" onclick="if (!confirm('<?php _e('Are you sure you want to delete all selected personal messages?','osclass_pm'); ?>')) return false;" class="delete apply pmDeleteButton" value="Delete Selected">
                   -->
@@ -243,76 +262,80 @@ $i_userId = osc_logged_user_id();
                   -->
                   <a id="btn1"  onclick="if (!confirm('<?php _e('Are you sure you want to delete all selected personal messages?','osclass_pm'); ?>')) return true;"  href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-proc.php&option=delMessages&box=inbox&p1=1' ; ?>" class="fancybox fancybox.iframe" >Delete Selected</a>
 
-					<div class="admin subscribe"> <a  href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&userId=0&mType=new';?>&p1=1" class="fancybox fancybox.iframe"><?php echo __('Send PM to the ','osclass_pm') . ' ' . pmAdmin(); ?></a></div>
+          <div class="admin subscribe send_but"> <a  href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&userId=0&mType=new';?>&p1=1" class="fancybox fancybox.iframe"><?php echo __('Send PM to the ','osclass_pm') . ' ' . pmAdmin(); ?></a></div>
                 </div>
             </li>
             <li>
             <?php $recipPMs = ModelPM::newInstance()->getSenderMessages(osc_logged_user_id(), 1, 'pm_id', 'DESC');
                         $recipCount = count($recipPMs); ?>
-            	<a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/outbox.png')?>"><h2>
-            	<?php _e('Outbox', 'osclass_pm'); ?> (<?php echo ' всего: '.$recipCount;  ?>)<span><?php _e('Your Outgoing Messages', 'isha'); ?></span></h2> <img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
-                <div class="wishlist inbox" style="display: none;height:500px;overflow:auto">
-                	<table cellspacing="0" cellpadding="0">
-                    	<tbody><tr>
-                        	<th><input id="all_outbox" type="checkbox"></th>
+              <a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/outbox.png')?>"><h2>
+              <?php _e('Outbox', 'osclass_pm'); ?> (<?php echo ' всего: '.$recipCount;  ?>)<span><?php _e('Your Outgoing Messages', 'isha'); ?></span></h2> <div class="plus_min">
+
+        <img class="minus opaci" alt="" src="<?php echo osc_current_web_theme_url('images/minus_dropdown.png')?>">
+        <img class="pluss" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>">
+        </div></a>
+                <div class="wishlist inbox" style="display: none;overflow:auto">
+                  <table cellspacing="0" cellpadding="0">
+                      <tbody><tr>
+                          <th><input id="all_outbox" type="checkbox"></th>
                             <th><?php _e('Date', 'osclass_pm'); ?></th>
                             <th><?php _e('Subject', 'osclass_pm'); ?></th>
                             <th><?php _e('Sent To', 'osclass_pm'); ?></th>
-							<th><?php _e('Action', 'osclass_pm'); ?></th>
+              <th><?php _e('Action', 'osclass_pm'); ?></th>
                         </tr>
-						<?php
+            <?php
                         if($recipCount == 0) {?>
-						<tr class="odd">
+            <tr class="odd">
                      <td></td>
                      <td></td>
                      <td><?php _e('You have no messages', 'osclass_pm'); ?></td>
                      <td></td>
                   </tr>
-				  <?php }else{
+          <?php }else{
                    foreach($recipPMs as $recipPM){
-                   	?>
+                    ?>
 
                         <tr>
-                        	<!--<td><input type="checkbox"></td> -->
-                        	<td class="pmCheckboxes"><input class="delChecks2" type="checkbox" id="delete<?php echo $recipPM['pm_id']; ?>" name="pms[]" value="<?php echo $recipPM['pm_id']; ?>" /></td>
+                          <!--<td><input type="checkbox"></td> -->
+                          <td class="pmCheckboxes"><input class="delChecks2" type="checkbox" id="delete<?php echo $recipPM['pm_id']; ?>" name="pms[]" value="<?php echo $recipPM['pm_id']; ?>" /></td>
                             <td><?php echo osc_format_date($recipPM['message_date']) . ', ' . osclass_pm_format_time($recipPM['message_date']); ?></td>
                             <td><!--<a class="mesLink" href="<?php echo osc_render_file_url('osclass_pm/' . 'user-messages.php?message=' . $recipPM['pm_id'] . '&box=outbox'); ?>">--><?php echo $recipPM['pm_subject'];
                             //http://test.playandbay.com/index.php?page=custom&file=osclass_pm/user-proc.php&pms=79&option=delMessages&box=inbox&p1=1
                              ?><!--</a>--></td>
                             <td><?php  /*print_r($recipPM);*/$user = User::newInstance()->findByPrimaryKey($recipPM['recip_id']);/*print_r($user);*/echo $user['s_name']; if ($user['s_name']=='') echo 'Admin';?></td>
-							<td>
-							<li class="read">
+              <td>
+              <li class="read">
 
-							<a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-messages.php&box=outbox&message=' . $recipPM['pm_id'] ; ?>&p1=1" class="fancybox fancybox.iframe" >Читать</a>
-							</li>
-							<li class="del">
+              <a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-messages.php&box=outbox&message=' . $recipPM['pm_id'] ; ?>&p1=1" class="fancybox fancybox.iframe" >Читать</a>
+              </li>
+              <li class="del">
                                     <a onclick="if (!confirm('Вы уверены, что хотите удалить это личное сообщение?')) return false;" href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-proc.php&pms=' . $recipPM['pm_id'].'&option=delMessages&box=outbox' ; ?>&p1=1" class="fancybox fancybox.iframe">
                              Удалить</a></li>
                             <!--
-							<li class="reply">
+              <li class="reply">
 
-							<a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=reply&messId=' . $recipPM['pm_id'] . '&userId=' . $recipPM['sender_id'] ; ?>&p1=1" class="fancybox fancybox.iframe" ><?php _e('Reply','osclass_pm'); ?></a>
-							</li>
+              <a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=reply&messId=' . $recipPM['pm_id'] . '&userId=' . $recipPM['sender_id'] ; ?>&p1=1" class="fancybox fancybox.iframe" ><?php _e('Reply','osclass_pm'); ?></a>
+              </li>
                   <li class="quote">
                   <a href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-send.php&mType=quote&messId=' . $recipPM['pm_id'] . '&userId=' . $recipPM['sender_id']; ?>&p1=1" class="fancybox fancybox.iframe" ><?php _e('Quote','osclass_pm'); ?></a>
                   </li>-->
 
                   </td>
                         </tr>
-						<?php
-						}
-						} ?>
+            <?php
+            }
+            } ?>
                     </tbody></table>
                     <a id="btn2"  onclick="if (!confirm('<?php _e('Are you sure you want to delete all selected personal messages?','osclass_pm'); ?>')) return true;"  href="<?php echo osc_base_url(true) . '?page=custom&file=osclass_pm/user-proc.php&option=delMessages&box=outbox&p1=1' ; ?>" class="fancybox fancybox.iframe" >Delete Selected</a>
 
                 </div>
             </li>
             <li>
-			<?php
+      <?php
 
-	if(Params::getParam('delete') != '' && osc_is_web_user_logged_in()){
-		delete_item(Params::getParam('delete'), $i_userId);
-	}
+  if(Params::getParam('delete') != '' && osc_is_web_user_logged_in()){
+    delete_item(Params::getParam('delete'), $i_userId);
+  }
 
     $itemsPerPage = (Params::getParam('itemsPerPage') != '') ? Params::getParam('itemsPerPage') : 5;
     $iPage        = (Params::getParam('iPage') != '') ? Params::getParam('iPage') : 0;
@@ -330,163 +353,171 @@ $i_userId = osc_logged_user_id();
     View::newInstance()->_exportVariableToView('search_total_pages', $iNumPages);
     View::newInstance()->_exportVariableToView('search_page', $iPage) ;
 
-	// delete item from watchlist
-	function delete_item($item, $uid){
-		$conn = getConnection();
-		$conn->osc_dbExec("DELETE FROM %st_item_watchlist WHERE fk_i_item_id = %d AND fk_i_user_id = %d LIMIT 1", DB_TABLE_PREFIX , $item, $uid);
-	}
+  // delete item from watchlist
+  function delete_item($item, $uid){
+    $conn = getConnection();
+    $conn->osc_dbExec("DELETE FROM %st_item_watchlist WHERE fk_i_item_id = %d AND fk_i_user_id = %d LIMIT 1", DB_TABLE_PREFIX , $item, $uid);
+  }
 
 ?>
-            	<a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/wishlist.png')?>">
-				<h2><?php _e('Watchlist', 'isha') ; ?><span><?php _e('Your Selected Watchlist', 'isha') ; ?></span></h2>
-				<img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
+              <a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/wishlist.png')?>">
+        <h2><?php _e('Watchlist', 'isha') ; ?><span><?php _e('Your Selected Watchlist', 'isha') ; ?></span></h2>
+        <div class="plus_min">
+
+        <img class="minus opaci" alt="" src="<?php echo osc_current_web_theme_url('images/minus_dropdown.png')?>">
+        <img class="pluss" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>">
+        </div></a>
 
                 <div class="wishlist" style="display: none;">
-				<?php if (osc_count_items() == 0) { ?>
+        <?php if (osc_count_items() == 0) { ?>
         <h3><?php _e('You don\'t have any items yet', 'watchlist'); ?></h3>
         <?php } else { ?>
-		<h3><?php printf(_n('You are watching %d item', 'You are watching %d items', $iTotalItems, 'watchlist'), $iTotalItems) ; ?></h3>
-		<?php while ( osc_has_items() ) { ?>
-                	<article class="list_result">
-            	<figure>
-				      <?php if (osc_images_enabled_at_items()) { ?>
-					   <?php if (osc_count_item_resources()) { ?>
+    <h3><?php printf(_n('You are watching %d item', 'You are watching %d items', $iTotalItems, 'watchlist'), $iTotalItems) ; ?></h3>
+    <?php while ( osc_has_items() ) { ?>
+                  <article class="list_result">
+              <figure>
+              <?php if (osc_images_enabled_at_items()) { ?>
+             <?php if (osc_count_item_resources()) { ?>
                                 <a href="<?php echo osc_item_url(); ?>"><img src="<?php echo osc_resource_thumbnail_url(); ?>" width="75px" height="56px" title="" alt="" /></a>
                             <?php } else { ?>
                                 <img src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" title="" alt="" />
                             <?php } ?>
-						<?php }?>
-                        <a class="rate" href="#"><?php if (osc_price_enabled_at_items()) { echo osc_item_formated_price(); ?> - <?php }?></a>
-                       <!-- <a class="other" href="#">Other currencies
-                            	<ul>
-                                	<li>378 EUR</li>
-                                	<li>320 GBP</li>
-                                	<li>4231 UAH</li>
-                                	<li>516 USD</li>
-                                </ul>
-                       </a>-->
+            <?php }?>
+                        
 
                 </figure>
-                <div class="list_textbox">
-                		<h1> <a href="<?php echo osc_item_url(); ?>"><?php echo osc_item_title(); ?></a></h1>
+                <div class="list_textbox list_t12">
+                  <a class="rate" href="#"><?php if (osc_price_enabled_at_items()) { echo osc_item_formated_price(); ?> - <?php }?></a>
+                       <!-- <a class="other" href="#">Other currencies
+                              <ul>
+                                  <li>378 EUR</li>
+                                  <li>320 GBP</li>
+                                  <li>4231 UAH</li>
+                                  <li>516 USD</li>
+                                </ul>
+                       </a>-->
+                    <h1> <a href="<?php echo osc_item_url(); ?>"><?php echo osc_item_title(); ?></a></h1>
                         <h3><?php echo osc_item_city();?> - (<?php echo osc_item_region(); ?>) - <?php echo osc_format_date(osc_item_pub_date()); ?>.</h3>
                         <p><?php echo osc_highlight(strip_tags(osc_item_description())); ?></p>
                 </div>
                 <div class="clear"></div>
             </article>
-			<?php }
-			}?>
+      <?php }
+      }?>
 
                 </div>
             </li>
             <li>
-            	<a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/account.png')?>">
-				<h2><?php _e('Settings', 'isha') ; ?><span><?php _e('View Full Account', 'isha') ; ?></span></h2>
-				<img class="plus" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>"></a>
+              <a href="javascript:void(0)"><img class="icon" alt="" src="<?php echo osc_current_web_theme_url('images/account.png')?>">
+        <h2><?php _e('Settings', 'isha') ; ?><span><?php _e('View Full Account', 'isha') ; ?></span></h2>
+        <div class="plus_min">
+
+        <img class="minus opaci" alt="" src="<?php echo osc_current_web_theme_url('images/minus_dropdown.png')?>">
+        <img class="pluss" alt="" src="<?php echo osc_current_web_theme_url('images/plus_dropdown.png')?>">
+        </div></a>
                 <div class="wishlist account" style="display: none;">
-                	<h1><?php _e('Update account', 'isha') ; ?></h1>
-					<?php
-					$osc_user = osc_user();
-					?>
-					<form action="<?php echo osc_base_url(true); ?>" method="post">
-					           <input type="hidden" name="page" value="user" />
+                  <h1><?php _e('Update account', 'isha') ; ?></h1>
+          <?php
+          $osc_user = osc_user();
+          ?>
+          <form action="<?php echo osc_base_url(true); ?>" method="post">
+                     <input type="hidden" name="page" value="user" />
                                <input type="hidden" name="action" value="profile_post" />
-                	<ul>
-                    	<li><label><?php _e('Name', 'isha') ; ?></label><?php UserForm::name_text(osc_user()); ?></li>
-                    	<li><label><?php _e('User Type', 'isha') ; ?></label> <?php UserForm::is_company_select(osc_user()); ?></li>
-                    	<li><label><?php _e('Cell Phone', 'isha') ; ?></label><?php UserForm::mobile_text(osc_user()); ?></li>
-                    	<li><label><?php _e('Phone', 'isha') ; ?></label><?php UserForm::phone_land_text(osc_user()); ?></li>
+                  <ul>
+                      <li><label><?php _e('Name', 'isha') ; ?></label><?php UserForm::name_text(osc_user()); ?></li>
+                      <li><label><?php _e('User Type', 'isha') ; ?></label> <?php UserForm::is_company_select(osc_user()); ?></li>
+                      <li><label><?php _e('Cell Phone', 'isha') ; ?></label><?php UserForm::mobile_text(osc_user()); ?></li>
+                      <li><label><?php _e('Phone', 'isha') ; ?></label><?php UserForm::phone_land_text(osc_user()); ?></li>
                         <li><label><?php _e('Country', 'isha') ; ?></label><?php UserForm::country_select(osc_get_countries(), osc_user()); ?></li>
                         <li><label><?php _e('Region', 'isha') ; ?></label> <?php UserForm::region_select(osc_get_regions(), osc_user());?></li>
 
                         <li><label><?php _e('City', 'isha') ; ?></label>  <?php UserForm::city_select(osc_get_cities(), osc_user()); ?></li>
-                    	<li><label><?php _e('City Area', 'isha') ; ?></label> <?php UserForm::city_area_text(osc_user()); ?></li>
+                      <li><label><?php _e('City Area', 'isha') ; ?></label> <?php UserForm::city_area_text(osc_user()); ?></li>
 
-                    	<li><label><?php _e('Address', 'isha') ; ?></label><?php UserForm::address_text(osc_user()); ?></li>
-                    	<li><label><?php _e('Website', 'isha') ; ?></label><?php UserForm::website_text(osc_user()); ?></li>
-                    	<li><label><?php _e('Description', 'isha') ; ?></label> <?php UserForm::info_textarea('s_info', osc_locale_code(), @$osc_user['locale'][osc_locale_code()]['s_info']); ?></li>
+                      <li><label><?php _e('Address', 'isha') ; ?></label><?php UserForm::address_text(osc_user()); ?></li>
+                      <li><label><?php _e('Website', 'isha') ; ?></label><?php UserForm::website_text(osc_user()); ?></li>
+                      <li><label><?php _e('Description', 'isha') ; ?></label> <?php UserForm::info_textarea('s_info', osc_locale_code(), @$osc_user['locale'][osc_locale_code()]['s_info']); ?></li>
                         <li> <button type="submit" class="Update apply ui-button ui-button-middle ui-button-main"><?php _e("Update", 'isha');?></button></li>
 
-						 <?php //osc_run_hook('user_form'); ?>
-						 <?php osc_run_hook('user_form', osc_user()); ?>
+             <?php //osc_run_hook('user_form'); ?>
+             <?php osc_run_hook('user_form', osc_user()); ?>
                     </ul>
-					</form>
-					<?php
+          </form>
+          <?php
             if(osc_is_web_user_logged_in()){
             $userSettings = ModelPM::newInstance()->getUserPmSettings(osc_logged_user_id());
             ?>
                     <h1><?php _e('PM Settings', 'isha') ; ?></h1>
-					 <form action="<?php echo osc_base_url() . 'oc-content/plugins/osclass_pm/user-proc.php'; ?>" method="POST">
-					  <input type="hidden" name="page" value="custom" />
+           <form action="<?php echo osc_base_url() . 'oc-content/plugins/osclass_pm/user-proc.php'; ?>" method="POST">
+            <input type="hidden" name="page" value="custom" />
       <input type="hidden" name="file" value="osclass_pm/user-proc.php" />
       <input type="hidden" name="option" value="userSettings" />
       <input type="hidden" name="user_id" value="<?php echo osc_logged_user_id(); ?>" />
-                	<ul class="pm">
-                    	<li><label><?php _e('Notify by email every time you get a new personal message', 'isha') ; ?>?</label>
-                        	 <select name="emailAlert">
+                  <ul class="pm">
+                      <li><label><?php _e('Notify by email every time you get a new personal message', 'isha') ; ?>?</label>
+                           <select name="emailAlert">
                   <option value="1" <?php if($userSettings['send_email'] == 1) { echo 'selected';}?>><?php _e('Always','osclass_pm'); ?></option>
                   <option value="0" <?php if($userSettings['send_email'] == 0) { echo 'selected';}?>><?php _e('Never','osclass_pm'); ?></option>
                </select>
                         </li>
-                    	<li><label><?php _e('Show a flash message when you have new personal messages', 'isha') ; ?>?</label>
-                        	 <select name="flashAlert">
+                      <li><label><?php _e('Show a flash message when you have new personal messages', 'isha') ; ?>?</label>
+                           <select name="flashAlert">
                   <option value="1" <?php if($userSettings['flash_alert'] == 1) { echo 'selected';}?>><?php _e('Always','osclass_pm'); ?></option>
                   <option value="0" <?php if($userSettings['flash_alert'] == 0) { echo 'selected';}?>><?php _e('Never','osclass_pm'); ?></option>
                </select>
                         </li>
                         <!--
-                    	<li><label><?php _e('Notify by email every time you get a new personal message', 'isha') ; ?>?</label>
-                        	<select name="saveSent">
+                      <li><label><?php _e('Notify by email every time you get a new personal message', 'isha') ; ?>?</label>
+                          <select name="saveSent">
                   <option value="1" <?php if($userSettings['save_sent'] == 1) { echo 'selected';}?>><?php _e('Always','osclass_pm'); ?></option>
                   <option value="0" <?php if($userSettings['save_sent'] == 0) { echo 'selected';}?>><?php _e('Never','osclass_pm'); ?></option>
                </select>
                         </li>  -->
-						 <?php if( pmSent() ) { ?>
-						 <li><label><?php _e('Save a copy of each personal message in your outbox by default', 'isha') ; ?>?</label>
-                        	<select name="saveSent">
+             <?php if( pmSent() ) { ?>
+             <li><label><?php _e('Save a copy of each personal message in your outbox by default', 'isha') ; ?>?</label>
+                          <select name="saveSent">
                   <option value="1" <?php if($userSettings['save_sent'] == 1) { echo 'selected';}?>><?php _e('Always','osclass_pm'); ?></option>
                   <option value="0" <?php if($userSettings['save_sent'] == 0) { echo 'selected';}?>><?php _e('Never','osclass_pm'); ?></option>
                </select>
                         </li>
-						 <?php } ?>
+             <?php } ?>
                         <li><button type="submit" class="Update apply ui-button ui-button-middle ui-button-main"><?php _e("Save Settings", 'isha');?></button>
-						</li>
+            </li>
                     </ul>
-					 </form>
-					<?php } ?>
-					  <form action="<?php echo osc_base_url(true); ?>" method="post">
+           </form>
+          <?php } ?>
+            <form action="<?php echo osc_base_url(true); ?>" method="post">
                     <h1><?php _e('Change your Username', 'isha') ; ?></h1>
-					 <input type="hidden" name="page" value="user" />
+           <input type="hidden" name="page" value="user" />
             <input type="hidden" name="action" value="change_username_post" />
-                	<ul>
-                    	<li><label><?php _e('User Name', 'isha') ; ?></label><input type="text" name="s_username" id="s_username" value="" /></li>
-						<li><button type="submit" class="Update apply ui-button ui-button-middle ui-button-main"><?php _e("Update", 'isha');?></button></li>
+                  <ul>
+                      <li><label><?php _e('User Name', 'isha') ; ?></label><input type="text" name="s_username" id="s_username" value="" /></li>
+            <li><button type="submit" class="Update apply ui-button ui-button-middle ui-button-main"><?php _e("Update", 'isha');?></button></li>
                       </ul>
-					</form>
-					<h1><?php _e('Change your Email', 'isha') ; ?></h1>
-					 <form action="<?php echo osc_base_url(true); ?>" method="post">
-					 <input type="hidden" name="page" value="user" />
+          </form>
+          <h1><?php _e('Change your Email', 'isha') ; ?></h1>
+           <form action="<?php echo osc_base_url(true); ?>" method="post">
+           <input type="hidden" name="page" value="user" />
             <input type="hidden" name="action" value="change_email_post" />
-                	<ul>
-                    	<li><label><?php _e('Current Email', 'isha') ; ?></label><?php echo osc_logged_user_email(); ?></li>
-                    	<li><label><?php _e('New Email*', 'isha') ; ?></label><input type="text" name="new_email" id="new_email" value="" /></li>
+                  <ul>
+                      <li><label><?php _e('Current Email', 'isha') ; ?></label><?php echo osc_logged_user_email(); ?></li>
+                      <li><label><?php _e('New Email*', 'isha') ; ?></label><input type="text" name="new_email" id="new_email" value="" /></li>
 
                         <li><button type="submit" class="Update apply ui-button ui-button-middle ui-button-main"><?php _e("Update", 'isha');?></button></li>
                     </ul>
-					</form>
-					<h1><?php _e('Change your Password', 'isha') ; ?></h1>
-					 <form action="<?php echo osc_base_url(true); ?>" method="post">
-					  <input type="hidden" name="page" value="user" />
+          </form>
+          <h1><?php _e('Change your Password', 'isha') ; ?></h1>
+           <form action="<?php echo osc_base_url(true); ?>" method="post">
+            <input type="hidden" name="page" value="user" />
             <input type="hidden" name="action" value="change_password_post" />
-                	<ul>
-					    <li><label class="control-label" for="password"><?php _e('Current password', 'isha'); ?> *</label>
+                  <ul>
+              <li><label class="control-label" for="password"><?php _e('Current password', 'isha'); ?> *</label>
                 <input type="password" name="password" id="password" value="" /></li>
-                    	<li> <label class="control-label" for="new_password"><?php _e('New password', 'isha'); ?> *</label><input type="password" name="new_password" id="new_password" value="" /></li>
-                    	<li> <label class="control-label" for="new_password2"><?php _e('Repeat new password', 'isha'); ?> *</label><input type="password" name="new_password2" id="new_password2" value="" /></li>
+                      <li> <label class="control-label" for="new_password"><?php _e('New password', 'isha'); ?> *</label><input type="password" name="new_password" id="new_password" value="" /></li>
+                      <li> <label class="control-label" for="new_password2"><?php _e('Repeat new password', 'isha'); ?> *</label><input type="password" name="new_password2" id="new_password2" value="" /></li>
                         <li><button type="submit" class="Update apply ui-button ui-button-middle ui-button-main"><?php _e("Update", 'isha');?></button></li>
                     </ul>
-					</form>
-                    <h1><?php _e('Delete Account', 'isha') ; ?></h1>
+          </form>
                     <?php /*$options = array();
       $options[] = array('name'  => __('Delete account', 'isha'),
                          'url'   => '#',
@@ -503,19 +534,19 @@ $i_userId = osc_logged_user_id();
     <script>
     (function($){
 
-    	$( "#all_inbox" ).click(function() {
+      $( "#all_inbox" ).click(function() {
 
-    		if($('.delChecks1').prop('checked')) {
-				    // something when checked
-				    $( ".delChecks1" ).prop( "checked", false );
-				     var href1='/index.php?page=custom&file=osclass_pm/user-proc.php&option=delMessages&box=inbox&p1=1';
+        if($('.delChecks1').prop('checked')) {
+            // something when checked
+            $( ".delChecks1" ).prop( "checked", false );
+             var href1='/index.php?page=custom&file=osclass_pm/user-proc.php&option=delMessages&box=inbox&p1=1';
      //console.log(href1);
      $('#btn1').attr('href',href1);
-				} else {
-				    // something else when not
-				     $( ".delChecks1" ).prop( "checked", true);
-				        var tt1='&';
-				      $('.delChecks1').each(function(i,elem)
+        } else {
+            // something else when not
+             $( ".delChecks1" ).prop( "checked", true);
+                var tt1='&';
+              $('.delChecks1').each(function(i,elem)
      {
 
     tt1=tt1+'pms[]='+$(elem).val()+'&';
@@ -526,27 +557,27 @@ $i_userId = osc_logged_user_id();
          var href1='/index.php?page=custom&file=osclass_pm/user-proc.php&option=delMessages&box=inbox&p1=1'+ tt1;
      //console.log(href1);
      $('#btn1').attr('href',href1);
-				}
+        }
 
-    		});
+        });
 
-    		$( "#all_outbox" ).click(function() {
+        $( "#all_outbox" ).click(function() {
 
-    		if($('.delChecks2').prop('checked')) {
-				    // something when checked
-				    $( ".delChecks2" ).prop( "checked", false );
-				      var href2='/index.php?page=custom&file=osclass_pm/user-proc.php&option=delMessages&box=outbox&p1=1';
+        if($('.delChecks2').prop('checked')) {
+            // something when checked
+            $( ".delChecks2" ).prop( "checked", false );
+              var href2='/index.php?page=custom&file=osclass_pm/user-proc.php&option=delMessages&box=outbox&p1=1';
      //console.log(href2);
      $('#btn2').attr('href',href2);
-				} else {
-				    // something else when not
-				     $( ".delChecks2" ).prop( "checked", true);
+        } else {
+            // something else when not
+             $( ".delChecks2" ).prop( "checked", true);
 
-				     var tt2='&';
+             var tt2='&';
      $('.delChecks2').each(function(ii,elemi)
      {
 
-     	//if ($(elemi).attr('checked')=='checked')
+      //if ($(elemi).attr('checked')=='checked')
     tt2=tt2+'pms[]='+$(elemi).val()+'&';
      }
      );
@@ -555,13 +586,13 @@ $i_userId = osc_logged_user_id();
      //console.log(href2);
      $('#btn2').attr('href',href2);
 
-				}
+        }
 
-    		});
+        });
 
-    	var url='';var pos='';   var pos2=''; var pos1='';
+      var url='';var pos='';   var pos2=''; var pos1='';
        // $( ".account_box ul li" ).click(function() {
-       	$( ".account_box ul li a" ).click(function() {
+        $( ".account_box ul li a" ).click(function() {
             //$(this).children(".wishlist").slideToggle( "slow", function() {});
             $(this).parent().children(".wishlist").slideToggle( "slow", function() {});
         });
@@ -571,8 +602,8 @@ $i_userId = osc_logged_user_id();
     var tt1='&';
      $('.delChecks1').each(function(i,elem)
      {
-     	if ($(elem).attr('checked')=='checked')
-     	{
+      if ($(elem).attr('checked')=='checked')
+      {
     // //console.log($(elem).val());
     tt1=tt1+'pms[]='+$(elem).val()+'&';
      }
@@ -590,7 +621,7 @@ $i_userId = osc_logged_user_id();
      $('.delChecks2').each(function(ii,elemi)
      {
 
-     	if ($(elemi).attr('checked')=='checked')
+      if ($(elemi).attr('checked')=='checked')
     tt2=tt2+'pms[]='+$(elemi).val()+'&';
      }
      );
@@ -612,18 +643,17 @@ var url='';var pos='';   var pos2=''; var pos1='';var pos3='';
    pos2 =url.indexOf('page=custom&file=osclass_pm/user-messages.php&box=inbox&message');
    pos3 =url.indexOf('page=custom&file=osclass_pm/user-send.php&box=inbox&message');
     pos4 =url.indexOf('page=custom&file=osclass_pm/user-proc.php');
-   	 if ((pos===-1)&&(pos1===-1)&&(pos2===-1)&&(pos3===-1)&&(pos4===-1))
+     if ((pos===-1)&&(pos1===-1)&&(pos2===-1)&&(pos3===-1)&&(pos4===-1))
             {
 
             }
             else
-			{
-            //window.location.reload();
-			}
+            window.location.reload();
 
  // this.href = url;
 
  },
+
         	afterClose:function() {
           window.location.reload();
 
