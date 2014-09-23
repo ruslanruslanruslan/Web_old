@@ -625,7 +625,7 @@ var url='';var pos='';   var pos2=''; var pos1='';var pos3='';
 
  },
         	afterClose:function() {
-
+          window.location.reload();
 
         }
         });
