@@ -648,8 +648,9 @@ var url='';var pos='';   var pos2=''; var pos1='';var pos3='';
 
             }
             else
-            window.location.reload();
-
+			{
+           // window.location.reload();
+            }
  // this.href = url;
 
  },
