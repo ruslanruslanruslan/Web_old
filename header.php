@@ -110,7 +110,7 @@
                         <a class="logout" href="<?php echo osc_user_logout_url(); ?>"><?php _e('Logout', 'isha'); ?></a>
                     </div>
                             <?php } ?>
-                        </ul> 
+                        </ul>
                     </div>
                 <?php } else { ?>
                         <div class="nav-mobile" id="menu-mobile_cliced">
@@ -149,6 +149,9 @@
                 <div class="search_area">
                     <form action="<?php echo osc_base_url(true); ?>" method="get" class="search nocsrf" <?php /* onsubmit="javascript:return doSearch();" */ ?>>
                         <input type="hidden" name="page" value="search" />
+
+                          <input id="s_order_type" type="hidden" name="iOrderType" value="desc">
+                          <input id="s_order" type="hidden" name="sOrder" value="dt_pub_date">
                         <div class="input_outer_area">
 
                             <input type="text" name="sPattern" id="query" class="input-text" value="" placeholder="<?php echo osc_get_preference('keyword_placeholder', 'isha'); ?>" />
@@ -168,7 +171,7 @@
             </section>
         </article>
         <div class="wrapper wrapper-flash">
-           
+
             <?php osc_show_flash_message(); ?>
         </div>
         <div id="home" class="div-cont" >

@@ -114,9 +114,13 @@ function autocompleteCity() {
 
             <section class="cent_srch_ryt">
                 <div class="maincc">
+
                     <div class="mainccs">
+
                         <input type="text" class="mrvmain" placeholder="Search "  name="sPattern"  id="query" value="<?php echo osc_search_pattern() ?>">
+                         <span style="color:black"><input type="checkbox" name="stype" <?php if ((isset($_GET['stype']))AND($_GET['stype']=='on')) echo 'checked'; ?> > нестрогий поиск</span>
                         <input type=submit class="mrvbtn" value="">
+
                         <div class="clear"></div>
                     </div>
                     <?php echo osc_search_pagination(); ?>
@@ -141,29 +145,66 @@ function autocompleteCity() {
                     <div class="list_ryt">
                         <?php
                         $orders = osc_list_orders();
+
                         $current = '';
                         foreach ($orders as $label => $params) {
                             $orderType = ($params['iOrderType'] == 'asc') ? '0' : '1';
+                             //print_r(osc_search_order_type());
+                             // echo '<input id="s_order" type="hidden" name="sOrder" value="'.$params['iOrderType'].'">';
                             if (osc_search_order() == $params['sOrder'] && osc_search_order_type() == $orderType) {
                                 $current = $label;
+                               // echo '$current: '.$current;
+                                echo '<input id="s_order" type="hidden" name="iOrderType" value="'.$params['iOrderType'].'">';
                             }
-                            if ($params['sOrder'] == 'dt_pub_date')
-                                $orders[$label]['sOrder'] = '';
+                            /*else
+                            {
+                             // $orderType = ($_POST['iOrderType'] == 'asc') ? '0' : '1';
+                             if (@$_POST['iOrderType']!='')
+                             echo '<input id="s_order" type="hidden" name="iOrderType" value="'.$_POST['iOrderType'].'">';
+                             else
+                             {
+                             	$_POST['iOrderType']='desc';
+                             	echo '<input id="s_order" type="hidden" name="iOrderType" value="'.$_POST['iOrderType'].'">';
+                             }
+                             }   */
+
+                            //if ($params['sOrder'] == 'dt_pub_date')
+                             //   $orders[$label]['sOrder'] = '';
+                             //  print_r($orders);
                         }
+
+                        if ((@$_POST['iOrderType']!='')AND($current==''))
+                             echo '<input id="s_order" type="hidden" name="iOrderType" value="'.$_POST['iOrderType'].'">';
+                             elseif ((@$_POST['iOrderType']=='')AND($current==''))
+                             {
+                             	$_POST['iOrderType']='desc';
+                             	echo '<input id="s_order" type="hidden" name="iOrderType" value="desc">';
+                             }
+
+
+                         /*    if ((@$_POST['sOrder']=='')AND($current==''))
+                             {
+                             	$_POST['sOrder']='dt_pub_date';
+                             	echo '<input id="s_order" type="hidden" name="sOrder" value="dt_pub_date">';
+                             }  */
+
+
+
                         ?>
-                          
+
 
                         <div class="demoTarget">
                             <span class="sorttxt"><?php _e('Sort by', 'isha'); ?>:</span>
                             <select id="default-usage-select" name="sOrder" class="selectBox" style="width:180px;">
                                 <?php
                                 foreach ($orders as $label => $params) {
-                                    //$orderType = ($params['iOrderType'] == 'asc') ? '0' : '1';
+                                   $orderType = ($params['iOrderType'] == 'asc') ? '0' : '1';
+
                                     ?>
                                     <?php if (osc_search_order() == $params['sOrder'] && osc_search_order_type() == $orderType) { ?>
-                                        <option selected="selected" value="<?php echo $params['sOrder'] ?>"><?php echo $label; ?></option>
+                                        <option selected="selected" value="<?php echo $params['sOrder'] ?>" data-id="<?php echo $params['iOrderType']  ?>"><?php echo $label; ?></option>
                                     <?php } else { ?>
-                                        <option value="<?php echo $params['sOrder'] ?>"><?php echo $label; ?></option>
+                                        <option value="<?php echo $params['sOrder'] ?>" data-id="<?php echo $params['iOrderType']  ?>"><?php echo $label; ?></option>
                                     <?php } ?>
                                 <?php } ?>
                             </select>
@@ -178,6 +219,10 @@ function autocompleteCity() {
                     <ul class="alist alist1">
                         <!--       <h1> Search Results for :- Музыкальные инструменты</h1>-->
                         <?php
+
+                       if (!isset($_POST['iOrderType'])) {$params['iOrderType']='desc';$_POST['iOrderType']='desc';$orderType='desc';}
+                        if (!isset($_POST['sOrder'])) {$params['sOrder']='dt_pub_date';$_POST['sOrder']='dt_pub_date'; $current='dt_pub_date';}
+                        //echo 'zh!'; print_r($params);
                         $i = 0;
                         osc_get_premiums();
                         if (osc_count_premiums() > 0) {
@@ -225,7 +270,7 @@ function autocompleteCity() {
                             <?php } ?>
 
 
-                        </ul> 
+                        </ul>
 
                     </div>
                     <div class="clear"></div>
@@ -270,6 +315,14 @@ function autocompleteCity() {
     (function($) {
         $(document).ready(function() {
             $('#default-usage-select').change(function() {
+               vall=$('.demoTarget .sbFocus').text();
+               //vall2="<?php echo (_e('Newly listed'));?>";
+             // console.log(vall2);
+               if (vall=="<?php echo (_e('Newly listed'));?>") vall='desc';
+             else  if  (vall=="<?php (_e('Lower price first'));?>") vall='asc';
+              else if  (vall=="<?php echo (__('Higher price first'));?>") vall='desc';
+               console.log(vall);
+               $('#s_order').val(vall);
                 $('#frm_search').submit();
             });
 
