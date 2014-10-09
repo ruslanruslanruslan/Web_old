@@ -375,10 +375,10 @@ $i_userId = osc_logged_user_id();
     <h3><?php printf(_n('You are watching %d item', 'You are watching %d items', $iTotalItems, 'watchlist'), $iTotalItems) ; ?></h3>
     <?php while ( osc_has_items() ) { ?>
                   <article class="list_result">
-              <figure>
+              <figure class="favorite_img">
               <?php if (osc_images_enabled_at_items()) { ?>
              <?php if (osc_count_item_resources()) { ?>
-                                <a href="<?php echo osc_item_url(); ?>"><img src="<?php echo osc_resource_thumbnail_url(); ?>" width="75px" height="56px" title="" alt="" /></a>
+                                <a href="<?php echo osc_item_url(); ?>"><img src="<?php echo osc_resource_thumbnail_url(); ?>" width="50px" height="50px" title="" alt="" /></a>
                             <?php } else { ?>
                                 <img src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" title="" alt="" />
                             <?php } ?>
@@ -387,7 +387,13 @@ $i_userId = osc_logged_user_id();
 
                 </figure>
                 <div class="list_textbox list_t12">
-                  <a class="rate" href="#"><?php if (osc_price_enabled_at_items()) { echo osc_item_formated_price(); ?> - <?php }?></a>
+                    <div class="favorite_text">
+                      <div class="favorite_header">
+                    <h1> <a href="<?php echo osc_item_url(); ?>"><?php echo osc_item_title(); ?></a></h1>
+                        <h3><?php echo osc_item_city();?> - (<?php echo osc_item_region(); ?>) - <?php echo osc_format_date(osc_item_pub_date()); ?>.</h3>
+                        </div>
+                        <div class="favorite_price">
+                  <a class="rate" href="#"><?php if (osc_price_enabled_at_items()) { echo osc_item_formated_price(); ?><?php }?></a>
                        <!-- <a class="other" href="#">Other currencies
                               <ul>
                                   <li>378 EUR</li>
@@ -396,9 +402,10 @@ $i_userId = osc_logged_user_id();
                                   <li>516 USD</li>
                                 </ul>
                        </a>-->
-                    <h1> <a href="<?php echo osc_item_url(); ?>"><?php echo osc_item_title(); ?></a></h1>
-                        <h3><?php echo osc_item_city();?> - (<?php echo osc_item_region(); ?>) - <?php echo osc_format_date(osc_item_pub_date()); ?>.</h3>
+                       </div>
+                       <div class="clear"></div>
                         <p><?php echo osc_highlight(strip_tags(osc_item_description())); ?></p>
+                        </div>
                 </div>
                 <div class="clear"></div>
             </article>

@@ -3307,9 +3307,12 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
     .list_result .obiava_text{
         width: 100% !important
     }
-    .account_box .for_price{
-        float: none;
+    .account_box .for_price, .favorite_price{
         width: 100% !important;
+        margin-right: 0 !important;
+    }
+    .account_box .for_price a, .favorite_price a{
+        margin-left: 0 !important;
     }
 }
 @media screen and (max-width: 240px) {
@@ -4205,7 +4208,7 @@ nav.navigation ul li.publish_ad a:hover:after{
         float: none;
         width: 33%;
     }
-    .list_textbox{
+    .list_textbox:not(.list_t12){
         width: 60%;
     }
     .account_box ul li a{
@@ -4229,7 +4232,7 @@ nav.navigation ul li.publish_ad a:hover:after{
     .obiava_text h1, .obiava_text h3{
         word-break: break-all;
     }
-    .account_outer .list_result .list_figure{
+    .account_outer .list_result .list_figure, .favorite_img{
         display: none;
     }
 }
@@ -4430,4 +4433,58 @@ button.apply.ui-button.ui-button-middle.ui-button-main,.delete_account{
 }
 .visiv{
     opacity: 1;
+}
+.favorite_img{
+    margin-bottom: 5px;
+   margin-right: 2%;
+}
+.favorite_img a{
+   padding: 0 !important;
+   -webkit-transition: 0 !important;
+   transition: 0 !important;
+}
+.favorite_img a img{
+   border: 0 !important;
+}
+.favorite_price{
+    width: 20%;
+    float: right;
+}
+.favorite_price a{
+   color: #0382B1;
+   padding: 0 !important;
+   float: none !important;
+   font-size: 14px;
+}
+.favorite_price a{
+   -webkit-transition: 0 !important;
+   transition: 0 !important;
+}
+.favorite_price a:hover{
+   background: transparent !important;
+}
+.favorite_text h1{
+    padding: 0;
+    margin: 0;
+}
+.favorite_text h1 a{
+    -webkit-transition: 0 !important;
+    transition: 0 !important;
+    padding: 0 !important;
+    font-size: 22px;
+    font-family: Verdana, Geneva, sans-serif;
+    color: #666;
+}
+.favorite_text h1 a:after{
+    display: none !important;
+}
+.for_price, .favorite_price{
+    margin-left: 4%;
+    margin-bottom: 1.5%;
+}
+.favorite_header{
+    float: left;
+}
+.dataTables_wrapper{
+    overflow: hidden;
 }
