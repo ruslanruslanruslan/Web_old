@@ -154,7 +154,7 @@ function autocompleteCity() {
                             if (osc_search_order() == $params['sOrder'] && osc_search_order_type() == $orderType) {
                                 $current = $label;
                                // echo '$current: '.$current;
-                                echo '<input id="s_order" type="hidden" name="iOrderType" value="'.$params['iOrderType'].'">';
+                                echo '<input class="s_order_type" type="hidden" name="iOrderType" value="'.$params['iOrderType'].'">';
                             }
                             /*else
                             {
@@ -174,11 +174,11 @@ function autocompleteCity() {
                         }
 
                         if ((@$_POST['iOrderType']!='')AND($current==''))
-                             echo '<input id="s_order" type="hidden" name="iOrderType" value="'.$_POST['iOrderType'].'">';
+                             echo '<input class="s_order_type" type="hidden" name="iOrderType" value="'.$_POST['iOrderType'].'">';
                              elseif ((@$_POST['iOrderType']=='')AND($current==''))
                              {
                              	$_POST['iOrderType']='desc';
-                             	echo '<input id="s_order" type="hidden" name="iOrderType" value="desc">';
+                             	echo '<input class="s_order_type" type="hidden" name="iOrderType" value="desc">';
                              }
 
 
@@ -322,7 +322,7 @@ function autocompleteCity() {
              else  if  (vall=="<?php (_e('Lower price first'));?>") vall='asc';
               else if  (vall=="<?php echo (__('Higher price first'));?>") vall='desc';
                console.log(vall);
-               $('#s_order').val(vall);
+               $('.s_order_type').val(vall);
                 $('#frm_search').submit();
             });
 

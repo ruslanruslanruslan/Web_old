@@ -10,18 +10,18 @@ $js_lang = array(
     'cancel' => __('Cancel', 'bender')
 );
 
-osc_enqueue_script('jquery');
+//osc_enqueue_script('jquery');
 osc_enqueue_script('jquery-ui');
 //osc_enqueue_script('jquery.min.js');
 osc_register_script('global-theme-js', osc_current_web_theme_js_url('global.js'), 'jquery');
 osc_register_script('delete-user-js', osc_current_web_theme_js_url('delete_user.js'), 'jquery-ui');
 osc_enqueue_script('global-theme-js');
 osc_enqueue_script('alertify');
-osc_enqueue_style('style', osc_current_web_theme_url('layout.css'));
+//osc_enqueue_style('style', osc_current_web_theme_url('layout.css'));
 
 osc_enqueue_style('style3', osc_current_web_theme_url('css/alertify.default.css'));
 osc_enqueue_style('style2', osc_current_web_theme_url('css/alertify.core.css'));
-osc_enqueue_style('style4', osc_current_web_theme_url('css/alertify.bootstrap.css'));
+//osc_enqueue_style('style4', osc_current_web_theme_url('css/alertify.bootstrap.css'));
 osc_run_hook('header');
 ?>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
