@@ -5,9 +5,14 @@
 .minbox {
 width: 98%;
 }
-.alaist {
-float: left;
-width: 100%;
+.alaist > li{
+	width: 100%;
+}
+.alaist > li:nth-child(odd){
+	margin-right: 0;
+}
+ul.alaist li{
+	height: 210px;
 }
 
 .price a.rate{ font-size:12px; padding:4px 4px; }

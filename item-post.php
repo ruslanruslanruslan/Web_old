@@ -70,6 +70,7 @@ osc_add_hook('header','bender_nofollow_construct');
         </ul>
     
     </div>
+
 	<?php if( osc_images_enabled_at_items() ) { ?>
  	<h1><?php _e('Photo', 'isha'); ?></h1>
     <div class="inner_area">
@@ -77,9 +78,20 @@ osc_add_hook('header','bender_nofollow_construct');
         	<li class="inner_area-item">
             	<label  for="photos[]"><?php _e('Photos', 'isha'); ?></label>
                 
+                <div class="wripi">
+                <div id="my-awesome-dropzone" class="dropzone"></div>
+
+
+            </div>
+      
+<div id="status1"></div>
+
+                
 				<div id="photos">
                 	  <?php ItemForm::photos(); ?>
                 </div>
+
+
                
                 <a href="#" onclick="addNewPhoto(); return false;"><?php _e('Add new photo', 'isha'); ?></a>
                 <div class="clear"></div>

@@ -54,6 +54,12 @@ if($i=="0"){
  </div>{
 
 }
-
+<script>
+$(document).ready(function(){
+  $(".dropzone").dropzone({ url: "http://playandbay.com/betaPlayandBay3/oc-content/themes/isha/img" });
+})
+  
+</script>
 <?php osc_run_hook('footer'); ?>
+<script src="http://playandbay.com/betaplayandbay3/oc-content/themes/isha/js/dropzone.js"></script>
 </body></html>
