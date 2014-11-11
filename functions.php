@@ -264,6 +264,8 @@ if (!function_exists('bender_draw_categories_list')) {
          * @return array
          */
         function bender_search_number() {
+            //echo 'osc_search_page() '.osc_search_page();
+           // echo '<br>osc_default_results_per_page_at_search()) '.osc_default_results_per_page_at_search();
             $search_from = ((osc_search_page() * osc_default_results_per_page_at_search()) + 1);
             $search_to = ((osc_search_page() + 1) * osc_default_results_per_page_at_search());
             if ($search_to > osc_search_total_items()) {
@@ -849,7 +851,7 @@ if (!function_exists('bender_draw_categories_list')) {
 
                     });
 
-                    // Contact 
+                    // Contact
                     $("#contact_form").submit(function() {
                         var error = "0";
                         $('#contact_form input').each(function() {
@@ -885,7 +887,7 @@ if (!function_exists('bender_draw_categories_list')) {
             <script type="text/javascript"  src="<?php echo osc_current_web_theme_url('js/jquery.validate.min.js'); ?>"></script>
             <div id="login_register" class="div-cont"  >
                 <article class="login_area">
-                    <section class="login_midbox wrapper"> 
+                    <section class="login_midbox wrapper">
                         <h1 class="login_text"><?php _e('Login & Signup', 'isha'); ?></h1>
 
                         <aside class="login_areabox">
@@ -990,7 +992,7 @@ if (!function_exists('bender_draw_categories_list')) {
                                 <li class="flx-linkdin-icon"><a href="http://www.linkedin.com/profile/view?id=141145637&trk=nav_responsive_tab_profile" target="_blank"></a></li>
                                 <li class="flx-vk-icon"><a href="http://vk.com/lovemarishaprecious" target="_blank"></a></li>
                             </ul>
-                        </center> 
+                        </center>
                         <h1 class="latest"><?php _e('Contact us', 'isha'); ?></h1>
                         <form id="contact_form" name="contact_form" action="<?php echo osc_base_url(true); ?>" method="post" >
                             <input type="hidden" value="contact" name="page">
@@ -1004,7 +1006,7 @@ if (!function_exists('bender_draw_categories_list')) {
                                 <p  class="error" style="display:none; color: #FF0000;">
                                     <?php _e("Enter your valid Email", 'isha'); ?>
                                 </p>
-                                <?php ContactForm::your_phone_number(); ?> 
+                                <?php ContactForm::your_phone_number(); ?>
                                 <p  class="error" style="display:none; color: #FF0000;">
                                     <?php _e("Enter your phone no.", 'isha'); ?>
                                 </p>
@@ -1076,7 +1078,7 @@ if (!function_exists('bender_draw_categories_list')) {
     function isha_premium_formated_price() {
         return (string) osc_format_price2(osc_premium_price());
     }
-    
+
     function osc_format_price2($price, $symbol = null) {
         if ($price === null) return osc_apply_filter ('item_price_null', __('Check with seller') );
         if ($price == 0) return osc_apply_filter ('item_price_zero', __('Free') );

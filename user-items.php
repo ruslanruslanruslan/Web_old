@@ -88,12 +88,15 @@ $i_userId = osc_logged_user_id();
            <?php if(osc_count_items() == 0) { ?>
                     <p><?php _e('No listings have been added yet', 'isha') ; ?></p>
           <?php } else {
+          	$inc=1;
           while(osc_has_items()) {
            $search_number = bender_search_number();
+          // print_r($search_number);
 
-        echo '<p>';
-                printf(__('%1$d to %2$d of <span> %3$d </span> listings', 'isha'), $search_number['from'], $search_number['to'], $search_number['of']);
-        echo '</p>';
+        echo '<br>';
+                printf(__('%1$d  из  <span> %2$d </span>', 'isha'),  $inc, $search_number['of']);
+     //   echo '';
+        $inc++;
           ?>
 
                     <article class="list_result">
@@ -105,14 +108,14 @@ $i_userId = osc_logged_user_id();
            <img src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" title="" alt="<?php echo osc_item_title() ; ?>" width="50" height="50">
         <?php } ?>
     <?php } ?>
-                    
+
 
                 </figure>
                 <div class="list_textbox list_text11">
                   <div class="obiava_text">
                     <h1><?php echo osc_item_title() ; ?>(<?php echo osc_item_category() ; ?>)</h1>
                         <h3><?php echo osc_item_city(); //osc_item()['s_city'];?> - (<?php echo osc_item_region(); ?>) - <?php echo osc_format_date(osc_item_pub_date()); ?>.</h3>
-                        </div>                        
+                        </div>
                         <div class="obiave_buttons">
             <a class="com_but" href="<?php echo osc_item_edit_url(); ?>" rel="nofollow"><?php _e('Edit item', 'isha'); ?></a>
             <a class="delete com_but" onclick="javascript:return confirm('<?php echo osc_esc_js(__('This action can not be undone. Are you sure you want to continue?', 'isha')); ?>')" href="<?php echo osc_item_delete_url();?>" ><?php _e('Delete', 'isha'); ?></a>
@@ -375,25 +378,19 @@ $i_userId = osc_logged_user_id();
     <h3><?php printf(_n('You are watching %d item', 'You are watching %d items', $iTotalItems, 'watchlist'), $iTotalItems) ; ?></h3>
     <?php while ( osc_has_items() ) { ?>
                   <article class="list_result">
-              <figure class="favorite_img">
+              <figure>
               <?php if (osc_images_enabled_at_items()) { ?>
              <?php if (osc_count_item_resources()) { ?>
-                                <a href="<?php echo osc_item_url(); ?>"><img src="<?php echo osc_resource_thumbnail_url(); ?>" width="50px" height="50px" title="" alt="" /></a>
+                                <a href="<?php echo osc_item_url(); ?>"><img src="<?php echo osc_resource_thumbnail_url(); ?>" width="75px" height="56px" title="" alt="" /></a>
                             <?php } else { ?>
                                 <img src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" title="" alt="" />
                             <?php } ?>
             <?php }?>
-                        
+
 
                 </figure>
                 <div class="list_textbox list_t12">
-                    <div class="favorite_text">
-                      <div class="favorite_header">
-                    <h1> <a href="<?php echo osc_item_url(); ?>"><?php echo osc_item_title(); ?></a></h1>
-                        <h3><?php echo osc_item_city();?> - (<?php echo osc_item_region(); ?>) - <?php echo osc_format_date(osc_item_pub_date()); ?>.</h3>
-                        </div>
-                        <div class="favorite_price">
-                  <a class="rate" href="#"><?php if (osc_price_enabled_at_items()) { echo osc_item_formated_price(); ?><?php }?></a>
+                  <a class="rate" href="#"><?php if (osc_price_enabled_at_items()) { echo osc_item_formated_price(); ?> - <?php }?></a>
                        <!-- <a class="other" href="#">Other currencies
                               <ul>
                                   <li>378 EUR</li>
@@ -402,10 +399,9 @@ $i_userId = osc_logged_user_id();
                                   <li>516 USD</li>
                                 </ul>
                        </a>-->
-                       </div>
-                       <div class="clear"></div>
+                    <h1> <a href="<?php echo osc_item_url(); ?>"><?php echo osc_item_title(); ?></a></h1>
+                        <h3><?php echo osc_item_city();?> - (<?php echo osc_item_region(); ?>) - <?php echo osc_format_date(osc_item_pub_date()); ?>.</h3>
                         <p><?php echo osc_highlight(strip_tags(osc_item_description())); ?></p>
-                        </div>
                 </div>
                 <div class="clear"></div>
             </article>
@@ -655,15 +651,15 @@ var url='';var pos='';   var pos2=''; var pos1='';var pos3='';
 
             }
             else
-			{
-           // window.location.reload();
+            {
+            //window.location.reload();
             }
+
  // this.href = url;
 
  },
-
-        	afterClose:function() {
-          window.location.reload();
+          afterClose:function() {
+         window.location.reload();
 
         }
         });

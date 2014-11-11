@@ -38,18 +38,37 @@ $(window).resize(function(){
         $('.list_ryt').css({'float':'right'});
     }
 });
+var pos='';
 $(window).on('load', function () {
+
+  url= window.location.href;
+  // console.log('url: '+url);
+   pos =url.indexOf('/user/items');
+   console.log('pos: '+pos);
+   
+     if (pos=== -1)
+	 {
     $('.preloader9').show();
     $('.wraper').show();
     $('.mask9').show();
     $('.preloader9').delay(350).fadeOut('slow');
     $('.mask9').delay(350).fadeOut('slow');
     $('.wraper').delay(350).fadeOut('slow');
+	}
+	else
+	{
+	  $('.preloader9').hide();
+    $('.wraper').hide();
+    $('.mask9').hide();
+	}
 });
 $(document).ready(function() {
+if (pos=== -1)
+	 {
     $("body").css("display", "none");
 
     $("body").fadeIn(500);
+	}
 
     /* $("a:not(a[href*=javascript],a[href^=#],a[class*=fancybox])").click(function(event){
         event.preventDefault();
@@ -310,4 +329,3 @@ $(document).ready(function(){
         $('.chose-langu').css({"z-index": "99"});
     })
 })
-
