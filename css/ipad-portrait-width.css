@@ -59,6 +59,9 @@ input.search_btn[type="button"]
 {
 	width:100%;
 }
+.location{
+	height: auto !important;
+}
 .login_areabox
 {
 	width:98%;	

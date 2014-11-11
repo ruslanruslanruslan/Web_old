@@ -66,7 +66,16 @@ if($i==0){
      document.getElementById("mask7").style.display = 'block';
      document.getElementById("mask8").style.display = 'block';
 </script>
+
  </div>
 <?php  }  ?>
+<script src="http://playandbay.com/betaplayandbay3/oc-content/themes/isha/js/dropzone.js"></script>
+<script>
+$(document).ready(function(){
+  $(".dropzone").dropzone({ url: "http://playandbay.com/betaPlayandBay3/oc-content/themes/isha/img" });
+})
+  
+</script>
 <?php osc_run_hook('footer'); ?>
+
 </body></html>

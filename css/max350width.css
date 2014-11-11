@@ -12,9 +12,14 @@ text-align: left;}
 .shwmain .slct{ width:98%;}
 .price a.rate{ font-size:11px; padding:5px 4px; }
 .price a.MCtooltip{ font-size:11px; padding:5px 4px;}
-.alaist {
-float: left;
-width: 100%;
+.alaist > li{
+	width: 100%;
+}
+.alaist > li:nth-child(odd){
+	margin-right: 0;
+}
+ul.alaist li{
+	height: 220px;
 }
 
 .cent_srch_left_main {
@@ -101,7 +106,7 @@ font-size: 11px;
  margin-right:0px
 }
 
-.alist .listings{ margin-bottom:70px;}
+.alist .listings{ margin-bottom:7px;}
 
 
 .list_left{ float:none; font-size:13px;}

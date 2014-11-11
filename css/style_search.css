@@ -184,7 +184,9 @@ margin: 2px 0 0 0; color:#000 !important;}
 
 
 .listings{
-border: 1px solid #0382B1;
+border-left: 1px solid #0382B1;
+border-right: 1px solid #0382B1;
+border-top: 1px solid #0382B1;
 padding: 5%;
 background: #fff;
 height:175px;
@@ -488,12 +490,14 @@ z-index: 5;
 position: relative;}
 
 .alaist > li {
-    width: 100%;
-}
-
-.alaist {
-    float: left;
     width: 48%;
+    margin-right: 0%;
+}
+.alaist > li:nth-child(odd) {
+    margin-right: 4%;
+}
+.alaist{
+  width: 100%;
 }
 .alaist:first-child {
   margin-right: 4%;
@@ -747,4 +751,19 @@ ul.alaist li{
 }
 button..apply.{
   background-color: #0382B1;
+}
+
+@media (max-width: 320px) {
+  .alaist > li{
+  width: 100%;
+}
+.alaist > li:nth-child(odd){
+  margin-right: 0;
+}
+ul.alaist li{
+  height: 180px;
+}
+}
+.cent_srch_left .for_price{
+  margin-left: 0 !important;
 }

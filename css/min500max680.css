@@ -38,9 +38,14 @@ float: none;
 .list_ryt {
 width: 50%;}
 
-.alaist {
-float: left;
-width: 100%;
+.alaist > li{
+	width: 100%;
+}
+.alaist > li:nth-child(odd){
+	margin-right: 0;
+}
+ul.alaist li{
+	height: 200px;
 }
 
 .amin article{ width:46%; float:left}

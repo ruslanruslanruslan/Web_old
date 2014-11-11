@@ -1,0 +1,44 @@
+﻿Merge branch 'master' of https://github.com/ruslanruslanruslan/isha
+
+Conflicts:
+	footer.php
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 1 different commit each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   css/ipad-portrait-width.css
+#	modified:   css/iphone-landscape-width.css
+#	modified:   css/max350width.css
+#	modified:   css/max480width.css
+#	modified:   css/max979width.css
+#	modified:   css/min500max680.css
+#	modified:   css/style.css
+#	modified:   css/style_search.css
+#	modified:   footer.php
+#	modified:   images/account.png
+#	modified:   images/alert.png
+#	modified:   images/inbox.png
+#	modified:   images/listing_icon.png
+#	new file:   images/minus_dropdown.png
+#	modified:   images/outbox.png
+#	modified:   images/plus_dropdown.png
+#	new file:   images/spritemap.png
+#	new file:   images/spritemap@2x.png
+#	modified:   images/wishlist.png
+#	modified:   item-post.php
+#	new file:   js/dropzone.js
+#
+

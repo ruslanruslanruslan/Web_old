@@ -58,12 +58,19 @@ nav ul li{ float:none}
 
 .selselct{ width:90%;}
 
-.alaist{ width:100%;}
+.alaist > li{
+	width: 100%;
+}
+.alaist > li:nth-child(odd){
+	margin-right: 0;
+}
+ul.alaist li{
+	height: 180px;
+}
 .price a.rate{ font-size:13px;}
 .alist1 .price a {
 padding:2px 13.1px;
 }
-.alist .listings{ margin-bottom:20px}
 
 
 .list_left{ float:none}
