@@ -24,41 +24,26 @@
 </footer>
  <div class="chose-langu">
       <a class="search-btn" href="javascript:void(0)"></a>
-      <?php
-
-      if ( osc_count_web_enabled_locales() > 1) {
-      $numb= osc_count_web_enabled_locales();
-//echo 'osc_count_web_enabled_locales: '.;
-
-      ?>
-
-
-      <?php $i = 0;
-     // echo '<br>$i: '.$i;
-      ?>
-       <?php while ( $i< $numb) {
-       //echo '<br>$i: '.$i;
-if($i==0){
+      <?php if ( osc_count_web_enabled_locales() > 1) { ?>
+      <?php $i = 0;  ?>
+       <?php while ( osc_has_web_enabled_locales() ) {
+if($i=="0"){ 
 ?>
       <a class="english-btn" href="<?php echo osc_change_language_url ( osc_locale_code() ); ?>"><img src="<?php echo osc_current_web_theme_url('images/english-flag.png');?>" alt=" "></a>
-      <?php }elseif($i==1){?>
+      <?php }elseif($i=='1'){?>
       <a class="rusiian-btn" href="<?php echo osc_change_language_url ( osc_locale_code() ); ?>"><img src="<?php echo osc_current_web_theme_url('images/russian-flag.png');?>" alt=" "></a>
       <?php } ?>
       <?php $i++; ?>
       <?php }}?>
  </div>
- <?php   $result = $_SERVER['REQUEST_URI'];
-
-  //echo '<br>$result '.$result;
-  if ($result!=='/user/items') {       ?>
 <div class="mask9" id="mask8">
-
+     
 </div>
 
 <div class="preloader9">
      <div class="wraper" id="mask7">
           <div class="dots">
-
+               
           </div>
      </div>
 </div>
@@ -66,16 +51,23 @@ if($i==0){
      document.getElementById("mask7").style.display = 'block';
      document.getElementById("mask8").style.display = 'block';
 </script>
+ </div>{
 
- </div>
-<?php  }  ?>
-<script src="http://playandbay.com/betaplayandbay3/oc-content/themes/isha/js/dropzone.js"></script>
+}
+<!-- Drag and Drop -->
 <script>
 $(document).ready(function(){
   $(".dropzone").dropzone({ url: "http://playandbay.com/betaPlayandBay3/oc-content/themes/isha/img" });
+  var heig_m = $(window).height() - 120;
+  $('.service_area').height(heig_m);
+  $(window).scroll(function() {
+    var xPos = $(window).scrollTop() * 0.8;
+    $('.service').css({"left": xPos});
+    $('.instrument:first-child').css({"right": xPos});
+  }) 
 })
-  
+ 
 </script>
 <?php osc_run_hook('footer'); ?>
-
+<script src="http://playandbay.com/betaplayandbay3/oc-content/themes/isha/js/dropzone.js"></script>
 </body></html>

@@ -213,7 +213,7 @@ header
 .logo
 {
     float:left;
-    padding:20px 20px 17px 5%;
+    padding:20px 0px 17px 5%;
 }
 nav.navigation
 {
@@ -230,7 +230,7 @@ nav.navigation ul li
     font-family: 'oswaldlight';
     font-size:24px;
     text-align:center;
-    margin-left:19px;
+    margin-left:-4px;
 }
 
 nav.navigation ul li a
@@ -434,11 +434,14 @@ input[type=submit].search_btn:hover
     float:left;
 }
 
-.instrument
-{
+.instrument{
     float:left;
-    width:25%;
+    width:16%;
     text-align:center;
+    position: relative;
+}
+.instrument:first-child{
+    margin-left: 28%;
 }
 .instrument h1
 {
@@ -486,14 +489,6 @@ input[type=submit].search_btn:hover
 .service h2 a:hover
 {
     color:#de450c;
-}
-.device
-{
-    margin-left:13%;
-}
-.service
-{
-    float:right;
 }
 .instrument ul
 {
@@ -2118,8 +2113,8 @@ input.delete_account[type="button"]
     width: 80%;
 }
 input.apply[type="submit"] {
-    background: -moz-linear-gradient(center top , #FB9500, #EB2B0C) repeat scroll 0 0 rgba(0, 0, 0, 0);
-    border: 1px solid #000000;
+    background: #0382B1;
+    border: 1px solid #1D5266;
     border-radius: 0px;
     color: #FFFFFF;
     font-size: 14px;
@@ -2484,7 +2479,7 @@ line-height: 20px;*/
     color:#015685;*/
 
 }
-.dash{float:right;font-family: verdana;background: #0382B1;color: #fff;margin-left: 1%;font-size: 12px;height: 60px;padding: 15px 10px;}
+.dash{float:right;font-family: verdana;background: #0382B1;color: #fff;margin-left: 0%;font-size: 12px;height: 60px;padding: 15px 10px;}
 
 .dash span
 {
@@ -3142,6 +3137,12 @@ form  .contect_form_textarea, form#comment_form textarea#body{width:90%; float:n
         width: 55%;
         margin-left: 28% !important;
     }
+    .instrument:first-child{
+        margin-left: 20%;
+    }
+    .instrument{
+        width: 20%;
+    }
 }
 @media (min-width: 1024px) and (max-width: 1044px) {
     .logo{
@@ -3638,7 +3639,7 @@ float: left;
 
 margin-top:20px;
 border: 1px solid #CCC;
-padding:5px;
+padding:15px;
 }
 
 .pm_message {
@@ -4525,6 +4526,7 @@ button.apply.ui-button.ui-button-middle.ui-button-main,.delete_account{
     width: 69%;
     float: none;
     line-height: 180%;
+    background: #fff;
 }
 .pm_author{
     line-height: 160%;
@@ -5283,3 +5285,85 @@ select#currency+div.sbHolder a.sbSelector{
     background-position: -7px -400px;
   }
 }
+input {
+    -webkit-border-radius: 0 !important;
+    border-radius: 0;
+}
+#home .service_midbox.wrapper{
+    display: table-cell;
+    vertical-align: bottom;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+#home .service_area{
+    display: table;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Main_page  animation */
+
+
+@-webkit-keyframes slideInLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.instrument:first-child {
+  -webkit-animation: slideInLeft 1s;
+          animation: slideInLeft 1s;
+}
+
+@-webkit-keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.service{
+  -webkit-animation: slideInRight 1s;
+          animation: slideInRight 1s;
+}
+

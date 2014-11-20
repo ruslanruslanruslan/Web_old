@@ -49,6 +49,13 @@ input.search_btn[type="button"]
 .instrument
 {
 	width:100%;
+	position: static !important;
+}
+.instrument:first-child{
+	margin-left: 0%;
+}
+#home .service_area{
+	min-height: 1250px;
 }
 .device
 {
