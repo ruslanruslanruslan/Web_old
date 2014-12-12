@@ -5285,10 +5285,7 @@ select#currency+div.sbHolder a.sbSelector{
     background-position: -7px -400px;
   }
 }
-input {
-    -webkit-border-radius: 0 !important;
-    border-radius: 0;
-}
+
 #home .service_midbox.wrapper{
     display: table-cell;
     vertical-align: bottom;
@@ -5365,5 +5362,14 @@ input {
 .service{
   -webkit-animation: slideInRight 1s;
           animation: slideInRight 1s;
+}
+input[type="submit"]{
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
+    -webkit-appearance: none;
+}
+input{
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
 }
 
