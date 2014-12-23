@@ -1024,7 +1024,7 @@ if (!function_exists('bender_draw_categories_list')) {
                             <p><?php _e("Please feel free to contact us at any time in any convenient way for you. We will answer any of your questions and resolve any problems related to us.", 'isha'); ?><br /><br />
 
                                 <span><?php _e("Email", 'isha'); ?>:</span> administrator@playandbay.com<br />
-                                <span><?php _e("Phone", 'isha'); ?>:</span> +7(916)6621382<br />
+                               <!-- <span><?php// _e("Phone", 'isha'); ?>:</span> +7(916)6621382<br /> -->
                                 <span><?php _e("Website", 'isha'); ?>:</span> www.playandbay.com
                             </p>
                         </aside>
