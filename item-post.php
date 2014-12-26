@@ -168,5 +168,10 @@ osc_add_hook('header','bender_nofollow_construct');
  
 <div class="clear"></div>
 </section>
-
+<script src="http://playandbay.com/betaplayandbay3/oc-content/themes/isha/js/dropzone.js"></script>
+<script>
+$(document).ready(function(){
+  $(".dropzone").dropzone({ url: "http://playandbay.com/betaPlayandBay3/oc-content/themes/isha/img" });
+})
+</script>
 <?php osc_current_web_theme_path('footer.php'); ?>

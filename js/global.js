@@ -1,4 +1,11 @@
 $(document).ready(function(){
+    var heig_m = $(window).height() - 120;
+    $('.service_area').height(heig_m);
+    $(window).scroll(function() {
+        var xPos = $(window).scrollTop() * 0.8;
+        $('.service').css({"left": xPos});
+        $('.instrument:first-child').css({"right": xPos});
+    }) 
     $('article.listings').click(function(){
         var url = $(this).find('a').attr('href');
         document.location.href = url;

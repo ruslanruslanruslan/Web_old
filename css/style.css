@@ -4562,10 +4562,10 @@ button.apply.ui-button.ui-button-middle.ui-button-main,.delete_account{
     width: 100% !important;
 }
 .adsbygoogle{
-    width: 55% !important
+    width:100% !important;
 }
 .adsbygoogle *{
-    width: 100% !important
+    width: 100% !important;
 }
 #adunit{
     width: 100% !important;
@@ -5372,4 +5372,7 @@ input{
     -webkit-border-radius: 0 !important;
     border-radius: 0 !important;
 }
-
+.reklama_newregister{
+    width: 86%;
+    margin: 0 auto;
+}
