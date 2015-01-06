@@ -416,13 +416,12 @@ osc_current_web_theme_path('header.php');
                             </br>
                         </div>
                         <div class="reklama_newregister" style="max-width: 80%;">
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- item_popup_create_top_ad -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- item_popup_create_top -->
 <ins class="adsbygoogle"
-     style="display:block;"
+     style="display:inline-block;width:468px;height:60px"
      data-ad-client="ca-pub-3021368859777537"
-     data-ad-slot="4143714806"
-     data-ad-format="auto"></ins>
+     data-ad-slot="8776066405"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
@@ -469,13 +468,12 @@ osc_current_web_theme_path('header.php');
                             </div>
                         </div>
                         <div class="reklama_newregister" style="max-width: 80%;">
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- item_popup_create_bottom_ad -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- item_popup_create bottom -->
 <ins class="adsbygoogle"
-     style="display:block"
+     style="display:inline-block;width:468px;height:60px"
      data-ad-client="ca-pub-3021368859777537"
-     data-ad-slot="1190248402"
-     data-ad-format="auto"></ins>
+     data-ad-slot="1252799602"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
