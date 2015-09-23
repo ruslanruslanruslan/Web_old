@@ -35,9 +35,9 @@
        //echo '<br>$i: '.$i;
       if($i==0){
     ?>
-      <a class="english-btn" href="<?php echo osc_change_language_url ( osc_locale_code() ); ?>"><img src="<?php echo osc_current_web_theme_url('images/english-flag.png');?>" alt=" "></a>
+      <a class="english-btn" href="<?php echo osc_change_language_url ( osc_get_locales()[$i]['pk_c_code'] ); ?>"><img src="<?php echo osc_current_web_theme_url('images/english-flag.png');?>" alt=" "></a>
       <?php }elseif($i==1){?>
-      <a class="rusiian-btn" href="<?php echo osc_change_language_url ( osc_locale_code() ); ?>"><img src="<?php echo osc_current_web_theme_url('images/russian-flag.png');?>" alt=" "></a>
+      <a class="rusiian-btn" href="<?php echo osc_change_language_url ( osc_get_locales()[$i]['pk_c_code'] ); ?>"><img src="<?php echo osc_current_web_theme_url('images/russian-flag.png');?>" alt=" "></a>
       <?php } ?>
       <?php $i++; ?>
       <?php }}?>
