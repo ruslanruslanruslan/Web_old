@@ -98,7 +98,9 @@ function autocompleteCity() {
             <div class="clear"></div>
         </div>
         <form action="<?php echo osc_base_url(true); ?>" method="get" class="nocsrf" id="frm_search">
+            <iframe id='my_iframe' width="500px" height="600px" style="display: none;" name='my_iframe' src=""></iframe>
             <input type="hidden" name="page" value="search"/>
+            <input id="iPageN" type="hidden" name="iPage" value="1">
             <?php /*<input type="hidden" name="sOrder" value="<?php echo osc_search_order(); ?>" />
             <input type="hidden" name="iOrderType" value="<?php
             $allowedTypesForSorting = Search::getAllowedTypesForSorting();
@@ -123,7 +125,7 @@ function autocompleteCity() {
 
                         <div class="clear"></div>
                     </div>
-                    <?php echo osc_search_pagination(); ?>
+                    
                     <div class="clear"></div>
 
                 </div>
@@ -141,8 +143,10 @@ function autocompleteCity() {
                         }
                         ?>
                     </div>
-
-                    <div class="list_ryt">
+                    <input type="hidden" id="search-number-from" name="search-number-from" value="<?= isset($search_number['from']) ? $search_number['from'] : ''; ?>">
+                    <input type="hidden" id="search-number-to" name="search-number-to" value="<?= isset($search_number['to']) ? $search_number['to'] : ''; ?>">
+                    <input type="hidden" id="search-number-of" name="search-number-of" value="<?= isset($search_number['of']) ? $search_number['of'] : ''; ?>">
+                    <div class="list_ryt" style="display:none;">
                         <?php
                         $orders = osc_list_orders();
 
@@ -216,7 +220,7 @@ function autocompleteCity() {
                 </div>
 
                 <div class="accord">
-                    <ul class="alist alist1">
+                    <ul class="alist">
                         <!--       <h1> Search Results for :- Музыкальные инструменты</h1>-->
                         <?php
 
@@ -278,10 +282,6 @@ function autocompleteCity() {
 
                 </div>
 
-                <div class="sotbot">
-                    <?php echo osc_search_pagination(); ?>
-                </div>
-                <div class="clear"></div>
                 <?php
                 /* if (osc_rewrite_enabled()) {
                   $footerLinks = osc_search_footer_links();
@@ -314,6 +314,57 @@ function autocompleteCity() {
     //<![CDATA[
     (function($) {
         $(document).ready(function() {
+            var statusUploadContent = true;
+            var from = $('#search-number-from').val();
+            var to = $('#search-number-to').val();
+            var of = $('#search-number-of').val();
+            window.onscroll = function()
+            {
+                if(to == of)
+                    statusUploadContent = false;
+                if((document.body.scrollTop > $(document).height() - (1.5 *$(window).height())) && statusUploadContent)
+                {
+                    statusUploadContent = false;
+                    $('.preloader9').show();
+                    $('.wraper').show();
+                    $('.mask9').show();
+                    document.getElementById('iPageN').value = (parseInt(document.getElementById('iPageN').value) + 1);
+                    document.getElementById('frm_search').target = 'my_iframe';
+                    document.getElementById('frm_search').submit();
+                    $('#my_iframe').unbind('load');
+                    $('#my_iframe').load(function(e)
+                    {
+                        statusUploadContent = true;
+                        var scrollContent = $(this).contents().find('.nocsrf .accord');
+                        var from = $(this).contents().find('#search-number-from').val();
+                        var to = $(this).contents().find('#search-number-to').val();
+                        var of = $(this).contents().find('#search-number-of').val();
+                        var listLeft = $(this).contents().find('.headnav .list_left').html();
+                        
+                        $('form.nocsrf .cent_srch_ryt').append('<div class="clear"></div><div class="headnav"><div class="list_left">'+listLeft+'</div></div>');
+                        if(scrollContent[0])
+                        {
+                            $('form.nocsrf .cent_srch_ryt').append(scrollContent[0]);
+                        }
+                        if(scrollContent[1])
+                        {
+                            $('form.nocsrf .cent_srch_ryt').append(scrollContent[1]);
+                        }
+                        $('.preloader9').fadeOut('slow');
+                        $('.mask9').fadeOut('slow');
+                        $('.wraper').fadeOut('slow');
+                        if(to == of)
+                        {
+                            statusUploadContent = false;
+                            return false;
+                        }
+                    });
+                }
+            };
+            $('#srchbtn-apply').click(function()
+            {
+                document.getElementById('frm_search').target = '';
+            });
             $('#default-usage-select').change(function() {
                vall=$('.demoTarget .sbFocus').text();
                //vall2="<?php echo (_e('Newly listed'));?>";

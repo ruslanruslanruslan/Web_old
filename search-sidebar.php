@@ -69,7 +69,7 @@ if (!isset($category['pk_i_id'])) {
                 ?>
                 <input type="hidden" name="sCategory[]" value="<?php echo osc_esc_html(end(explode('/',$cat_id))); ?>"/>
             <?php } ?>
-            <input type="submit" class="srchbtn apply" value="Apply">
+            <input type="submit" class="srchbtn apply" id="srchbtn-apply" value="Apply">
             <div class="clear"></div>
 
     </section>
