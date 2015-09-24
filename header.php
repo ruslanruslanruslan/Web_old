@@ -188,6 +188,9 @@
                 <div class="breadcrumb">
                     <?php echo $breadcrumb; ?>
                     <div class="clear"></div>
+                    <script type="text/javascript">
+                        $('.breadcrumb .first-child a').prepend('<div class="for_home_images"><img src="<?= osc_current_web_theme_url("images/home.png"); ?>" clss="visibl"><img src="<?= osc_current_web_theme_url("images/home_hover.png"); ?>" clss="not" style="position:absolute;top:3px;left:0;z-index:5"></div>');
+                    </script>
                 </div>
                 <?php
             }
