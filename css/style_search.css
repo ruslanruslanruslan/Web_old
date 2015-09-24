@@ -206,13 +206,15 @@ padding: 5px 90.1px;
 -ms-transition: all 350ms  linear;
 -o-transition: all 350ms  linear;
 transition: all 350ms  linear; }
-.alist li:hover{-webkit-transform: scale(1.04);
+.alist li:hover{
+/*-webkit-transform: scale(1.04);
 -moz-transform: scale(1.04);
 -ms-transform: scale(1.04);
 -o-transform: scale(1.04);
 transform: scale(1.04);
 box-shadow: 0 0 8px rgba(0,0,0,0.2);
-z-index: 5;position: relative;}
+z-index: 5;position: relative;
+*/}
 
 .alist li:hover >.listings a {
   
@@ -481,13 +483,14 @@ float: left;  margin:0px;}
     transition: all 350ms linear 0s;
 }
 .alaist li:hover {
--webkit-transform: scale(1.05);
+/*-webkit-transform: scale(1.05);
 -moz-transform: scale(1.05);
 -ms-transform: scale(1.05);
 -o-transform: scale(1.05);
 transform: scale(1.05);
 z-index: 5;
-position: relative;}
+position: relative;*/
+}
 
 .alaist > li {
     width: 48%;
