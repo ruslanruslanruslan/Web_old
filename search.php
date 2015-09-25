@@ -341,7 +341,7 @@ function autocompleteCity() {
                         var of = $(this).contents().find('#search-number-of').val();
                         var listLeft = $(this).contents().find('.headnav .list_left').html();
                         
-                        $('form.nocsrf .cent_srch_ryt').append('<div class="clear"></div><div class="headnav"><div class="list_left">'+listLeft+'</div></div>');
+                        $('form.nocsrf .cent_srch_ryt').append('<div class="clear"></div>');
                         if(scrollContent[0])
                         {
                             $('form.nocsrf .cent_srch_ryt').append(scrollContent[0]);
