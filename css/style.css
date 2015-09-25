@@ -186,6 +186,7 @@ section.wrapper:not(.header_midbox)
 {
     margin:0px auto;
     width: 87.5%;
+    padding-bottom: 30px;
 }
 section.header_midbox{
     width: 100%;
