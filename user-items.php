@@ -375,9 +375,9 @@ $i_userId = osc_logged_user_id();
         <?php if (osc_count_items() == 0) { ?>
         <h3><?php _e('You don\'t have any items yet', 'watchlist'); ?></h3>
         <?php } else { ?>
-    <h3><?php printf(_n('You are watching %d item', 'You are watching %d items', $iTotalItems, 'watchlist'), $iTotalItems) ; ?></h3>
+    <h3><?php printf(_n('You are watching <span class="list-count">%d</span> item', 'You are watching <span class="list-count">%d</span> items', $iTotalItems, 'watchlist'), $iTotalItems) ; ?></h3>
     <?php while ( osc_has_items() ) { ?>
-                  <article class="list_result">
+                  <article class="list_result" id="list-item-<?php echo osc_item_id() ?>">
               <figure>
               <?php if (osc_images_enabled_at_items()) { ?>
              <?php if (osc_count_item_resources()) { ?>
@@ -402,12 +402,29 @@ $i_userId = osc_logged_user_id();
                     <h1> <a href="<?php echo osc_item_url(); ?>"><?php echo osc_item_title(); ?></a></h1>
                         <h3><?php echo osc_item_city();?> - (<?php echo osc_item_region(); ?>) - <?php echo osc_format_date(osc_item_pub_date()); ?>.</h3>
                         <p><?php echo osc_highlight(strip_tags(osc_item_description())); ?></p>
+                        <p><a rel="list-item-<?php echo osc_item_id() ?>" href="<?php echo osc_base_url(true) . "?page=custom&file=watchlist/watchlist.php&delete=" . osc_item_id(); ?>" class="remove-watchlist"><?php _e('Delete', 'bender'); ?></a></p>
                 </div>
                 <div class="clear"></div>
             </article>
       <?php }
       }?>
-
+      <script type="text/javascript">
+      $('.remove-watchlist').click(function()
+      {
+          $.ajax(
+          {
+            data : "",
+            type :'POST',
+            cache    : false,
+            url  : $(this).prop('href'),
+            success  : function(response) {
+            }
+          });
+          $('#'+$(this).prop('rel')).remove();
+          $('.list-count').text($('.list_result').length);
+          return false;
+      });
+      </script>
                 </div>
             </li>
             <li>
