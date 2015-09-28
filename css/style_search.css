@@ -226,7 +226,7 @@ transition: all 350ms  linear; }
     -o-transform: matrix(0.9,0,0,0.9,0,0);
     -ms-transform: matrix(0.9,0,0,0.9,0,0);
     transform: matrix(0.9,0,0,0.9,0,0);
-    z-index: 1000;
+    z-index: 8;
 }
 .alist li:hover:before, .alaist li:hover .listings:before
 {
@@ -241,7 +241,7 @@ transition: all 350ms  linear; }
      -moz-transition: all 0.2s cubic-bezier(.13,.81,.89,.48) 0s;
      -o-transition: all 0.2s cubic-bezier(.13,.81,.89,.48) 0s;
      transition: all 0.2s cubic-bezier(.13,.81,.89,.48) 0s;
-     z-index: 1000;
+     z-index: 8;
 }
 
 .alist li:hover >.listings a {
