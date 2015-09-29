@@ -381,7 +381,7 @@ width: 238px;}
 .amin .listings{margin-right: 30px;}
 .amin{ margin-bottom:20px}
 
-.price{z-index: 1;position: absolute;left: 0; bottom:0; top: auto;}
+.price{z-index: 10;position: absolute;left: 0; bottom:0; top: auto;}
 .price a.rate {
 /* display: block; */
 background: #0382b1;
