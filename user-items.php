@@ -240,7 +240,12 @@ $i_userId = osc_logged_user_id();
                           <td class="pmCheckboxes"><input class="delChecks1" type="checkbox" id="delete<?php echo $recipPM['pm_id']; ?>" name="pms[]" value="<?php echo $recipPM['pm_id']; ?>" /></td>
                             <td style="<?php echo $styleNew; ?>"><?php echo osc_format_date($recipPM['message_date']) . ', ' . osclass_pm_format_time($recipPM['message_date']); ?></td>
                             <td style="<?php echo $styleNew; ?>"><!--<a class="mesLink" href="<?php echo osc_render_file_url('osclass_pm/' . 'user-messages.php?message=' . $recipPM['pm_id'] . '&box=inbox'); ?>">--><?php echo $recipPM['pm_subject']; ?><!--</a>--></td>
-                            <td style="<?php echo $styleNew; ?>"><?php  /*print_r($recipPM);*/$user = User::newInstance()->findByPrimaryKey($recipPM['sender_id']); echo $user['s_name'];  ?></td>
+                            <td style="<?php echo $styleNew; ?>">
+                            <?php 
+                              $user = $user = User::newInstance()->findByPrimaryKey($recipPM['sender_id']);;
+                              echo ($user['s_name']=='') ? 'Admin' : "<a href='" . osc_user_public_profile_url($recipPM['sender_id']) . "'>". $user['s_name'] . "</a>";
+                            ?>
+                            </td>
               <td>
               <li class="read">
 
@@ -305,7 +310,11 @@ $i_userId = osc_logged_user_id();
                             <td><!--<a class="mesLink" href="<?php echo osc_render_file_url('osclass_pm/' . 'user-messages.php?message=' . $recipPM['pm_id'] . '&box=outbox'); ?>">--><?php echo $recipPM['pm_subject'];
                             //http://test.playandbay.com/index.php?page=custom&file=osclass_pm/user-proc.php&pms=79&option=delMessages&box=inbox&p1=1
                              ?><!--</a>--></td>
-                            <td><?php  /*print_r($recipPM);*/$user = User::newInstance()->findByPrimaryKey($recipPM['recip_id']);/*print_r($user);*/echo $user['s_name']; if ($user['s_name']=='') echo 'Admin';?></td>
+                            <td>
+                              <?php 
+                              $user = User::newInstance()->findByPrimaryKey($recipPM['recip_id']);
+                              echo ($user['s_name']=='') ? 'Admin' : "<a href='" . osc_user_public_profile_url($recipPM['recip_id']) . "'>". $user['s_name'] . "</a>";?>
+                            </td>
               <td>
               <li class="read">
 
