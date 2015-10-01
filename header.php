@@ -126,6 +126,16 @@
                         <div class="nav-mobile" id="menu-mobile_cliced">
                         <div class="mobile_header"><div>Меню</div><div id="close_menu"></div>
                         </div>
+                        <style type="text/css">
+                        .mobile_header #close_menu
+                        {
+                            background: url(<?= osc_current_web_theme_url("images/close.png"); ?>) !important;
+                        }
+                        .mobile_header #close_menu:hover
+                        {
+                            background: url(<?= osc_current_web_theme_url("images/close_red.png"); ?>) !important;   
+                        }
+                        </style>
                         <ul class="nav">
                             <li class="current" ><a href="<?php echo osc_base_url() . '#home'; ?>" >
                                     <p><?php _e("Home", 'isha'); ?></p></a>
