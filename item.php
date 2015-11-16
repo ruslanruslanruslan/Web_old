@@ -627,7 +627,7 @@ osc_current_web_theme_path('header.php');
             setTimeout(function() {
                 $('#jp_popup').show();
                 $('#jp_popup_wrap').show();
-            }, 0000);
+            }, 5000);
         }
         function changeimage(x) {
             // alert(x.id);
